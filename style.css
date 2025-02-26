@@ -498,3 +498,13 @@ h6 {
 .quizdown h3 {
    color: #007bff;
  }
+
+ .theorem {
+  border-radius: 5px; /* Zaokrąglone rogi */
+  background-color: #073642
+}
+
+ .definition {
+  border-radius: 5px; /* Zaokrąglone rogi */
+  background-color: #073642
+}

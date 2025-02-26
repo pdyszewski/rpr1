@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>3 Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Aby zrozumieć eksperyment losowy należy dobrze opisać jego strukturę. Jednym sposobem jest udzielenie sobie odpowiedzi na pytanie jak zajście jednego zdarzenia wpływa na prawdopodobieństwa innych...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="3 Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Aby zrozumieć eksperyment losowy należy dobrze opisać jego strukturę. Jednym sposobem jest udzielenie sobie odpowiedzi na pytanie jak zajście jednego zdarzenia wpływa na prawdopodobieństwa innych...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3 Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Aby zrozumieć eksperyment losowy należy dobrze opisać jego strukturę. Jednym sposobem jest udzielenie sobie odpowiedzi na pytanie jak zajście jednego zdarzenia wpływa na prawdopodobieństwa innych...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="active" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobiemstwa.html">Lista 2: Aksjomaty rachunku prawdopodobiemstwa</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="prawdopodobieństwo-warunkowe" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Prawdopodobieństwo warunkowe<a class="anchor" aria-label="anchor" href="#prawdopodobie%C5%84stwo-warunkowe"><i class="fas fa-link"></i></a>
+</h1>
+<p>Aby zrozumieć eksperyment losowy należy dobrze opisać jego strukturę. Jednym sposobem jest udzielenie sobie
+odpowiedzi na pytanie jak zajście jednego zdarzenia wpływa na prawdopodobieństwa innych zdarzeń.</p>
+<p>Rozważmy rzut dwiema kośćmi sześciennymi. Wiemy już, że odpowiadająca temu doświadczeniu przestrzeń zdarzeń elementarnych to<br><span class="math display">\[
+\Omega = [6]^2=  \{ (1,1), (1, 2),  \ldots , (6,6) \}.
+\]</span>
+Jeżeli rozważymy zdarzenie <span class="math inline">\(A=\)</span> suma oczek na obu kościach wynosi <span class="math inline">\(6\)</span>, to <span class="math inline">\(A\)</span> jest zbiorem danym przez
+<span class="math display">\[
+A=  \{ (1,5), (2, 4), (3,3), (4,2), (5,1) \}
+\]</span>
+Zakładać będziemy, że kości są dobrze wyważone.
+Do opisu tego eksperymentu posłużymy się prawdopodobieństwem <span class="math inline">\(\mathbb{P}\)</span>, które każdemu zdarzeniu
+elementarnemu przypisuje takie samo prawdopodobieństwo.
+Wówczas <span class="math inline">\(\mathbb{P}[A] = 5/36\)</span>.
+Złóżmy teraz, że posiadamy dodatkową informację, że na pierwszej kości wypadło jedno oczko.
+Wówczas powinniśmy zmienić rozważaną przestrzeń zdarzeń elementarnych, a mianowicie
+<span class="math display">\[
+B=\{(1,1), (1,2), (1,3), (1,4), (1,5), (1,6)\}
+\]</span>
+Musimy zmienić również sposób przypisywania prawdopodobieństwa na <span class="math inline">\(\mathbb{P}_1\)</span> przypisujące każdemu
+zdarzeniu elementarnemu z <span class="math inline">\(B\)</span> takie samo prawdopodobieństwo.
+Wówczas zdarzenie <span class="math inline">\(A_1=\)</span> suma oczek jest równa <span class="math inline">\(6\)</span> to
+<span class="math display">\[
+A_1 = A \cap B =\{ (1,5)\}
+\]</span>
+co daje <span class="math inline">\(\mathbb{P}_1[A_1] = 1/6\)</span>. Zauważmy, że
+<span class="math display">\[\begin{align*}
+\mathbb{P}_1[A_1] &amp; = \mathbb{P}_1[A \cap B ]= \frac{|A \cap B|}{ |B| } \\ &amp; =
+\frac{|A \cap B| \cdot |\Omega|^{-1}}{ |B| \cdot |\Omega|^{-1} } = \frac{\mathbb{P}[A \cap B]}{\mathbb{P}[B]}.  
+\end{align*}\]</span>
+Okazuje się, że prawdopodobieństwo <span class="math inline">\(\mathbb{P}_1\)</span> w nowej przestrzeni probabilistycznej można wyrazić w
+terminach pierwotnie rozważanego prawdopodobieństwa <span class="math inline">\(\mathbb{P}\)</span>.
+Ta konstrukcja jest spotykana na tak często, że wyrażenie występujące po prawej stronie ostatniego
+wzoru ma swoją specjalną nazwę.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-21" class="definition"><strong>Definicja 3.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną. Rozważmy zdarzenie <span class="math inline">\(B\)</span>
+takie, że <span class="math inline">\(\mathbb{P}[B]&gt;0\)</span>. {} (zajścia) zdarzenia <span class="math inline">\(A\)</span> pod warunkiem (zajścia) zdarzenia <span class="math inline">\(B\)</span> nazywamy liczbę
+<span class="math display">\[
+\mathbb{P}[A|B] = \frac{\mathbb{P}[A\cap B]}{\mathbb{P}[B]}.
+\]</span></p>
+</div>
+<p>Przy ustalonym zbiorze <span class="math inline">\(B\)</span>, <span class="math inline">\(\mathbb{P}[\cdot|B]\)</span> jest miarą probabilistyczną na <span class="math inline">\((\Omega,\mathcal{F})\)</span>.</p>
+<p>Prawdopodobieństwo warunkowe jest jednym z ważniejszych pojęć teorii prawdopodobieństwa.
+Rzadko zdarza się, aby doświadczenie było wykonywane w idealnych warunkach i zazwyczaj jest
+ono obarczone zewnętrznymi czynnikami, pewną dodatkową informacją.
+Jest to wykorzystywane np. przez firmy ubezpieczeniowe (polisa samochodu zależy np. od płci i wieku kierowcy;
+polisa na życia od wieku, przebytych chorób, ryzyka zawodowego), graczy giełdowych.
+Dla przykładu, wysokość emerytury powinna zależeć (oprócz zgromadzonych środków) od przewidywanej długości życia emeryta,
+co z kolei zależy od płci (mężczyźni 73,8; kobiety 81,7 - dane wg GUS za 2018r.),
+ale też aktualnego wieku (przeciętny 60 latek, niezależnie od płci, będzie żył jeszcze średnio 260,7 miesięcy,
+a 65 latek, 217,1 miesiąca).</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-22" class="example"><strong>Przykład 3.1  </strong></span>Wybieramy losową rodzinę z dwojgiem dzieci.
+Interesuje nas prawdopodobieństwo, że jest to dwóch chłopców, jeżeli wiemy, że</p>
+<ol style="list-style-type: lower-alpha">
+<li>starsze dziecko jest chłopcem;</li>
+<li>jedno z nich ma na imię Franek.</li>
+</ol>
+<p>W obu przypadkach
+<span class="math display">\[
+\Omega=\{(c,c), (c,d), (d,c), (d,d)\}.
+\]</span>
+W przypadku a:
+<span class="math display">\[
+\mathbb{P}[\{(c,c)\} | \{(c,c),(d,c)\}] = 1/2,
+\]</span>
+a w przypadku b:
+<span class="math display">\[
+\mathbb{P}[\{(c,c)\} | \{(c,c),(d,c), (c,d)\}] = 1/3.
+\]</span></p>
+</div>
+<p>Liczba <span class="math inline">\(\mathbb{P}[A|B]\)</span> mówi jakie jest prawdopodobieństwo zajścia zdarzenia <span class="math inline">\(A\)</span> jeżeli wiemy, że zaszło
+zdarzenie <span class="math inline">\(B\)</span>. Prawdopodobieństwa względem wyjściowej miary <span class="math inline">\(\mathbb{P}[\cdot]\)</span>
+można reprezentować w terminach względem miary warunkowanej <span class="math inline">\(\mathbb{P}[\cdot| B]\)</span>. W wielu przypadkach
+ułatwia to rachunki. Mamy bowiem
+<span class="math display">\[
+    \mathbb{P}[A\cap B] = \mathbb{P}[B] \mathbb{P}[A|B]
+\]</span>
+oraz, skoro zdarzenia <span class="math inline">\(A\cap B\)</span> oraz <span class="math inline">\(A\cap B^c\)</span> wykluczają się wzajemnie,
+<span class="math display">\[\begin{align*}
+\mathbb{P}[A] &amp; = \mathbb{P}[A\cap B] + \mathbb{P}[A\cap B^c] \\&amp;=
+\mathbb{P}[B]\mathbb{P}[A|B] + \mathbb{P}[B^c]\mathbb{P}[A|B^c].
+\end{align*}\]</span>
+Ostatni wzór jest szczególnie pomocny kiedy eksperymenty podzielone są na etapy.
+Zanim zbadamy konkretny przykład uogólnijmy powyższy rachunek na dowolną liczbą zdarzeń.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-23" class="definition"><strong>Definicja 3.2  </strong></span>Niech <span class="math inline">\(I \subseteq \mathbb{N}\)</span> będzie zbiorem indeksów.
+Mówimy, że rodzina zdarzeń <span class="math inline">\(\{B_k\}_{k\in I}\)</span> (dopuszczamy <span class="math inline">\(|I|=\infty\)</span>) jest <strong>rozbiciem</strong> zbioru <span class="math inline">\(\Omega\)</span>, jeżeli
+<span class="math display">\[
+\Omega = \bigcup_{k \in I} B_k
+\]</span>
+oraz zbiory <span class="math inline">\(B_k\)</span> są parami rozłączne.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-24" class="theorem"><strong>Twierdzenie 3.1  (Wzór na prawdopodobieństwo całkowite) </strong></span>Jeżeli <span class="math inline">\(\{B_k\}_{k \in I}\)</span> jest rozbiciem <span class="math inline">\(\Omega\)</span> (skończonym lub przeliczalnym) takim, że
+<span class="math inline">\(\mathbb{P}[B_k]&gt;0\)</span> dla każdego <span class="math inline">\(k\in I\)</span>, to dla dowolnego zdarzenia <span class="math inline">\(A\in \mathcal{F}\)</span>
+<span class="math display">\[
+  \mathbb{P}[A] = \sum_{k \in I} \mathbb{P}[A|B_k]\mathbb{P}[B_k]
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-25" class="proof"><em>Proof</em>. </span>Korzystając z definicji rozbicia oraz prawdopodobieństwa warunkowego piszemy
+<span class="math display">\[\begin{align*}
+\mathbb{P}[A] &amp; = \mathbb{P}\left[ A\cap \bigcup_{k\in I} B_k\right]
+= \mathbb{P}\left[  \bigcup_{kin I} (A\cap B_k)\right]
+\\ &amp; = \sum_{k\in I} \mathbb{P}[ A\cap B_k] = \sum_{k\in I} \mathbb{P}[A|B_k]\mathbb{P}[B_k].
+\end{align*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-26" class="example"><strong>Przykład 3.2  </strong></span>W loterii fantowej szansa wylosowania losu wygrywającego jest równa <span class="math inline">\(p\)</span>, przegrywającego <span class="math inline">\(q\)</span>, a z prawdopodobieństwem
+<span class="math inline">\(r\)</span> (<span class="math inline">\(p+q+r=1\)</span>) wyciągamy los ‘graj dalej’. Los ‘graj dalej’ wrzucany
+jest do urny i pozwala na kolejne losowanie. Jakie jest prawdopodobieństwo wygranej?
+Oznaczmy przez <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> zdarzenie polegające na wyciągnięciu losu odpowiednio wygrywającego,
+przegrywającego, ‘graj dalej’, a przez <span class="math inline">\(W\)</span> zdarzenie wygrania w loterii. Wówczas
+<span class="math display">\[\begin{align*}
+\mathbb{P}[W] =&amp;  \mathbb{P}[W|A]\mathbb{P}[A]+\mathbb{P}[W|B]\mathbb{P}[B]\\ &amp;+\mathbb{P}[W|C]\mathbb{P}[C]
+\\ =&amp; 1\cdot p + 0\cdot q + \mathbb{P}[W]\cdot r.
+\end{align*}\]</span>
+Zatem
+<span class="math display">\[
+\mathbb{P}[W] = \frac{p}{1-r} = \frac p{p+q}.
+\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-27" class="theorem"><strong>Twierdzenie 3.2  (Wzór Bayesa) </strong></span>Przy założeniach jw. jeżeli <span class="math inline">\(\mathbb{P}[A]&gt;0\)</span>, to dla każdego <span class="math inline">\(k\in I\)</span>,
+<span class="math display">\[
+\mathbb{P}[B_k| A] = \frac{\mathbb{P}[A|B_k]\mathbb{P}[B_k]}{\sum_{i \in I} \mathbb{P}[A|B_i]\mathbb{P}[B_i]}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span>Ze wzoru na prawdopodobieństwo całkowite
+<span class="math display">\[
+\frac{\mathbb{P}[A|B_k]\mathbb{P}[B_k]}{\sum_{i \in I} \mathbb{P}[A|B_i]\mathbb{P}[B_i]}
+= \frac{\mathbb{P}[A\cap B_k]}{\mathbb{P}[A]} =   \mathbb{P}B_k| A].
+\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-29" class="remark"><em>Remark</em>. </span>Ze względu na strukturę wzorów w dwóch ostatnich twierdzeniach korzysta się z nich w różnych kontekstach.</p>
+<ul>
+<li>Wzór na prawdopodobieństwo całkowite pozwala na obliczanie prawdopodobieństw zdarzeń,
+które mogą zajść w wyniku innych zdarzeń, np. przy doświadczeniach wieloetapowych.</li>
+<li>Wzór Bayesa używamy, gdy pytamy o przebieg doświadczenia znając już jego wynik.</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-30" class="example"><strong>Przykład 3.3  </strong></span>Mamy <span class="math inline">\(100\)</span> monet, spośród których jedna jest fałszywa i ma orła po obu stronach.
+Wybieramy losową monetę i rzucamy nią <span class="math inline">\(10\)</span> razy.
+W wyniku otrzymaliśmy <span class="math inline">\(10\)</span> orłów. Jakie jest prawdopodobieństwo, że wylosowana moneta była fałszywa?
+Oznaczmy zdarzenia</p>
+<ul>
+<li>
+<span class="math inline">\(B_1\)</span> - wylosowaliśmy prawidłową monetę;</li>
+<li>
+<span class="math inline">\(B_2\)</span> - wylosowaliśmy fałszywą monetę z dwoma orłami;</li>
+<li>
+<span class="math inline">\(A\)</span> - wyrzucono <span class="math inline">\(10\)</span> orłów.</li>
+</ul>
+<p>Ze wzoru Bayesa
+<span class="math display">\[\begin{align*}
+    \mathbb{P}[B_2|A] &amp; =
+    \frac{\mathbb{P}[A|B_2]\mathbb{P}[B_2]}{\mathbb{P}[A|B_1]\mathbb{P}[B_1] +  \mathbb{P}[A|B_2]\mathbb{P}[B_2]}
+    \\&amp; =
+    \frac{1\cdot \frac{1}{100}}{\frac 1{2^{10}}\cdot \frac{99}{100} + 1\cdot \frac 1{100}}
+    = \frac{1024}{1123}\\ &amp;\approx 0,91.
+\end{align*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-31" class="example"><strong>Przykład 3.4  </strong></span>U pacjenta przeprowadzono test na obecność pewnej choroby.
+Wiadomo, że <span class="math inline">\(1\)</span> osoba na <span class="math inline">\(1000\)</span> jest chora.
+Ponadto wiemy, że u chorych test wykrywa chorobę z prawdopodobieństwem <span class="math inline">\(99\%\)</span>,
+a u osób zdrowych działa poprawnie (tzn. nie wykrywa choroby) z prawdopodobieństwem <span class="math inline">\(95\%\)</span>.
+Załóżmy, że u pacjenta test był pozytywny. Jakie jest prawdopodobieństwo, że jest on chory?
+Oznaczmy
+- <span class="math inline">\(C\)</span> - badana osoba jest chora;
+- <span class="math inline">\(Z\)</span> - badana osoba jest zdrowa;
+- <span class="math inline">\(T\)</span> - test był pozytywny.
+Ze wzoru Bayesa
+<span class="math display">\[\begin{align*}
+\mathbb{P}[C|T] &amp; = \frac{\mathbb{P}[T|C]\mathbb{P}[C]}{\mathbb{P}[T|Z]\mathbb{P}[Z] + \mathbb{P}[T|C]\mathbb{P}[C]}
+\\ &amp; =\frac{ \frac{99}{100}\cdot \frac{1}{1000} }{ \frac{5}{100}\cdot \frac{999}{1000}  +  \frac{99}{100}\cdot \frac{1}{1000}  }
+= \frac{99}{5094} \\&amp; \approx 0,019.
+\end{align*}\]</span>
+Powyższy wynik jest zaskakujący.
+Zobaczmy jak wygląda on na przykładowych liczbach.
+Jeżeli populacja składa się ze <span class="math inline">\(100000\)</span> osób, to wśród nich jest
+ok. <span class="math inline">\(100\)</span> chorych i <span class="math inline">\(99900\)</span> zdrowych.
+Spośród chorych u <span class="math inline">\(99\)</span> osób test wyjdzie pozytywny, a spośród zdrowych u <span class="math inline">\(4995\)</span>.
+Ograniczenie przestrzeni probabilistycznej do osób u których test wyszedł pozytywny,
+pozostawia nas w przestrzeni, składającej się niemal wyłącznie z osób zdrowych.
+Zauważmy, że powtórzenie testu niewiele poprawia jego skuteczność,
+dlatego też ważna jest informacja o innych czynnikach związanych z chorobą (np. informacja genetyczna).</p>
+</div>
+<iframe src="QUIZDOWN/quiz3.html" width="100%" height="590px" style="border: none;">
+</iframe>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#prawdopodobie%C5%84stwo-warunkowe"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-02-25.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 Aksjomatyka rachunku prawdopodobieństwa | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Omówimy podstawowe aksjomaty teorii prawdopodobieństwa. Zaczniemy jednak od przykładu ilustrującego konieczność wprowadzenia matematycznego formalizmu.  2.1 Paradoks Bertranda W rachunku...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="2 Aksjomatyka rachunku prawdopodobieństwa | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Omówimy podstawowe aksjomaty teorii prawdopodobieństwa. Zaczniemy jednak od przykładu ilustrującego konieczność wprowadzenia matematycznego formalizmu.  2.1 Paradoks Bertranda W rachunku...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 Aksjomatyka rachunku prawdopodobieństwa | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Omówimy podstawowe aksjomaty teorii prawdopodobieństwa. Zaczniemy jednak od przykładu ilustrującego konieczność wprowadzenia matematycznego formalizmu.  2.1 Paradoks Bertranda W rachunku...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="active" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobiemstwa.html">Lista 2: Aksjomaty rachunku prawdopodobiemstwa</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="aksjomatyka-rachunku-prawdopodobieństwa" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa<a class="anchor" aria-label="anchor" href="#aksjomatyka-rachunku-prawdopodobie%C5%84stwa"><i class="fas fa-link"></i></a>
+</h1>
+<p>Omówimy podstawowe aksjomaty teorii prawdopodobieństwa. Zaczniemy jednak od przykładu
+ilustrującego konieczność wprowadzenia matematycznego formalizmu.</p>
+<div id="paradoks-bertranda" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Paradoks Bertranda<a class="anchor" aria-label="anchor" href="#paradoks-bertranda"><i class="fas fa-link"></i></a>
+</h2>
+<p>W rachunku prawdopodobieństwa można wiele powiedzieć na poziomie intuicyjnym.
+Okazuje się jednak, że bez odpowiedniego formalizmu łatwo jest popaść w kłopoty.
+Aby to zilustrować rozważmy klasyczne zjawisko zwane paradoksem Bertranda.
+W okręgu o promieniu <span class="math inline">\(1\)</span> wybrano losowo cięciwę <span class="math inline">\(AB\)</span>. Jakie jest prawdopodobieństwo,
+że będzie ona dłuższa niż bok trójkąta
+równobocznego wpisanego w ten okrąg?</p>
+<p>Cięciwa wyznaczona jest przez dwa swoje końce. Skoro
+okrąg jest niezmienniczy na obroty, zawsze możemy umieścić
+interesujący nas trójkąt równoboczny tak, aby jeden w końców
+cięciwy <span class="math inline">\(A\)</span> znajdował się dokładnie w wierzchołku trójkąta.
+Wylosowanie cięciwy można więc utożsamić z wylosowaniem
+drugiego punktu na okręgu.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand1.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Cięciwa <span class="math inline">\(AB\)</span> spełnia zadany warunek wtedy i tylko wtedy, gdy
+punkt <span class="math inline">\(B\)</span> trafia w łuk wyznaczony przez bok trójkąta
+przeciwległy do <span class="math inline">\(A\)</span>. Skoro trójkąt dzieli okrąg na
+trzy łuki równej długości, to szukane prawdopodobieństwo wynosi <span class="math inline">\(1/3\)</span>.</p>
+<p>Istnieje inny sposób podejścia do tego problemu. Cięciwa jest jednoznacznie wyznaczona przez
+położenie swojego środka, więc jej wylosowanie jej jest równoważne z wylosowaniem jej środka.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand2.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Cięciwa spełnia warunki zadania, gdy jej środek leży we wnętrzu
+koła o promieniu <span class="math inline">\(1/2\)</span> i tym samym środku. Prawdopodobieństwo, że
+cięciwa <span class="math inline">\(AB\)</span> spełnia warunki zadania jest zatem
+równe ilorazowi pół obu kół
+<span class="math display">\[
+    \frac{|B(0,1/2)|}{|B(0,1)|}  = \frac 14.
+\]</span>
+Dokładne uzasadnienie słuszności powyższego wyrażenia wymaga wprowadzenia odpowiedniego
+formalizmu. Widzimy jednak, że o wiele większym problemem jest to, że otrzymaliśmy
+inny wynik niż poprzednio.
+Okazuje się jednak, że można wprowadzić więcej chaosu.
+Podobnie jak w poprzednim przypadku chcemy wylosować środek cięciwy.
+Zauważmy, że istotna jest jedynie jej długość, a ta zależy tylko od odległości środka
+cięciwy od środka okręgu.
+Podobnie jak poprzednio wnioskujemy więc, że
+<span class="math display">\[
+    \frac{|(0,1/2)|}{|(0,1)|}  = \frac 12.
+\]</span>
+Otrzymaliśmy trzy różne odpowiedzi, co tłumaczy dlaczego zjawisko to nazywane jest niekiedy
+paradoksem. Sprzeczność jest jednak pozorna. Jak się okazuje powyższe trzy metody losowania nie są
+równoważne. Aby się o tym przekonać możemy powtórzyć powyższe eksperymenty wiele razy i porównać rezultaty.
+Jeżeli sto razy wylosujemy cięciwę przez wylosowanie jej końców na okręgu otrzymamy następujący rysunek.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand1a.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Widzimy, że w tym przypadku cięciwy umieszczone są równomiernie. Jeżeli natomiast wylosujemy sto
+cięciw poprzez wylosowanie ich środka otrzymamy więcej cięciw bliżej okręgu.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand2a.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Jeżeli wreszcie wylosujemy sto cięciw losując odległość od środka
+okręgu w sposób jednostajny, to otrzymamy wiele cięciw blisko
+środka okręgu.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand3a.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Widzimy więc, że wspomniany paradoks jest pozorny, ponieważ przedstawione
+sposoby losowania cięciw nie są równoważne. Aby uniknąć tego typu niejasności
+jak i formalnie uzasadnić wyniki teoretyczne otrzymane przy trzech sposobach losowania,
+musimy wprowadzić odpowiedni język do opisu zdarzeń losowych.</p>
+</div>
+<div id="przestrzeń-probabilistyczna" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Przestrzeń probabilistyczna<a class="anchor" aria-label="anchor" href="#przestrze%C5%84-probabilistyczna"><i class="fas fa-link"></i></a>
+</h2>
+<p>Za każdym razem kiedy rzucamy kością czy losujemy kartę z talii wykonujemy pewnego rodzaju
+eksperyment losowy. W pierwszej części wykładu zajmiemy się ich badaniem.
+Zaczniemy od sposobu matematycznej reprezentacji wyniku naszego eksperymentu.
+Każdy możliwy wynik eksperymentu nazywać będziemy zdarzeniem elementarnym.<br>
+Przykładowo dla rzutu kością sześcienną zdarzeniem elementarnym będzie
+liczba wyrzuconych oczek, czyli dowolna z liczb 1,2, 6.
+Zbiór wszystkich zdarzeń elementarnych oznaczać będziemy przez <span class="math inline">\(\Omega\)</span> i
+będziemy nazywać <em>przestrzenią zdarzeń elementarnych</em>, a jego elementy,
+czyli <em>zdarzenia elementarne</em> będziemy oznaczać przez <span class="math inline">\(\omega\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-1" class="example"><strong>Przykład 2.1  </strong></span>Powiedzmy, że nasz eksperyment losowy polega na rzucie parą kości sześciennych.
+Wynikiem naszego eksperymentu jest para elementów zbioru za
+<span class="math inline">\([6] = \{1, 2, \ldots , 6\}\)</span>.
+Istotne jest aby rozróżnić wyniki
+otrzymane na obu kościach,
+wszak kości nie muszą być symetryczne. Zbiorem zdarzeń elementarnych jest
+<span class="math display">\[
+\Omega = [6]^2=  
+\{ (1,1), (1,2),
+\ldots , (6,6) \}.
+\]</span>
+W tym przypadku przestrzeń zdarzeń elementarnych jest skończona i
+składa się z <span class="math inline">\(|\Omega| = 36\)</span> elementów.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-2" class="example"><strong>Przykład 2.2  </strong></span>Tym razem rzucamy monetą do momentu otrzymania orła.
+Przestrzeń zdarzeń elementarnych <span class="math inline">\(\Omega\)</span> składa się ze skończonych ciągów <span class="math inline">\(\{O, R\}\)</span>
+kończących się znakiem <span class="math inline">\(O\)</span> i jednego nieskończonego ciągu <span class="math inline">\(R\)</span>. Dokładniej
+<span class="math display">\[\begin{align*}
+\Omega &amp; = \{R\}^{\mathbb{N}} \cup \bigcup_{k=0}^\infty\{R \}^k \times \{O\}
+\\ &amp; = \{ RRRR \ldots\} \cup \{ O, RO, RRO, \ldots  \}.
+\end{align*}\]</span>
+Tutaj niekończony ciąg <span class="math inline">\(RRR\ldots\)</span> opisuje scenariusz, w którym nigdy nie wyrzucimy orła.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-3" class="example"><strong>Przykład 2.3  </strong></span>Losujemy liczbę z przedziału <span class="math inline">\([0,1]\)</span>. Wówczas wynikiem naszego losowania jest dokładnie
+otrzymana liczba. Stąd <span class="math inline">\(\Omega=[0,1]\)</span>.</p>
+</div>
+<p>W większości eksperymentów losowych nie interesują nas poszczególne jego wyniki,
+lecz pewien ich wspólny aspekt. Dla przykładu w rzucie kością sześcienną istotna
+dla nas może być tylko parzystość uzyskanego wyniku.
+Innymi słowy bardziej od poszczególnych zdarzeń elementarnych interesować nas będę ich wyróżnione
+zbiory <span class="math inline">\(A\subset \Omega\)</span>.
+Te interesujące nas zbiory nazywać będziemy <em>zdarzeniami</em> i będziemy
+oznaczać przez
+<span class="math inline">\(A,B,C\)</span> itd.
+Dla określonego zbioru zdarzeń elementarnych <span class="math inline">\(\Omega\)</span>
+chcemy określić prawdopodobieństwo (miarę) <span class="math inline">\(\mathbb{P}\)</span>.
+Jeżeli <span class="math inline">\(\Omega\)</span> jest zbiorem skończonym lub przeliczalnym,
+to zazwyczaj możemy przypisać prawdopodobieństwo (zmierzyć) dowolny podzbiór
+<span class="math inline">\(\Omega\)</span>, a więc dowolny element Wówczas przyjmuje się
+<span class="math inline">\(2^\Omega\)</span>, rodziny wszystkich podzbiorów <span class="math inline">\(\Omega\)</span>.
+Jeżeli <span class="math inline">\(\Omega\)</span> jest zbiorem nieprzeliczalnym, to <span class="math inline">\(2^\Omega\)</span> jest zbyt duże
+i pojawiają się problemy ze zdefiniowaniem na <span class="math inline">\(\Omega\)</span> prawdopodobieństwa.
+Jesteśmy zatem zmuszeni do ograniczenia się do pewnej
+szczególnej rodziny <span class="math inline">\(\mathcal{F} \subseteq 2^\Omega\)</span> zbiorów, dla których
+jesteśmy w stanie określić prawdopodobieństwo.
+Rodzina <span class="math inline">\(\mathcal{F}\)</span> powinna być zamknięta na wykonywanie podstawowych operacji na zbiorach.
+Okazuje się, że należy założyć, że <span class="math inline">\(\mathcal{F}\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem.</p>
+<div class="definition">
+<p><span id="def:1-zdarzenie" class="definition"><strong>Definicja 2.1  </strong></span>Rodzinę <span class="math inline">\(\mathcal{F}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <span class="math inline">\(\sigma\)</span>-ciałem, jeżeli</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\emptyset\in \mathcal{F}\)</span>;</li>
+<li>jeżeli <span class="math inline">\(A\in \mathcal{F}\)</span>, to <span class="math inline">\(A^c\in \mathcal{F}\)</span>;</li>
+<li>jeżeli <span class="math inline">\(A_1,A_2,\ldots\in \mathcal{F}\)</span>, to <span class="math inline">\(\bigcup_{i=1}^\infty A_i \in \mathcal{F}\)</span>.</li>
+</ol>
+<p>Parę <span class="math inline">\((\Omega,\mathcal{F})\)</span> nazywamy <em>przestrzenią mierzalną</em>. Elementy <span class="math inline">\(\mathcal{F}\)</span>
+nazywamy <em>zdarzeniami</em>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-4" class="example"><strong>Przykład 2.4  </strong></span>Wróćmy do rzutu parą kości, gdzie przestrzenią zdarzeń elementarnych jest <span class="math inline">\(\Omega = [6]^2\)</span>.
+Wówczas zdarzeniem jest
+<span class="math display">\[\begin{align*}
+A &amp; = \{ \mbox{suma oczek jest równa 7} \} \\
+&amp; = \{ (1,6), (2,5),  \ldots , (6,1)  \} \subseteq \Omega.
+\end{align*}\]</span>
+Natomiast zbiór
+<span class="math display">\[
+\{ (1,1), (2,2) , \ldots , (6,6)\}
+\]</span>
+jest zdarzeniem <span class="math inline">\(\{\mbox{wypadł dublet}\}\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-5" class="example"><strong>Przykład 2.5  </strong></span>Alex układa swoją dwudziestosześciotomową encyklopedię na półce.
+Eksperyment polega na umieszczeniu poszczególnych tomów encyklopedii w losowej kolejności.
+Wtedy zbiór zdarzeń elementarnych możemy utożsamić ze zbiorem permutacji. Dla <span class="math inline">\(n \in \mathbb{N}\)</span>
+definiujemy
+<span class="math display">\[\begin{equation*}
+    S_{n} = \left\{ \pi \colon [n] \to [n]\: : \: \mbox{$\pi$ jest $1-1$ i ''na''} \right\}.
+        \end{equation*}\]</span>
+Każdy element <span class="math inline">\(\omega \in S_n\)</span> możemy utożsamić z macierzą
+<span class="math display">\[\begin{equation*}
+\omega = \left( \begin{array}{ccccc}
+1 &amp; 2 &amp; 3 &amp; \ldots &amp; n\\
+\omega(1) &amp; \omega(2) &amp; \omega(3) &amp; \ldots &amp; \omega(n) \end{array} \right),
+\end{equation*}\]</span>
+gdzie <span class="math inline">\(\omega(1), \omega(2), \ldots , \omega(n)\)</span> są parami różnymi liczbami ze zbioru
+<span class="math inline">\([n]=\{1,2,\ldots n\}\)</span>.
+Wówczas w naszym przykładzie <span class="math inline">\(\Omega=S_{26}\)</span>.
+Przykładowo ułożenie tomów w kolejności alfabetycznej odpowiada permutacji
+identycznościowej <span class="math inline">\({\rm id} \in \Omega\)</span> czyli takiej, że<br><span class="math inline">\({\rm id}(i)=i\)</span> dla <span class="math inline">\(i\in [26]\)</span>.
+Innymi słowy
+<span class="math display">\[\begin{equation*}
+{\rm id} =
+\left( \begin{array}{ccccc} 1 &amp; 2 &amp; 3 &amp; \ldots &amp; n\\ 1 &amp; 2 &amp; 3 &amp; \ldots &amp; n \end{array} \right).
+\end{equation*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-6" class="example"><strong>Przykład 2.6  </strong></span>Andrzej układa sagę o Wiedźminie na półce.
+Wówczas tomy możemy ponumerować liczbami <span class="math inline">\(1,2,3,4,5\)</span> według daty wydania.
+Zbiorem zdarzeń elementarnych jest zatem <span class="math inline">\(\Omega = S_5\)</span>.
+Rozważmy zdarzenie <span class="math inline">\(A\)</span> polegające na tym, że
+pierwsze dwa tomy ułożone są chronologicznie.
+Wówczas <span class="math inline">\(A\)</span> składa się z permutacji o reprezentacji
+<span class="math display">\[\begin{equation*}
+\left( \begin{array}{ccccc} 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5\\ 1 &amp; 2 &amp; * &amp; * &amp; * \end{array} \right).
+\end{equation*}\]</span></p>
+</div>
+<p>Wprowadzone przez nas Definicja <a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html#def:1-zdarzenie">2.1</a> zdarzenia jest niezwykle pojemna.
+W skutek czego jeżeli <span class="math inline">\(A_1, A_2 \ldots\)</span> jest ciągiem zdarzeń, czyli dla każdego <span class="math inline">\(k \in \mathbb{N}\)</span>,
+<span class="math inline">\(A_k\)</span> jest zdarzeniem, to zdarzeniem jest również <span class="math inline">\(\bigcup_{k=1}^{\infty} A_k\)</span>
+oraz <span class="math inline">\(\bigcap_{k=1}^\infty A_k\)</span>.
+Dodatkowo, jeżeli <span class="math inline">\(A\)</span> jest zdarzeniem, to jest nie również
+<em>zdarzenie przeciwne do zdarzenia <span class="math inline">\(A\)</span></em>, zadane wzorem
+<span class="math display">\[
+    A^c = \Omega \setminus A.
+\]</span>
+Zdarzenie <span class="math inline">\(A^c\)</span> polega na tym, że nie zachodzi zdarzenie <span class="math inline">\(A\)</span>.
+Jest jeszcze jedna relacja teoriomnogościowa, z której będziemy korzystać.
+Powiemy, że <em>zdarzenie <span class="math inline">\(B\)</span> pociąga zdarzenie <span class="math inline">\(A\)</span></em>, jeżeli <span class="math inline">\(B \subseteq A\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-7" class="example"><strong>Przykład 2.7  </strong></span>Powiedzmy, że rzucamy tylko jedną kością.
+Wówczas <span class="math inline">\(\Omega = D = \{ 1, 2, \ldots , 6\}\)</span>. Niech
+<span class="math display">\[\begin{align*}
+A &amp; = \{\mbox{wypadła liczba parzysta} \} \\ &amp; = \{ 2, 4, 6\}.
+\end{align*}\]</span>
+Zdarzenie przeciwne do zdarzenia <span class="math inline">\(A\)</span> to
+<span class="math display">\[\begin{align*}
+A^c &amp; = \{\mbox{wypadła liczba nieparzysta} \} \\ &amp;= \{ 1, 3, 5\}.
+\end{align*}\]</span>
+Z kolei zdarzenie
+<span class="math display">\[
+B = \{\mbox{wypadła szóstka} \} = \{ 6\}
+\]</span>
+pociąga zdarzenie <span class="math inline">\(A\)</span>, czyli <span class="math inline">\(B \subseteq A\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-8" class="example"><strong>Przykład 2.8  </strong></span>Losujemy punkt z przedziału <span class="math inline">\([0,1]\)</span>. Tak jak przyjęliśmy wcześniej <span class="math inline">\(\Omega=[0,1]\)</span>.
+W przyszłości będziemy chcieli określić prawdopodobieństwo, że wylosowany punkt wpada do
+ustalonego przedziału. Przedziały postaci <span class="math inline">\((a,b)\)</span> będą więc dla nas zdarzeniami.
+Z kursu teorii miary wiemy, że wówczas będziemy w stanie zmierzyć każdy zbiór, który jest
+rezultatem przeliczalnych operacji mnogościowych na przedziałach otwartych. Oznacza to, że
+<span class="math inline">\(\mathcal{F} =\mathcal{B}or([0,1]\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem zbiorów borelowskich na <span class="math inline">\([0,1]\)</span>,
+czyli najmniejszym <span class="math inline">\(\sigma\)</span>-ciałem zawierającym wszystkie zbiory otwarte.
+Pamiętajmy, że <span class="math inline">\(\mathcal{B}or([0,1]) \neq 2^{[0,1]}\)</span>. Istnieją zatem <span class="math inline">\(A \subseteq \Omega\)</span> takie, że
+<span class="math inline">\(A \notin \mathcal{F}\)</span>. Są to zbiory, których nie będziemy w stanie zmierzyć. Dla zdarzenia
+<span class="math inline">\(A \in \mathcal{F}\)</span> mamy
+<span class="math display">\[\begin{equation*}
+    A = \{ \omega \in \Omega \: : \: \omega \in A \}.
+\end{equation*}\]</span>
+Jest to więc zdarzenie polegające na tym, że wylosowana liczba <span class="math inline">\(\omega\)</span> pochodzi ze zboru <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+<div id="miara-probabilistyczna" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> Miara probabilistyczna<a class="anchor" aria-label="anchor" href="#miara-probabilistyczna"><i class="fas fa-link"></i></a>
+</h2>
+<p>Jesteśmy przyzwyczajeni do intuicyjnego mylenia o prawdopodobieństwie.
+Dla przykładu w eksperymencie polegającym na rzucie dwoma monetami od razu napiszemy, że
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}\left[ \mbox{na obu kościach wypadnie $1$} \right] =
+    \frac 1{36}.
+\end{equation*}\]</span>
+W pewnym sensie o liczbie <span class="math inline">\(\mathbb{P}[A]\)</span> myślimy jak o prawdopodobieństwie zdarzenia <span class="math inline">\(A\)</span>
+opierając się na słownym opisie zdarzenia <span class="math inline">\(A\)</span>. Nie ma w tym nic złego,
+lecz w wielu przypadkach wygodniej jest myśleć o zdarzeniu <span class="math inline">\(A\)</span> jak o podzbiorze <span class="math inline">\(\Omega\)</span> a
+o liczbie <span class="math inline">\(\mathbb{P}[A]\)</span> jak o masie zbioru <span class="math inline">\(A\)</span>.</p>
+<div class="definition">
+<p><span id="def:2-defprob" class="definition"><strong>Definicja 2.2  </strong></span>Niech <span class="math inline">\((\Omega,\mathcal{F})\)</span> będzie przestrzenią mierzalną.
+Funkcję <span class="math inline">\(\mathbb{P}:\mathcal{F}\to [0,1]\)</span> nazywamy <em>prawdopodobieństwem</em>
+(miarą probabilistyczną) jeżeli</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\mathbb{P}[\Omega] = 1\)</span>;</li>
+<li>
+<span class="math inline">\(\mathbb{P}\left[\bigcup_{i=1}^\infty A_i\right] = \sum_{i=1}^\infty \mathbb{P}[A_i]\)</span>
+dla dowolnych parami rozłącznych zdarzeż <span class="math inline">\(A_1,A_2,\ldots \in \mathcal{F}\)</span>.</li>
+</ol>
+<p>Trójkę <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> nazywamy <em>przestrzenią probabilistyczną</em>.</p>
+</div>
+<p>Aksjomatyzacja rachunku prawdopodobieństwa a była jednym z problemów Hilberta.
+Powyższa definicja została podana przez Kołmogorowa w 1933 roku i zapoczątkowała
+współczesny rachunek prawdopodobieństwa.
+Wcześniej badano głównie dyskretne przestrzenie probabilistyczne
+(np. w celu zrozumienia gier hazardowych).
+Z biegiem czasu, na przełomie dziewiętnastego i
+dwudziestego wieku, zaczęto badać jednak znacznie bardziej skomplikowane modele
+(np. Pochodzące z fizyki statystycznej) i brakowało matematycznych narządzi
+do ich precyzyjnego opisu. Okazało się, że powyższa definicja jest właściwym punktem wyjścia.
+Należy jednak mieć świadomość, że np. pokazanie istnienia miary probabilistycznej
+jest nietrywialne (odpowiednia konstrukcja pokazywana jest podczas kursu z teorii miary i bazuje na tw. Carath'eodory’ego).</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-9" class="example"><strong>Przykład 2.9  (Prawdopodobieństwo klasyczne) </strong></span>Niech <span class="math inline">\(\Omega\)</span>
+będzie skończonym zbiorem, <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>.
+Wówczas wystarczy zdefiniować prawdopodobieństwo na zdarzeniach elementarnych
+(zbiorach jednoelementowych). Zazwyczaj zakłada się, że są one jednakowo prawdopodobne,
+co prowadzi do
+<span class="math display">\[
+    \mathbb{P}[\{\omega\}] = \frac 1{|\Omega|},
+\]</span>
+gdzie <span class="math inline">\(|\Omega|\)</span> oznacza liczbę elementów zbioru <span class="math inline">\(\Omega\)</span>.
+Wówczas dla dowolnego <span class="math inline">\(A\subseteq \Omega\)</span>:
+<span class="math display" id="eq:2-klasyczne">\[\begin{equation}
+\mathbb{P}[A] = \frac{|A|}{|\Omega|}.
+\tag{2.1}
+\end{equation}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-10" class="example"><strong>Przykład 2.10  </strong></span>Rzucamy trzykrotnie symetryczną monetą. Interesuje nas prawdopodobieństwo, że
+dokładnie <span class="math inline">\(2\)</span> razy wypadła reszka.
+Mamy
+<span class="math display">\[\begin{multline*}
+  \Omega=\left\{ (O,O,O), (O,O,R), (O,R,O), (R,O,O),\right. \\
+  \left. (O,R,R), (R,O,R), (R,R,O), (R,R,R)   \right\}
+\end{multline*}\]</span>
+oraz <span class="math inline">\(\mathcal{F}= 2^{\Omega}\)</span>.
+Skoro moneta jest symetryczna, to każdy wynik jest jednakowo prawdopodobny.
+Za miarę probabilistyczną <span class="math inline">\(\mathbb{P}\)</span>
+przyjmujemy zatem prawdopodobieństwo klasyczne dane wzorem <a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html#eq:2-klasyczne">(2.1)</a>.
+Interesuje nas prawdopodobieństwo zdarzenia
+<span class="math display">\[\begin{equation*}
+  A = \left\{  (O,R,R), (R,O,R), (R,R,O)   \right\}.
+\end{equation*}\]</span>
+Skoro <span class="math inline">\(A\)</span> jest trójelementowy, to <span class="math inline">\(\mathbb{P}(A) = 3/8\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-11" class="example"><strong>Przykład 2.11  </strong></span>Jeśli rzucamy kością sześcienną, to zbiorem zdarzeń elementarnych jest
+<span class="math inline">\(\Omega =[6]= \{ 1, 2, \ldots , 6\}\)</span>. Jeżeli kość jest dobrze wyważona, to
+do opisu tego doświadczenia użyjemy prawdopodobieństwa klasycznego <span class="math inline">\(\mathbb{P}_1\)</span> takiego, że
+<span class="math display">\[
+\mathbb{P}_0[\{ 1 \}] = \mathbb{P}_0[\{ 2 \}] = \ldots = \mathbb{P}_0[\{ 6\}] = 1/6.
+\]</span>
+Możemy też zakładać, że jedna kość jest niewyważona, przykładowo
+<span class="math display">\[\begin{align*}
+\mathbb{P}_1[\{2\}] &amp; = \mathbb{P}_1[\{6\}]= 1/4 \\
+\mathbb{P}_1[\{ 1\}] &amp; = \mathbb{P}_1[\{ 3\}] = \mathbb{P}_1[\{4\}] = \mathbb{P}_1[\{ 5 \}] = 1/8.
+\end{align*}\]</span>
+Miary <span class="math inline">\(\mathbb{P}_0\)</span> i <span class="math inline">\(\mathbb{P}_1\)</span> są różne i te same zdarzenia będą miały względem nich
+różne prawdopodobieństwa. Dla przykładu dla zdarzenia
+<span class="math display">\[
+A = \{\mbox{wypadła liczba parzysta}\} = \{2, 4, 6\}
+\]</span>
+otrzymujemy <span class="math inline">\(\mathbb{P}_0[A] = 1/3\)</span> oraz <span class="math inline">\(\mathbb{P}_1[A]=5/8\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-12" class="example"><strong>Przykład 2.12  </strong></span>Załóżmy, że <span class="math inline">\(\Omega = \{\omega_1,\omega_2,\ldots,\}\)</span>
+jest zbiorem przeliczalnym i niech <span class="math inline">\(p_1,p_2,\ldots\)</span> będą
+liczbami nieujemnymi o sumie <span class="math inline">\(1\)</span>.
+Wtedy wybór <span class="math inline">\(\mathcal{F}=2^\Omega\)</span> oraz <span class="math inline">\(\mathbb{P}[\{\omega_i\}] = p_i\)</span> dla <span class="math inline">\(i\in\mathbb{N}\)</span>
+jednoznacznie definiuje miarę probabilistyczną. Mianowicie dla każdego
+<span class="math inline">\(A \in \mathcal{F}\)</span> mamy
+<span class="math display" id="eq:2-count">\[\begin{equation}
+  \mathbb{P}[A] = \sum_{i: \omega_i\in A} p_i = \sum_i p_i {\bf 1}_A(\omega_i).
+  \tag{2.2}
+  \end{equation}\]</span>
+Tutaj <span class="math inline">\({\bf 1}_A\)</span> jest indykatorem zbioru <span class="math inline">\(A\)</span> zadanym przez
+<span class="math display">\[\begin{equation*}
+{\bf 1}_A(\omega) = \left\{ \begin{array}{cc} 1 &amp; \omega \in A \\ 0 &amp; \omega\notin A \end{array}
+\right. .
+\end{equation*}\]</span>
+Na tym przykładzie widać, że o prawdopodobieństwie <span class="math inline">\(\mathbb{P}\)</span> można (a czasami nawet trzeba)
+myśleć jak o masie. Każdy z punktów <span class="math inline">\(\Omega\)</span> ma pewną masę (punkt <span class="math inline">\(\omega_k\)</span> ma masę <span class="math inline">\(p_k\)</span>).
+Wówczas <a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html#eq:2-count">(2.2)</a> jest po prostu zliczeniem masy wszystkich punktów znajdujących się
+w zbiorze <span class="math inline">\(A\)</span>.</p>
+</div>
+<p>Omówione do tej pory przykłady dotyczą skończonych bądź przeliczalnych przestrzeni probabilistycznych.
+Zdefiniowanie na nich prawdopodobieństwa jest stosunkowo łatwa, ponieważ można to zrobić
+dla każdego punktu z osobna. Wprowadzona przez nas Definicja <a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html#def:2-defprob">2.2</a>
+jest na tyle pojemna, aby dopuścić przypadki o wiele większych przestrzeni. Z takimi
+przestrzeniami będziemy się spotykali niejednokrotnie w trakcie wykładu. Najprostszą z
+nich jest odcinek jednostkowy.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-13" class="example"><strong>Przykład 2.13  (Wybór losowego punktu z odcinka [0,1]) </strong></span>Powiedzmy, że chcemy zdefiniować przestrzeń probabilistyczną <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+opisującą losowanie punktu z odcinka <span class="math inline">\([0,1]\)</span>. Wówczas możemy przyjąć
+<span class="math inline">\(\Omega=[0,1]\)</span> oraz <span class="math inline">\(\mathcal{F}=\mathcal{B}or[0,1]\)</span> rodzinę zbiorów borelowskich <span class="math inline">\([0,1]\)</span>.
+Jest to najmniejsze <span class="math inline">\(\sigma\)</span>-ciało podzbiorów <span class="math inline">\([0,1]\)</span> zawierające wszystkie otwarte podzbiory <span class="math inline">\([0,1]\)</span>.
+Chcemy na <span class="math inline">\((\Omega, \mathcal{F})\)</span> wprowadzić takie prawdopodobieństwo <span class="math inline">\(\mathbb{P}\)</span> aby (luźno mówiąc)
+<em>wylosowanie każdego punktu było jednakowo prawdopodobne</em>. Formalnie nie można
+tego zrobić wprost. Dokładniej nie jest możliwe zdefiniowanie prawdopodobieństwa tak,
+aby punkty należące do odcinka <span class="math inline">\([0,1]\)</span> miały takie samo, niezerowe prawdopodobieństwo.
+Właściwe jest pytanie o wylosowanie zbioru (borelowskiego).
+Szukamy prawdopodobieństwa takiego aby prawdopodobieństwo wylosowania (miara zbioru) postaci
+<span class="math inline">\([a, a+\epsilon)\)</span> nie zależała od <span class="math inline">\(a \in [0,1-\epsilon)\)</span> (lub równoważnie prawdopodobieństwo było
+niezmiennicze na przesunięcia).
+Jedynym wyborem jest <span class="math inline">\(\mathbb{P}\)</span> będące miarą Lebesgue’a na <span class="math inline">\([0,1]\)</span>.
+Jak widzimy na symulacji poniżej, rozrzut punktów w takim modelu
+rzeczywiście jest jednostajny na całym odcinku.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/unif1.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Powyżej widzimy symulacje <span class="math inline">\(100\)</span> punktów wylosowanych z <span class="math inline">\([0,1]\)</span>
+w sposób jednostajny.
+Zauważmy, że wówczas dla każdego <span class="math inline">\(x\in [0,1]\)</span>, <span class="math inline">\(\mathbb{P}[\{x\}] = 0\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-14" class="example"><strong>Przykład 2.14  </strong></span>Możemy powtórzyć poprzedni przykład dla równoramiennego trójkąta prostokątnego
+<span class="math inline">\(T \subseteq \mathbb{R}^2\)</span>. Wówczas <span class="math inline">\(\Omega=T\)</span>, <span class="math inline">\(\mathcal{F}=\mathcal{B}or(T)\)</span>.
+Chcąc ponownie losować w sposób jednostajny za <span class="math inline">\(\mathbb{P}\)</span> wybierzemy
+odpowiednio unormowaną dwuwymiarową miarę Lebesgue’a (tak aby <span class="math inline">\(\mathbb{P}[\Omega]=1\)</span>).</p>
+</div>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/unif2.svg" style="display: block; margin: auto;"></div>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-15" class="example"><strong>Przykład 2.15  </strong></span>Wróćmy jeszcze na chwilę, do losowania liczb z przedziału <span class="math inline">\([0,1]\)</span>. Przypuśćmy jednak, że
+<span class="math display">\[\begin{equation*}
+\mathbb{P}[A] = 2 \int_A s \: \mathrm{d}s
+\end{equation*}\]</span>
+dla dowolnego <span class="math inline">\(A \in \mathcal{F}\)</span>.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/beta1.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Przy takim wyborze prawdopodobieństwa faworyzujemy
+punkty bliżej prawego końca odcinka. Dla <span class="math inline">\(x, \epsilon \in (0,1)\)</span> takich, że <span class="math inline">\(x+\epsilon&lt;1\)</span>
+mamy bowiem
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}[(x, x+\epsilon)] = (x+\epsilon)^2-x^2 = 2x\epsilon +\epsilon
+\end{equation*}\]</span>
+co jest rosnącą funkcją <span class="math inline">\(x\)</span>.
+Widzimy to też na poniższej symulacji.</p>
+</div>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/unif3.svg" style="display: block; margin: auto;"></div>
+</div>
+<div class="theorem">
+<p><span id="thm:2-podstawowe-wlasnosci" class="theorem"><strong>Twierdzenie 2.1  (Podstawowe własności prawdopodobieństwa) </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią
+probabilistyczną oraz <span class="math inline">\(A,B,A_1,A_2,\ldots \in\mathcal{F}\)</span>. Wtedy</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\mathbb{P}[\emptyset] = 0\)</span>.</li>
+<li>
+<span class="math inline">\(\mathbb{P}[A^c] = 1-\mathbb{P}[A]\)</span>.</li>
+<li>Jeżeli <span class="math inline">\(A\subset B\)</span>, to <span class="math inline">\(\mathbb{P}[B\setminus A] = \mathbb{P}[B] - \mathbb{P}[A]\)</span>,
+w szczególności <span class="math inline">\(\mathbb{P}[A]\le \mathbb{P}[B]\)</span>.</li>
+<li>
+<span class="math inline">\(\mathbb{P}[A\cup B] = \mathbb{P}[A] + \mathbb{P}[B] - \mathbb{P}[A\cap B]\)</span>.</li>
+<li>
+<span class="math inline">\(\mathbb{P}[\bigcup_{i=1}^\infty A_i] \le \sum_{i=1}^\infty \mathbb{P}[A_i]\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-16" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-17" class="example"><strong>Przykład 2.16  </strong></span>Romeo i Julia umówili się na spotkanie między <span class="math inline">\(12\)</span> a <span class="math inline">\(1\)</span> w nocy. Nie ustalili jednak
+dokładnej godziny spotkania. Osoba, która przyjdzie jako pierwsza może czekać co najwyżej
+<span class="math inline">\(15\)</span> minut na drugą. Jakie jest prawdopodobieństwo, że dojdzie do spotkania?
+Kładziemy <span class="math inline">\(\Omega = [0,1]^2\)</span>. Wówczas <span class="math inline">\(\omega = (x,y) \in \Omega\)</span> reprezentuje czas
+przyjścia pierwszej osoby prze <span class="math inline">\(x\)</span> i drugiej przez <span class="math inline">\(y\)</span>. <span class="math inline">\(\mathcal{F} = \mathcal{B}or([0,1]^2)\)</span>.
+Zdarzenie, że dojdzie do spotkania to
+<span class="math display">\[\begin{equation*}
+    A = \{ \omega= (x,y) \in \Omega \: : \: |x-y|\leq 1/4\}.
+\end{equation*}\]</span>
+Z reprezentacji graficznej</p>
+</div>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/romeo.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>łatwo znajdujemy prawdopodobieństwo zdarzenia przeciwnego <span class="math inline">\(\mathbb{P}[A^c] = 9/16\)</span>.
+Stąd <span class="math inline">\(\mathbb{P}[A] = 1-\mathbb{P}[A^c]=7/16\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-18" class="example"><strong>Przykład 2.17  </strong></span>Losujemy jedną z liczb <span class="math inline">\(1, 2, \ldots 1000\)</span> w taki sposób, że wylosowanie każdej z
+nich jest jednakowo prawdopodobne. Wówczas przestrzenią zdarzeń elementarnych jest
+<span class="math display">\[\begin{equation*}
+\Omega = \{ 1, 2, \ldots , 1000\}.
+\end{equation*}\]</span>
+Jakie jest prawdopodobieństwo, że wylosowana liczba dzieli się przez <span class="math inline">\(3\)</span> lub <span class="math inline">\(5\)</span>?
+Dla liczby <span class="math inline">\(p\)</span> oznaczmy zdarzenie
+<span class="math display">\[\begin{equation*}
+    D_{p} = \{ n \in [1000] \: | \: \mbox{$n$ dzieli się przez $p$} \} \subseteq \Omega.
+\end{equation*}\]</span>
+Szukamy <span class="math inline">\(\mathbb{P}[D_3\cup D_5]\)</span>. Zauważmy, że
+<span class="math display">\[\begin{equation*}
+    D_{3} = \{ 3m \: | \: 1\leq m \leq 333 \},
+\end{equation*}\]</span>
+więc <span class="math inline">\(\mathbb{P}[D_3] = 333/1000\)</span>. Podobnie <span class="math inline">\(\mathbb{P}[D_5] =1/5\)</span>.
+Skoro <span class="math inline">\(D_3 \cap D_5 = D_{15}\)</span>, to <span class="math inline">\(\mathbb{P}[D_3 \cap D_5] = 33/500\)</span>.
+Ostatecznie
+<span class="math display">\[\begin{align*}
+    \mathbb{P}[D_3 \cup D_5] &amp; = \mathbb{P}[D_3]+\mathbb{P}[D_5]-\mathbb{P}[D_3\cap D_5] \\&amp;=
+    467/1000.
+\end{align*}\]</span></p>
+</div>
+<p>Punkt 4. powyższego twierdzenia to szczególny przypadek <em>zasady włączeń i wyłączeñ</em>.
+Ten punkt można uogólnić na dowolną skończoną liczbę zbiorów. Dla trzech zbiorów mamy:
+<span class="math display">\[\begin{align*}
+\mathbb{P}[A\cup B\cup C] &amp; = \mathbb{P}[A]  +\mathbb{P}[B] +\mathbb{P}[C] + \\
+&amp; - \mathbb{P}[A\cap B] - \mathbb{P}[A\cap C] - \mathbb{P}[B\cap C]\\ &amp; + \mathbb{P}[A\cap B\cap C].
+\end{align*}\]</span></p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-19" class="theorem"><strong>Twierdzenie 2.2  (Zasada włączeń i wyłączeń) </strong></span>Niech <span class="math inline">\(n \in \mathbb{N}\)</span>. Jeżeli <span class="math inline">\(A_1,A_2,\ldots, A_n\in \mathcal{F}\)</span>, to
+<span class="math display">\[\begin{multline*}
+  \mathbb{P}[A_1\cup A_2\cup \ldots \cup A_n] = \sum_{i=1}^n\mathbb{P}[A_i]+ \\
+- \sum_{i&lt;j}\mathbb{P}[A_i\cap A_j] + \sum_{i&lt;j&lt;k}\mathbb{P}[A_i\cap A_j\cap A_k]
+  \\ + \ldots +(-1)^{n+1} \mathbb{P}[A_1\cap A_2\cap \ldots \cap A_n]
+  \end{multline*}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-20" class="proof"><em>Proof</em>. </span>Pozostawiamy jako ćwiczenie.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:2-o-ciaglosci" class="theorem"><strong>Twierdzenie 2.3  (Twierdzenie o ciągłości) </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P},\)</span> będzie przestrzenią probabilistyczną.
+Rozważmy nieskończony ciąg zdarzeń <span class="math inline">\(A_1,A_2,\ldots \in \mathcal{F}\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Jeżeli ciąg <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> jest wstępujący (tzn. <span class="math inline">\(A_1\subset A_2 \subset \ldots\)</span>)
+i <span class="math inline">\(A=\bigcup_{i=1}^\infty A_i\)</span>, to
+<span class="math display">\[
+\mathbb{P}[A] = \lim_{n\to\infty} \mathbb{P}[A_n].
+\]</span>
+</li>
+<li>Jeżeli ciąg <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> jest zstępujący
+(tzn. <span class="math inline">\(A_1\supset A_2 \supset \ldots\)</span>) i <span class="math inline">\(A=\bigcap_{i=1}^\infty A_i\)</span>, to
+<span class="math display">\[
+\mathbb{P}[A] = \lim_{n\to\infty} \mathbb{P}[A_n].
+\]</span>
+</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-21" class="proof"><em>Proof</em>. </span>Punkt 1. Niech <span class="math inline">\(B_1 = A_1\)</span>, <span class="math inline">\(B_2 = A_2\setminus A_1\)</span>, …, <span class="math inline">\(B_n = A_n\setminus A_{n-1}\)</span>,
+wtedy zdarzenia <span class="math inline">\(B_n\)</span> są rozłączne,
+<span class="math display">\[
+\bigcup_{i=1}^n B_i = A_n \quad \mbox{oraz } \quad \bigcup_{i=1}^\infty B_i =  A.
+\]</span>
+Na mocy punktu drugiego Definicji <a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html#def:2-defprob">2.2</a> otrzymujemy
+<span class="math display">\[\begin{align*}
+\mathbb{P}[A] &amp; = \mathbb{P}\left[\bigcup_{i=1}^\infty B_i\right] =
+\sum_{i=1}^\infty \mathbb{P} [ B_i ] \\&amp;= \lim_{n\to\infty} \sum_{i=1}^n \mathbb{P}[B_i]
+= \lim_{n\to\infty} \mathbb{P}[A_n].
+\end{align*}\]</span>
+Punkt 2. Niech <span class="math inline">\(C_i = A_i^c\)</span>. Wtedy rodzina zdarzeń ciąg <span class="math inline">\(\{C_n\}_{n \in \mathbb{N}}\)</span>
+jest wstępujący. Z prawa De Morgana
+<span class="math display">\[
+    \bigcup_{i=1}^\infty C_i = \bigcup_{i=1}^\infty A^c_i
+    = \left( \bigcap_{i=1}^\infty A_i \right)^c = A^c.
+\]</span>
+Korzystając zatem z udowodnionego już punktu 1 otrzmyjemu
+<span class="math display">\[\begin{multline*}
+\mathbb{P}[A] = 1 - \mathbb{P}[A^c] = 1 - \mathbb{P}[C] = \\
+1 - \lim_{n\to\infty} \mathbb{P}[C_n] = \lim_{n\to\infty}\mathbb{P}[\Omega\setminus C_n]
+= \lim_{n\to\infty} \mathbb{P}[A_n].
+\end{multline*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-22" class="example"><strong>Przykład 2.18  </strong></span>Do urny wrzucamy nieskończenie wiele kul o numerach <span class="math inline">\(1,2,\ldots\)</span> w
+następujący sposób (w każdym kroku wybieramy ustaloną opcję a), b) lub c)):</p>
+<ul>
+<li>o godz. (<span class="math inline">\(12.00 - 1\)</span> min.) wrzucamy kule <span class="math inline">\(1,2,\ldots, 10\)</span>;</li>
+<li>o godz. (<span class="math inline">\(12.00 - 1/2\)</span> min.) wyciągamy a) kulę 10; b) kulę 1; c) losową kulę,
+a następnie wrzucamy kule <span class="math inline">\(11,12,\ldots, 20\)</span>;</li>
+<li>o godz. (<span class="math inline">\(12.00 - 1/4\)</span> min.) wyciągamy a) kulę 20; b) kulę 2; c) losową kulę,
+a~następnie
+wrzucamy kule <span class="math inline">\(21,22,\ldots, 30\)</span>;</li>
+<li>…</li>
+</ul>
+<p>Ile kul będzie w urnie o godz. 12?
+Jasne jest, że jeżeli zastosujemy opcję a), to o 12 w urnie będzie nieskończenie wiele kul.
+Troszeczkę bardziej niepokojący jest fakt, że jeżeli zastosujemy opcję b) to urna będzie pusta.</p>
+<p>Rozpatrzmy przypadek c). Niech <span class="math inline">\(A_n\)</span> będzie zdarzeniem, że po <span class="math inline">\(n\)</span> krokach kula <span class="math inline">\(1\)</span>
+jest wciąż w urnie (oczywiście <span class="math inline">\(A_{n+1}\subset A_n\)</span>). Wówczas
+<span class="math display">\[
+\mathbb{P}[A_{n+1}]
+= \frac{9}{10}\cdot\frac{18}{19}\cdot\frac{27}{28}\cdot \ldots  \cdot\frac{9n}{9n+1}.
+\]</span><br>
+Chcemy obliczyć <span class="math inline">\(\mathbb{P}[\bigcap_{n=1}^{\infty}A_n]\)</span>, a więc prawdopodobieństwo,
+że kula <span class="math inline">\(1\)</span> pozostanie w urnie. Z Twierdzenia <a href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html#thm:2-o-ciaglosci">2.3</a> o ciągłości
+wynika
+<span class="math display">\[
+\mathbb{P}\bigg[\bigcap_{n=1}^{\infty}A_n\bigg]
+= \lim_{n\to\infty} \mathbb{P}[A_n]
+= \prod_{n=1}^\infty \frac{9n}{9n+1}.
+\]</span>
+Pozostaje więc policzenie powyższego iloczynu.
+W tym celu piszemy, dla ustalonej liczby <span class="math inline">\(N\)</span>,
+<span class="math display">\[\begin{align*}
+\bigg(\prod_{n=1}^\infty \frac{9n}{9n+1}\bigg)^{-1}
+&amp; = \prod_{n=1}^\infty \bigg( 1 + \frac 1{9n} \bigg)
+\\ &amp; &gt; \prod_{n=1}^N \bigg( 1 + \frac 1{9n} \bigg) \\ &amp; &gt; \frac 19 + \frac 1{18} +\ldots + \frac 1{9N}
+\\ &amp; = \frac 19 \sum_{i=1}^N \frac 1i.
+\end{align*}\]</span>
+Powyższe wyrażenie zbiega do <span class="math inline">\(\infty\)</span>, gdy <span class="math inline">\(N\to\infty\)</span>.
+Zatem szukane prawdopodobieństwo wynosi <span class="math inline">\(0\)</span>.
+Podobne obliczenia można wykonać dla kuli o dowolnym numerze.
+To pokazuje, że z prawdopodobieństwem <span class="math inline">\(1\)</span> urna o godz. 12 będzie pusta.</p>
+</div>
+<iframe src="QUIZDOWN/quiz2.html" width="100%" height="590px" style="border: none;">
+</iframe>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aksjomatyka-rachunku-prawdopodobie%C5%84stwa"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="nav-link" href="#paradoks-bertranda"><span class="header-section-number">2.1</span> Paradoks Bertranda</a></li>
+<li><a class="nav-link" href="#przestrze%C5%84-probabilistyczna"><span class="header-section-number">2.2</span> Przestrzeń probabilistyczna</a></li>
+<li><a class="nav-link" href="#miara-probabilistyczna"><span class="header-section-number">2.3</span> Miara probabilistyczna</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-02-26.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
