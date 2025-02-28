@@ -27,3 +27,19 @@
     align-items: flex-start;  /* Usunięcie wolnego miejsca na górze */
     overflow: hidden;
 }
+
+.rw-container {
+	width: 100%; /* Szerokość kontenera */
+	margin: 20px auto; /* Wyśrodkowanie na stronie */
+    text-align: center; /* Wyśrodkowanie elementów wewnątrz */
+       padding: 2px; /* Odstęp wewnętrzny */
+    background-color: #002b36; /* Tło kontenera */
+  }
+
+.input-container {
+    display: flex;
+      justify-content: center;
+         gap: 10px;
+     margin-top: 10px;
+    }
+
