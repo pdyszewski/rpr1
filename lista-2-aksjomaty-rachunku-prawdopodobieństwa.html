@@ -52,9 +52,12 @@
 <li class="book-part">Notatki</li>
 <li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
 <li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="active" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
 </ul>
 
         <div class="book-extra">
@@ -115,7 +118,7 @@ Odpowiedź
 <div id="zad2_3" class="collapse">
 <p class="text-primary">
 <span class="math inline">\(\Omega = [0,1]^4\)</span>, <span class="math inline">\(\mathcal{F} = \mathcal{B}or([0,1]^4)\)</span>, <span class="math inline">\(\mathbb{P}\)</span> jest czterowymiarową
-miarą Lebesgue’a. a. <span class="math inline">\(1/2\)</span> b. <span class="math inline">\(\pi/4\)</span> c. 1-/4 d. <span class="math inline">\(1/36\)</span>.
+miarą Lebesgue’a. a. <span class="math inline">\(1/2\)</span> b. <span class="math inline">\(\pi/4\)</span> c. <span class="math inline">\(1-\pi/4\)</span> d. <span class="math inline">\(1/36\)</span>.
 </p>
 </div>
 </li>
@@ -131,10 +134,12 @@ Odpowiedź
 <div id="zad2_4" class="collapse">
 <p class="text-primary">
 Mamy <span class="math inline">\(1 = \mathbb{P}[\Omega] \leq \mathbb{P}[A]\)</span> <span class="math inline">\(+\mathbb{P}[B]+\mathbb{P}[C] = 6 \mathbb{P}[A]\)</span>.
-Stąd <span class="math inline">\(\mathbb{P}[A]\geq 1/6\)</span>. To ograniczenie jest osiągnięte, jeżeli zbiory <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> i <span class="math inline">\(C\)</span> są rozłaczne. Z drugiej strony ze wzoru z wykładu
-<span class="math inline">\(1 = \mathbb{P}[\Omega] = 6\mathbb{P}[A]\)</span> <span class="math inline">\(-3\mathbb{P}[A\cap B]\)</span> <span class="math inline">\(+ \mathbb{P}[A\cap B\cap C]\)</span>
-<span class="math inline">\(\geq  6\mathbb{P}[A]\)</span> <span class="math inline">\(-2\mathbb{P}[A\cap B]\)</span> <span class="math inline">\(\geq 4 \mathbb{P}[A]\)</span>. Stąd <span class="math inline">\(\mathbb{P}[A]\leq 1/4\)</span>.
-Ograniczenie to jest osiągnięte kiedy <span class="math inline">\(A \subseteq B \subseteq C\)</span>.
+Stąd <span class="math inline">\(\mathbb{P}[A]\geq 1/6\)</span>. To ograniczenie jest osiągnięte, jeżeli zbiory <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> i <span class="math inline">\(C\)</span> są
+rozłączne. Z drugiej strony
+<span class="math inline">\(1 = \mathbb{P}[\Omega] = \mathbb{P}[C] + \mathbb{P}[B\setminus C]\)</span>
+<span class="math inline">\(= \mathbb{P}[C] +\mathbb{P}[B] - \mathbb{P}[B\cap C] \geq 4\mathbb{P}[A]\)</span>.
+Stąd <span class="math inline">\(\mathbb{P}[A]\leq 1/4\)</span>.
+Ograniczenie to jest osiągnięte kiedy <span class="math inline">\(A = B \cap C\)</span>.
 </p>
 </div>
 </li>
@@ -155,7 +160,7 @@ Jest to wniosek z zadania 6.
 <h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-1"><i class="fas fa-link"></i></a>
 </h2>
 <ol start="6" style="list-style-type: decimal">
-<li><p>Udowodnij nierówności Boole’a
+<li><p>Udowodnij nierówność Boole’a
 <span class="math display">\[
 \mathbb{P}\left[\bigcup_{i=1}^n A_i\right] \; \leq \; \sum_{i=1}^n \mathbb{P}[A_i].
 \]</span>
@@ -163,7 +168,7 @@ Wywnioskuj, że
 <span class="math display">\[
 \mathbb{P}\left[\bigcap_{i=1}^n A_i\right] \; \geq \; 1-  \sum_{i=1}^n \mathbb{P}\left[A_i^c\right].
 \]</span></p></li>
-<li><p>Udowodnij nierównośc Bonferroniego
+<li><p>Udowodnij nierówność Bonferroniego
 <span class="math display">\[\begin{equation*}
      \mathbb{P}\left[\bigcup_{i=1}^n A_i\right] \; \geq \;
      \sum_{i=1}^n \mathbb{P}[A_i] - \sum_{1 \leq i &lt; j \leq n} \mathbb{P}[A_i \cap A_j]
@@ -214,7 +219,7 @@ czy też nie. Pokaż, że <span class="math inline">\(\mathbb{P}\)</span> jest m
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
-<div class="empty"></div>
+<div class="next"><a href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -238,7 +243,7 @@ czy też nie. Pokaż, że <span class="math inline">\(\mathbb{P}\)</span> jest m
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-02-28.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

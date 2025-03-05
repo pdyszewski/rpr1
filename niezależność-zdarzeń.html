@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>4 Niezależność zdarzeń | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Wróćmy do przykładu polegającym na rzucie dwoma kośćmi. Wówczas przestrzenią probabilistyczną jest \(\Omega = [6]^2\) z miarą jednostajną probabilistyczną \(\mathbb{P}\) na \(\Omega\). Rozważmy...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="4 Niezależność zdarzeń | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Wróćmy do przykładu polegającym na rzucie dwoma kośćmi. Wówczas przestrzenią probabilistyczną jest \(\Omega = [6]^2\) z miarą jednostajną probabilistyczną \(\mathbb{P}\) na \(\Omega\). Rozważmy...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="4 Niezależność zdarzeń | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Wróćmy do przykładu polegającym na rzucie dwoma kośćmi. Wówczas przestrzenią probabilistyczną jest \(\Omega = [6]^2\) z miarą jednostajną probabilistyczną \(\mathbb{P}\) na \(\Omega\). Rozważmy...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="active" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="niezależność-zdarzeń" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Niezależność zdarzeń<a class="anchor" aria-label="anchor" href="#niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84"><i class="fas fa-link"></i></a>
+</h1>
+<p>Wróćmy do przykładu polegającym na rzucie dwoma kośćmi.
+Wówczas przestrzenią probabilistyczną jest <span class="math inline">\(\Omega = [6]^2\)</span> z miarą jednostajną probabilistyczną <span class="math inline">\(\mathbb{P}\)</span> na <span class="math inline">\(\Omega\)</span>.
+Rozważmy dwa zdarzenia
+<span class="math display">\[
+  A = \{ \mbox{na pierwszej kości wypadła liczba podzielna przez $3$}\}
+\]</span>
+oraz
+<span class="math display">\[
+B = \{ \mbox{na drugiej kości wypadła liczba mniejsza niż $6$}\}.
+\]</span>
+Wtedy <span class="math inline">\(\mathbb{P}[A]= 1/2\)</span> oraz <span class="math inline">\(\mathbb{P}[B]= 5/6\)</span>. Z kolei prawdopodobieństwo <span class="math inline">\(A\)</span> pod warunkiem <span class="math inline">\(B\)</span> wynosi
+<span class="math display">\[
+\mathbb{P}[A \: | \: B] = 1/2 = \mathbb{P}[A].
+\]</span>
+Innymi słowy zajście zdarzenia <span class="math inline">\(B\)</span> nie wpływa na prawdopodobieństwo zdarzenia <span class="math inline">\(A\)</span>.
+Powyższa równość może być zapisana jako
+<span class="math display">\[
+\mathbb{P}[A \cap B] = \mathbb{P}[A] \mathbb{P}[B].
+\]</span>
+Zauważmy, że powyższa równość nie wymusza założenia <span class="math inline">\(\mathbb{P}[B]&gt;0\)</span>.
+Własność ta okazuje się być bardzo użyteczna i często spotykana.</p>
+<hr>
+<div class="definition">
+<p><span id="def:unlabeled-div-35" class="definition"><strong>Definicja 4.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
+Zdarzenia <span class="math inline">\(A,B\in \mathcal{F}\)</span> nazywamy <strong>niezależnymi</strong>, gdy
+<span class="math display">\[
+  \mathbb{P}[A\cap B] = \mathbb{P}[A]\mathbb{P}[B].
+  \]</span></p>
+</div>
+<hr>
+<p>Zauważmy, że jeżeli <span class="math inline">\(\mathbb{P}[A]=0\)</span> lub <span class="math inline">\(\mathbb{P}[A]=1\)</span>, to dla każdego <span class="math inline">\(B\in \mathcal{F}\)</span>
+zdarzenia <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są niezależne.</p>
+<hr>
+<div class="example">
+<p><span id="exm:unlabeled-div-36" class="example"><strong>Przykład 4.1  </strong></span>Rzucamy kostką sześcienną. Niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że wypadnie liczba parzysta,
+a <span class="math inline">\(B\)</span> zdarzeniem, że wypadnie wypadnie liczba podzielna przez <span class="math inline">\(3\)</span>.
+Wówczas oba zdarzenia są niezależne.
+Definiujemy przestrzeń probabilistyczną: <span class="math inline">\(\Omega = [6] = \{ 1,2, \ldots 6\}\)</span>,
+<span class="math inline">\(\mathcal{F}\)</span> składa się ze wszystkich podzbiorów <span class="math inline">\(\Omega\)</span>, a <span class="math inline">\(\mathbb{P}[ \{ k \}]=1/6\)</span>.
+Wówczas <span class="math inline">\(A = \{2,4,6\}\)</span>, <span class="math inline">\(B = \{3,6\}\)</span>, <span class="math inline">\(A \cap B = \{6\}\)</span>.
+Mamy
+<span class="math display">\[\begin{equation*}
+\mathbb{P}[A\cap B] = \frac 16 = \frac 12 \cdot \frac 13 = \mathbb{P}[A]\cdot \mathbb{P}[B].
+\end{equation*}\]</span></p>
+</div>
+<hr>
+<p>Często z samego opisu zdarzeń nie wynika ich niezależność.</p>
+<hr>
+<div class="example">
+<p><span id="exm:unlabeled-div-37" class="example"><strong>Przykład 4.2  </strong></span>Wybieramy losową rodzinę posiadającą <span class="math inline">\(n\)</span> dzieci.
+Niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że w wybranej rodzinie jest co najwyżej jedna dziewczynka, a
+<span class="math inline">\(B\)</span> będzie zdarzeniem, że w wybranej rodzinie są dziewczynki i chłopcy.
+Czy zdarzenia <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są niezależne?
+<span class="math inline">\(\Omega\)</span> jest to zbiór ciągów o długości <span class="math inline">\(n\)</span> i wyrazach <span class="math inline">\(c\)</span> i <span class="math inline">\(d\)</span> (płeć dzieci uporządkowanych wg wieku).
+Wtedy <span class="math inline">\(|\Omega| = 2^n\)</span>. Przyjmujemy, że każdy ciąg jest jednakowo prawdopodobny.
+Mamy
+<span class="math inline">\(|A| = n+1\)</span>, <span class="math inline">\(|B| = 2^n-2\)</span>, <span class="math inline">\(|A\cap B| = n\)</span> (dokładnie jedna dziewczynka). Zauważmy, że
+<span class="math display">\[
+\mathbb{P}[A]\mathbb{P}[B] = \frac{n+1}{2^n} \cdot \frac{2^n-2}{2^n}
+\]</span>
+oraz
+<span class="math display">\[
+\mathbb{P}[A\cap B] = \frac{n}{2^n}.
+\]</span>
+Zdarzenia <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> będą niezależne wtedy i tylko wtedy, gdy
+<span class="math display">\[
+1+n = 2^{n-1}.
+\]</span>
+co ma miejsce jedynie dla <span class="math inline">\(n=3\)</span>.
+W tym przypadku powody niezależności są czysto algebraiczne.</p>
+</div>
+<hr>
+<div class="definition">
+<p><span id="def:unlabeled-div-38" class="definition"><strong>Definicja 4.2  </strong></span>Zdarzenia <span class="math inline">\(A_1,\ldots,A_n\in \mathcal{F}\)</span> nazywamy <strong>niezależnymi</strong>, gdy
+<span class="math display">\[
+  \mathbb{P}[A_{i_1} \cap A_{i_2}\cap \ldots \cap A_{i_k}] = \mathbb{P}[A_{i_1}]\cdot \ldots \cdot \mathbb{P}[A_{i_k}]
+  \]</span>
+dla każdego ciągu <span class="math inline">\(1\le i_1 &lt; i_2 &lt;\cdots &lt; i_k \le n\)</span>, <span class="math inline">\(k=2,3,\ldots, n\)</span>.</p>
+</div>
+<hr>
+<div class="definition">
+<p><span id="def:unlabeled-div-39" class="definition"><strong>Definicja 4.3  </strong></span>Zdarzenia <span class="math inline">\(A_1,\ldots,A_n\in \mathcal{F}\)</span> nazywamy <em>niezależnymi parami</em>, gdy dla dowolnych <span class="math inline">\(i\not=j\)</span>
+zdarzenia <span class="math inline">\(A_i\)</span> i <span class="math inline">\(A_j\)</span> są niezależne</p>
+</div>
+<hr>
+<p>Jeżeli zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne, to są niezależne parami. Odwrotna implikacja nie jest jednak prawdziwa.</p>
+<hr>
+<div class="example">
+<p><span id="exm:unlabeled-div-40" class="example"><strong>Przykład 4.3  </strong></span>Rzucamy 2 razy kostką. Oznaczmy</p>
+<ul>
+<li>
+<span class="math inline">\(A\)</span> - za pierwszym razem wypadła parzysta liczba oczek;</li>
+<li>
+<span class="math inline">\(B\)</span> - za drugim razem wypadła parzysta liczba oczek;</li>
+<li>
+<span class="math inline">\(C\)</span> - suma oczek jest parzysta;</li>
+</ul>
+<p>Wówczas zdarzania <span class="math inline">\(A,B,C\)</span> są niezależne parami, ale nie są niezależne. Rzeczywiście, mamy
+<span class="math inline">\(A\cap B = A\cap C = B \cap C\)</span> i <span class="math inline">\(A\cap B \cap C = A\cap B\)</span>. Stąd</p>
+<ul>
+<li><span class="math inline">\(\mathbb{P}[A] = 1/2\)</span></li>
+<li><span class="math inline">\(\mathbb{P}[B] = 1/2\)</span></li>
+<li><span class="math inline">\(\mathbb{P}[C] = 1/2\)</span></li>
+<li>
+<span class="math inline">\(\mathbb{P}[A\cap B] = \mathbb{P}[A\cap C]\)</span> <span class="math inline">\(= \mathbb{P}[C\cap B]\)</span> <span class="math inline">\(=\mathbb{P}[A\cap B\cap C]\)</span> <span class="math inline">\(=1/4\)</span>
+</li>
+</ul>
+</div>
+<hr>
+<p>Zbadanie niezależności <span class="math inline">\(n\)</span> zdarzeń wymaga
+sprawdzenia <span class="math inline">\({n\choose 2}+ {n\choose 3} +\ldots + {n\choose n} = 2^n-n-1\)</span> równań.
+Chcemy badać ciągi niezależnych doświadczeń (może być ich nieskończenie wiele).</p>
+<div id="niezależne-sigma-ciała" class="section level2 unnumbered">
+<h2>Niezależne <span class="math inline">\(\sigma\)</span>-ciała<a class="anchor" aria-label="anchor" href="#niezale%C5%BCne-sigma-cia%C5%82a"><i class="fas fa-link"></i></a>
+</h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-41" class="definition"><strong>Definicja 4.4  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P}\)</span> będzie przestrzenią probabilistyczną
+oraz niech <span class="math inline">\(\mathcal{F}_1\)</span>, <span class="math inline">\(\mathcal{F}_2\)</span>, …, <span class="math inline">\(\mathcal{F}_n\)</span>
+będą <span class="math inline">\(\sigma\)</span>-ciałami zawartymi w <span class="math inline">\(\mathcal{F}\)</span>.
+Mówimy, że <span class="math inline">\(\sigma\)</span>-ciała te
+są <strong>niezależne</strong> jeżeli dla dowolnych <span class="math inline">\(A_1\in \mathcal{F}_1\)</span>, …, <span class="math inline">\(A_n\in \mathcal{F}_n\)</span>
+zachodzi warunek
+<span class="math display">\[
+\mathbb{P}[A_1\cap A_2\cap \ldots \cap A_n] = \mathbb{P}[A_1]\cdot \ldots \cdot \mathbb{P}[A_n].
+\]</span></p>
+</div>
+<hr>
+<p>Równoważnie (zadanie) <span class="math inline">\(\sigma\)</span>-ciała <span class="math inline">\(\mathcal{F}_1\)</span>, <span class="math inline">\(\mathcal{F}_2\)</span>, …, <span class="math inline">\(\mathcal{F}_n\)</span>
+są niezależne gdy dowolne zdarzenia <span class="math inline">\(A_1\in \mathcal{F}_1\)</span>, …, <span class="math inline">\(A_n\in \mathcal{F}_n\)</span> są niezależne.</p>
+<hr>
+<div class="definition">
+<p><span id="def:unlabeled-div-42" class="definition"><strong>Definicja 4.5  </strong></span>Dowolna rodzina <span class="math inline">\(\sigma\)</span>-ciał <span class="math inline">\(\{\mathcal{F}_i\}_{i\in I}\)</span> jest niezależna,
+jeżeli każdy skończony jej podzbiór jest niezależny.</p>
+</div>
+<hr>
+<div class="example">
+<p><span id="exm:unlabeled-div-43" class="example"><strong>Przykład 4.4  </strong></span>Rzucamy <span class="math inline">\(2\)</span> razy kostką. Pokażemy, że przy jednostajnym prawdopodobieństwie, rzuty te są niezależne.
+Niech <span class="math inline">\(\Omega = \left\{ (i,j): i,j \in [6]\right\}\)</span>, <span class="math inline">\(\mathcal{F}\)</span> składa się ze wszystkich podzbiorów
+<span class="math inline">\(\Omega\)</span>, a <span class="math inline">\(\mathbb{P}\)</span>
+jest wspomnianą już jednostajną miarą probabilistyczną.<br>
+Rozważmy dwa <span class="math inline">\(\sigma\)</span>-ciała:
+<span class="math display">\[\begin{align*}
+    \mathcal{F}_1 &amp; = \left\{ A\times [6]:\ A\subset  [6]  \right\},\\
+    \mathcal{F}_2 &amp; = \left\{  [6]\times B:\ B\subset  [6]  \right\}.
+\end{align*}\]</span>
+Wówczas zdarzenie <span class="math inline">\(A \times [6] \in \mathcal{F}_1\)</span> mówi, że wynik na pierwszej kości należy do <span class="math inline">\(A\)</span> i nie niesie
+żadnej informacji o wyniku drugiej kości.</p>
+<div style="margin:2px; padding:1px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/prod1.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>To samo dotyczy zdarzeń postaci <span class="math inline">\([6]\times B \in \mathcal{F}_2\)</span>.</p>
+<div style="margin:2px; padding:1px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/prod2.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Natomiast ich przekrój <span class="math inline">\(A \times [6] \cap [6]\times B = A \times B\)</span>
+oznacza zdarzenie, że wynik na pierwszej kości należy do <span class="math inline">\(A\)</span> i wynik na drugiej kości należy do <span class="math inline">\(B\)</span>.</p>
+<div style="margin:2px; padding:1px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/prod3.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Pokażemy, że <span class="math inline">\(\sigma\)</span>-ciała <span class="math inline">\(\mathcal{F}_1\)</span> i <span class="math inline">\(\mathcal{F}_2\)</span> są niezależne.
+Weźmy dowolne zdarzenia <span class="math inline">\(A\times [6] \in \mathcal{F}_1\)</span> oraz <span class="math inline">\([6]\times B\in \mathcal{F}_2\)</span>.
+Wówczas
+<span class="math display">\[
+\mathbb{P}\left[A\times [6] \right] = \frac{|A|\cdot 6}{36} = \frac{|A|}{6}.
+\]</span>
+Podobnie
+<span class="math display">\[
+\mathbb{P}\left[ [6] \times B\right] =\frac{|B|}{6}.
+\]</span>
+Dla przekroju
+<span class="math display">\[
+\mathbb{P}\left[ A\times [6]\cap  [6] \times B  \right] = \mathbb{P}[A\times B] = \frac{|A||B|}{36}.
+\]</span></p>
+</div>
+<hr>
+<p>Powyższy przykład pokazuje, że intuicyjne pojęcie niezależności dwóch rzutów kostką zgadza się z formalną definicją.<br>
+Łatwo uogólnić go do <span class="math inline">\(n\)</span> rzutów.</p>
+<hr>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-44" class="lemma"><strong>Lemma 4.1  </strong></span>Załóżmy, że zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne.
+Wtedy <span class="math inline">\(\sigma\)</span>-ciała generowane przez <span class="math inline">\(A_i\)</span>: <span class="math inline">\(\sigma(A_1),\ldots, \sigma(A_n)\)</span>
+(przypomnijmy <span class="math inline">\(\sigma(A) = \{\emptyset, A, A^c, \Omega\}\)</span>) również są niezależne.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-45" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie</p>
+</div>
+<hr>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-46" class="corollary"><strong>Wniosek 4.1  </strong></span>Jeżeli zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne, to
+<span class="math display">\[
+\mathbb{P}\left[ \bigcup_{i=1}^n A_i   \right] =
+1 -\mathbb{P}\left[ \bigcap_{i=1}^n A_i^c   \right] = 1 -\prod_{i=1}^n (1 - \mathbb{P}[A_i]).
+\]</span></p>
+</div>
+<hr>
+<p>Rozważmy następujący problem.
+Dany jest ciąg <span class="math inline">\(n\)</span> doświadczeń, w którym wynik <span class="math inline">\(i\)</span>-tego doświadczenia jest
+opisany przestrzenią probabilistyczną <span class="math inline">\((\Omega_i,\mathcal{F}_i, \mathbb{P}_i)\)</span>.
+Jak zbudować przestrzeń probabilistyczną <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+modelującą przeprowadzenie tych <span class="math inline">\(n\)</span> doświadczeń w sposób niezależny?
+Zdefiniujmy
+<span class="math display">\[
+    \Omega = \Omega_1 \times \ldots \times \Omega_n
+\]</span>
+oraz
+<span class="math display">\[
+\mathcal{F}'_i = \left\{ \Omega_1\times \ldots \times \Omega_{i-1} \times A \times \Omega_{i+1} \times \ldots \times \Omega_n :
+A\in \mathcal{F}_i \right\}.
+\]</span>
+Wówczas <span class="math inline">\(\mathcal{F}'_i\)</span> jest kopią <span class="math inline">\(\mathcal{F}_i\)</span>.
+Weźmy <span class="math inline">\(\mathcal{F} = \sigma(\mathcal{F}'_1,\ldots,\mathcal{F}'_n)\)</span> - <span class="math inline">\(\sigma\)</span>-ciało generowane przez <span class="math inline">\(\mathcal{F}'_i\)</span>
+(wówczas <span class="math inline">\(\mathcal{F} = \mathcal{F}_1 \otimes \ldots \otimes \mathcal{F}_n\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem produktowym),
+tzn. elementami <span class="math inline">\(\mathcal{F}\)</span> są zbiory postaci <span class="math inline">\(A_1\times \ldots \times A_n\)</span>, dla <span class="math inline">\(A_i\in \mathcal{F}_i\)</span>.</p>
+<p>Chcemy, aby kolejne doświadczenia były niezależne, a więc aby <span class="math inline">\(\sigma\)</span>-ciała <span class="math inline">\(\mathcal{F}'_1,\ldots, \mathcal{F}'_n\)</span>
+były niezależne. Poszukujemy więc prawdopodobieństwa <span class="math inline">\(\mathbb{P}\)</span> takiego, że dla dowolnych
+<span class="math inline">\(A_i\in \mathcal{F}_i\)</span> zachodzi
+<span class="math display">\[\begin{multline*}
+\mathbb{P}[A_1\times\ldots \times A_n] = \\
+\mathbb{P}\left[(A_1\times \Omega_2 \times \ldots \times \Omega_n) \cap \ldots \cap (\Omega_1\times \ldots \times A_n)\right] \\
+=\prod_{i=1}^n \mathbb{P}\left[\Omega_1 \times \ldots \times A_i \times \ldots \times \Omega_n\right].
+\end{multline*}\]</span>
+Skoro chcemy, aby przestrzeń produktowa reprodukowała <span class="math inline">\(i\)</span>-ty eksperyment, to musi również
+zachodzić
+<span class="math display">\[
+\mathbb{P}[\Omega_1 \times \ldots \times A_i \times \ldots \times \Omega_n] = \mathbb{P}_i[A_i].
+\]</span>
+Upraszczając zapis szukamy prawdopodobieństwa <span class="math inline">\(\mathbb{P}\)</span> na <span class="math inline">\(\Omega\)</span> takiego, że
+<span class="math display">\[
+\mathbb{P}[A_1\times\ldots \times A_n] =\prod_{i=1}^n \mathbb{P}_i[A_i]
+\]</span>
+dla dowolnych zdarzeń <span class="math inline">\(A_1, \ldots, A_n\)</span>.
+Z teorii miary wiemy, że dokładnie jednak taka miara probabilistyczna.
+Jest to miara produktowa:
+<span class="math display">\[
+\mathbb{P} = \mathbb{P}_1 \otimes \ldots \otimes \mathbb{P}_n.
+\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-47" class="example"><strong>Przykład 4.5  </strong></span>Losujemy niezależnie dwie liczby z przedziału <span class="math inline">\([0,1]\)</span>.
+W tym przypadku mamy <span class="math inline">\(\Omega_1=\Omega_2=[0,1]\)</span>,
+<span class="math inline">\(\mathcal{F}_1=\mathcal{F}_2 = \mathcal{B}or([0,1])\)</span> oraz <span class="math inline">\(\mathbb{P}_1=\mathbb{P}_2=\lambda_1\)</span>,
+gdzie <span class="math inline">\(\lambda_1\)</span> jest jednowymiarową miarą Lebesgue’a.
+Jak reprezentować wynik tego eksperymentu na jednej przestrzeni probabilistycznej?
+Z powyższej konstrukcji <span class="math inline">\(\Omega = \Omega_1\times \Omega_2 = [0,1]^2\)</span>,
+<span class="math inline">\(\mathcal{F} = \mathcal{B}or([0,1]) \otimes \mathcal{B}or([0,1]) = \mathcal{B}or([0,1]^2)\)</span>.
+Odpowiadające prawdopodobieństwo to
+<span class="math inline">\(\mathbb{P}=\mathbb{P}_1\otimes \mathbb{P}_2 = \lambda_1\otimes \lambda_1\)</span>.
+Przypomnijmy, że jest to jedyna miara na <span class="math inline">\([0,1]^2\)</span> taka, że
+<span class="math display">\[\begin{equation*}
+    \lambda_1\otimes \lambda_1 (A\times B) = \lambda_1 (A) \lambda_1(B)
+\end{equation*}\]</span>
+dla dowolnych <span class="math inline">\(A, B \in \mathcal{B}or([0,1])\)</span>.
+Jest to dokładnie charakteryzacja dwuwymiarowej (płaskiej) miary Lebesgue’a. Innymi słowy
+<span class="math inline">\(\mathbb{P} = \lambda_1\otimes \lambda_1 = \lambda_2\)</span>.
+Reasumując, wylosowanie niezależnie dwóch liczb z przedziału <span class="math inline">\([0,1]\)</span> jest tożsame z wylosowaniem
+punktu z kwadratu jednostkowego <span class="math inline">\([0,1]^2\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:bernoulli" class="example"><strong>Przykład 4.6  (Schemat Bernoulliego) </strong></span>Wykonano <span class="math inline">\(n\)</span>-krotnie to samo doświadczenie, w którym prawdopodobieństwo sukcesu wynosi <span class="math inline">\(p\)</span>.
+Kolejne próby były niezależne.
+Wówczas prawdopodobieństwo sukcesu w dokładnie <span class="math inline">\(k\)</span> próbach wynosi
+<span class="math inline">\({n\choose k} p^k (1-p)^{n-k}\)</span>.
+Rzeczywiście, niech</p>
+<ul>
+<li>
+<span class="math inline">\(\Omega_i = \{0,1\}\)</span> (1 odpowiada sukcesowi w <span class="math inline">\(i\)</span>-tym doświadczeniu),</li>
+<li>
+<span class="math inline">\(\mathcal{F}_i = 2^{\Omega_i}\)</span>,</li>
+<li>
+<span class="math inline">\(\mathbb{P}_i[\{1\}] = p\)</span>, równoważnie <span class="math inline">\(\mathbb{P}_i[\{1\}] = p^{\omega_i}(1-p)^{1-\omega_i}\)</span>.</li>
+</ul>
+<p>Wówczas <span class="math inline">\((\Omega_i, \mathcal{F}_i, \mathbb{P}_i)\)</span>
+modeluje wynik doświadczenie w <span class="math inline">\(i\)</span>-tym kroku. Definiując jak powyżej</p>
+<ul>
+<li>
+<span class="math inline">\(\Omega = \Omega_1 \times \ldots \times \Omega_n = \{0,1\}^n\)</span>,</li>
+<li>
+<span class="math inline">\(\mathcal{F} = \mathcal{F}_1 \otimes \ldots \otimes \mathcal{F}_n\)</span>,</li>
+<li>
+<span class="math inline">\(\mathbb{P}  = \mathbb{P}_1 \otimes \ldots \otimes \mathbb{P}_n\)</span>.</li>
+</ul>
+<p>Wtedy dla <span class="math inline">\(\omega = (\omega_1,\ldots, \omega_n)\in \Omega\)</span> mamy
+<span class="math display">\[
+\mathbb{P}[\{\omega\}] = p^{\omega_1+\ldots+\omega_n}(1-p)^{n-(\omega_1+\ldots+\omega_n)}.
+\]</span>
+Niech <span class="math inline">\(A_k\)</span> oznacza zdarzenie osiągnięcia dokładnie <span class="math inline">\(k\)</span> sukcesów, tj.
+<span class="math display">\[
+A_k = \{\omega\in \Omega:\; \omega_1+\ldots+\omega_n = k\},
+\]</span>
+innymi słowy <span class="math inline">\(A_k\)</span> zawiera <span class="math inline">\(\omega\)</span> zawierające dokładnie <span class="math inline">\(k\)</span> jedynek.
+Stąd <span class="math inline">\(|A_k| = {n\choose k}\)</span> oraz
+<span class="math display">\[
+\mathbb{P}[A_k] = \sum_{\omega \in A_k} \mathbb{P}[\{\omega\}] =
+|A_k| p^k (1-p)^{n-k}= {n\choose k} p^k (1-p)^{n-k}.
+\]</span></p>
+</div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="nav-link" href="#niezale%C5%BCne-sigma-cia%C5%82a">Niezależne \(\sigma\)-ciała</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-05.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

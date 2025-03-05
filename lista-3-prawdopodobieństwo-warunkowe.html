@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lista 3: Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Zadania na ćwiczenia: 2025-03-10 Zadania do samodzielnego rozwiązania W urnie znajduje się \(20\) kul białych i \(5\) czarnych. Losujemy po jednej kuli aż do momentu, gdy wylosujemy czarną kulę....">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Lista 3: Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Zadania na ćwiczenia: 2025-03-10 Zadania do samodzielnego rozwiązania W urnie znajduje się \(20\) kul białych i \(5\) czarnych. Losujemy po jednej kuli aż do momentu, gdy wylosujemy czarną kulę....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lista 3: Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-03-10 Zadania do samodzielnego rozwiązania W urnie znajduje się \(20\) kul białych i \(5\) czarnych. Losujemy po jednej kuli aż do momentu, gdy wylosujemy czarną kulę....">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="active" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-3-prawdopodobieństwo-warunkowe" class="section level1 unnumbered">
+<h1>Lista 3: Prawdopodobieństwo warunkowe<a class="anchor" aria-label="anchor" href="#lista-3-prawdopodobie%C5%84stwo-warunkowe"><i class="fas fa-link"></i></a>
+</h1>
+<p>Zadania na ćwiczenia: 2025-03-10</p>
+<div id="zadania-do-samodzielnego-rozwiązania-2" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-2"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>W urnie znajduje się <span class="math inline">\(20\)</span> kul białych i <span class="math inline">\(5\)</span> czarnych.
+Losujemy po jednej kuli aż do momentu, gdy wylosujemy czarną kulę.
+Jakie jest prawdopodobieństwo, że wykonamy <span class="math inline">\(k\)</span> losowań,
+jeżeli
+<ol style="list-style-type: lower-alpha">
+<li>losujemy bez zwracania</li>
+<li>losujemy ze zwracaniem?
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad3_1">
+Odpowiedź
+</button>
+<div id="zad3_1" class="collapse">
+<p class="text-primary">
+bez zwracania:
+<span class="math display">\[
+\prod_{j=0}^{k-2} \frac{20-j}{25-j} \cdot \frac{5}{25-k+1}
+\]</span>
+ze zwracaniem: <span class="math inline">\((4/5)^{k-1}/5\)</span>
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li>Dwoje graczy, Maciek i Dawid, dostało po <span class="math inline">\(13\)</span> kart z <span class="math inline">\(52\)</span>.
+Maciek zobaczył przypadkowo u Dawida
+<ol style="list-style-type: lower-alpha">
+<li>asa pik,</li>
+<li>jakiegoś asa czarnego koloru,</li>
+<li>jakiegoś asa.
+Obliczyć prawdopodobieństwo, że Maciek nie ma asa.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad3_2">
+Odpowiedź
+</button>
+<div id="zad3_2" class="collapse">
+<p class="text-primary">
+a,b,c <span class="math inline">\({48 \choose 13}/{51 \choose 13}\)</span>
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li>Trzech strzelców oddało niezależnie po jednym strzale do tego samego celu.
+Prawdopodobieństwa trafień wynoszą odpowiednio <span class="math inline">\(p_1\)</span>, <span class="math inline">\(p_2\)</span>, <span class="math inline">\(p_3\)</span>.
+Wyznacz prawdopodobieństwo, że trzeci strzelec trafił, jeżeli cel został trafiony
+<ol style="list-style-type: lower-alpha">
+<li>dokładnie jednym pociskiem</li>
+<li>dokładnie dwoma pociskami;</li>
+<li>trzema pociskami.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad3_3">
+Odpowiedź
+</button>
+<div id="zad3_3" class="collapse">
+<p class="text-primary">
+<span class="math display">\[\begin{align*}
+a &amp; \frac{p_1(1-p_2)(1-p_3)}{ p_1(1-p_2)(1-p_3) + p_2(1-p_1)(1-p_3)+p_3(1-p_1)(1-p_2)}\\
+b &amp; \frac{p_1(1-p_2)p_3+(1-p_1)p_2p_3}{p_1p_2(1-p_3)+p_1(1-p_2)p_3 +(1-p_1)p_2p_3} \\ c&amp; 1
+\end{align*}\]</span>
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li>Podaj przykłady zdarzeń takich, że
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(\mathbb{P}[A|B] &lt; \mathbb{P}[A]\)</span>,</li>
+<li><span class="math inline">\(\mathbb{P}[A|B] = \mathbb{P}[A]\)</span></li>
+<li>
+<span class="math inline">\(\mathbb{P}[A|B] &gt; \mathbb{P}[A]\)</span>.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad3_4">
+Odpowiedź
+</button>
+<div id="zad3_4" class="collapse">
+<p class="text-primary">
+Rozważmy
+<span class="math inline">\(\mathbb{P}[A \cap B]=\alpha\)</span>, <span class="math inline">\(\mathbb{P}[B \cap A^c]=\beta\)</span>,
+<span class="math inline">\(\mathbb{P}[A\setminus B]=\gamma\)</span>.
+Szukamy takiego doboru liczb <span class="math inline">\(\alpha, \beta \gamma\)</span>
+takich, że <span class="math inline">\(\alpha+\beta\)</span>, <span class="math inline">\(\alpha+\gamma \leq 1\)</span> oraz
+<span class="math inline">\(\alpha /(\alpha+\beta)\)</span> było mniejsz/większe/równe <span class="math inline">\(\alpha+\gamma\)</span>.
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="zadania-na-ćwiczenia-2" class="section level2 unnumbered">
+<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-2"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="5" style="list-style-type: decimal">
+<li><p>W populacji jest <span class="math inline">\(15\%\)</span> dyslektyków.
+Jeżeli w teście diagnostycznym uczeń popełni <span class="math inline">\(6\)</span> lub więcej błędów, to zostaje uznany za dyslektyka.
+Każdy dyslektyk na pewno popełni co najmniej <span class="math inline">\(6\)</span> błędów.
+Również nie-dyslektyk może popełnić co najmniej <span class="math inline">\(6\)</span> błędów i dzieje się to z prawdopodobieństwem <span class="math inline">\(0,1\)</span>.
+Jasiu popełnił <span class="math inline">\(6\)</span> błędów.
+Oblicz prawdopodobieństwo, że jest dyslektykiem.
+Jakie jest prawdopodobieństwo, że w kolejnym teście też popełni co najmniej <span class="math inline">\(6\)</span> błędów?</p></li>
+<li><p>Dawid i Maciek grają w pokera. Maciek ma silną rękę i zaczął od <span class="math inline">\(5\)</span> dolarów.
+Prawdopodobieństwo, że Dawid ma silniejsze karty wynosi <span class="math inline">\(0,1\)</span>.
+Gdyby Dawid miał mocniejsze/ słabsze karty podbiłby stawkę z prawdopodobieństwem <span class="math inline">\(0,9 / 0,1\)</span>.
+Dawid podbił stawkę. Jakie jest prawdopodobieństwo, że ma lepsze karty?</p></li>
+<li>
+<p>W pewnej fabryce telewizorów każdy z aparatów może być wadliwy z prawdopodobieństwem <span class="math inline">\(p\)</span>.
+W fabryce są trzy stanowiska kontroli i wyprodukowany telewizor trafia na każde ze stanowisk
+z jednakowym prawdopodobieństwem. <span class="math inline">\(i\)</span>-te stanowisko wykrywa wadliwy telewizor z
+prawdopodobieństwem <span class="math inline">\(p_i\)</span> (<span class="math inline">\(i = 1, 2, 3\)</span>).
+Telewizory nie odrzucone w fabryce trafiają do hurtowni i tam poddawane są dodatkowej kontroli,
+która wykrywa wadliwy telewizor z prawdopodobieństwem <span class="math inline">\(p_0\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Obliczyć prawdopodobieństwo tego, że dany nowowyprodukowany telewizor znajdzie się w sprzedaży (tzn. przejdzie przez obie kontrole).</li>
+<li>Przypuśćmy, że telewizor jest już w sklepie. Jakie jest prawdopodobieństwo, że jest on wadliwy?</li>
+</ol>
+</li>
+<li><p>Mamy dwie urny i <span class="math inline">\(50\)</span> kul. Połowa z kul jest biała, a połowa czarna.
+Jak rozłożyć kule do urn, aby zmaksymalizować prawdopodobieństwo zdarzenia,
+że losowo wybrana kula z losowej urny jest biała (najpierw losujemy urnę,
+a potem z wybranej urny losujemy kulę)?</p></li>
+<li><p>Rzucamy trzema sześciennymi kostkami do gry.
+Następnie rzucamy ponownie tymi kostkami, na których nie wypadły “jedynki”.
+Obliczyć prawdopodobieństwo, że na wszystkich trzech kostkach będą “jedynki”.</p></li>
+<li>
+<p>Przypuśćmy, że <span class="math inline">\(1/20\)</span> wszystkich kości do gry jest sfałszowana i zawsze wypada na nich szóstka. Wybieramy losowo trzy kostki i rzucamy nimi. Oblicz</p>
+<ol style="list-style-type: lower-alpha">
+<li>prawdopodobieństwo wyrzucenia w sumie 18 oczek;</li>
+<li>prawdopodobieństwo, że co najmniej jedna kostka była sfałszowana, jeżeli wyrzuciliśmy 18 oczek;</li>
+</ol>
+</li>
+<li><p>Kierowcy dzielą się na ostrożnych (jest ich $ 95 % $ i taki kierowca powoduje w ciągu roku wypadek z prawdopodobieństwem $ 0.01 $) i piratów (jest ich $ 5 % $ i taki kierowca powoduje w ciągu roku wypadek z prawdopodobieństwem $ 0.5 $). Wybrany losowo kierowca nie spowodował wypadku w pierwszym i drugim roku. Obliczyć prawdopodobieństwo warunkowe, że spowoduje wypadek w trzecim roku.\</p></li>
+<li><p>W zabawę w ‘głuchy telefon’ gra <span class="math inline">\(n\)</span> osób: <span class="math inline">\(L_1, \ldots, L_n\)</span>. Pierwsza osoba <span class="math inline">\(L_1\)</span> otrzymuje
+informację w postaci ‘tak’ lub ‘nie’ i przekazuje ją <span class="math inline">\(L_2\)</span>. Osoba <span class="math inline">\(L_2\)</span> przekazują ją dalej, z prawdopodobieństwem <span class="math inline">\(p\)</span>
+taką samą, a z prawdopodobieństwem <span class="math inline">\(1-p\)</span> przeciwną, itd. Każdy uczestnik przekazuje kolejnemu informację,
+którą uzyskał w prawdopodobieństwem <span class="math inline">\(p\)</span> i przeciwną z prawdopodobieństwem <span class="math inline">\(1-p\)</span>.
+Oblicz prawdopodobieństwo <span class="math inline">\(q_n\)</span>, że osoba <span class="math inline">\(L_n\)</span> otrzyma prawidłową informację.
+Oblicz <span class="math inline">\(\lim_n q_n\)</span>.</p></li>
+</ol>
+</div>
+<div id="zadania-dodatkowe-2" class="section level2 unnumbered">
+<h2>Zadania dodatkowe<a class="anchor" aria-label="anchor" href="#zadania-dodatkowe-2"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="13" style="list-style-type: decimal">
+<li>Na rodzinie wszystkich podzbiorów <span class="math inline">\(\mathbb{N}\)</span> określamy miarę probabilistyczną <span class="math inline">\(\mathbb{P}_n\)</span>
+wzorem
+<span class="math display">\[
+\mathbb{P}_n(A) = \frac{|\{m:\; 1\le m\le n, m\in A \}|}{n}.
+\]</span> Mówimy, że zbiór <span class="math inline">\(A\)</span> ma gęstość
+<span class="math display">\[
+D(A) = \lim_n \mathbb{P}_n(A)
+\]</span>
+jeżeli istnieje powyższa granica. Niech <span class="math inline">\(\mathcal D\)</span> oznacza rodzinę zbiorów posiadających gęstość.
+<ol style="list-style-type: lower-alpha">
+<li>Pokaż, że <span class="math inline">\(D\)</span> jest skończenie addytywna na <span class="math inline">\(\mathcal D\)</span>, ale nie jest przeliczalnie addytywna.</li>
+<li>Czy <span class="math inline">\(\mathcal D\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem?</li>
+<li>Wykaż, że jeżeli <span class="math inline">\(x\in [0,1]\)</span>, to istnieje zbiór <span class="math inline">\(A\)</span> taki, że <span class="math inline">\(D(A) = x\)</span>.</li>
+</ol>
+</li>
+<li>Niech <span class="math inline">\(\Omega\)</span> będzie przestrzenią przeliczalnych ciągów 0-1, tj. <span class="math inline">\(\Omega = \{0,1\}^\mathbb{P}\)</span>.
+Dla <span class="math inline">\(\omega\in \Omega\)</span> oznaczmy przez <span class="math inline">\(\omega_n\)</span> wartość <span class="math inline">\(n\)</span>-tej składowej.
+Dla ustalonego ciągu <span class="math inline">\(u=(u_1,\ldots,u_n)\in \{0,1\}^n\)</span> niech
+<span class="math display">\[C_u =\{\omega:\; \omega_i = u_i; i=1,\ldots,n\}. \]</span>
+Zbiór <span class="math inline">\(C_u\)</span> nazywamy cylindrem rzędu <span class="math inline">\(n\)</span>. Każdemu takiemu zbiorowi przypisujemy
+miarę probabilistyczną~<span class="math inline">\(\mathbb{P}\)</span> równą <span class="math inline">\(2^{-n}\)</span>.
+Oznaczmy przez <span class="math inline">\(\mathcal F_0\)</span> ciało składające się ze zbioru pustego oraz skończonych
+sum rozłącznych cylindrów. W naturalny sposób definiujemy <span class="math inline">\(\mathbb{P}\)</span> na <span class="math inline">\(\mathcal F_0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Pokaż, że miara <span class="math inline">\(\mathbb P\)</span> jest przeliczalnie addytywna na <span class="math inline">\(\mathcal F_0\)</span>.</li>
+<li>Utożsamiając <span class="math inline">\(\Omega\)</span> z przedziałem (0,1] porównaj miarę <span class="math inline">\(\mathbb P\)</span> z miarą Lebesgue’a.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-3-prawdopodobie%C5%84stwo-warunkowe">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-2">Zadania do samodzielnego rozwiązania</a></li>
+<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia-2">Zadania na ćwiczenia</a></li>
+<li><a class="nav-link" href="#zadania-dodatkowe-2">Zadania dodatkowe</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-05.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
