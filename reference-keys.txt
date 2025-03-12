@@ -45,6 +45,17 @@ lem:unlabeled-div-44
 cor:unlabeled-div-46
 exm:unlabeled-div-47
 exm:bernoulli
+eq:omegan
+exm:unlabeled-div-48
+thm:kol
+cor:unlabeled-div-49
+def:unlabeled-div-51
+lem:unlabeled-div-52
+exm:unlabeled-div-54
+exm:unlabeled-div-55
+exm:unlabeled-div-56
+def:unlabeled-div-57
+exm:unlabeled-div-58
 wprowadzenie
 krzywa-dzwonowa
 deska-galtona
@@ -56,4 +67,6 @@ przestrzeń-probabilistyczna
 miara-probabilistyczna
 prawdopodobieństwo-warunkowe
 niezależność-zdarzeń
+lemat-borela-cantelliego
+zmienne-losowe-i-ich-rozkłady
 part-listy-zadań

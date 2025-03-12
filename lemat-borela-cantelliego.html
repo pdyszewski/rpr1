@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>5 Lemat Borela-Cantelliego | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Nieskończone ciągi eksperymentów W przyszłości chcemy analizować asymptotyczne zachowanie procesów losowych. W naturalny sposób potrzeba konstrukcji przestrzeni probabilistycznej, na której można...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="5 Lemat Borela-Cantelliego | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Nieskończone ciągi eksperymentów W przyszłości chcemy analizować asymptotyczne zachowanie procesów losowych. W naturalny sposób potrzeba konstrukcji przestrzeni probabilistycznej, na której można...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5 Lemat Borela-Cantelliego | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Nieskończone ciągi eksperymentów W przyszłości chcemy analizować asymptotyczne zachowanie procesów losowych. W naturalny sposób potrzeba konstrukcji przestrzeni probabilistycznej, na której można...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="active" href="lemat-borela-cantelliego.html"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego.html">Lista 4: Niezależność i lemat Borela-Cantelliego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lemat-borela-cantelliego" class="section level1" number="5">
+<h1>
+<span class="header-section-number">5</span> Lemat Borela-Cantelliego<a class="anchor" aria-label="anchor" href="#lemat-borela-cantelliego"><i class="fas fa-link"></i></a>
+</h1>
+<div id="nieskończone-ciągi-eksperymentów" class="section level2 unnumbered">
+<h2>Nieskończone ciągi eksperymentów<a class="anchor" aria-label="anchor" href="#niesko%C5%84czone-ci%C4%85gi-eksperyment%C3%B3w"><i class="fas fa-link"></i></a>
+</h2>
+<p>W przyszłości chcemy analizować asymptotyczne zachowanie procesów losowych.
+W naturalny sposób potrzeba konstrukcji przestrzeni probabilistycznej, na której
+można wykonać nieskończenie wiele eksperymentów które mogą, ale nie muszą być niezależne.
+Dla ustalenia uwagi skupimy się jednak na niezależnych eksperymentach.
+Zakładać będziemy, że mamy ciąg przestrzeni probabilistycznych, w którym
+<span class="math inline">\((\Omega_n, \mathcal{F}_n, \mathbb{P}_n)\)</span> opisuje wynik <span class="math inline">\(n\)</span>-tego eksperymentu. Zakładać będziemy, że
+<span class="math display" id="eq:omegan">\[\begin{equation}
+    \Omega_n \subseteq \mathbb{R}, \quad \mathcal{F}_n \subseteq \mathcal{B}or(\mathbb{R}).
+    \tag{5.1}
+\end{equation}\]</span>
+Chcemy udzielić odpowiedzi na pytanie jak skonstruować przestrzeń, na której
+wszystkie te eksperymenty wykonywane są niezależnie?</p>
+<p>Powiedzmy, że interesuje nas
+nieskończony ciąg rzutów monetą. Skoro ciąg <span class="math inline">\(n\)</span> rzutów modelujemy przestrzenią skończonych
+ciągów zer i jedynek <span class="math inline">\(\{0,1\}^n\)</span>, to nieskończony ciąg rzutów będziemy modelować
+przestrzenią nieskończonych ciągów zer i jedynek <span class="math inline">\(\{0,1\}^\mathbb{N}\)</span>.
+Nieskończony produkt kartezjański prowadzi do pewnych trudności technicznych
+przy sprawdzaniu warunku przeliczalnej addytywności, który nakładamy zawsze na rozważane
+prawdopodobieństwo <span class="math inline">\(\mathbb{P}\)</span>. Trudności te są oczywiście do przejścia.
+My jednak ograniczymy się do gotowych rozwiązań.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-48" class="example"><strong>Przykład 5.1  </strong></span>Zamierzamy skonstruować przestrzeń probabilistyczną na której można
+zdefiniować ciąg niezależnych zdarzeń <span class="math inline">\(\{A_n\}_{n=1}^{\infty}\)</span>
+takich, że <span class="math inline">\(\mathbb{P}[A_n]= 1/2\)</span>.
+Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P}) = ([0,1], \mathcal{B}or([0,1]), {\rm Leb})\)</span>.
+Dla każdego <span class="math inline">\(\omega\in[0,1]\)</span> przyporządkowujemy jego rozwinięcie dwójkowe:
+<span class="math display">\[
+  \omega =\sum_{n=1}^\infty \frac{\omega_n}{2^n} = 0,\omega_1\omega_2\ldots
+\]</span>
+Powyższe przedstawienie nie jest jednoznaczne np.
+<span class="math inline">\(1/2 = 0,10000\ldots = 0,01111\ldots\)</span>, aby uzyskać jednoznaczność
+wybieramy rozwinięcie zawierające nieskończenie wiele <span class="math inline">\(1\)</span>.
+Niech
+<span class="math display">\[
+A_n = \big\{ \omega \in [0,1]:\; \omega_n = 0  \big\},
+\]</span>
+czyli
+<span class="math display">\[\begin{align*}
+A_1 &amp;= [0,1/2),\\
+A_2 &amp;= [0,1/4)\cup [1/2,3/4),\\
+A_3 &amp;= [0,1/8)\cup [1/4, 3/8) \cup [1/2,5/8)\cup [3/4,7/8),\\
+A_4 &amp; = \cdots
+\end{align*}\]</span>
+Wtedy <span class="math inline">\(\mathbb{P}[A_n]=1/2\)</span>.
+Ponadto można pokazać, że zbiory <span class="math inline">\(\{A_n\}\)</span> są niezależne (zadanie).</p>
+</div>
+<p>Powyższy przykład pokazuje, że w przypadku rzutów monetą można wskazać bardzo konkretną przestrzeń,
+którą możemy modelować nieskończony ciąg eksperymentów. Jeżeli bylibyśmy
+zainteresowani rzutami kostką, to konstrukcję z powyższego przykładu można przeprowadzić
+dla rozwinięć w systemie szóstkowym.</p>
+<p>Co jeżeli nasz ciąg eksperymentów jest bardziej skomplikowany? Jeżeli w chwilach nieparzystych rzucamy
+jedną kością, a w chwilach parzystych rzucamy monetą z wyłączeniem chwil podzielnych przez 128,
+w których losujemy punkt z przedziału <span class="math inline">\([0,42]\)</span>?</p>
+<p>Potrzebne nam jest ogólne narzędzie (maszynka) do konstruowania przestrzeni probabilistycznych
+dla nieskończonych ciągów eksperymentów.</p>
+<div class="theorem">
+<p><span id="thm:kol" class="theorem"><strong>Twierdzenie 5.1  </strong></span>Załóżmy, że <span class="math inline">\(\{\mathbb{P}_n'\}_{n \in \mathbb{N}}\)</span> jest ciągiem miar probabilistycznych takim, że</p>
+<ol style="list-style-type: decimal">
+<li>dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(\mathbb{P}_n'\)</span> jest miarą na <span class="math inline">\(\mathbb{R}^n, \mathcal{B}or(\mathbb{R}^n)\)</span>.</li>
+<li>Spełniony jest warunek zgodności:
+<span class="math display">\[
+\mathbb{P}_{n+1}'0(A_1\times A_2 \times \ldots \times A_n\times \mathbb{R})
+=  \mathbb{P}_{n}'(A_1\times A_2 \times \ldots \times A_n).
+\]</span>
+</li>
+</ol>
+<p>Wówczas istnieje jedyna miara probabilistyczna <span class="math inline">\(\mathbb{P}\)</span> na
+<span class="math inline">\((\mathbb{R}^\mathbb{N}, \mathcal{B}or(\mathbb{R}^\mathbb{N}))\)</span> (<span class="math inline">\(\mathcal{B}or(\mathbb{R}^\mathbb{N})\)</span>
+jest <span class="math inline">\(\sigma\)</span>-ciałem generowanym przez skończenie wymiarowe prostokąty) taka, że
+<span class="math display">\[
+\mathbb{P}'(A_1\times A_2 \times \ldots \times A_n\times \mathbb{R}\times \ldots)
+=  \mathbb{P}_{n}'(A_1\times A_2 \times \ldots \times A_n).
+\]</span></p>
+</div>
+<p>Powyższe twierdzenie dostarcza ogólne narzędzie gwarantujące istnienie miary probabilisycznej.
+Zauważmy też, że działa ono nie tylko dla niezależnych eksperymentów.
+Jedynym warunkiem jest zgodność miar.
+W niektórych przypadkach można bezpośrednio skonstruować przestrzeń probabilistyczną.</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-49" class="corollary"><strong>Wniosek 5.1  </strong></span>Istnieje przestrzeń probabilistyczna <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+opisująca nieskończony ciąg niezależnych eksperymentów.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-50" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\((\Omega_n, \mathcal{F}_n, \mathbb{P}_n)\)</span> będzie ciagiem przestrzeni probabilistycznych
+spełniających <a href="lemat-borela-cantelliego.html#eq:omegan">(5.1)</a>.
+Wówczas
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}'_n = \mathbb{P}_1\otimes \mathbb{P}_2\otimes \cdots \otimes \mathbb{P}_n
+\end{equation*}\]</span>
+opisuje pierwsze <span class="math inline">\(n\)</span>-eksperymentów wykonanych niezależnie. Rodzina ta jest zgodna, bo
+<span class="math display">\[\begin{multline*}
+\mathbb{P}_{n+1}'[B_1\times B_2\times \cdots B_{n} \times \mathbb{R}] \\
+= \mathbb{P}_1[B_1]\mathbb{P}_2[B_2] \cdots \mathbb{P}_n[B_n]\mathbb{P}_{n+1}[\mathbb{R}] \\
+\mathbb{P}_{n}'[B_1\times B_2\times \cdots B_{n}] \\
+\end{multline*}\]</span>
+Teza wynika z Twierdzenia <a href="lemat-borela-cantelliego.html#thm:kol">5.1</a>.</p>
+</div>
+<p>Badając eksperymenty losowe polegające na nieskończonych powtórzeniach jednego
+eksperymentu. Powiedzmy, że wykonujemy nieskończenie wiele rzutów monetą.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-51" class="definition"><strong>Definicja 5.1  </strong></span>Dana jest przestrzeń probabilistyczna <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+oraz ciąg zdarzeń <span class="math inline">\(\{A_n\}_{n\in \mathbb{N}} \subseteq \mathcal{F}\)</span>.
+<strong>Granicą górną</strong> ciągu zdarzeń
+<span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> nazywamy zdarzenie
+<span class="math display">\[\begin{multline*}
+    \limsup_{n\in \mathbb{N}} A_n = \bigcap_{m=1}^\infty \bigcup_{n=m}^\infty A_n \\
+    = \left( A_1\cup A_2\cup A_3\cup\ldots \right)\cap
+\left( A_2\cup A_3\cup\ldots \right)\cap
+\left( A_3\cup\ldots \right) \cap \ldots.
+\end{multline*}\]</span></p>
+</div>
+<p>Przypomnijmy, że element należy do przekroju zbiorów wtedy i tylko wtedy, gdy należy
+do każdego z nich. Element należy do sumy zbiorów wtedy i tylko wtedy, gdy należy
+do jednego ze zbiorów. Mamy więc
+<span class="math display">\[\begin{equation*}
+\omega \in \bigcap_{m=1}^\infty\bigcup_{n=m}^{\infty }A_n \iff
+\forall m \geq 1, \: \omega \in \bigcup_{n=m}^{\infty} A_m \iff
+\forall m\geq 1, \: \exists n\geq m, \: \omega \in A_n.
+\end{equation*}\]</span>
+Reasumując <span class="math inline">\(\omega\in \limsup A_n\)</span> wtedy i tylko wtedy, gdy <span class="math inline">\(\omega\)</span>
+należy do nieskończenie wielu zbiorów <span class="math inline">\(A_i\)</span>. Innymi słowy
+<span class="math inline">\(\limsup A_n\)</span> to zdarzenie polegające na tym, że
+zaszło nieskończenie wiele spośród zdarzeń <span class="math inline">\(A_1, A_2, \ldots\)</span>.
+Dla przykładu, rzucamy nieskończenie wiele razy kostką i <span class="math inline">\(A_n\)</span> oznacza zdarzenie,
+że w <span class="math inline">\(n\)</span>-tym rzucie kostką wypadła <span class="math inline">\(6\)</span>, to <span class="math inline">\(\limsup A_n\)</span> jest zdarzeniem,
+że wypadło nieskończenie wiele <span class="math inline">\(6\)</span>.</p>
+<p>Kolejny lemat będzie niezwykle przydatnym narzędziem będzie lemat wskazujący
+warunki przy których zachodzi nieskończenie wiele zdarzeń.</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-52" class="lemma"><strong>Lemma 5.1  </strong></span>Załóżmy, że <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> jest przestrzenią probabilistyczną
+oraz niech <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\subseteq \mathcal{F}\)</span> będzie ciągiem zdarzeń.</p>
+<ul>
+<li>Jeżeli <span class="math inline">\(\sum_{n=1}^\infty \mathbb{P}[A_n] &lt; \infty\)</span>, to <span class="math display">\[\mathbb{P}[\limsup A_n] = 0,\]</span>
+tzn. z prawdopodobieństwem <span class="math inline">\(1\)</span> zachodzi jedynie skończenie wiele spośród zdarzeń <span class="math inline">\(A_n\)</span>.</li>
+<li>Jeżeli <span class="math inline">\(A_1,A_2,\ldots\)</span> są <strong>niezależnymi</strong> zdarzeniami oraz<br><span class="math inline">\(\sum_{n=1}^\infty \mathbb{P}[A_n] = \infty\)</span>, to <span class="math display">\[\mathbb{P}[\limsup A_n] =1,\]</span>
+tzn. z prawdopodobieństwem <span class="math inline">\(1\)</span> zachodzi nieskończenie wiele zdarzeń <span class="math inline">\(A_n\)</span>.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-53" class="proof"><em>Proof</em>. </span>Korzystając z ciągłości miary a następnie z jej podaddytywności otrzymujemy
+<span class="math display">\[\begin{equation*}
+\mathbb{P}[\limsup A_n] = \mathbb{P}\left[ \bigcap_{m=1}^\infty \bigcup_{n=m}^\infty A_n \right]
+=\lim_{m\to\infty} \mathbb{P}\left[ \bigcup_{n=m}^\infty A_n \right]\le
+\lim_{m\to\infty} \sum_{n=m}^\infty \mathbb{P}[A_n] = 0,
+\end{equation*}\]</span>
+gdzie ostatnia równość wynika z sumowalności szeregu.
+Aby wykazać punkt 2, wystarczy pokazać, że
+<span class="math display">\[
+  0 = \mathbb{P}\left[ (\limsup A_n)^c\right]=  
+  \mathbb{P}\left[\left( \bigcap_{m=1}^\infty \bigcup_{n=m}^\infty A_n\right)^c \right]
+=   \mathbb{P}\left[ \bigcup_{m=1}^\infty \bigcap_{n=m}^\infty A_n^c \right].
+\]</span>
+Skoro
+<span class="math display">\[\begin{equation*}
+\mathbb{P}\left[ \bigcup_{m=1}^\infty \bigcap_{n=m}^\infty A_n^c \right]
+\leq \sum_{m=1}^\infty\mathbb{P}\left[ \bigcap_{n=m}^\infty A_n^c \right],
+\end{equation*}\]</span>
+to wystarczy udowodnić, że dla każdego <span class="math inline">\(m\)</span> mamy
+<span class="math display">\[
+\mathbb{P}\left[ \bigcap_{n=m}^\infty A_n^c \right] = 0.
+\]</span>
+W tym celu piszemy (kolejno korzystamy z twierdzenia o ciągłości, niezależności zbiorów <span class="math inline">\(A_n\)</span> oraz nierówności
+<span class="math inline">\(1-x\le e^{-x}\)</span>)
+<span class="math display">\[\begin{multline*}
+\mathbb{P}\left[ \bigcap_{n=m}^\infty A_n^c \right]
+= \lim_{k\to \infty} \mathbb{P}\left[ \bigcap_{n=m}^k A_n^c \right]
+    = \lim_{k\to \infty} \prod_{n=m}^k \mathbb{P}\left[ A_n^c \right] \\
+    = \lim_{k\to \infty} \prod_{n=m}^k \left( 1 - \mathbb{P}\left[ A_n \right]\right)
+    \le \lim_{k\to \infty} e^{-\sum_{n=m}^k \mathbb{P}[ A_n]} =  e^{-\sum_{n=m}^\infty \mathbb{P}[ A_n]} = 0.
+  \end{multline*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-54" class="example"><strong>Przykład 5.2  </strong></span>Uzasadnimy, że jeżeli będziemy rzucać odpowiednio długo kostką,
+to z prawdopodobieństwem <span class="math inline">\(1\)</span> wyrzucimy dowolną liczbę szóstek.
+Niech <span class="math inline">\(\Omega = \{1,2,\ldots,6\}^\mathbb{N}\)</span>, <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>.
+Ponadto niech <span class="math inline">\(\mathbb{P}\)</span> będzie odpowiednią miarą probabilistyczną.
+Oznaczmy przez <span class="math inline">\(A_n\)</span> zdarzenie, że w rzucie o numerze <span class="math inline">\(n\)</span>, wypadło <span class="math inline">\(6\)</span>.
+Wówczas <span class="math inline">\(\mathbb{P}[A_n] = 1/6\)</span>.
+Zdarzania <span class="math inline">\(A_i\)</span> są niezależne oraz
+<span class="math display">\[
+\sum_{n=1}^\infty \mathbb{P}\left[A_n\right]  = \sum_{n=1}^\infty 1/6 = \infty.
+\]</span>
+Lemat Borella - Cantelliego pociąga
+<span class="math display">\[
+\mathbb{P}\left[\limsup  A_n\right] =1.
+\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-55" class="example"><strong>Przykład 5.3  </strong></span>Jeżeli będziemy rzucać odpowiednio długo kostką,
+to z prawdopodobieństwem <span class="math inline">\(1\)</span> wyrzucimy w kolejnych rzutach ciąg złożony z kolejnych <span class="math inline">\(10\)</span> jedynek i kolejnych <span class="math inline">\(10\)</span> szóstek.
+Niech <span class="math inline">\(\Omega = \{1,2,\ldots,6\}^\mathbb{N}\)</span>, <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>.
+Ponadto niech <span class="math inline">\(\mathbb{P}\)</span> będzie odpowiednią miarą probabilistyczną.
+Oznaczmy przez <span class="math inline">\(A_n\)</span> zdarzenie, że w rzutach o numerach <span class="math inline">\(n, n+1, \ldots, n+19\)</span> wypadnie żądany ciąg.
+Wówczas <span class="math inline">\(\mathbb{P}[A_n] = 1/6^{20}\)</span>.</p>
+<p>Zdarzania <span class="math inline">\(A_i\)</span> nie są niezależne, więc nie możemy dla nich użyć lematu Borela-Cantalliego.
+Zdefiniujmy jednak <span class="math inline">\(\widetilde A_n = A_{20n}\)</span>.
+Wówczas zbiory <span class="math inline">\(\widetilde A_n\)</span> są
+niezależne oraz
+<span class="math display">\[
+\sum_{n=1}^\infty \mathbb{P}\left[\widetilde A_n\right]  = \sum_{n=1}^\infty \frac 1{6^{20}} = \infty.
+\]</span>
+Lemat Borella - Cantelliego pociąga
+<span class="math display">\[
+\mathbb{P}\left[\limsup \widetilde A_n\right] =1,
+\]</span>
+a więc z prawdopodobieństwem <span class="math inline">\(1\)</span> zdarzenia <span class="math inline">\(\widetilde A_n\)</span> (a zatem również <span class="math inline">\(A_n\)</span>) zachodzą nieskończenie wiele razy.
+W szczególności z prawdopodobieństwem <span class="math inline">\(1\)</span> zajdzie przynajmniej jedno ze zdarzeń <span class="math inline">\(A_n\)</span>.</p>
+</div>
+<p>Ostatni przykład można powtórzyć dla dowolnego ciągu wyników. W szczególności pociąga to
+<a href="https://pl.wikipedia.org/wiki/Twierdzenie_o_niesko%C5%84czonej_liczbie_ma%C5%82p">Twierdzenie o nieskończonej liczbie małp</a>
+które można sparafrazować na następujący sposób. Jeżeli małpa będzie naciskać w sposób losowy
+klawisze maszyny do pisania przez nieskończenie długi czas, to z prawdopodobieństwem jeden
+napisze ona wszystkie dzieła Mickiewicza.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-56" class="example"><strong>Przykład 5.4  </strong></span>Rzucamy nieskończenie wiele razy niesymetryczną monetą (orzeł wypada na niej z prawdopodobieństwem <span class="math inline">\(p\not=1/2\)</span>).
+Niech <span class="math inline">\(A_n\)</span> oznacza zdarzenie, że w pierwszych <span class="math inline">\(n\)</span> rzutach wypadło tyle samo orłów co reszek.
+Pokażemy że z prawdopodobieństwem <span class="math inline">\(1\)</span> zachodzi jedynie skończenie wiele zdarzeń <span class="math inline">\(A_n\)</span>.
+Dla nieparzystej liczby rzutów mamy oczywiście <span class="math inline">\(\mathbb{P}[A_{2n+1}] = 0\)</span>,
+natomiast dla parzystej liczby
+<span class="math display">\[
+\mathbb{P}[A_{2n}] = {2n \choose n} p^n(1-p)^n \sim \frac{4^np^n(1-p)^n}{\sqrt{n\pi}},
+\]</span> gdzie ostatnia implikacja wynika ze wzoru Stirlinga
+<span class="math display">\[\begin{equation}
+n! \sim \sqrt{2\pi n} \bigg(\frac{n}{e}\bigg)^n,
+\end{equation}\]</span> a zapis <span class="math inline">\(a_n\sim b_n\)</span> oznacza, że <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n}=1\)</span>.</p>
+<p>Funkcja <span class="math inline">\(x\to 4x(1-x)\)</span> na przedziale <span class="math inline">\([0,1]\)</span> przyjmuje maksimum równe 1 dla <span class="math inline">\(x=1/2\)</span>, zatem dla <span class="math inline">\(p\not= 1/2\)</span>, <span class="math inline">\(4p(1-p)\)</span>,
+a to z kolei, na mocy kryterium Cauchy’ego oznacza zbieżność szeregu
+<span class="math display">\[
+\sum_n \mathbb{P}[A_n] &lt;\infty.
+\]</span> Z lematu Borella-Cantalliego zdarzenia <span class="math inline">\(A_n\)</span> z prawdopodobieństwem jeden zachodzą
+jedynie skończenie wiele razy. (Zauważmy jednak, że liczba tych zdarzeń jest losowa).</p>
+</div>
+W celu zilustrowania ostatniego przykładu rozważmy poniższą symulację.
+Wykonujemy kilkadziesiąt rzutów monetą na sekundę i rysujemy wykres funkcji przedstawiającą liczbę orłów - liczbę reszek.
+Momenty, w których wykres przecina prostą <span class="math inline">\(y=0\)</span> to momenty, w których wyrzuciliśmy do tej pory tyle samo reszek co orłów.
+W polu poniżej możemy wpisać wartość parametru <span class="math inline">\(p\)</span>.
+<div class="rw-container">
+
+</div>
+<div class="input-container">
+
+</div>
+<script src="JAVA/rw.js"></script><p>Jak zmienia się rysunek, gdy <span class="math inline">\(p&gt;1/2\)</span>? Jakie zachowanie obserwujemy dla małych wartości <span class="math inline">\(p-1/2\)</span>?</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></div>
+<div class="next"><a href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lemat-borela-cantelliego"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></li>
+<li><a class="nav-link" href="#niesko%C5%84czone-ci%C4%85gi-eksperyment%C3%B3w">Nieskończone ciągi eksperymentów</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-12.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

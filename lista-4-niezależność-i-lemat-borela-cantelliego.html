@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lista 4: Niezależność i lemat Borela-Cantelliego | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Zadania na ćwiczenia: 2025-03-17 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Maciek rzuca dwiema kośćmi. Pierwsza kość jest dobrze wyważona. Na drugiej szóstka wypada dwa razy...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Lista 4: Niezależność i lemat Borela-Cantelliego | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Zadania na ćwiczenia: 2025-03-17 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Maciek rzuca dwiema kośćmi. Pierwsza kość jest dobrze wyważona. Na drugiej szóstka wypada dwa razy...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lista 4: Niezależność i lemat Borela-Cantelliego | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-03-17 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Maciek rzuca dwiema kośćmi. Pierwsza kość jest dobrze wyważona. Na drugiej szóstka wypada dwa razy...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantelliego.html"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="active" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego.html">Lista 4: Niezależność i lemat Borela-Cantelliego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-4-niezależność-i-lemat-borela-cantelliego" class="section level1 unnumbered">
+<h1>Lista 4: Niezależność i lemat Borela-Cantelliego<a class="anchor" aria-label="anchor" href="#lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego"><i class="fas fa-link"></i></a>
+</h1>
+<p>Zadania na ćwiczenia: 2025-03-17</p>
+<p><a href="L3_niezaleznosc.pdf">Lista zadań w formacie PDF</a></p>
+<div id="zadania-do-samodzielnego-rozwiązania-3" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-3"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Maciek rzuca dwiema kośćmi. Pierwsza kość jest dobrze wyważona.
+Na drugiej szóstka wypada dwa razy częściej niż pozostałe liczby. Jakie jest prawdopodobieństwo,
+że suma oczek będzie większa niż 10?
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad4_1">
+Odpowiedź
+</button>
+<div id="zad4_1" class="collapse">
+<p class="text-primary">
+<span class="math inline">\(5/42\)</span>
+</p>
+</div>
+</li>
+<li>Losujemy punkt <span class="math inline">\((x,y)\)</span> z kwadratu <span class="math inline">\([0,1]^2\)</span>. Niech
+<span class="math inline">\(A = \{ |x -y|\leq 1/3\}\)</span>, <span class="math inline">\(B = \{x\leq 1/2\}\)</span> oraz <span class="math inline">\(C = \{ y\geq 1/2\}\)</span>.
+Czy zdarzenia <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> i <span class="math inline">\(C\)</span> są niezależne? Czy są niezależne parami?
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad4_2">
+Odpowiedź
+</button>
+<div id="zad4_2" class="collapse">
+<p class="text-primary">
+Zdarzenia nie są niezależne. Są niezależne parami.
+</p>
+</div>
+</li>
+<li>Niech <span class="math inline">\(\Omega = [-2,2]\)</span> oraz <span class="math inline">\(A_n = [(-1)^n-1/n, (-1)^n+1/n]\)</span>.
+Znajdź <span class="math inline">\(\limsup_n A_n\)</span><br><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad4_3">
+Odpowiedź
+</button>
+<div id="zad4_3" class="collapse">
+<p class="text-primary">
+<span class="math inline">\(\{-1,1\}\)</span>.
+</p>
+</div>
+</li>
+<li>Zdarzenia <span class="math inline">\(A_1, A_2, \ldots , A_{2025}\)</span> są niezależne i mają jednakowe prawdopodobieństwo <span class="math inline">\(p\)</span>.
+Jaka jest szansa, że zajdzie dokładnie jedno?
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad4_4">
+Odpowiedź
+</button>
+<div id="zad4_4" class="collapse">
+<p class="text-primary">
+<span class="math inline">\(2025p(1-p)^{2024}\)</span>
+</p>
+</div>
+</li>
+<li>Zdarzenia <span class="math inline">\(A_1, \dots, A_n, \dots\)</span> są niezależne i mają równe prawdopodobieństwa.<br>
+Jaka jest szansa, że zajdzie skończenie wiele zdarzeń <span class="math inline">\(A_n\)</span>?
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad4_5">
+Odpowiedź
+</button>
+<div id="zad4_5" class="collapse">
+<p class="text-primary">
+Niech <span class="math inline">\(\mathbb{P}[A_k]=p\)</span>. Jeżeli <span class="math inline">\(p&gt;0\)</span>, to szukana szansa wynosi zero.
+</p>
+</div>
+</li>
+<li>Rzucono <span class="math inline">\(10\)</span> razy kostką. Jakie jest prawdopodobieństwo otrzymania
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(6\)</span> oczek co najmniej raz?</li>
+<li>
+<span class="math inline">\(5\)</span> oczek dokładnie <span class="math inline">\(3\)</span> razy?</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad4_6">
+Odpowiedź
+</button>
+<div id="zad4_6" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>0.8385, b. 0.214</li>
+</ol>
+</div>
+</div>
+<div id="zadania-na-ćwiczenia-3" class="section level2 unnumbered">
+<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-3"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Wykonujemy dwa eksperymenty: rzucamy kością, na której liczby parzyste wypadają dwa
+razy częściej niż liczby nieparzyste i losujemy liczbę z przedziału <span class="math inline">\([0,1]\)</span>.
+Skonstruuj przestrzeń przestrzeń probabilistyczną opisująca wykonanie tych eksperymentów
+niezależnie. Jakie jest prawdopodobieństwo, że suma otrzymanych liczb jest
+mniejsza niż <span class="math inline">\(5/2\)</span>?</p></li>
+<li><p>Pokaż, że zdarzenia <span class="math inline">\(A_1\)</span>, …, <span class="math inline">\(A_n\)</span> są niezależne wtedy i tylko wtedy, gdy <span class="math inline">\(\sigma\)</span>-ciała
+<span class="math inline">\(\mathcal{F}_j=\sigma(A_j) = \{\emptyset, \Omega, A_j, A_j^c\}\)</span> dla <span class="math inline">\(j \in [n]\)</span> są niezależne.</p></li>
+<li><p>Niech <span class="math inline">\(\Omega=[0,1]\)</span>. Rozważmy zdarzenia
+<span class="math display">\[\begin{align*}
+A_1&amp; =[0,1/2),\\
+     A_2 &amp;= [0,1/4)\cup [1/2,3/4), \\
+A_3 &amp;= [0,1/8)\cup[2/8, 3/8)\cup[4/8,5/8)\cup[6/8,7/8),
+     ....
+\end{align*}\]</span>
+Pokaż, że zdarzenia <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> są niezależne.</p></li>
+<li><p>Student musi poprawić oceny niedostateczne z dwóch przedmiotów. Szansa poprawienia oceny z
+pierwszego przedmiotu w jednej próbie wynosi <span class="math inline">\(p\)</span>, a z drugiego — <span class="math inline">\(q\)</span>.
+Żeby móc poprawić drugą ocenę, trzeba najpierw poprawić pierwszą. Poszczególne próby
+poprawiania są niezależne. Wiadomo, że po piętnastu próbach poprawiania oceny student
+jeszcze nie poprawił oceny z drugiego przedmiotu.
+Jaka jest szansa – pod tym warunkiem – że nie poprawił jeszcze oceny z pierwszego przedmiotu?</p></li>
+<li><p>Rzucamy <span class="math inline">\(2n\)</span> razy symetryczną monetą. Niech <span class="math inline">\(O_{2n}\)</span> (odpowiednio <span class="math inline">\(R_{2n}\)</span>)
+oznacza liczbę orłów (odpowiednio reszek). Dla ustalonego <span class="math inline">\(k\)</span> obliczyć<br><span class="math display">\[
+\lim_{n \to \infty} \mathbb{P}(|O_{2n} - R_{2n}| \leq 2k).
+\]</span></p></li>
+<li><p>Niech <span class="math inline">\(A_n\)</span> będą zdarzeniami niezależnymi, przy czym <span class="math inline">\(\mathbb{P}(A_n) = p_n \in (0,1)\)</span>.
+Wykaż, że zachodzi co najmniej jedno ze zdarzeń <span class="math inline">\(A_n\)</span> wtedy i tylko wtedy,
+gdy z prawdopodobieństwem 1 zachodzi nieskończenie wiele zdarzeń <span class="math inline">\(A_n\)</span>.</p></li>
+<li><p>Rzucamy nieskończenie wiele razy monetą, w której orzeł wypada w prawdopodobieństwem <span class="math inline">\(p \geq 1/2\)</span>.
+Niech <span class="math inline">\(A_n\)</span> oznacza zdarzenie, że pomiędzy rzutem <span class="math inline">\(2^n\)</span> a <span class="math inline">\(2^{n+1}\)</span> otrzymano ciąg <span class="math inline">\(n\)</span>
+kolejnych orłów. Pokaż, że zdarzenia <span class="math inline">\(A_n\)</span> z prawdopodobieństwem <span class="math inline">\(1\)</span> zachodzą
+nieskończenie wiele razy.</p></li>
+<li>
+<p>Niech <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem zdarzeń.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pokaż, że jeśli <span class="math inline">\(\mathbb{P}(A_n) \to 0\)</span> oraz
+<span class="math display">\[
+\sum_{n=1}^{\infty} P(A_n^c \cap A_{n+1}) &lt; \infty,
+\]</span>
+to
+<span class="math display">\[
+\mathbb{P}(\limsup_n A_n) = 0.
+\]</span>
+</li>
+<li>Znajdź przykład ciągu zdarzeń <span class="math inline">\(A_n\)</span>, do którego można zastosować wynik z punktu a,
+ale nie można zastosować lematu Borela-Cantellego.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="zadania-dodatkowe-3" class="section level2 unnumbered">
+<h2>Zadania dodatkowe<a class="anchor" aria-label="anchor" href="#zadania-dodatkowe-3"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="15" style="list-style-type: decimal">
+<li>Rzucamy nieskończenie wiele razy symetryczną monetą.
+Niech <span class="math inline">\(A_n\)</span> oznacza zdarzenie, że w pierwszych <span class="math inline">\(n\)</span> rzutach było tyle samo orłów i reszek.
+Wykazać, że z prawdopodobieństwem 1 zachodzi nieskończenie wiele zdarzeń <span class="math inline">\(A_n\)</span>.</li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego">Lista 4: Niezależność i lemat Borela-Cantelliego</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-3">Zadania do samodzielnego rozwiązania</a></li>
+<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia-3">Zadania na ćwiczenia</a></li>
+<li><a class="nav-link" href="#zadania-dodatkowe-3">Zadania dodatkowe</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-12.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

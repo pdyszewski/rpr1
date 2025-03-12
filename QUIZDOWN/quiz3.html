@@ -13,6 +13,20 @@
 	<script>
 		quizdown.register(quizdownKatex).register(quizdownHighlight).init();
 	</script>
+
+<script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
     <style>
 
@@ -75,6 +89,32 @@
 			1. [ ] $\mathbb{P}[A\cap B \cap C] = \mathbb{P}[B  | A\cap C] \mathbb{P}[B|C] \mathbb{P}[C]$
 			1. [ ] $\mathbb{P}[A\cap B \cap C] = \mathbb{P}[A | B\cap C] \mathbb{P}[B|C]/ \mathbb{P}[C]$
 			1. [ ] $\mathbb{P}[A\cap B \cap C] = \mathbb{P}[A | B\cap C] \mathbb{P}[C|B] \mathbb{P}[C]$
+		
+			#### Test na pospolitą chorobę.
+
+			Rozważmy chorobę, na którą choruje $2/3$ populacji.
+			Test na tę chorobę działa z prawdopodobieństwem $99%$ u osób chorych
+			i $96%$ u osób zdrowych.
+			Załóżmy,  że u losowo wybranej osoby test był pozytywny. Jakie jest prawdopodobieństwo, że ta osoba jest chora?
+
+			1. [ ] $97,27%$
+			1. [ ] $99,01%$
+			1. [ ] $95,05%$
+			1. [x] $98,02%$
+
+			#### W pewnym mieście są dwa osiedla:
+	
+			Na osiedlu A mieszka $60%$ mieszkańców.
+			Na osiedlu B mieszka $40%$ mieszkańców.
+			Na osiedlu A $70%$ mieszkańców na samochód.
+			Na osiedlu B jest ich $50%$.
+			Jakie jest prawdopodobieństwo, 
+			że losowo wybrana osoba z miasta posiada samochód?
+			
+			1. [x] $62%$
+			1. [ ] $61%$
+			1. [ ] $63%$
+			1. [ ] $64%$
 		</div>
 	</div>
 </body>

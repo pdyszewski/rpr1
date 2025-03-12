@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>6 Zmienne losowe i ich rozkłady | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy rozwijać...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="6 Zmienne losowe i ich rozkłady | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy rozwijać...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="6 Zmienne losowe i ich rozkłady | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy rozwijać...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantelliego.html"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></li>
+<li><a class="active" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego.html">Lista 4: Niezależność i lemat Borela-Cantelliego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="zmienne-losowe-i-ich-rozkłady" class="section level1" number="6">
+<h1>
+<span class="header-section-number">6</span> Zmienne losowe i ich rozkłady<a class="anchor" aria-label="anchor" href="#zmienne-losowe-i-ich-rozk%C5%82ady"><i class="fas fa-link"></i></a>
+</h1>
+<p>Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie
+dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy
+rozwijać naszą teorię.</p>
+<p>Jeżeli losujemy cięciwę pierwszym sposobem, tj. przez wylosowanie jej końców to przestrzenią probabilistyczną,
+która to reprezentuje jest <span class="math inline">\(\Omega_1 = [0,1]^2\)</span> z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów Borelowskich i miarą Lebesgue’a.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand1b.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Zdarzenie elementarne <span class="math inline">\(\omega = (\theta, \phi)\)</span> utożsamiamy cięciwą o końcach
+<span class="math inline">\((\cos(2\pi \theta), \sin(2\pi \theta))\)</span> oraz
+<span class="math inline">\((\cos(2\pi \phi), \sin(2\pi \phi))\)</span>. Wówczas długość takiej cięciwy to
+<span class="math display">\[\begin{equation*}
+    X_1(\omega) = \sqrt{(\cos(2\pi \theta) -\cos(2\pi \phi))^2 + (\sin(2\pi \theta)-\sin(2\pi \phi))^2}.
+\end{equation*}\]</span>
+Postać <span class="math inline">\(X_1(\omega)\)</span> możemy oczywiście nieco uprościć. Wykorzystując niezmienniczość
+na obroty
+<span class="math display">\[\begin{multline*}
+    X_1(\omega) = X_1(\theta,\phi) = X_1(\theta-\phi,0) \\
+    = \sqrt{(1-\cos(2\pi (\theta -\phi))^2 + (\sin(2\pi (\theta - \phi)))^2}
+    = 2 \sin \left( \pi(\theta-\phi) \right).
+\end{multline*}\]</span>
+Zauważmy, że interesująca nas wielkość jest funkcją rzeczywistą
+zdarzenia elementarnego, tj. <span class="math inline">\(X_1 \colon \Omega \to \mathbb{R}\)</span>.</p>
+<p>Załóżmy teraz, że losujemy cięciwę poprzez wylosowanie jej środka.
+Wówczas <span class="math inline">\(\Omega_2\)</span> jest kołem jednostkowym z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów Borelowskich i miarą Lebesgue’a.</p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/bertrand2b.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Jeżeli <span class="math inline">\(\omega =(x,y) \in \Omega_2\)</span> jest środkiem cięciwy, to z twierdzenia Pitagorasa jej długość jest dana przez
+<span class="math display">\[\begin{equation*}
+    X_2(\omega) = 2 \sqrt{1-x^2-y^2}.
+\end{equation*}\]</span>
+Wreszcie losując tylko odległość od środka koła wybieramy <span class="math inline">\(\Omega_3=[0,1]\)</span> z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów Borelowskich
+i miarą Lebesgue’a. Wówczas dla <span class="math inline">\(\omega \in \Omega_3\)</span> długość wylosowanej cięciwy to
+<span class="math display">\[\begin{equation*}
+    X_3(\omega) = 2\sqrt{1-\omega^2}.
+\end{equation*}\]</span>
+We wszystkich trzech przykładach otrzymaliśmy różne przestrzenie probabilistyczne.
+Aby rzeczywiście stwierdzić, że powyższe trzy metody nie są równoważne musimy
+porównać funkcje <span class="math inline">\(X_i\colon \Omega_i \to \mathbb{R}\)</span> dla <span class="math inline">\(i=1,2,3\)</span> pod kątem probabilistycznym.
+Powyższe stanowi przykład sytuacji w której bardziej od samych zdarzeń elementarnych
+interesują nas wartości funkcji zdarzeń elementarnych. Pamiętajmy, że struktura przestrzeni <span class="math inline">\(\Omega\)</span> może być niemal dowolna.
+Elementami przestrzeni zdarzeń elementarnych mogą być liczby,
+wynik rzutów monetą, ciągi, zbiory (kart), wykresy (kursy akcji) itd.
+Nas jednak zazwyczaj interesuje bardzo konkretna, często liczbowa, informacja.</p>
+<p>Pracując na ogólnej przestrzeni probabilistycznej <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+będziemy chcieli analizować funkcje <span class="math inline">\(X \colon \Omega \to \mathbb{R}\)</span> z punktu widzenia
+prawdopodobieństwa <span class="math inline">\(\mathbb{P}\)</span>. Oznacza to, że od funkcji <span class="math inline">\(X\)</span> będziemy wymagali
+odpowiedniej regularności.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-57" class="definition"><strong>Definicja 6.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+będzie przestrzenią probabilistyczną. <strong>Zmienna losowa</strong> jest to dowolna mierzalna funkcja
+<span class="math inline">\(X:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}or(\mathbb{R}))\)</span>.</p>
+</div>
+<p>Przypomnijmy, że <span class="math inline">\(X:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}or(\mathbb{R}))\)</span> jest mierzalna gdy
+dla każdego <span class="math inline">\(A\in \mathcal{B}or(\mathbb{R})\)</span>,
+<span class="math display">\[
+X^{-1}(A)= \{ \omega \in \Omega \: : \: X(\omega) \in A \}\in \mathcal{F}.
+\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-58" class="example"><strong>Przykład 6.1  </strong></span>Jeżeli rzucamy pięć razy kostką, to
+<span class="math inline">\(\Omega = \{(i_1,\ldots, i_5), i_j \in \{1,2,\ldots, 6\}\}\)</span>, <span class="math inline">\(\omega = (\omega_1,\ldots, \omega_5)\)</span>.
+Jeśli chcemy obliczyć sumę wyników (nie interesują nas konkretne wyniki rzutów, ale suma oczek). Wówczas
+rozważamy <span class="math inline">\(X(\omega) = \omega_1+\ldots + \omega_5\)</span>. Wtedy <span class="math inline">\(X \colon \Omega \to \mathbb{R}\)</span> jest zmienną losową.</p>
+</div>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lemat-borela-cantelliego.html"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#zmienne-losowe-i-ich-rozk%C5%82ady"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-12.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
