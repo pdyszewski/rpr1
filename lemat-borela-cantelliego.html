@@ -170,7 +170,32 @@ opisuje pierwsze <span class="math inline">\(n\)</span>-eksperymentów wykonanyc
 = \mathbb{P}_1[B_1]\mathbb{P}_2[B_2] \cdots \mathbb{P}_n[B_n]\mathbb{P}_{n+1}[\mathbb{R}] \\
 \mathbb{P}_{n}'[B_1\times B_2\times \cdots B_{n}] \\
 \end{multline*}\]</span>
-Teza wynika z Twierdzenia <a href="lemat-borela-cantelliego.html#thm:kol">5.1</a>.</p>
+Z Twierdzenia <a href="lemat-borela-cantelliego.html#thm:kol">5.1</a> wynika, że istnieje <span class="math inline">\(\mathbb{P}\)</span> na <span class="math inline">\(\mathbb{R}^\mathbb{N}\)</span> taka, że
+<span class="math display">\[
+\mathbb{P}'(A_1\times A_2 \times \ldots \times A_n\times \mathbb{R}\times \ldots)
+=  \mathbb{P}_{n}'(A_1\times A_2 \times \ldots \times A_n).
+\]</span>
+Okazuje się, że jest to szukana przez nas miara probabilistyczna modelująca niezależne eksperymenty.
+Niech
+<span class="math display">\[\begin{align*}
+    \tilde{A}_1 &amp; = A_1\times \mathbb{R}\times \mathbb{R}\times \ldots \\
+    \tilde{A}_2 &amp; = \mathbb{R}\times A_2 \times \mathbb{R} \times \ldots \\
+    \tilde{A}_3 &amp; = \mathbb{R} \times \mathbb{R} \times A_3 \times \mathbb{R} \ldots
+\end{align*}\]</span>
+Wówczas <span class="math inline">\(\tilde{A}_j\)</span> jest kopią <span class="math inline">\(A_j\)</span> w nieskończonym produkcie.
+Wówczas dla każdego <span class="math inline">\(j \in \mathbb{N}\)</span>,
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}[\tilde A_j] = \mathbb{P}_j[A_j].
+\end{equation*}\]</span>
+Skoro
+<span class="math display">\[\begin{equation*}
+    A_1\times A_2 \times \ldots \times A_n \times \mathbb{R} \ldots = \tilde{A}_1\cap \tilde{A}_2\cap \ldots \tilde{A}_n,
+\end{equation*}\]</span>
+to
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}[\tilde{A}_1\cap \tilde{A}_2\cap \ldots \tilde{A}_n] = \mathbb{P}[\tilde A_1]\mathbb{P}[\tilde A_2] \cdots \mathbb{P}[\tilde A_n].
+\end{equation*}\]</span>
+Czyli miara <span class="math inline">\(\mathbb{P}\)</span> reprodukuje eksperymenty w sposób niezależny.</p>
 </div>
 <p>Badając eksperymenty losowe polegające na nieskończonych powtórzeniach jednego
 eksperymentu. Powiedzmy, że wykonujemy nieskończenie wiele rzutów monetą.</p>
