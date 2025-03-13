@@ -54,13 +54,13 @@
 <li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
 <li><a class="active" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
 <li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
-<li><a class="" href="lemat-borela-cantelliego.html"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
 <li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
 <li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
-<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego.html">Lista 4: Niezależność i lemat Borela-Cantelliego</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
 </ul>
 
         <div class="book-extra">
@@ -99,7 +99,7 @@ Zakładać będziemy, że kości są dobrze wyważone.
 Do opisu tego eksperymentu posłużymy się prawdopodobieństwem <span class="math inline">\(\mathbb{P}\)</span>, które każdemu zdarzeniu
 elementarnemu przypisuje takie samo prawdopodobieństwo.
 Wówczas <span class="math inline">\(\mathbb{P}[A] = 5/36\)</span>.
-Złóżmy teraz, że posiadamy dodatkową informację, że na pierwszej kości wypadło jedno oczko.
+Załóżmy teraz, że posiadamy dodatkową informację, że na pierwszej kości wypadło jedno oczko.
 Wówczas powinniśmy zmienić rozważaną przestrzeń zdarzeń elementarnych, a mianowicie
 <span class="math display">\[
 B=\{(1,1), (1,2), (1,3), (1,4), (1,5), (1,6)\}
@@ -117,7 +117,7 @@ co daje <span class="math inline">\(\mathbb{P}_1[A_1] = 1/6\)</span>. Zauważmy,
 \end{align*}\]</span>
 Okazuje się, że prawdopodobieństwo <span class="math inline">\(\mathbb{P}_1\)</span> w nowej przestrzeni probabilistycznej można wyrazić w
 terminach pierwotnie rozważanego prawdopodobieństwa <span class="math inline">\(\mathbb{P}\)</span>.
-Ta konstrukcja jest spotykana na tak często, że wyrażenie występujące po prawej stronie ostatniego
+Ta konstrukcja jest spotykana tak często, że wyrażenie występujące po prawej stronie ostatniego
 wzoru ma swoją specjalną nazwę.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-23" class="definition"><strong>Definicja 3.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną. Rozważmy zdarzenie <span class="math inline">\(B\)</span>
@@ -132,7 +132,7 @@ warunkowym</strong> (zajścia) zdarzenia <span class="math inline">\(A\)</span> 
 Rzadko zdarza się, aby doświadczenie było wykonywane w idealnych warunkach i zazwyczaj jest
 ono obarczone zewnętrznymi czynnikami, pewną dodatkową informacją.
 Jest to wykorzystywane np. przez firmy ubezpieczeniowe (polisa samochodu zależy np. od płci i wieku kierowcy;
-polisa na życia od wieku, przebytych chorób, ryzyka zawodowego), graczy giełdowych.
+polisa na życie od wieku, przebytych chorób, ryzyka zawodowego), graczy giełdowych.
 Dla przykładu, wysokość emerytury powinna zależeć (oprócz zgromadzonych środków) od przewidywanej długości życia emeryta,
 co z kolei zależy od płci (mężczyźni 73,8; kobiety 81,7 - dane wg GUS za 2018r.),
 ale też aktualnego wieku (przeciętny 60 latek, niezależnie od płci, będzie żył jeszcze średnio 260,7 miesięcy,
@@ -174,7 +174,7 @@ oraz, skoro zdarzenia <span class="math inline">\(A\cap B\)</span> oraz <span cl
 \mathbb{P}[B]\mathbb{P}[A|B] + \mathbb{P}[B^c]\mathbb{P}[A|B^c].
 \end{align*}\]</span>
 Ostatni wzór jest szczególnie pomocny kiedy eksperymenty podzielone są na etapy.
-Zanim zbadamy konkretny przykład uogólnijmy powyższy rachunek na dowolną liczbą zdarzeń.</p>
+Zanim zbadamy konkretny przykład uogólnijmy powyższy rachunek na dowolną liczbę zdarzeń.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-25" class="definition"><strong>Definicja 3.2  </strong></span>Niech <span class="math inline">\(I \subseteq \mathbb{N}\)</span> będzie zbiorem indeksów.
 Mówimy, że rodzina zdarzeń <span class="math inline">\(\{B_k\}_{k\in I}\)</span> (dopuszczamy <span class="math inline">\(|I|=\infty\)</span>) jest <strong>rozbiciem</strong> zbioru <span class="math inline">\(\Omega\)</span>, jeżeli
@@ -194,7 +194,7 @@ oraz zbiory <span class="math inline">\(B_k\)</span> są parami rozłączne.</p>
 <p><span id="unlabeled-div-27" class="proof"><em>Proof</em>. </span>Korzystając z definicji rozbicia oraz prawdopodobieństwa warunkowego piszemy
 <span class="math display">\[\begin{align*}
 \mathbb{P}[A] &amp; = \mathbb{P}\left[ A\cap \bigcup_{k\in I} B_k\right]
-= \mathbb{P}\left[  \bigcup_{kin I} (A\cap B_k)\right]
+= \mathbb{P}\left[  \bigcup_{k\in I} (A\cap B_k)\right]
 \\ &amp; = \sum_{k\in I} \mathbb{P}[ A\cap B_k] = \sum_{k\in I} \mathbb{P}[A|B_k]\mathbb{P}[B_k].
 \end{align*}\]</span></p>
 </div>
@@ -244,7 +244,7 @@ Mamy
 Jeżeli test wyszedł pozytywny, jakie jest prawdopodobieństwo, że pacjent jest
 rzeczywiście chory? Pytamy więc o przyczynę pozytywnego wyniku.
 Z jakim prawdopodobieństwem wynik jest spowodowany przez chorobę?
-Z jakim prawdopodobieństwem wynik jest spowodowany przez wyniki fałszywie pozytywny?
+Z jakim prawdopodobieństwem wynik jest fałszywie pozytywny?
 Odpowiedzi na powyższe pytanie możemy udzielić stosując wzór Bayesa.</p>
 <div class="theorem">
 <p><span id="thm:unlabeled-div-30" class="theorem"><strong>Twierdzenie 3.2  (Wzór Bayesa) </strong></span>Przy założeniach jw. jeżeli <span class="math inline">\(\mathbb{P}[A]&gt;0\)</span>, to dla każdego <span class="math inline">\(k\in I\)</span>,
@@ -315,11 +315,11 @@ stosunek pola małego kwadratu w lewym dolnym rogu do całości obrazka to dokł
 <div style="margin:20px; padding:10px; text-align:center;">
 <div class="inline-figure"><img src="TIKZ/bay.svg" style="display: block; margin: auto;"></div>
 </div>
-<p>Spośród chorych u <span class="math inline">\(99\)</span> osób test wyjdzie pozytywny, a spośród zdrowych u <span class="math inline">\(4995\)</span>.
-Ograniczenie przestrzeni probabilistycznej do osób u których test wyszedł pozytywny,
-pozostawia nas w przestrzeni, składającej się niemal wyłącznie z osób zdrowych.
-Zauważmy, że powtórzenie testu niewiele poprawia jego skuteczność,
-dlatego też ważna jest informacja o innych czynnikach związanych z chorobą (np. informacja genetyczna).</p>
+<p>Spośród chorych u <span class="math inline">\(99\)</span> osób test wyjdzie pozytywny, a spośród zdrowych u <span class="math inline">\(4995\)</span>.<br>
+Ograniczenie przestrzeni probabilistycznej do osób, u których test wyszedł pozytywny,
+pozostawia nas w przestrzeni składającej się niemal wyłącznie z osób zdrowych.<br>
+Zauważmy, że powtórzenie testu niewiele poprawia jego skuteczność, dlatego też
+ważna jest informacja o innych czynnikach związanych z chorobą (np. informacja genetyczna).</p>
 </div>
 <iframe src="QUIZDOWN/quiz3.html" width="100%" height="590px" style="border: none;">
 </iframe>
@@ -352,7 +352,7 @@ dlatego też ważna jest informacja o innych czynnikach związanych z chorobą (
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-13.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

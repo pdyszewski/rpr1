@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>7 Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="{} Załóżmy, że wykonano \(n\) rzutów. Wówczas oczekujemy, że gracz \(A\) wygra w przybliżeniu \[ \approx \frac n6\cdot 1 - \frac n6\cdot 2 + \frac n6\cdot 3 - \frac n6\cdot 4 + \frac n6\cdot 5 -...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="7 Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="{} Załóżmy, że wykonano \(n\) rzutów. Wówczas oczekujemy, że gracz \(A\) wygra w przybliżeniu \[ \approx \frac n6\cdot 1 - \frac n6\cdot 2 + \frac n6\cdot 3 - \frac n6\cdot 4 + \frac n6\cdot 5 -...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7 Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="{} Załóżmy, że wykonano \(n\) rzutów. Wówczas oczekujemy, że gracz \(A\) wygra w przybliżeniu \[ \approx \frac n6\cdot 1 - \frac n6\cdot 2 + \frac n6\cdot 3 - \frac n6\cdot 4 + \frac n6\cdot 5 -...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantelliego.html"><span class="header-section-number">5</span> Lemat Borela-Cantelliego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="active" href="warto%C5%9B%C4%87-oczekiwana.html"><span class="header-section-number">7</span> Wartość oczekiwana</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantelliego.html">Lista 4: Niezależność i lemat Borela-Cantelliego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="wartość-oczekiwana" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Wartość oczekiwana<a class="anchor" aria-label="anchor" href="#warto%C5%9B%C4%87-oczekiwana"><i class="fas fa-link"></i></a>
+</h1>
+{}
+Załóżmy, że wykonano <span class="math inline">\(n\)</span> rzutów. Wówczas oczekujemy, że gracz <span class="math inline">\(A\)</span> wygra w przybliżeniu
+<span class="math display">\[
+\approx \frac n6\cdot 1 - \frac n6\cdot 2 + \frac n6\cdot 3 - \frac n6\cdot 4 + \frac n6\cdot 5 - \frac n6\cdot 6 = -\frac n2.
+\]</span> Formalnie: niech <span class="math inline">\(X\)</span> oznacza wygraną gracza <span class="math inline">\(A\)</span> podczas jednej rundy, wtedy
+<span class="math display">\[
+\E X = 1\cdot \P[X=1] - 2\cdot \P[X=2] + 3\cdot \P[X=3]
+- 4\cdot \P[X=4] + 5\cdot \P[X=5] - 6\cdot \P[X=6]= -\frac 12. \qquad \Box
+\]</span>
+Wartość oczekiwana jest najważniejszym parametrem decydującym o opłacalności np gier hazardowych
+Bezpośrednie użycie definicji <span class="math inline">\(\E X = \sum_{k=0}^{600}k\P[X=k]\)</span> jest kłopotliwe. Niech <span class="math inline">\(X_i\)</span> oznacza liczbę oczek uzyskanych w <span class="math inline">\(i\)</span>-tym rzucie. Wtedy
+<span class="math display">\[
+X = \sum_{i=1}^{100} X_i.
+\]</span> Ponadto <span class="math inline">\(\E X_i = 3,5\)</span>. Zatem z liniowości wartości oczekiwanej
+<span class="math display">\[
+\E X = \sum_{i=1}^{100} \E X_i = 350. \qquad \Box
+\]</span>
+<p> Zdefiniujmy
+<span class="math display">\[X_i = \left\{\begin{array}{cc}
+                 1 &amp; \mbox{ jeżeli $i$-ty los wygrywa} \\
+                 0 &amp; \mbox{ jeżeli $i$-ty los przegrywa}
+               \end{array}
+\right.
+\]</span>
+Wtedy <span class="math inline">\(X = \sum_{i=1}^k X_i\)</span> oraz <span class="math inline">\(\E X_i = \frac{N}{N+M}\)</span>
+<span class="math display">\[ \E X = \sum_{i=1}^k \E X_i  =  \frac{kN}{N+M}.\]</span>
+{} Szkolna metoda:
+<span class="math display">\[
+\E X = \sum_{j=0}^k j \P[X=j] = \sum_{j=0}^k j\cdot \frac{{N\choose j}{M\choose k-j}}{{N+M \choose k}}
+\]</span></p>
+Obie metody muszą prowadzić do tego samego wyniku, stąd
+<span class="math display">\[
+\sum_{j=0}^k j\cdot \frac{{N\choose j}{M\choose k-j}}{{N+M \choose k}} = \frac{kN}{N+M}. \qquad \Box
+\]</span>
+<p>Oznaczmy
+<span class="math display">\[X_i = \left\{\begin{array}{cc}
+                 1 &amp; \mbox{ jeżeli $i$-ty punkt jest stały} \\
+                 0 &amp; \mbox{ jeżeli $i$-ty punkt nie jest stały}
+               \end{array}
+\right.
+\]</span> Wtedy <span class="math inline">\(\E X_i = 1/n\)</span> oraz <span class="math inline">\(X = \sum_{i=1}^n X_i\)</span>, stąd
+<span class="math display">\[\E X  = \sum_{i=1}^n \E X_i = n\cdot \frac 1n = 1.\]</span></p>
+Niech <span class="math inline">\(X\)</span> będzie liczbą prób, które należy wykonać, aby otrzymać pierwszy sukces. Wówczas
+<span class="math display">\[
+\P[X=k] = (1-p)^{k-1}p,
+\]</span> jest to rozkład geometryczny z parametrem <span class="math inline">\(p\)</span> (Geom(<span class="math inline">\(p\)</span>)). Zatem,
+<span class="math display">\[
+\E X  = \sum_{k=1}^{\infty} kp(1-p)^{k-1} = \frac{p}{1-p} \sum_{k=1}^{\infty} k (1-p)^k = \frac 1p.\qquad \Box
+\]</span>
+<p>Kluczowa jest karta, która początkowo znajduję się na samym dole talii. Oznaczmy ją przez <span class="math inline">\(A\)</span>. Zauważmy, że w trakcie tasowania będzie się ona przemieszczać powoli do góry talii. o, że w pierwszym ruchu karta z góry talii znajdzie się pod <span class="math inline">\(A\)</span> wynosi <span class="math inline">\(1/52\)</span>. Jest ono małe, ale z em 1 (Lemat Borela-Cantelliego) nastąpi moment, gdy pod <span class="math inline">\(A\)</span> znajdzie się jakaś karta, oznaczmy ją przez <span class="math inline">\(K_1\)</span>.</p>
+<p>Po wykonaniu losowej liczby tasowań kolejna karta <span class="math inline">\(K_2\)</span> zostanie wstawiona poniżej <span class="math inline">\(A\)</span>. Wzajemne ułożenie kart <span class="math inline">\(K_1\)</span> i <span class="math inline">\(K_2\)</span> jest losowe (tzn. z em <span class="math inline">\(1/2\)</span> karta <span class="math inline">\(K_1\)</span> jest nad <span class="math inline">\(K_2\)</span> i na odwrót). Kontynuując to rozumowanie w pewnej chwili pod <span class="math inline">\(A\)</span> będzie znajdować się <span class="math inline">\(k\)</span> kart: <span class="math inline">\(K_1,
+\ldots K_k\)</span>. Każde ułożenie tychże kart jest tak samo prawdopodobne (indukcja!). Zatem karty pod <span class="math inline">\(A\)</span> są dobrze potasowane.</p>
+<p>Karta <span class="math inline">\(A\)</span> dotrze w końcu na sam szczyt talii i to właśnie ona zostanie wstawiona. W tej chwili wszystkie karty będą dobrze potasowane (każde ich wzajemne ułożenie jest jednakowo prawdopodobne).</p>
+<p>Obliczmy ile czasu potrzebuje karta <span class="math inline">\(A\)</span>, aby dotrzeć na górę talii. Niech <span class="math inline">\(X_i\)</span> oznacza czas jaki karta <span class="math inline">\(A\)</span> spędza na <span class="math inline">\(i\)</span>-tej pozycji od dołu. o, że karta wstawiona zostanie poniżej <span class="math inline">\(A\)</span> wynosi <span class="math inline">\(1/52\)</span>. Czas oczekiwania na sukces <span class="math inline">\(X_1\)</span>, zgodnie z poprzednim przykładem jest zmienną
+losową o rozkładzie Geom(<span class="math inline">\(1/52\)</span>), zatem <span class="math inline">\(\E X_1 = 52\)</span>. Podobnie dla każdego <span class="math inline">\(i\)</span>: <span class="math inline">\(\E X_i = 52/i\)</span>. Podsumowując
+%<span class="math display">\[\begin{multline*}
+$$\E X = \E \sum_{i=1}^{52 } X_i = \sum_{i=1}^{52} \E X_i = \sum_{i=1}^{52} \frac{52}i
+= 52 \sum_{i=1}^{52} \frac 1i \sim 52 (\log 52 + \gamma) \sim 235, $$
+%\end{multline*}
+gdzie $\gamma$ jest stałą Eulera–Mascheroni'ego znaną z wykładu z analizy ($\gamma \sim 0,577$). $\Box$
+
+
+\begin{thm}
+  Załóżmy, że $\{X_n\}$ jest ciągiem zmiennych losowych takich, że $\E X_n$ istnieją. Wtedy
+  \begin{enumerate}
+    \item (Lemat Fatou) Jeżeli $X\ge 0$, to
+    $$
+     \E \liminf_{n\to\infty} X_n \le \liminf_{n\to\infty} \E X_n
+     $$
+     \item (tw. o zbieżności monotonicznej) Jeżeli $X_n\ge 0$ oraz $\{X_n\}$ jest ciągiem monotonicznym, to
+     $$
+     \E \lim_{n\to\infty} X_n = \lim_{n\to\infty} \E X_n
+     $$
+     \item (tw. Lebesgue'a o zbieżności zmajoryzowanej) Jeżeli $|X_n|\le Y$ dla pewnej zmiennej losowej $Y$ takiej, że
+     $\E |Y|&lt;\infty$ oraz istnieje granica $\lim_{n\to\infty} X_n(\o) = X(\o)$ dla $\P$~p.k.~$\o$, to
+     $$
+     \E X =  \E \lim_{n\to\infty} X_n = \lim_{n\to\infty} \E X_n.
+     $$
+  \end{enumerate}
+\end{thm}
+
+
+Chcąc porównać dwie zmienne losowe $X_1 \colon \Omega_1 \to \mathbb{R}$ oraz $X_2 \colon \Omega_2 \to \mathbb{R}$
+zdefiniowane na dwóch różnych przestrzeniach probabilistycznych musimy znaleźć sposób
+na reprezentację ich na pewnej wspólnej przestrzeni. Tak się akurat składa, że obie
+funkcje mają takie same przeciwdziedziny.
+Jeżeli $X$ jest zmienną losową, to można jej użyć do przetransportowania miary $\P$ na $(\R, \B(\R))$:
+
+::: {.definition}
+  Miarę $\mu$ na $(\R,\B(\R))$ zdefiniowaną wzorem
+  $$
+  \mu(B) = \P[X\in B] = \P\big[ \{\o\in \O:\; X(\o)\in B\} \big] = \P[X^{-1}(B)]
+  $$ dla każdego $B\in \B(\R)$, nazywamy {\bf rozkładem} zmiennej losowej $X$.
+:::
+
+W ten sposób zdefiniowaliśmy nową przestrzeń probabilistyczną $(\R, \B(\R),\mu)$. To nie jest już abstrakcyjna przestrzeń $\O$, ale
+przestrzeń  o której sporo wiemy (dysponujemy narzędziami analitycznymi, na $\R$ zachodzi twierdzenie Kołmogorowa).
+
+::: {.definition}
+  {\bf Dystrybuantą} zmiennej losowej $X$ nazywamy funkcję $F:\; \R \to [0,1]$ zadaną wzorem
+  $$
+  F(t) = \P[X\le t] = \mu\big((-\infty,t]\big).
+  $$
+:::
+
+\begin{comment}
+        \begin{figure}[h]
+\begin{center}
+  \includegraphics[scale=0.6]{dystrybuanta.png}
+  \caption{Przykładowe dystrybuanty}
+  \label{fig:dist}
+\end{center}
+        \end{figure}
+
+{\bf Przykłady:}
+\begin{enumerate}
+  \item Rzut monetą: $\O = \{O,R\}$, $X(O)=1$, $X(R) = -1$. Wtedy
+  $$
+  F(t) = \P[X\le t] = \left\{
+  \begin{array}{cc}
+    0 &amp; \mbox{ dla } t &lt; -1 \\
+    1/2 &amp; \mbox{ dla } -1\le t &lt; 1 \\
+    1 &amp;  \mbox{ dla } t \ge 1.
+  \end{array}
+  \right.
+  $$
+  \item Losowa liczba z przedziału $[0,1]$: $\pb = ([0,1], \B([0,1]), {\rm Leb})$, $X(\o) = \o$.
+  $$
+  F(t) = \P[X\le t] = \left\{
+  \begin{array}{cc}
+    0 &amp; \mbox{ dla } t &lt; 0 \\
+    t &amp; \mbox{ dla } 0\le t &lt; 1 \\
+    1 &amp;  \mbox{ dla } t \ge  1.
+  \end{array}
+  \right.
+  $$
+  \item Rzut kostką.
+\end{enumerate}
+\begin{thm}[Własności dystrybuanty]
+Niech $F$ będzie dystrybuantą pewnej zmiennej losowej $X$. Wówczas
+  \begin{enumerate}
+    \item $F$ jest niemalejąca.
+    \item $\lim_{t\to -\infty} F(t) = 0$, $\lim_{t\to  \infty} F(t)$ = 1.
+    \item $F$ jest prawostronnie  ciągła.
+    \item dla dowolnego $t\in \R$ istnieje lewostronna granica
+    $$F(t-) = \lim_{s\to t^-}F(s) = \P[X&lt;t].$$
+    \item $F$ jest nieciągła w punkcie $t_0$ wtedy i tylko wtedy, gdy $\P[X = t_0] &gt; 0$. Wówczas
+    $\P[X=t_0] = F(t_0) - F(t_0-)$. Punkt $t_0$ nazywamy wówczas {\bf atomem} rozkładu.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+Punkt 1. Jeżeli $t_1&lt;t_2$, to $(-\infty,t_1] \subset (-\infty, t_2]$. Zatem
+$$
+F(t_1) = \mu((-\infty,t_1]) \le \mu((-\infty, t_2]) = F(t_2).
+$$
+Punkt 2. Niech $\{t_n\}$ będzie dowolnym ciągiem rosnącym do $+\infty$. Wówczas rodzina zbiorów $(-\infty,t_n]$ jest wstępująca
+oraz $\R = \bigcup_n (-\infty,t_n]$. Z twierdzenia o ciągłości
+$$
+\lim_{n\to\infty} F(t_n) = \lim_{n\to\infty} \mu((-\infty,t_n]) = \mu(\R) = 1.
+$$
+Analogicznie dowodzimy drugiej części.
+
+Punkt 3. Ustalmy $t\in \R$ i niech $\{t_n\}$ będzie ciągiem malejącym do $t$. Wtedy ciąg przedziałów $(t,t_n]$ jest zstępujący oraz
+$\bigcap_n (t,t_n] = \emptyset$. Z twierdzenia o ciągłości
+$$
+\lim_{n\to\infty}\big( F(t_n) - F(t) \big)
+=\lim_{n\to\infty}\big( \mu((-\infty,t_n] - \mu(-\infty, t]) \big)
+=\lim_{n\to\infty}\big( \mu((t,t_n]) \big) = \mu(\emptyset) = 0.
+$$
+Punkt 4 dowodzimy podobnie jak pkt. 3, a punkt 5 jest konsekwencją 4.
+\end{proof}
+\begin{thm}
+  Jeżeli $F$ jest funkcją na $\R$ spełniającą warunki 1,2 i 3 z poprzedniego twierdzenia:
+    \begin{enumerate}
+    \item $F$ jest niemalejąca;
+    \item $\lim_{t\to -\infty} F(t) = 0$, $\lim_{t\to  \infty} F(t)$ = 1;
+    \item $F$ jest prawostronnie  ciągła;
+  \end{enumerate}
+to $F$ jest dystrybuantą pewnego rozkładu.
+\end{thm}
+\begin{proof}
+  Naszym celem jest skonstruowanie przestrzeni probabilistycznej $\pb$ oraz zmiennej losowej $X$ na niej określonej takiej, że
+  $F$ jest dystrybuantą $X$, tzn.
+  \begin{equation}\label{eq:pt1}
+    F(t) = \P[X\le t].
+  \end{equation}
+Zdefiniujmy $\pb = \big( (0,1), \B(0,1), {\rm Leb} \big)$. \\
+
+
+{\sc Szczególny przypadek.} Załóżmy najpierw, że funkcja $F$ jest odwracalna i zdefiniujmy
+$$
+X(\o) = F^{-1}(\o).
+$$
+Musimy najpierw sprawdzić, że $X$ jest zmienną losową, tzn, że jest mierzalna.
+Zauważmy, że dla dowolnego $t\in \R$,
+$$
+X^{-1}((-\infty, t]) = \{\o:\; X(\o) \le t \} = \{\o:\; \o \le F(t)\} = [0,F(t)] \in \B(0,1).
+$$
+Dla sprawdzenia \eqref{eq:pt1} piszemy
+$$
+\P[X(\o) \le t] = \P[ \o \le F(t)] = F(t).
+$$
+{\sc Ogólny przypadek.} Rozważmy teraz ogólny przypadek.
+    Zdefiniujmy zmienną losową $X$
+  jako uogólnioną funkcję odwrotną $F$:
+  \begin{equation}\label{eq:m1}
+  X(\o) = F^{-1}(\o):= \inf\{y\in \R:\; F(y)\ge \o\}.
+  \end{equation}
+
+        \begin{figure}[h]
+\begin{center}
+  \includegraphics[scale=0.4]{geninv.png}
+  \caption{Przykład uogólnionej funkcji odwrotnej%\footnote{Grafika pochodzi ze strony https://www.researchgate.net/figure/the-infimum-generalized-inverse-blue-of-a-fantasy-function-green_fig6_319112385}
+  }
+  \label{fig:geninv}
+\end{center}
+        \end{figure}
+
+  Dzięki warunkom 1 i 2, zmienna losowa $X$ jest dobrze zdefiniowana na $(0,1)$. Oczywiście jako funkcja niemalejąca jest mierzalna.
+
+  Pokażemy, że $F$ jest dystrybuantą $X$, tzn. zachodzi \eqref{eq:pt1}.
+  W tym celu wystarczy pokazać
+  \begin{equation}\label{eq:pt2}
+  \{ \o:\; X(\o) \le t \} =\{\o:\; \o \le F(t)\}
+  \end{equation} dla każdego $t$, bo wtedy
+  $$
+\P[X\le t] = \P\big[ \{ \o:\; X(\o) \le t \}\big] =\P\big[\{\o:\; \o \le F(t)\}\big] = F(t),
+  $$ gdzie ostatnia równość wynika z definicji miary probabilistycznej $\P$, która jest miarą Lebesgue'a na $[0,1]$.
+
+  Oznaczmy przez $L$ ($P$) zbiór po lewej (prawej) stronie formuły \eqref{eq:pt2}. Pokażemy najpierw, że $L\supset P$. Istotnie, niech
+  $\o\in P$, tzn. $\o \le F(t)$. Wtedy $$t\in \{ y\in \R:\; F(y)\ge \o\},$$ zatem $X(\o) \le t$ (w tym miejscu korzystamy z definicji $X(\o)$, \eqref{eq:m1}).
+
+  Do dowodu odwrotnej implikacji, niech $\o\in L$. Załóżmy nie wprost, że $\o\notin P$, tzn. $\o &gt; F(t)$, korzystając z warunku 3, czyli prawociągłości dystrybuanty $F$,
+  istnieje $\varepsilon &gt; 0$ tż. $F(t+\varepsilon) &lt; \o$. Zatem $$t+\varepsilon \notin \{ y\in \R:\; F(y) \ge \o \}.$$ Stąd $X(\o)&gt;t+\varepsilon$, a więc dochodzimy do sprzeczności, co dowodzi $L\subset P$.
+\end{proof}
+
+
+\begin{thm}[Twierdzenie o jednoznaczności]\label{thm:o jednoznacznosci}
+  Dystrybuanta zmiennej losowej $X$ wyznacza jednoznacznie jej rozkład.
+\end{thm}
+Powyższy wynik jest konsekwencją  lematu o $\pi-\lambda$ układach zwanym też twierdzeniem Dynkina.
+\begin{defn}
+Niepustą rodzinę $\K$ podzbiorów $\O$  nazywamy {\bf $\pi$-układem}, jeżeli jest zamknięta na operację przekroju, tzn. $A\cap B\in \K$ dla wszystkich $A,B\in\K$.
+\end{defn}
+\begin{defn}
+Niepustą rodzinę $\L$ podzbiorów $\O$ nazywamy {\bf $\lambda$-układem}, jeżeli
+\begin{itemize}
+  \item $\O \in \L$.
+  \item jeżeli $A,B\in \L$ i $A\subset B$, to $B\setminus A\in \L$.
+  \item jeżeli $A_1,A_2,...$ jest wstępującym ciągiem elementów $\L$, to $\bigcup_{n=1}^\infty A_n \in \L$.
+\end{itemize}
+\end{defn}
+\begin{lem}[Lemat o $\pi-\lambda$ układach; Twierdzenie Dynkina]
+  Jeżeli $\L$ jest $\lambda$-układem zawierającym $\pi$-układ $\K$, to $\L$ zawiera także $\sigma(\K)$, $\sigma$-ciało generowane przez $\K$.
+\end{lem}
+\begin{proof}
+{\sc Krok 1.} Pokażemy najpierw, że jeżeli $\L$ jest jednocześnie $\pi$-układem oraz $\lambda$-układem, to jest $\sigma$-ciałem. Istotnie
+$\L$ jest zamknięte na operację sumy: jeżeli $A,B\in \L$, to
+$$
+A\cup B = A\cup \big(  B\setminus A\cap B \big) = \big( A^c \setminus (B\setminus A\cap B)   \big)^c \in \L.
+$$ Przez indukcję pokazuje się, że $\L$ jest zamknięte na skończone sumy, tzn. jeżeli $A_1,\ldots, A_n\in \L$, to
+$A_1\cup A_2\cup\ldots\cup A_n\in \L$.
+Załóżmy teraz, że $\{A_n\}_{n\in\N}$ jest przeliczalnym ciągiem elementów $\L$, wówczas $\bigcup_{k=1}^n A_k$ jest ciągiem wstępującym elementów $\L$, a stąd
+$$
+\bigcup_{n=1}^\infty A_n = \bigcup_{n=1}^\infty \bigcup_{k=1}^n A_k \in \L,
+$$ zatem $\L$ jest $\sigma$-ciałem.
+
+\medskip
+
+{\sc Krok 2.} Niech $\L_0$ będzie przekrojem wszystkich $\lambda$-układów zawierających $\K$. Wystarczy pokazać, że $\L_0$ jest $\pi$-układem,
+bo wówczas z kroku 1 jest $\sigma$-ciałem i
+$$
+\K \subset \sigma(\K) \subset \L_0 \subset \L.
+$$
+Ustalmy $A\in \K$ i rozważmy rodzinę
+$$\K_1^A = \{    B\subset \Omega:\; A\cap B\in \L_0   \}.$$ Wówczas $\K\subset  \K_1^A$ (bo $\K$ jest $\pi$-układem), ale ponadto $\K_1^A$ jest $\lambda$-układem:
+\begin{itemize}
+\item $\O \in \K_1^A$;
+\item jeżeli $B_1,B_2\in \K_1^A$ oraz $B_1\subset B_2$, to $$A\cap (B_2\setminus B_1) = (A\cap B_2) \setminus (A\cap B_1) \in \L_0$$
+\item jeżeli $B_n$ jest wstępującą rodziną elementów $\K_1^A$, to
+$$
+A\cap \bigg(\bigcup B_n \bigg) = \bigcup (A\cap B_n) \in \L_0
+$$ zatem $\bigcup B_n \in \K_1^A$.
+\end{itemize}
+Pokazaliśmy, że $\K_1^A$ jest $\lambda$-układem zawierającym $\K$
+% \subset \K_1^A$, bo $\K$ jest $\pi$-układem (a więc dla każdego zbioru $B\in \K$, przekrój $A\cap B \in \K\subset \L$.
+Stąd wynika, że $\K_1^A\supset \L_0$ i ponadto jeżeli $A\in \K, B\in \L_0$, to $A\cap B \in \L_0$.
+
+Zauważmy, że $A$ był dowolnym zbiorem z $\K$. Pokazaliśmy, że dla dowolnych $A\in \K$ i $B \in \L_0$ zachodzi $A\cap B \in \L_0$.
+
+\medskip
+
+Następnie ustalmy dowolny zbiór
+$ B\in \L_0$ i zdefiniujmy $$\K_2^B = \{ A: A\cap B\in \L_0  \}.$$
+To samo rozumowanie co powyżej uzasadnia, że $\K_2^B$ jest $\lambda$-układem oraz zawiera rodzinę $\K$, a więc $\K_2^B \supset \L_0$. Podsumowując pokazaliśmy, że jeżeli
+$A,B\in \L_0$, to $A\cap B\in \L_0$, a więc $\L_0$ jest $\pi$-układem, co kończy dowód.
+\end{proof}
+\begin{proof}[Dowód twierdzenia o jednoznaczności (Twierdzenie \ref{thm:o jednoznacznosci})]
+Chcemy pokazać, że jeżeli $X$ i $Y$ są dwoma zmiennymi losowymi o tej samej dystrybuancie $F$, to muszą mieć te same rozkłady:
+\begin{equation}\label{eq:mu}
+\mu_X(B) = \mu_Y(B), \end{equation}
+dla wszystkich $B\in \B(\R)$. (Zauważmy, że $X$ i $Y$ mogą być określone na różnych przestrzeniach probabilistycznych. Pokazujemy równość
+rozkładów, a nie równość zmiennych losowych.)
+
+Z definicji dystrybuanty wynika, że \eqref{eq:mu} zachodzi dla wszystkich zbiorów postaci $(-\infty,t]$. Oznaczmy te zbiory przez $\K$. Tworzą one  $\pi$-układ. Niech
+$$
+\L = \big\{ A\in\B(\R):\; \mu_X(A) = \mu_Y(A)  \big\}.
+$$ Rodzina $\L$ jest $\lambda$-układem (\zadd). Zatem z lematu o $\pi-\lambda$ układach
+$$
+\L\supset \sigma(\K) = \B(\R).
+$$ To pokazuje, że \eqref{eq:mu} zachodzi dla wszystkich zbiorów borelowskich, a więc obie miary $\mu_X$ i $\mu_Y$ są równe.
+\end{proof}
+
+Powyższe twierdzenie mówi, że dwie miary probabilistyczne są równe, gdy mają identyczne dystrybuanty. Możemy postawić
+ogólniejsze pytanie: kiedy  dwie miary probabilistyczne $\mu$ i $\nu$ są sobie równe? Pokażemy poniżej (Twierdzenie \ref{thm 9.7})
+następujący wynik:
+
+\begin{thm}
+  Jeżeli $\mu$ i $\nu$ są miarami probabilistycznymi na $(\R,\B(\R))$ takimi, że dla każdej ciągłej i ograniczonej funkcji $f$ na $\R$
+  $$
+  \int_\R f d\mu = \int_\R f d\nu,
+  $$ to $\mu=\nu$, tj. $\mu(A) = \nu(A)$ dla każdego $A\in \B(\R)$.
+\end{thm}
+\end{comment}
+
+&lt;!--chapter:end:3_1_zmienne_losowe_rozklady.Rmd--&gt;
+
+# (PART) Listy zadań
+
+&lt;!--chapter:end:L0_listy.Rmd--&gt;
+
+# Lista 1: Rozgrzewka {-}
+
+Zadania na ćwiczenia: 2025-02-24
+
+## Zadania do samodzielnego rozwiązania {-}
+
+1. Na szachownicy o wymiarach $n\times n$ umieszczono $8$ nierozróżnialnych wież, w taki sposób aby żadne dwie się nie biły.
+   Na ile sposobów można to zrobić? Jak zmieni się wynik, gdy wieże będą rozróżnialne?
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_1"&gt;
+  Odpowiedź
+&lt;/button&gt;
+
+&lt;div id="zad1_1" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+    Jeżeli wieże nie są rozróżnialne ${n \choose 8}^28!$
+    jeżeli wieże są rozróżnialne ${n \choose 8}^2(8!)^2$.
+&lt;/p&gt;
+&lt;/div&gt;
+
+2. Na ile sposobów można rozmieścić $n$ kul w $k$ urnach jeżeli: (a) kule są rozróżnialne, (b) kule są nierozróżnialne.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_2"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad1_2" class="collapse"&gt;
+&lt;p class="text-primary"&gt; a $n^k$ b ${n+k-1 \choose k-1}$ &lt;/p&gt;
+&lt;/div&gt;
+
+3. Ile jest liczb mniejszych od $1000$ podzielnych przez jedną z liczb $3$, $5$, $7$?
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_3"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad1_3" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+    $542$
+&lt;/p&gt;
+&lt;/div&gt;
+
+4. Na płaszczyznie danych jest pięć punktów kratowych (o obu współrzędnych całkowitych).
+   Wykazać, ze środek jednego z odcinków łączacych te punkty również jest kratowy
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_4"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad1_4" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+   Należy pokazać, że istnieje para punktów na płaszczyźnie, której współrzędne mają tę samą parzystość.
+   Teza wynika z zastosowania zasady szufladkowej Dirichleta.
+&lt;/p&gt;
+&lt;/div&gt;
+5. Oblicz prawdopodobieństwo zdarzenia, że w potasowanej talii $52$ kart wszystkie cztery asy znajdują się koło siebie.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_5"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad1_5" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+$4!/(52\cdot 51\cdot 50)$
+&lt;/p&gt;
+&lt;/div&gt;
+
+## Zadania na ćwiczenia {-}
+
+6. Na ile sposobów można ustawić $7$ krzeseł białych i $3$ czerwone przy okrągłym stole?
+
+7. Zsumuj
+\begin{equation*}
+\sum_{k=0}^m{n+k \choose j}
+\end{equation*}
+gdzie $m,n,j \in \mathbb{N}$ są liczbami naturalnymi.
+Zapisz $k^2$ jako $a_2{k \choose 2 }+ a_1{ k \choose 1} + a_0{k \choose 0}$.
+Wykorzystaj to do policzenia $\sum_{k=0}^n{k^2}$
+
+8. Wachlarzem rzędu $n$ nazywamy graf o wierzchołkach $\{0, 1, \ldots , n\}$ z $2n-1$ krawędziami zdefiniowanymi
+następująco: wierzchołek $0$ połączony jest krawędzią z każdym z pozostałych wierzchołków i wierzchołek $k$ połączony
+jest krawędzią z wierzchołkiem $k+1$ dla każdego $1 \leq k&lt;n$. Dla przykładu wachlarz rzędu $5$ wygląda następująco
+&lt;div style="margin:20px; padding:10px; text-align:center;"&gt;
+&lt;img src="TIKZ/wachlarz1.svg" style="display: block; margin: auto;" /&gt;
+&lt;/div&gt;
+   Przyjmując $S_0=0$, ile wynosi $S_n$ liczba drzew rozpinających na takim grafie?
+   Drzewem rozpinającym nazywamy spójny podgraf bez cykli zawierający wszystkie wierzchołki
+   &lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_8"&gt;
+     Wskazówka
+   &lt;/button&gt;
+   &lt;div id="zad1_8" class="collapse"&gt;
+   &lt;p class="text-primary"&gt;
+       Znajdź zależność rekurencyjną na $S_n$.
+   &lt;/p&gt;
+   &lt;/div&gt;
+
+9. W klasie jest $15$ uczniów. Na każdej lekcji odpytywany jest losowo jeden z nich.
+   Oblicz prawdopodobieństwo, że podczas $16$ lekcji zostanie przepytany każdy z nich.
+
+10. W Totolotku losuje się $6$ z $49$ liczb. Jakie jest prawdopodobieństwo, że żadne dwie nie będą dwiema
+   kolejnymi liczbami naturalnymi?
+
+11. Stefan Banach w każdej z kieszeni trzymał po pudełku zapałek.
+   Początkowo każde z nich zawierało $n$ zapałek. Za każdym razem kiedy Banach potrzebował zapałki sięgał losowo do jednej
+   z kieszeni i wyciągał jedną zapałkę.
+   Oblicz prawdopodobieństwo, że w momencie gdy sięgnął po puste pudełko, w drugim pozostało jeszcze $k$ zapałek.
+
+12. Oblicz
+   \begin{equation*}
+    \int_{-\infty}^{\infty} e^{-x^2} \: \mathrm{d}x.
+   \end{equation*}
+   &lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad1_12"&gt;
+     Wskazówka
+   &lt;/button&gt;
+   &lt;div id="zad1_12" class="collapse"&gt;
+   &lt;p class="text-primary"&gt;
+       Podnieś całkę do kwadratu i zastosuj współrzędne biegunowe.
+   &lt;/p&gt;
+   &lt;/div&gt;
+
+13.  Grupa składająca się z $2n$ pań i $2n$ panów została podzielona na dwie równoliczne grupy.
+   Znaleźć prawdopodobieństwo, że każda z tych grup składa się z takiej samej liczby pań i panów.
+   Przybliżyć to prawdopodobieństwo za pomocą wzoru Stirlinga.
+
+## Zadania dodatkowe {-}
+
+14. Pewien sułtan więził 100 osób. Pewnego dnia postanowił ich zgładzić.
+   Jako, że był znany ze swego miłosierdzia  dał im ostatnią szansę.
+   Postawił przed nimi następujące zadanie. Każdemu więźniowi przyporządkował liczbę.
+   Następnie w pokoju obok umieścił w rzędzie kolejno $100$ pudełek i do każdego z nich włożył losową liczbę od $1$ do $100$
+   (w każdym pudełku inną). Wieżniowie po kolei, pojedynczo, wchodzą do pokoju z pudełkami.
+   Mogą otworzyć $50$ pudełek, aby znaleźć swój numer, ale pokój muszą pozostawić dokładnie w takim samym stanie w jakim
+   go zastali. Następnie opuszczają pokój wychodząc innym wyjściem i nie mają możliwości skontaktowania się z
+   pozostałymi osobami. Więźniowie zostaną ocaleni, jeżeli z nich każdy znajdzie swój numer.
+   Jeżeli każdy z nich otwiera losowe 50 pudełek, to szanse ich przeżycia wynoszą
+   $2^{-100} \approx 7,8*10^{-31}$. Czy mają oni lepszą strategię?
+
+&lt;!--chapter:end:L1_Rozgrzewka.Rmd--&gt;
+
+# Lista 2: Aksjomaty rachunku prawdopodobieństwa {-}
+
+Zadania na ćwiczenia: 2025-03-03
+
+
+
+## Zadania do samodzielnego rozwiązania {-}
+
+1. Ze zbioru $[100]=\{1,  \ldots  100 \}$ wylosowano ze zwracaniem dwie liczby $L$ i $M$.
+   Zdefiniuj odpowiednią przestrzeń probabilistyczną.
+   Oblicz prawdopodobieństwo, że średnia arytmetyczna $L$ i $M$ jest ściśle mniejsza niż $30$.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad2_1"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad2_1" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+$\Omega = [100]^2$, $\mathcal{F}=2^\Omega$, $\mathbb{P}[\{(l,m)\} ]=100^{-2}$.
+Szukane prawdopodobieństwo to $58\cdot 59/20000$.
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+2. Wybrano losowy punkt $(x,y)$ z kwadratu $[0,1]\times [0,1]$. Zdefiniuj odpowiednią przestrzeń probabilistyczną. Oblicz prawdopodobieństwo, że
+    a. $x$ jest liczbą wymierną;
+    b. obie liczby $x$ i $y$ są niewymierne;
+    c. spełniona jest nierówność $x^2+y^2 &lt; 1$;
+    d. spełniona jest równość $x^2+y^2 = 1$.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad2_2"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad2_2" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+$\Omega = [0,1]^2$, $\mathcal{F} = \mathcal{B}or([0,1]^2)$, $\mathbb{P}$ jest dwuwymiarową
+miarą Lebesgue'a. a) 0; b) 1; c) $\pi/4$;  d) 0
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+3. W kwadracie $[0,1] \times [0,1]$ wybrano losowo dwa punkty $A$ i $B$.
+   Zdefiniuj odpowiednią przestrzeń probabilistyczną. Oblicz prawdopodobieństwo, że
+    a. odcinek $AB$ przecina przekątną łączącą wierzchołki $(0,0)$ i $(1,1)$;
+    b. odległość punktu $A$ od $(1,1)$ jest mniejsza niż 1,
+    c. odległość punktu $B$ od $(1,1)$ jest większa niż 1;
+    d. oba punkty leżą pod parabolą $y = - x(x-1)$.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad2_3"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad2_3" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+$\Omega = [0,1]^4$, $\mathcal{F} = \mathcal{B}or([0,1]^4)$, $\mathbb{P}$ jest czterowymiarową
+miarą Lebesgue'a. a. $1/2$ b. $\pi/4$ c. $1-\pi/4$ d. $1/36$.
+&lt;/p&gt;
+&lt;/div&gt;
+
+4. Niech $A \cup B \cup C = \Omega$, $\mathbb{P}[B] = 2 \mathbb{P}[A]$,
+   $\mathbb{P}[C] = 3 \mathbb{P}[A]$, $\mathbb{P}[A \cap B] = \mathbb{P}[A \cap C] =
+   \mathbb{P}[B \cap C]$. Pokaż, że $1/6 \leq \mathbb{P}[A] \leq 1/4$,
+   przy czym oba ograniczenia są osiągalne.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad2_4"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad2_4" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+Mamy $1 = \mathbb{P}[\Omega] \leq \mathbb{P}[A]$ $+\mathbb{P}[B]+\mathbb{P}[C] = 6 \mathbb{P}[A]$.
+Stąd $\mathbb{P}[A]\geq 1/6$. To ograniczenie jest osiągnięte, jeżeli zbiory $A$, $B$ i $C$ są
+rozłączne. Z drugiej strony
+$1 = \mathbb{P}[\Omega] = \mathbb{P}[C] + \mathbb{P}[B\setminus C]$
+$= \mathbb{P}[C] +\mathbb{P}[B] - \mathbb{P}[B\cap C] \geq 4\mathbb{P}[A]$.
+Stąd $\mathbb{P}[A]\leq 1/4$.
+Ograniczenie to jest osiągnięte kiedy $A = B \cap C$.
+&lt;/p&gt;
+&lt;/div&gt;
+5. Pokaż, że jeżeli $\{A_i\}_{i\ge 1}$ jest rodziną zdarzeń takich, że
+   $\mathbb{P}[A_i]=1$ dla $i\ge 1$, to $\mathbb{P}\left[\bigcap_{i=1}^{\infty} A_i\right]=1$.
+&lt;button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad2_5"&gt;
+  Odpowiedź
+&lt;/button&gt;
+&lt;div id="zad2_5" class="collapse"&gt;
+&lt;p class="text-primary"&gt;
+Jest to wniosek z zadania 6.
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+## Zadania na ćwiczenia {-}
+
+
+6. Udowodnij nierówność Boole'a
+$$
+\mathbb{P}\left[\bigcup_{i=1}^n A_i\right] \; \leq \; \sum_{i=1}^n \mathbb{P}[A_i].
+$$
+Wywnioskuj, że
+$$
+\mathbb{P}\left[\bigcap_{i=1}^n A_i\right] \; \geq \; 1-  \sum_{i=1}^n \mathbb{P}\left[A_i^c\right].
+$$
+
+
+7. Udowodnij nierówność Bonferroniego
+    \begin{equation*}
+        \mathbb{P}\left[\bigcup_{i=1}^n A_i\right] \; \geq \;
+        \sum_{i=1}^n \mathbb{P}[A_i] - \sum_{1 \leq i &lt; j \leq n} \mathbb{P}[A_i \cap A_j]
+    \end{equation*}
+
+
+8. Udowodnij wzór włączeń i wyłączeń
+\begin{multline*}
+  \mathbb{P}[A_1\cup A_2\cup \ldots \cup A_n] = \sum_{i=1}^n\mathbb{P}[A_i]+ \\
+-\sum_{i&lt;j}\mathbb{P}[A_i\cap A_j] + \sum_{i&lt;j&lt;k}\mathbb{P}[A_i\cap A_j\cap A_k]
+  \\ + \ldots +(-1)^{n+1} \mathbb{P}[A_1\cap A_2\cap \ldots \cap A_n]
+\end{multline*}\]</span></p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Dziesięć małżeństw usiadło losowo przy okrągłym stole.
+Oblicz prawdopodobieństwo, że żaden mąż nie siedzi przy swojej żonie.</p></li>
+<li><p>Podczas imprezy mikołajkowej wszystkie <span class="math inline">\(n\)</span> prezentów pozbawiono karteczek z imieniem adresata
+i losowo rozdano uczestnikom. Niech <span class="math inline">\(p_n\)</span> oznacza prawdopodobieństwo,
+że dokładnie jedna osoba dostanie własny prezent.
+Oblicz <span class="math inline">\(p_n\)</span> oraz <span class="math inline">\(\lim_{n \to \infty} p_n\)</span>.</p></li>
+<li><p>Rzucamy symetryczną monetą do chwili otrzymania orła.
+Zdefiniuj odpowiednią przestrzeń probabilistyczną.
+Jaka jest szansa, że liczba rzutów będzie parzysta?
+podzielna przez <span class="math inline">\(3\)</span>? podzielna przez <span class="math inline">\(m\)</span>?</p></li>
+<li><p>Z przedziału <span class="math inline">\([0,1]\)</span> wybrano losowo dwa punkty, które podzieliły go na trzy odcinki.
+Obliczyć prawdopodobieństwo, że z tych odcinków można skonstruować trójkąt.</p></li>
+<li>
+<p>Na nieskończoną szachownicę o boku <span class="math inline">\(a\)</span> rzucamy monetę o średnicy <span class="math inline">\(2r &lt; a\)</span>.
+Znaleźć prawdopodobieństwo, że</p>
+<ol style="list-style-type: lower-alpha">
+<li>moneta znajdzie się całkowicie we wnętrzu jednego z pól;</li>
+<li>moneta przetnie się z co najwyżej jednym bokiem pola na szachownicy.</li>
+</ol>
+</li>
+<li><p>Igłę o długości <span class="math inline">\(l\)</span> rzucono na podłogę z desek o szerokości <span class="math inline">\(a\geq l\)</span>.
+Znajdź prawdopodobieństwo, że igła przetnie krawędź deski.</p></li>
+</ol>
+<div id="zadania-dodatkowe" class="section level2 unnumbered">
+<h2>Zadania dodatkowe<a class="anchor" aria-label="anchor" href="#zadania-dodatkowe"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="15" style="list-style-type: decimal">
+<li><p>Niech <span class="math inline">\((\Omega, \mathcal{F})\)</span> będzie przestrzenią mierzalną.
+Uzasadnij, że <span class="math inline">\(\sigma\)</span>-ciało <span class="math inline">\(\mathcal{F}\)</span> nie może być nieskończoną przeliczalną rodziną zbiorów.</p></li>
+<li><p>Oznaczmy przez <span class="math inline">\(\mathcal B_0\)</span> ciało składające się ze skończonych sum
+rozłącznych przedziałów <span class="math inline">\((a,b]\)</span> zawartych w odcinku <span class="math inline">\((0,1]\)</span>. Określmy na
+<span class="math inline">\(\mathcal B_0\)</span> funkcję <span class="math inline">\(\mathbb{P}\)</span> taką, że <span class="math inline">\(\mathbb{P}(A) = 1\)</span> lub <span class="math inline">\(0\)</span> w zależności od tego,
+czy zbiór <span class="math inline">\(A\)</span> zawiera przedział postaci <span class="math inline">\((1/2,1/2+\varepsilon]\)</span> dla pewnego <span class="math inline">\(\varepsilon&gt;0\)</span>,
+czy też nie. Pokaż, że <span class="math inline">\(\mathbb{P}\)</span> jest miarą addytywną, ale nie przeliczalnie addytywną.</p></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></div>
+<div class="next"><a href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#warto%C5%9B%C4%87-oczekiwana"><span class="header-section-number">7</span> Wartość oczekiwana</a></li>
+<li><a class="nav-link" href="#zadania-dodatkowe">Zadania dodatkowe</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-12.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
