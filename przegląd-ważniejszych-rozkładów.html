@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Rachunek Prawdopodobieństwa 1R</title>
+<title>7 Przegląd ważniejszych rozkładów | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Krótki opis książki.">
+<meta name="description" content="{} {} {} Rozkłady dyskretne i ciągłe nie wyczerpują wszystkich możliwości. Wiemy, że każdą miarę \(\mu\) można jednoznacznie zapisać w postaci \[ \mu = \mu_{{\rm abs}} + \mu_{{\rm sing}}, \] gdzie...">
 <meta name="generator" content="bookdown 0.41 with bs4_book()">
-<meta property="og:title" content="Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="7 Przegląd ważniejszych rozkładów | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Krótki opis książki.">
+<meta property="og:description" content="{} {} {} Rozkłady dyskretne i ciągłe nie wyczerpują wszystkich możliwości. Wiemy, że każdą miarę \(\mu\) można jednoznacznie zapisać w postaci \[ \mu = \mu_{{\rm abs}} + \mu_{{\rm sing}}, \] gdzie...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Krótki opis książki.">
+<meta name="twitter:title" content="7 Przegląd ważniejszych rozkładów | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="{} {} {} Rozkłady dyskretne i ciągłe nie wyczerpują wszystkich możliwości. Wiemy, że każdą miarę \(\mu\) można jednoznacznie zapisać w postaci \[ \mu = \mu_{{\rm abs}} + \mu_{{\rm sing}}, \] gdzie...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -47,7 +47,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="active" href="index.html"></a></li>
+<li><a class="" href="index.html"></a></li>
 <li><a class="" href="sylabus.html">Sylabus</a></li>
 <li class="book-part">Notatki</li>
 <li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
@@ -56,12 +56,14 @@
 <li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
 <li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
 <li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="active" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">7</span> Przegląd ważniejszych rozkładów</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
 <li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
 <li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
 <li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
 </ul>
 
         <div class="book-extra">
@@ -69,48 +71,26 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="section" class="section level1 unnumbered">
-<h1 class="unnumbered"><a class="anchor" aria-label="anchor" href="#section"><i class="fas fa-link"></i></a></h1>
-<div style="text-align: center">
-<div id="galton-container">
-
-</div>
-<script src="JAVA/galton1.js"></script><script>
-  // Po załadowaniu strony uruchom skrypt
-  document.addEventListener("DOMContentLoaded", function() {
-  init(); // Wywołaj funkcję `init` z `galton1.js`
-  });
-</script>
-</div>
-<div style="text-align:center; font-size: 2em; font-weight: bold; margin-top: 20px;">
-Rachunek prawdopodobieństwa
-</div>
-<div style="text-align:center; font-size: 1.5em; margin-top: 20px;">
-Dariusz Buraczewski, Piotr Dyszewski
-</div>
-<div style="text-align:center; font-size: 1.2em; margin-top: 20px;">
-2025-03-19
-</div>
-<hr>
-<p>Notatki te powstały na potrzeby kursu o tej samej nazwie, prowadzonego w Instytucie Matematycznym Uniwersytetu
-Wrocławskiego w semestrze letnim 2024/2025.
-Pierwsza wersja tych notatek jak i plan merytoryczny wykładu zostały przygotowane przez DB w latach 2020-2024.
-Interaktywna wersja notatek została przygotowana przez PD w semestrze letnim roku akademickiego 2024/2025.</p>
-<p>Interaktywny charakter notatek był zainspirowany książkami <a href="https://complex-analysis.com/">Complex Analysis</a> autorstwa Juana Carlosa Ponce Campuzano oraz <a href="https://www.jeffreythompson.org/collision-detection/index.php">Collision Detection</a> Jeffreya Thompsona.</p>
-<p>Notatki te wciąż znajdują się we wstępnej fazie i mogą zawierać błędy. Jeśli zauważysz jakiekolwiek nieścisłości, niedociągnięcia lub inne problemy, gorąco zachęcam do ich zgłaszania na <a href="https://github.com/pdyszewski/">GitHubie</a>.</p>
-<p>Do napisania książki wykorzystałem bibliotekę <a href="https://bookdown.org/">bookdown</a> z pakietu R, a symulacje zostały stworzone przy użyciu javascript lub <a href="https://p5js.org/">p5.js</a>. Rysunki w przeważającej większości są generowane przy użyciu TikZ.</p>
-<div style="text-align: right">
-<p>Wrocław, luty 2025</p>
-<p>Piotr Dyszewski</p>
-</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="przegląd-ważniejszych-rozkładów" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Przegląd ważniejszych rozkładów<a class="anchor" aria-label="anchor" href="#przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w"><i class="fas fa-link"></i></a>
+</h1>
+{}
+{}
+{}
+<p>Rozkłady dyskretne i ciągłe nie wyczerpują wszystkich możliwości. Wiemy, że każdą miarę <span class="math inline">\(\mu\)</span> można jednoznacznie zapisać w postaci
+<span class="math display">\[
+\mu =  \mu_{{\rm abs}} + \mu_{{\rm sing}},
+\]</span> gdzie <span class="math inline">\(\mu_{{\rm abs}} \ll{\rm Leb}\)</span> (tzn. <span class="math inline">\(\mu_{{\rm abs}}\)</span> jest absolutnie ciągła względem <span class="math inline">\({\rm Leb}\)</span>,
+a <span class="math inline">\(\mu_{{\rm sing}} \perp {\rm Leb}\)</span> są wzajemnie singularne (rozkład Lebesgue’a).</p>
 
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="next"><a href="sylabus.html">Sylabus</a></div>
+<div class="prev"><a href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#section"></a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w"><span class="header-section-number">7</span> Przegląd ważniejszych rozkładów</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

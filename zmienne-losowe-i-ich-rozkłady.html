@@ -61,6 +61,7 @@
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
 <li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
 <li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
 </ul>
 
         <div class="book-extra">
@@ -190,14 +191,287 @@ Oznacza to, że
 \end{equation*}\]</span>
 Innymi słowy rozkład <span class="math inline">\(\mu_{S_n}\)</span> jest równy
 <span class="math display">\[\begin{equation*}
-    \mu_{S_n} = \sum_{k=0}^n p_k\delta_k.
+    \mu_{S_n}(\cdot) = \sum_{k=0}^n p_k\delta_k(\cdot).
 \end{equation*}\]</span></p>
 </div>
+<p>Powyższy przykład można bardzo łatwo uogólnić. Rzeczywiście, jeżeli zmienna losowa <span class="math inline">\(X\)</span>
+jest taka, że istnieje przeliczalny zbiór <span class="math inline">\(\{x_k\}_{k \in \mathbb{N}}\)</span> taki, że
+<span class="math display">\[\begin{equation*}
+    \sum_{k=1}^\infty\mathbb{P}[X-x_k] =1,
+\end{equation*}\]</span>
+to jej rozkład zadany jest przez
+<span class="math display">\[\begin{equation*}
+    \mu_X(\cdot)=\sum_{k=1}^\infty p_k\delta_{x_k}(\cdot),
+\end{equation*}\]</span>
+gdzie
+<span class="math display">\[\begin{equation*}
+    p_k = \mathbb{P}[X = x_k], \quad k \in \mathbb{N}.
+\end{equation*}\]</span>
+Powyższe stosuje się do każdej zmiennej losowej określonej na zbiorze przeliczalnym.
+Aby móc w podobny sposób analizować zmienne losowe określone na większych przestrzeniach
+musimy wprowadzić dodatkowy aparat.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-66" class="definition"><strong>Definicja 6.3  </strong></span>{} zmiennej losowej <span class="math inline">\(X\)</span> nazywamy funkcję <span class="math inline">\(F:\; \R \to [0,1]\)</span> zadaną wzorem
+<p><span id="def:unlabeled-div-66" class="definition"><strong>Definicja 6.3  </strong></span>Dystrybuantą zmiennej losowej <span class="math inline">\(X\)</span> nazywamy funkcję <span class="math inline">\(F:\; \mathbb{R} \to [0,1]\)</span> zadaną wzorem
 <span class="math display">\[
-  F(t) = \P[X\le t] = \mu\big((-\infty,t]\big).
+  F(t) = \mathbb{P}[X\le t] = \mu_X\left((-\infty,t]\right).
   \]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-67" class="example"><strong>Przykład 6.3  </strong></span>Rzucamy monetą. <span class="math inline">\(\Omega = \{O,R\}\)</span>, <span class="math inline">\(X(O)=1\)</span>, <span class="math inline">\(X(R) = -1\)</span>. Wtedy
+<span class="math display">\[
+  F(t) = \mathbb{P}[X\le t] = \left\{
+  \begin{array}{cc}
+    0 &amp; \mbox{ dla } t &lt; -1 \\
+    1/2 &amp; \mbox{ dla } -1\le t &lt; 1 \\
+    1 &amp;  \mbox{ dla } t \ge 1.
+  \end{array}
+  \right.
+  \]</span></p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/dystr1.svg" style="display: block; margin: auto;"></div>
+</div>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-68" class="example"><strong>Przykład 6.4  </strong></span>Losowa liczba z przedziału <span class="math inline">\([0,1]\)</span>: <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})
+  = ([0,1], \mathcal{B}or([0,1]), \lambda_1)\)</span>, <span class="math inline">\(X(\omega) = \omega\)</span>.
+<span class="math display">\[
+  F(t) = \mathbb{P}[X\le t] = \left\{
+  \begin{array}{cc}
+    0 &amp; \mbox{ dla } t &lt; 0 \\
+    t &amp; \mbox{ dla } 0\le t &lt; 1 \\
+    1 &amp;  \mbox{ dla } t \ge  1.
+  \end{array}
+  \right.
+  \]</span></p>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/dystr2.svg" style="display: block; margin: auto;"></div>
+</div>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-69" class="example"><strong>Przykład 6.5  </strong></span>Rozważmy pierwszy sposób losowania w paradoksie Bertranda.
+<span class="math display">\[
+  F(t) = \mathbb{P}[X_1\le t] = \left\{
+  \begin{array}{cc}
+    0 &amp; \mbox{ dla } t &lt; 0 \\
+    \frac{2}{\pi} \arcsin(t/2) &amp; \mbox{ dla } 0\le t &lt; 2 \\
+    1 &amp;  \mbox{ dla } t \ge  2.
+  \end{array}
+  \right.
+\]</span></p>
+</div>
+<div style="margin:20px; padding:10px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/dystr3.svg" style="display: block; margin: auto;"></div>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-70" class="theorem"><strong>Twierdzenie 6.2  (Własności dystrybuanty) </strong></span>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą pewnej zmiennej losowej <span class="math inline">\(X\)</span>. Wówczas</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(F\)</span> jest niemalejąca.</li>
+<li>
+<span class="math inline">\(\lim_{t\to -\infty} F(t) = 0\)</span>, <span class="math inline">\(\lim_{t\to  \infty} F(t) = 1\)</span>.</li>
+<li>
+<span class="math inline">\(F\)</span> jest prawostronnie ciągła.</li>
+<li>dla dowolnego <span class="math inline">\(t\in \mathbb{R}\)</span> istnieje lewostronna granica
+<span class="math display">\[F(t-) = \lim_{s\to t^-}F(s) = \mathbb{P}[X&lt;t].\]</span>
+</li>
+<li>
+<span class="math inline">\(F\)</span> jest nieciągła w punkcie <span class="math inline">\(t_0\)</span> wtedy i tylko wtedy, gdy <span class="math inline">\(\mathbb{P}[X = t_0] &gt; 0\)</span>. Wówczas
+<span class="math inline">\(\mathbb{P}[X=t_0] = F(t_0) - F(t_0-)\)</span>. Punkt <span class="math inline">\(t_0\)</span> nazywamy wówczas <strong>atomem</strong> rozkładu.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-71" class="proof"><em>Proof</em>. </span><strong>Punkt 1.</strong> Jeżeli <span class="math inline">\(t_1&lt;t_2\)</span>, to zachodzi inkluzja <span class="math inline">\((-\infty,t_1] \subset (-\infty, t_2]\)</span>. Wówczas:
+<span class="math display">\[
+F(t_1) = \mu((-\infty,t_1]) \leq \mu((-\infty, t_2]) = F(t_2).
+\]</span></p>
+<p><strong>Punkt 2.</strong> Niech <span class="math inline">\(\{t_n\}\)</span> będzie dowolnym ciągiem rosnącym do <span class="math inline">\(+\infty\)</span>. Wówczas rodzina zbiorów <span class="math inline">\((-\infty,t_n]\)</span> jest rosnąca, a ponadto:
+<span class="math display">\[
+\mathbb{R} = \bigcup_n (-\infty,t_n].
+\]</span>
+Z twierdzenia o ciągłości otrzymujemy:
+<span class="math display">\[
+\lim_{n\to\infty} F(t_n) = \lim_{n\to\infty} \mu((-\infty,t_n]) = \mu(\mathbb{R}) = 1.
+\]</span>
+Analogicznie dowodzimy drugiej części.</p>
+<p><strong>Punkt 3.</strong> Ustalmy <span class="math inline">\(t \in \mathbb{R}\)</span> i niech <span class="math inline">\(\{t_n\}\)</span> będzie ciągiem malejącym do <span class="math inline">\(t\)</span>. Wówczas ciąg przedziałów <span class="math inline">\((t,t_n]\)</span> jest malejący i spełnia:
+<span class="math display">\[
+\bigcap_n (t,t_n] = \emptyset.
+\]</span>
+Z twierdzenia o ciągłości otrzymujemy:
+<span class="math display">\[
+\lim_{n\to\infty} \big( F(t_n) - F(t) \big)
+= \lim_{n\to\infty} \big( \mu((-\infty,t_n]) - \mu((-\infty, t]) \big)
+= \lim_{n\to\infty} \mu((t,t_n]) = \mu(\emptyset) = 0.
+\]</span></p>
+<p><strong>Punkt 4.</strong> Dowód przebiega analogicznie jak w punkcie 3.</p>
+<p><strong>Punkt 5.</strong> Jest konsekwencją punktu 4.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:dystr" class="theorem"><strong>Twierdzenie 6.3  </strong></span>Jeżeli <span class="math inline">\(F\)</span> jest funkcją na <span class="math inline">\(\mathbb{R}\)</span> spełniającą warunki 1,2 i 3 z poprzedniego twierdzenia:</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(F\)</span> jest niemalejąca;</li>
+<li>
+<span class="math inline">\(\lim_{t\to -\infty} F(t) = 0\)</span>, <span class="math inline">\(\lim_{t\to  \infty} F(t)\)</span> = 1;</li>
+<li>
+<span class="math inline">\(F\)</span> jest prawostronnie ciągła;</li>
+</ol>
+<p>to <span class="math inline">\(F\)</span> jest dystrybuantą pewnego rozkładu.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-72" class="proof"><em>Proof</em>. </span>Naszym celem jest skonstruowanie przestrzeni probabilistycznej
+<span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> oraz zmiennej losowej <span class="math inline">\(X\)</span> na niej określonej
+takiej, że
+<span class="math inline">\(F\)</span> jest dystrybuantą <span class="math inline">\(X\)</span>, tzn.
+<span class="math display" id="eq:pt1">\[\begin{equation}
+    F(t) = \mathbb{P}[X\le t]
+\tag{6.1}
+\end{equation}\]</span>
+Zdefiniujmy <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P}) = \big( (0,1), \mathcal{B}or(0,1), {\rm Leb} \big)\)</span>.</p>
+<p>Załóżmy najpierw, że funkcja <span class="math inline">\(F\)</span> jest odwracalna i zdefiniujmy
+<span class="math display">\[
+X(\omega) = F^{-1}(\omega).
+\]</span>
+Musimy najpierw sprawdzić, że <span class="math inline">\(X\)</span> jest zmienną losową, tzn, że jest mierzalna.
+Zauważmy, że dla dowolnego <span class="math inline">\(t\in \mathbb{R}\)</span>,
+<span class="math display">\[
+X^{-1}((-\infty, t]) = \{\omega:\; X(\omega) \le t \} = \{\omega:\; \omega \le F(t)\} = [0,F(t)] \in \mathcal{B}or(0,1).
+\]</span>
+Dla sprawdzenia <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#eq:pt1">(6.1)</a> piszemy
+<span class="math display">\[
+\mathbb{P}[X(\omega) \le t] = \mathbb{R}[ \omega \le F(t)] = F(t).
+\]</span>
+Rozważmy teraz ogólny przypadek.
+Zdefiniujmy zmienną losową <span class="math inline">\(X\)</span>
+jako uogólnioną funkcję odwrotną <span class="math inline">\(F\)</span>:
+<span class="math display" id="eq:m1">\[\begin{equation}
+X(\omega) = F^{-1}(\omega):= \sup\{y\in \mathbb{R}:\; F(y)&lt; \omega\}.
+\tag{6.2}  
+\end{equation}\]</span>
+Pokażemy, że <span class="math inline">\(F\)</span> jest dystrybuantą <span class="math inline">\(X\)</span>, tzn. zachodzi <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#eq:pt1">(6.1)</a>.
+W tym celu wystarczy pokazać
+<span class="math display" id="eq:pt2">\[\begin{equation}
+\{ \omega:\; X(\omega) \le t \} =\{\omega:\; \omega \le F(t)\}
+\tag{6.3}
+\end{equation}\]</span>
+dla każdego <span class="math inline">\(t\)</span>.</p>
+<p>Oznaczmy przez <span class="math inline">\(L\)</span> (<span class="math inline">\(P\)</span>) zbiór po lewej (prawej) stronie formuły <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#eq:pt2">(6.3)</a>.
+Pokażemy najpierw, że <span class="math inline">\(L\supset P\)</span>. Istotnie, niech
+<span class="math inline">\(\omega\in P\)</span>, tzn. <span class="math inline">\(\omega \le F(t)\)</span>.
+Wtedy <span class="math display">\[t\notin \{ y\in \mathbb{R}:\; F(y)&lt; \omega\}.\]</span>
+Skoro <span class="math inline">\(F\)</span> jest monotoniczna, to
+<span class="math display">\[
+t \geq \sup\{ y \in \mathbb{R} \: : \: F(y)&lt;\omega\} = F^{-1}(\omega)=X(\omega)
+\]</span>
+zatem <span class="math inline">\(X(\omega) \le t\)</span>.</p>
+<p>Do dowodu odwrotnej implikacji, niech <span class="math inline">\(\omega\notin P\)</span>, czyli <span class="math inline">\(\omega &gt;F(t)\)</span>.<br>
+Korzystając z prawostronnej ciągłości dystrybuanty <span class="math inline">\(F\)</span>,
+istnieje <span class="math inline">\(\varepsilon &gt; 0\)</span> tż. <span class="math inline">\(F(t+\varepsilon) &lt; \omega\)</span>.
+Zatem <span class="math display">\[t+\varepsilon \in \{ y\in \mathbb{R}:\; F(y) &lt; \omega \}.\]</span>
+Stąd
+<span class="math display">\[
+t&lt;t+\varepsilon \leq \sup\{ y \in \mathbb{R} \: : \: F(y)&lt;\omega\} = F^{-1}(\omega) = X(\omega).
+\]</span>
+Skoro
+<span class="math inline">\(X(\omega)&gt;t\)</span>, czyli <span class="math inline">\(\omega \notin L\)</span>.
+Z równości <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#eq:pt2">(6.3)</a> wynika, że <span class="math inline">\(X\)</span> jest zmienną losową.
+Aby pokazać, że <span class="math inline">\(X\)</span> ma zadaną dystrybuantę
+<span class="math display">\[
+\mathbb{P}[X\le t] = \mathbb{P}\left[ \{ \omega:\; X(\omega) \le t \}\right]
+=\mathbb{P}\left[\{\omega:\; \omega \le F(t)\}\right] = F(t),
+\]</span>
+gdzie ostatnia równość wynika z definicji miary probabilistycznej <span class="math inline">\(\mathbb{P}\)</span>,
+która jest miarą Lebesgue’a na <span class="math inline">\([0,1]\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:jedn" class="theorem"><strong>Twierdzenie 6.4  (Twierdzenie o jednoznaczności) </strong></span>Dystrybuanta zmiennej losowej <span class="math inline">\(X\)</span> wyznacza jednoznacznie jej rozkład.</p>
+</div>
+<p>Powyższy wynik jest konsekwencją lematu o <span class="math inline">\(\pi-\lambda\)</span> układach zwanym też twierdzeniem Dynkina.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-73" class="definition"><strong>Definicja 6.4  </strong></span>Niepustą rodzinę <span class="math inline">\(\mathcal{K}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <strong><span class="math inline">\(\pi\)</span>-układem</strong>,
+jeżeli jest zamknięta na operację przekroju, tzn. <span class="math inline">\(A\cap B\in \mathcal{K}\)</span> dla wszystkich <span class="math inline">\(A,B\in\mathcal{K}\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-74" class="definition"><strong>Definicja 6.5  </strong></span>Niepustą rodzinę <span class="math inline">\(\mathcal{L}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <strong><span class="math inline">\(\lambda\)</span>-układem</strong>,
+jeżeli</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\Omega \in \mathcal{L}\)</span>.</li>
+<li>jeżeli <span class="math inline">\(A,B\in \mathcal{L}\)</span> i <span class="math inline">\(A\subset B\)</span>, to <span class="math inline">\(B\setminus A\in \mathcal{L}\)</span>.</li>
+<li>jeżeli <span class="math inline">\(A_1,A_2,...\)</span> jest wstępującym ciągiem elementów <span class="math inline">\(\mathcal{L}\)</span>,
+to <span class="math inline">\(\bigcup_{n=1}^\infty A_n \in \mathcal{L}\)</span>.</li>
+</ol>
+</div>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-75" class="lemma"><strong>Lemma 6.1  (Dynkin) </strong></span>Jeżeli <span class="math inline">\(\mathcal{L}\)</span> jest <span class="math inline">\(\lambda\)</span>-układem zawierającym <span class="math inline">\(\pi\)</span>-układ <span class="math inline">\(\mathcal{K}\)</span>,
+to <span class="math inline">\(\mathcal{L}\)</span> zawiera także <span class="math inline">\(\sigma(\mathcal{K})\)</span>,
+<span class="math inline">\(\sigma\)</span>-ciało generowane przez <span class="math inline">\(\mathcal{K}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-76" class="proof"><em>Proof</em>. </span><strong>Krok 1.</strong> Pokażemy najpierw, że jeżeli <span class="math inline">\(\mathcal{L}\)</span> jest jednocześnie <span class="math inline">\(\pi\)</span>-układem oraz <span class="math inline">\(\lambda\)</span>-układem, to jest <span class="math inline">\(\sigma\)</span>-ciałem. Istotnie
+<span class="math inline">\(\mathcal{L}\)</span> jest zamknięte na operację sumy: jeżeli <span class="math inline">\(A,B\in \mathcal{L}\)</span>, to
+<span class="math display">\[
+A\cup B = A\cup \big(  B\setminus A\cap B \big) =
+\big( A^c \setminus (B\setminus A\cap B)   \big)^c \in \mathcal{L}.
+\]</span> Przez indukcję pokazuje się, że <span class="math inline">\(\mathcal{L}\)</span> jest zamknięte na skończone sumy,
+tzn. jeżeli <span class="math inline">\(A_1,\ldots, A_n\in \mathcal{L}\)</span>, to
+<span class="math inline">\(A_1\cup A_2\cup\ldots\cup A_n\in \mathcal{L}\)</span>.
+Załóżmy teraz, że <span class="math inline">\(\{A_n\}_{n\in\mathbb{N}}\)</span> jest przeliczalnym ciągiem elementów <span class="math inline">\(\mathcal{L}\)</span>,
+wówczas <span class="math inline">\(\bigcup_{k=1}^n A_k\)</span> jest ciągiem wstępującym elementów <span class="math inline">\(\mathcal{L}\)</span>, a stąd
+<span class="math display">\[
+\bigcup_{n=1}^\infty A_n = \bigcup_{n=1}^\infty \bigcup_{k=1}^n A_k \in \mathcal{L},
+\]</span> zatem <span class="math inline">\(\mathcal{L}\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem.</p>
+<p><strong>Krok 2.</strong> Niech <span class="math inline">\(\mathcal{L}_0\)</span> będzie przekrojem wszystkich <span class="math inline">\(\lambda\)</span>-układów
+zawierających <span class="math inline">\(\mathcal{K}\)</span>. Wystarczy pokazać, że <span class="math inline">\(\mathcal{L}_0\)</span> jest <span class="math inline">\(\pi\)</span>-układem,
+bo wówczas z kroku 1 jest <span class="math inline">\(\sigma\)</span>-ciałem i
+<span class="math display">\[
+\mathcal{K} \subset \sigma(\mathcal{K}) \subset \mathcal{L}_0 \subset \mathcal{L}.
+\]</span>
+Ustalmy <span class="math inline">\(A\in \mathcal{K}\)</span> i rozważmy rodzinę
+<span class="math display">\[\mathcal{K}_1^A = \{    B\subset \Omega:\; A\cap B\in \mathcal{L}_0   \}.\]</span>
+Wówczas <span class="math inline">\(\mathcal{K}\subset  \mathcal{K}_1^A\)</span> (bo <span class="math inline">\(\mathcal{K}\)</span> jest <span class="math inline">\(\pi\)</span>-układem),
+ale ponadto <span class="math inline">\(\mathcal{K}_1^A\)</span> jest <span class="math inline">\(\lambda\)</span>-układem:</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\Omega \in \mathcal{K}_1^A\)</span>;</li>
+<li>jeżeli <span class="math inline">\(B_1,B_2\in \mathcal{K}_1^A\)</span> oraz <span class="math inline">\(B_1\subset B_2\)</span>, to
+<span class="math display">\[A\cap (B_2\setminus B_1) = (A\cap B_2) \setminus (A\cap B_1) \in \mathcal{L}_0\]</span>
+</li>
+<li>jeżeli <span class="math inline">\(B_n\)</span> jest wstępującą rodziną elementów <span class="math inline">\(\mathcal{K}_1^A\)</span>, to
+<span class="math display">\[
+A\cap \bigg(\bigcup B_n \bigg) = \bigcup (A\cap B_n) \in \mathcal{L}_0
+\]</span> zatem <span class="math inline">\(\bigcup B_n \in \mathcal{K}_1^A\)</span>.</li>
+</ol>
+<p>Pokazaliśmy, że <span class="math inline">\(\mathcal{K}_1^A\)</span> jest <span class="math inline">\(\lambda\)</span>-układem zawierającym <span class="math inline">\(\mathcal{K}\)</span>
+Stąd wynika, że <span class="math inline">\(\mathcal{L}_0 \subseteq \mathcal{K}_1^A.\)</span>.
+Czyli jeżeli <span class="math inline">\(A\in \mathcal{K}, B\in \mathcal{L}_0\)</span>, to <span class="math inline">\(A\cap B \in \mathcal{L}_0\)</span>.</p>
+<p>Następnie ustalmy dowolny zbiór
+<span class="math inline">\(B\in \mathcal{L}_0\)</span> i zdefiniujmy <span class="math display">\[\mathcal{K}_2^B = \{ A: A\cap B\in \mathcal{L}_0  \}.\]</span>
+To samo rozumowanie co powyżej uzasadnia, że <span class="math inline">\(\mathcal{K}_2^B\)</span> jest <span class="math inline">\(\lambda\)</span>-układem oraz
+zawiera rodzinę <span class="math inline">\(\mathcal{K}\)</span>, a więc <span class="math inline">\(\mathcal{L}_0 \subseteq \mathcal{K}_2^B\)</span>.
+Podsumowując pokazaliśmy, że jeżeli
+<span class="math inline">\(A,B\in \mathcal{L}_0\)</span>, to <span class="math inline">\(A\cap B\in \mathcal{L}_0\)</span>, a więc <span class="math inline">\(\mathcal{L}_0\)</span> jest <span class="math inline">\(\pi\)</span>-układem,
+co kończy dowód.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-77" class="proof"><em>Proof</em>. </span>Dowód twierdzenia o jednoznaczności (Twierdzenie <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#thm:jedn">6.4</a>)
+Chcemy pokazać, że jeżeli <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są dwoma zmiennymi losowymi o tej samej dystrybuancie <span class="math inline">\(F\)</span>, to muszą mieć te same rozkłady:
+<span class="math display" id="eq:mu">\[\begin{equation}
+\mu_X(B) = \mu_Y(B),
+\tag{6.4}
+\end{equation}\]</span>
+dla wszystkich <span class="math inline">\(B\in \mathcal{B}or(\mathbb{R})\)</span>. (Zauważmy, że <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> mogą być
+określone na różnych przestrzeniach probabilistycznych. Pokazujemy równość
+rozkładów, a nie równość zmiennych losowych.)</p>
+<p>Z definicji dystrybuanty wynika, że <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#eq:mu">(6.4)</a> zachodzi dla wszystkich zbiorów
+postaci <span class="math inline">\((-\infty,t]\)</span>. Oznaczmy te zbiory przez <span class="math inline">\(\mathcal{K}\)</span>. Tworzą one <span class="math inline">\(\pi\)</span>-układ. Niech
+<span class="math display">\[
+\mathcal{L} = \big\{ A\in\mathcal{B}or(\mathbb{R}):\; \mu_X(A) = \mu_Y(A)  \big\}.
+\]</span> Rodzina <span class="math inline">\(\mathcal{L}\)</span> jest <span class="math inline">\(\lambda\)</span>-układem. Zatem z lematu o <span class="math inline">\(\pi-\lambda\)</span> układach
+<span class="math display">\[
+\mathcal{L}\supset \sigma(\mathcal{K}) = \mathcal{B}or((\mathbb{R}).
+\]</span> To pokazuje, że <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#eq:mu">(6.4)</a> zachodzi dla wszystkich zbiorów borelowskich,
+a więc obie miary <span class="math inline">\(\mu_X\)</span> i <span class="math inline">\(\mu_Y\)</span> są równe.</p>
 </div>
 
 </div>
@@ -227,7 +501,7 @@ Innymi słowy rozkład <span class="math inline">\(\mu_{S_n}\)</span> jest równ
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-13.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-19.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

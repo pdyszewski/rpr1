@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lista 5: Zmienne losowe | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Zadania na ćwiczenia: 2025-03-24 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Losujemy bez zwracania dwie liczby ze zbioru {1,2,3,4,5}. Niech \(X\) będzie sumą wylosowanych...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Lista 5: Zmienne losowe | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Zadania na ćwiczenia: 2025-03-24 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Losujemy bez zwracania dwie liczby ze zbioru {1,2,3,4,5}. Niech \(X\) będzie sumą wylosowanych...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lista 5: Zmienne losowe | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-03-24 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Losujemy bez zwracania dwie liczby ze zbioru {1,2,3,4,5}. Niech \(X\) będzie sumą wylosowanych...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="active" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-5-zmienne-losowe" class="section level1 unnumbered">
+<h1>Lista 5: Zmienne losowe<a class="anchor" aria-label="anchor" href="#lista-5-zmienne-losowe"><i class="fas fa-link"></i></a>
+</h1>
+<p>Zadania na ćwiczenia: 2025-03-24</p>
+<p><a href="L5_zmienne.pdf">Lista zadań w formacie PDF</a></p>
+<div id="zadania-do-samodzielnego-rozwiązania-4" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-4"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Losujemy bez zwracania dwie liczby ze zbioru {1,2,3,4,5}.
+Niech <span class="math inline">\(X\)</span> będzie sumą wylosowanych liczb - wyznacz jego rozkład oraz dystrybuantę.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_1">
+Odpowiedź
+</button>
+<div id="zad5_1" class="collapse">
+<p class="text-primary">
+<span class="math display">\[\begin{align*}
+\mu_X =&amp;  0.1\delta_3+0.1\delta_4+0.2\delta_5+0.2\delta_6\\ &amp;+0.2\delta_7+0.1\delta_8+0.1\delta_9\\
+F_X(t) =&amp;  0.1\mathbf{1}_{[3,4)}(t) +0.2\mathbf{1}_{[4,5)}(t)+0.4\mathbf{1}_{[5,6)}(t) +
+    0.6\mathbf{1}_{[6,7)}(t)\\ &amp;+0.8\mathbf{1}_{[7,8)}(t) +0.9 \mathbf{1}_{[8,9)}(t) + \mathbf{1}_{[9, +\infty)}(t)
+\end{align*}\]</span>
+</p>
+</div>
+</li>
+<li>Losujemy jednostajnie punkt z okręgu o promieniu jeden. Niech <span class="math inline">\(X\)</span> będzie odległością
+wylosowanego punktu od środka okręgu. Uzasadnij, że <span class="math inline">\(X\)</span> jest zmienną losową. Znajdź jej dystrybuantę.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_2">
+Odpowiedź
+</button>
+<div id="zad5_2" class="collapse">
+<p class="text-primary">
+Przyjmujemy <span class="math inline">\(\Omega = \{ (x,y) \: : \: x^2+y^2 &lt;1\}\)</span>, <span class="math inline">\(\mathcal{F} = \mathcal{B}or(\Omega)\)</span>,
+<span class="math inline">\(\mathbb{P} = \pi^{-1}\lambda_1\)</span>.
+<span class="math display">\[\begin{align*}
+   X^{-1}[(-\infty,t]] &amp;= \Omega\cap \{(x,y) \: : \: x^2+y^2&lt;t^2\}\in \mathcal{F}\\
+   F_X(t) &amp;= \mathbf{1}_{[0,1]}(t)t^2 + \mathbf{1}_{[ 1,\infty)}(t).
+\end{align*}\]</span>
+</p>
+</div>
+</li>
+<li>Niech <span class="math inline">\(F_1, F_2\)</span> będą dystrybuantami (spełniają założenia Twierdzenia <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#thm:dystr">6.3</a>).
+Sprawdzić, czy następujące funkcje są jednowymiarowymi dystrybuantami (spełniają założenia Twierdzenia <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#thm:dystr">6.3</a>):
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(F_1 F_2\)</span>;</li>
+<li>
+<span class="math inline">\(F_1 + F_2\)</span>;</li>
+<li>
+<span class="math inline">\(F_1 - F_2\)</span>;</li>
+<li>
+<span class="math inline">\(F_1 / F_2\)</span>;</li>
+<li>
+<span class="math inline">\(\max(F_1, F_2)\)</span>;</li>
+<li>
+<span class="math inline">\(\min(F_1, F_2)\)</span>.<br><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_3">
+Odpowiedź
+</button>
+<div id="zad5_3" class="collapse">
+<p class="text-primary">
+a,e,f.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li>Podaj przykład przestrzeni probabilistycznej <span class="math inline">\((\Omega, {\mathcal F}, {\mathbb P})\)</span> i funkcji
+<span class="math inline">\(X: \Omega\to  \mathbb{R}\)</span>, która nie jest zmienną losową.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_4">
+Odpowiedź
+</button>
+<div id="zad5_4" class="collapse">
+<p class="text-primary">
+Niech <span class="math inline">\(\Omega=\{1,2\}\)</span>, <span class="math inline">\(\mathcal{F} = \{\emptyset, \Omega\}\)</span>, <span class="math inline">\(X(\omega)=\omega\)</span>.
+</p>
+</div>
+</li>
+<li>Dystrybuanta zmiennej losowej <span class="math inline">\(X\)</span> dana jest wzorem
+<span class="math display">\[\begin{equation*}
+F_X(x) \; = \; (0.1 + x)\mathbf{1}_{[0,0.5)}(x) + (0.4 + x)\mathbf{1}_{[0.5,0.55)}(x)
++ \mathbf{1}_{[0.55,\infty)}(x) \; .
+\end{equation*}\]</span>
+Niech <span class="math inline">\(\mu_X\)</span> będzie rozkładem <span class="math inline">\(X\)</span>. Wyznacz
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(\mu_X(\{ 1/2 \})\)</span>,</li>
+<li>
+<span class="math inline">\(\mu_X([0,1/2])\)</span>,</li>
+<li>
+<span class="math inline">\(\mu_X((0,0.55))\)</span>.</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_5">
+Odpowiedź
+</button>
+<div id="zad5_5" class="collapse">
+<p class="text-primary">
+a 0.3, b 0.9, c. 0.85
+</p>
+</div>
+</li>
+<li>Zmienna losowa <span class="math inline">\(X\)</span> ma rozkład zadany przez
+<span class="math display">\[\begin{equation*}
+\mu_X(A) = \int_A c (1-x)^2 \mathbf{1}_{[0,1]}(x) \mathrm{d}x.
+\end{equation*}\]</span>
+Znajdź wartość parametru <span class="math inline">\(c\)</span>.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_6">
+Odpowiedź
+</button>
+<div id="zad5_6" class="collapse">
+<p class="text-primary">
+<span class="math inline">\(3\)</span>.
+</p>
+</div>
+</li>
+<li>Losujemy jednostajnie punkt z przedziału <span class="math inline">\((0,1)\)</span>. Niech <span class="math inline">\(U\)</span> będzie wylosowanym punktem. Wyznacz dystrybuantę
+zmiennej losowej <span class="math inline">\(X = -\log(U)\)</span>.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad5_7">
+Odpowiedź
+</button>
+<div id="zad5_7" class="collapse">
+<p class="text-primary">
+<span class="math inline">\(F_X(t)=1-e^{-t}\)</span>.
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="zadania-na-ćwiczenia-4" class="section level2 unnumbered">
+<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-4"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Dana jest przestrzeń probabilistyczna <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> oraz funkcja
+<span class="math inline">\(X: \Omega \to \mathbb{R}\)</span>. Uzasadnij, że jeżeli <span class="math inline">\(X^{-1}(a,b)\in \mathcal{F}\)</span> dla dowolnych
+<span class="math inline">\(a,b\in \mathbb{R}\)</span>, to <span class="math inline">\(X\)</span> jest zmienną losową.</p></li>
+<li><p>Dystrybuanta zmiennej losowej <span class="math inline">\(X\)</span> dana jest wzorem:
+<span class="math display">\[
+F_X(t) = \left\{
+\begin{array}{cc}
+   0 &amp;  \mbox{ dla } t&lt;0\\
+   t^2 \ \  &amp;  \mbox{ dla } 0\leq t &lt; 1/2\\
+   1/4 &amp; \mbox{ dla } 1/2 \leq t &lt; 4 \\
+   1 &amp; \mbox{ dla }t\geq 4.
+\end{array}
+\right.
+\]</span>
+Oblicz <span class="math inline">\(\mathbb{P}[X=5]\)</span>, <span class="math inline">\(\mathbb{P}[X=4]\)</span>, <span class="math inline">\(\mathbb{P}[1/3 &lt; X \leq 5]\)</span>, <span class="math inline">\(\mathbb{P}[0&lt;X&lt;1]\)</span>.</p></li>
+<li><p>Niech <span class="math inline">\(X_1,\ldots, X_n\)</span> będą zmiennymi losowymi określonymi na przestrzeni probabilistycznej
+<span class="math inline">\((\Omega,\mathcal{F},\mathbb{P})\)</span> i niech <span class="math inline">\(B_1,B_2,\ldots, B_n \in \mathcal{F}\)</span> będzie rozbiciem <span class="math inline">\(\Omega\)</span>
+(tzn. zbiory te są rozłączne i ich sumą jest <span class="math inline">\(\Omega\)</span>).
+Niech <span class="math inline">\(Z(\omega) = X_i(\omega)\)</span> dla <span class="math inline">\(\omega\in B_i\)</span>. Uzasadnij, że <span class="math inline">\(Z\)</span> jest zmienną losową.</p></li>
+<li>
+<p>Punkt <span class="math inline">\(x\)</span> nazywamy atomem rozkładu <span class="math inline">\(\mu\)</span> na <span class="math inline">\(\mathbb{R}\)</span>, gdy <span class="math inline">\(\mu(\{x\}) &gt; 0\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pokaż, że rozkład prawdopodobieństwa <span class="math inline">\(\mu\)</span> może mieć co najwyżej przeliczalną liczbę atomów.</li>
+<li>Czy zbiór atomów może mieć punkt skupienia?</li>
+<li>Czy zbiór atomów może być gęsty w <span class="math inline">\(\mathbb{R}\)</span>?</li>
+</ol>
+</li>
+<li><p>Dane są dwie miary probabilistyczne <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> na <span class="math inline">\((\mathbb{R}, \mathcal{B}(\mathbb{R}))\)</span> takie, że dla dowolnej liczby <span class="math inline">\(t&gt;0\)</span> mamy <span class="math inline">\(\nu([-t,t]) = \mu([-t,t])\)</span>. Uzasadnić, że <span class="math inline">\(\mu(A) = \nu(A)\)</span> dla dowolnego symetrycznego zbioru <span class="math inline">\(A\in \mathcal{B}(\mathbb{R})\)</span> (zbiór <span class="math inline">\(A\)</span> nazywamy symetrycznym, jeżeli <span class="math inline">\(A = -A\)</span>).</p></li>
+<li><p>Zmienna losowa <span class="math inline">\(X\)</span> ma rozkład zadany przez
+<span class="math display">\[
+\mu_X(A) = \int_A \frac{2}{\pi}\frac{1}{1+x^2} \mathbf{1}_{[0, +\infty)}(x) \mathrm{d}x.
+\]</span>
+Udowodnij, że
+<span class="math display">\[\begin{equation*}
+Y(\omega) = \left\{ \begin{array}{cc} 1/X(\omega), &amp; X(\omega)&gt;0 \\  17, &amp; X(\omega)\leq 0\end{array} \right.   
+\end{equation*}\]</span>
+ma ten sam rozkład, co <span class="math inline">\(X\)</span>.</p></li>
+<li><p>(rozkład geometryczny) Wykonujemy doświadczenia Bernoulliego (z prawdopodobieństwem pojedynczego sukcesu <span class="math inline">\(p\)</span>)
+aż do chwili otrzymania pierwszego sukcesu. Niech <span class="math inline">\(X\)</span> oznacza liczbę wykonanych doświadczeń,
+<span class="math inline">\(Y\)</span> – czas oczekiwania na pierwszy sukces, czyli liczbę porażek przed pierwszym sukcesem. Wyznaczyć rozkłady zmiennych
+losowych <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>, tj. wyznaczyć funkcje <span class="math inline">\(\mathbb{P}[X=k]\)</span> oraz <span class="math inline">\(\mathbb{P}[Y=k]\)</span>.</p></li>
+<li><p>(rozkład wykładniczy) Przypuśćmy, że doświadczenia opisane w poprzednim zadaniu
+wykonuje się <span class="math inline">\(n\)</span> razy na sekundę,
+zaś prawdopodobieństwo sukcesu wynosi <span class="math inline">\(\lambda/n\)</span>, <span class="math inline">\(\lambda &gt; 0\)</span>,
+a czas oczekiwania na pierwszy sukces, <span class="math inline">\(Y_n\)</span>, mierzy się w sekundach.
+Wyznaczyć dystrybuantę zmiennej losowej <span class="math inline">\(Y_n\)</span> i zbadać jej zachowanie gdy <span class="math inline">\(n \to \infty\)</span>.</p></li>
+</ol>
+</div>
+<div id="zadania-dodatkowe-4" class="section level2 unnumbered">
+<h2>Zadania dodatkowe<a class="anchor" aria-label="anchor" href="#zadania-dodatkowe-4"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="16" style="list-style-type: decimal">
+<li>Mówimy, że zmienna losowa <span class="math inline">\(X\)</span> jest niezdegenerowana, gdy <span class="math inline">\(\mathbb{P}[X = a] &lt; 1\)</span> dla każdego <span class="math inline">\(a\in \mathbb{R}\)</span>.
+Wyznacz wszystkie liczby rzeczywiste <span class="math inline">\(b, c\)</span> dla których istnieje niezdegenerowana zmienna losowa <span class="math inline">\(X\)</span>
+taka, że <span class="math inline">\(X\)</span> ma taki sam rozkład jak <span class="math inline">\(bX+c\)</span>. Scharakteryzuj rozkład <span class="math inline">\(X\)</span> w terminach <span class="math inline">\(b\)</span> i <span class="math inline">\(c\)</span>.</li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-5-zmienne-losowe">Lista 5: Zmienne losowe</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-4">Zadania do samodzielnego rozwiązania</a></li>
+<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia-4">Zadania na ćwiczenia</a></li>
+<li><a class="nav-link" href="#zadania-dodatkowe-4">Zadania dodatkowe</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-19.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
