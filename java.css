@@ -42,4 +42,35 @@
          gap: 10px;
      margin-top: 10px;
     }
+#top2random-container {
+      padding: 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
 
+#top2rand-button-container {
+      margin-top: 10px;
+    }
+#step-counter {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #bern-container {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    #slider-container {
+      margin-top: 10px;
+    }
+
+    input[type="range"] {
+      accent-color: #eee8d5;
+      background-color: #eee8d5;
+    }
+    #geo-container {
+  width: 100%;
+  height: 300px; /* lub jak chcesz */
+  position: relative;
+}
