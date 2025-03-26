@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lista 6: Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Zadania na ćwiczenia: 2025-03-31 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania W urnie jest \(b \geq 1\) kul białych i \(c \geq 1\) czarnych. Obliczyć \(\mathbb{E}[X]\), jeśli...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Lista 6: Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Zadania na ćwiczenia: 2025-03-31 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania W urnie jest \(b \geq 1\) kul białych i \(c \geq 1\) czarnych. Obliczyć \(\mathbb{E}[X]\), jeśli...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lista 6: Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-03-31 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania W urnie jest \(b \geq 1\) kul białych i \(c \geq 1\) czarnych. Obliczyć \(\mathbb{E}[X]\), jeśli...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="active" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-6-wartość-oczekiwana" class="section level1 unnumbered">
+<h1>Lista 6: Wartość oczekiwana<a class="anchor" aria-label="anchor" href="#lista-6-warto%C5%9B%C4%87-oczekiwana"><i class="fas fa-link"></i></a>
+</h1>
+<p>Zadania na ćwiczenia: 2025-03-31</p>
+<p><a href="L6_rozklady.pdf">Lista zadań w formacie PDF</a></p>
+<div id="zadania-do-samodzielnego-rozwiązania-5" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-5"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>W urnie jest <span class="math inline">\(b \geq 1\)</span> kul białych i <span class="math inline">\(c \geq 1\)</span> czarnych.
+Obliczyć <span class="math inline">\(\mathbb{E}[X]\)</span>, jeśli <span class="math inline">\(X\)</span> jest liczbą wylosowanych kul białych podczas
+losowania bez zwracania <span class="math inline">\(n\)</span> kul (<span class="math inline">\(n \leq b + c\)</span>);</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_1">
+Odpowiedź
+</button>
+<div id="zad6_1" class="collapse">
+<p class="text-primary">
+<span class="math inline">\(bn/(b+c)\)</span>
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<p>Zmienna losowa ma rozkład o gęstości <span class="math inline">\(g(x) = 5x^4 \mathbb{I}_{[0,1]}(x)\)</span>.
+Obliczyć</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mathbb{E}[X]\)</span></li>
+<li>
+<span class="math inline">\(\mathbb{E}[1/(1+X^5)]\)</span>.</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_2">
+Odpowiedź
+</button>
+<div id="zad6_2" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>5/6 b. <span class="math inline">\(\log(2)\)</span>
+</li>
+</ol>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>
+<p>Oblicz <span class="math inline">\(\mathbb{E}[X]\)</span> jeżeli <span class="math inline">\(X\)</span> jest zmienną o rozkładzie:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Poiss(<span class="math inline">\(\lambda\)</span>),</li>
+<li>Exp(<span class="math inline">\(\lambda\)</span>),</li>
+<li>Geom(<span class="math inline">\(p\)</span>).</li>
+<li>
+<span class="math inline">\(\mathcal{N}(\mu, \sigma^2)\)</span>.</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_3">
+Odpowiedź
+</button>
+<div id="zad6_3" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(\lambda\)</span> b. <span class="math inline">\(1/\lambda\)</span>, c. <span class="math inline">\(1/p\)</span>, d. <span class="math inline">\(\mu\)</span>
+</li>
+</ol>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>
+<p>Zmienna losowa <span class="math inline">\(X\)</span> ma rozkład jednostajny <span class="math inline">\(U[0,1]\)</span>.
+Obliczyć <span class="math inline">\(\mathbb{E}[Y]\)</span> jeżeli</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(Y = e^X\)</span>,</li>
+<li>
+<span class="math inline">\(Y = \cos^2(\pi X)\)</span>.</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_4">
+Odpowiedź
+</button>
+<div id="zad6_4" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(e-1\)</span> b. <span class="math inline">\(1/2\)</span>
+</li>
+</ol>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>
+<p>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą zmiennej losowej <span class="math inline">\(X\)</span>, a <span class="math inline">\(f\)</span> jej gęstością.
+Wyznaczyć dystrybuanty i gęstości zmiennych losowych:</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(a X + b\)</span> dla <span class="math inline">\(a &gt; 0\)</span>;</li>
+<li>
+<span class="math inline">\(|X|\)</span>;</li>
+<li>
+<span class="math inline">\(X^2\)</span>;</li>
+<li>
+<span class="math inline">\(e^X\)</span>;</li>
+</ol>
+</li>
+</ol>
+W terminach <span class="math inline">\(F\)</span> i <span class="math inline">\(f\)</span>.
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_5">
+Odpowiedź
+</button>
+<div id="zad6_5" class="collapse">
+<p class="text-primary">
+<span class="math display">\[\begin{align*}
+    a. &amp; F((t-b)/a) &amp; f((x-b)/a)/a \\
+    b. &amp; F(t)-0F(-t) &amp; f(x)-f(-x) \\
+    c. &amp; F(\sqrt{t}) - F(-\sqrt{t}) &amp; (f(\sqrt{x}) +f(\sqrt{x}))/(2\sqrt{x}) \\
+    d. &amp; F(\log(t)) &amp; f(\log(x))/x 1_{y&gt;0}
+\end{align*}\]</span>
+</p>
+</div>
+</div>
+<div id="zadania-na-ćwiczenia-5" class="section level2 unnumbered">
+<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-5"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p>Monika wybrała się do kasyna w Las Vegas mając przy sobie 255$.
+Jako cel postawiła sobie wygranie <span class="math inline">\(1\)</span> dolara w ruletkę i wyjście z kasyna z kwotą 256$.
+Podczas tej wizyty obstawiała kolory. Wszystkie pola poza 0 i 00 są czerwone lub czarne
+(po 18 pól). Poprawne wskazanie koloru (z prawdopodobieństwem 18/38) podwaja zaryzykowaną kwotę.
+Monika zastosowała następującą strategię: postanowiła, że będzie grać kolejno
+o 1$, 2$, 4$, 8$, 16$, 32$, 64$, 128$. Jeżeli w jednej z gier wygra,
+zabiera nagrodę i opuszcza kasyno z 256 dolarami.
+Obliczyć prawdopodobieństwo, że jej się powiodło. Obliczyć wartość oczekiwaną wygranej.</p></li>
+<li><p>Losujemy cięciwę w okręgu o promieniu jeden poprzez wylosowanie jej środka.
+Niech <span class="math inline">\(X_2\)</span> będzie długością wylosowanej cięciwy. Wyznacz rozkład <span class="math inline">\(X_2\)</span>.
+Czy rozkład ten jest absolutnie ciągły? Wyznacz gęstość. Znajdź <span class="math inline">\(\mathbb{E}[X_2]\)</span>.</p></li>
+<li><p>Każdy bok i każda przekątna <span class="math inline">\(2n\)</span>-kąta foremnego malujemy losowo na jeden z trzech kolorów.
+Wybór każdego koloru jest jednakowo prawdopodobny, a kolorowania różnych odcinków są niezależne.
+Niech <span class="math inline">\(X\)</span> oznacza liczbę jednobarwnych trójkątów prostokątnych o wierzchołkach będących
+wierzchołkami <span class="math inline">\(2n\)</span>-kąta. Obliczyć <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
+<li><p>W urnie znajduje się 50 białych kul. Losujemy ze zwracaniem po jednej kuli,
+przy czym wyciągniętą kulę malujemy na czerwono, jeśli jest biała.
+Niech <span class="math inline">\(X\)</span> będzie liczbą czerwonych kul w urnie po 20 losowaniach.
+Obliczyć <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
+<li><p>Na płaszczyźnie zaznaczono <span class="math inline">\(n\)</span> punktów w taki sposób, że żadne trzy nie są współliniowe.
+Każda para punktów została połączona odcinkiem z prawdopodobieństwem <span class="math inline">\(p\)</span>.
+Niech <span class="math inline">\(X\)</span> oznacza liczbę powstałych trójkątów.
+Oblicz <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
+<li><p>Pokaż, że jeżeli zmienna losowa <span class="math inline">\(X\)</span> ma rozkład dyskretny skoncentrowany na liczbach całkowitych nieujemnych, to
+<span class="math display">\[
+     \mathbb{E}X = \sum_{k=1}^{\infty} \mathbb{P}(X \geq k).
+\]</span></p></li>
+<li>
+<p>Niech <span class="math inline">\(X\)</span> będzie zmienną losową o dystrybuancie <span class="math inline">\(F\)</span>. Wykaż, że</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Jeżeli <span class="math inline">\(X \geq 0\)</span>, to <span class="math inline">\(\mathbb{E}[X]  =  \int_0^\infty \mathbb{P}(X&gt;t)\: d t
+=  \int_0^\infty \mathbb{P}(X \geq t)\:d t\)</span> przy czym istnienie
+jednej strony implikuje istnienie drugiej i ich równość;</p></li>
+<li><p>Jeżeli <span class="math inline">\(X\)</span> jest dowolną zmienną losową o skończonej wartości oczekiwanej,
+to <span class="math inline">\(\mathbb{E}[X] =
+\int_0^\infty \left( 1 - F(t) \right)\: d t - \int_{-\infty}^0 F(t)\: d t\)</span>.</p></li>
+<li><p>jeżeli <span class="math inline">\(X \geq 0\)</span>, <span class="math inline">\(\varphi\)</span> jest rosnąca i różniczkowalna,
+<span class="math inline">\(\varphi(0) = 0\)</span>, to
+<span class="math inline">\(\mathbb{E}[\varphi(X)]  =  \int_0^\infty \varphi '(t) \mathbb{P}(X&gt;t)\: d t\)</span>.
+W szczególności, jeżeli <span class="math inline">\(r &gt; 0\)</span>, to <span class="math inline">\(\mathbb{E}[X^r] =
+   \int_0^\infty r t^{r-1} \mathbb{P}(X&gt;t)\: d t\)</span>.</p></li>
+</ol>
+</li>
+<li><p>Udowodnić, że jeżeli <span class="math inline">\(X \geq 0\)</span>, to <span class="math inline">\(\sum_{n=1}^\infty \mathbb{P}(X \geq n) \; \leq \; \
+\mathbb{E}[X] \; \leq 1 + \sum_{n=1}^\infty \mathbb{P}(X \geq n)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></div>
+<div class="next"><a href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-6-warto%C5%9B%C4%87-oczekiwana">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-5">Zadania do samodzielnego rozwiązania</a></li>
+<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia-5">Zadania na ćwiczenia</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-26.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

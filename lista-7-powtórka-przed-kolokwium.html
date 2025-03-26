@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lista 7: Powtórka przed kolokwium | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Wybieramy losowo liczbę naturalną z przedziału \([1, 1000]\). Obliczyć prawdopodobieństwo, że wybrana liczba jest podzielna przez co...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Lista 7: Powtórka przed kolokwium | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Wybieramy losowo liczbę naturalną z przedziału \([1, 1000]\). Obliczyć prawdopodobieństwo, że wybrana liczba jest podzielna przez co...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lista 7: Powtórka przed kolokwium | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Wybieramy losowo liczbę naturalną z przedziału \([1, 1000]\). Obliczyć prawdopodobieństwo, że wybrana liczba jest podzielna przez co...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="active" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-7-powtórka-przed-kolokwium" class="section level1 unnumbered">
+<h1>Lista 7: Powtórka przed kolokwium<a class="anchor" aria-label="anchor" href="#lista-7-powt%C3%B3rka-przed-kolokwium"><i class="fas fa-link"></i></a>
+</h1>
+<p><a href="L7_powtorka.pdf">Lista zadań w formacie PDF</a></p>
+<div id="zadania-do-samodzielnego-rozwiązania-6" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-6"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p>Wybieramy losowo liczbę naturalną z przedziału <span class="math inline">\([1, 1000]\)</span>.
+Obliczyć prawdopodobieństwo, że wybrana liczba jest podzielna przez co najmniej
+jedną z liczb: <span class="math inline">\(4\)</span>, <span class="math inline">\(6\)</span>, <span class="math inline">\(9\)</span>.</p></li>
+<li><p>Co jest bardziej prawdopodobne: otrzymanie co najmniej jednej jedynki przy
+rzucie <span class="math inline">\(4\)</span> kostek, czy co najmniej raz dwóch jedynek na obu kostkach przy <span class="math inline">\(24\)</span>
+rzutach obu kostek</p></li>
+<li><p>Znaleźć prawdopodobieństwo, że przy wielokrotnym rzucaniu parą kostek sześciennych suma
+oczek <span class="math inline">\(8\)</span> wypadnie przed sumą oczek <span class="math inline">\(7\)</span>.</p></li>
+<li>
+<p>Każda z <span class="math inline">\(n\)</span> pałek została złamana na dwie części -
+długą i krótką. <span class="math inline">\(2n\)</span> części połączono w <span class="math inline">\(n\)</span> par, z których
+utworzono nowe pałki. Znaleźć prawdopodobieństwo, że</p>
+<ol style="list-style-type: lower-alpha">
+<li>części zostaną połączone w takich samych kombinacjach jak przed złamaniem;</li>
+<li>wszystkie długie części zostaną połączone z krótkimi.</li>
+</ol>
+</li>
+<li><p>Niech <span class="math inline">\(n \in \mathbb{N}\)</span>. Losujemy jednostajnie podzbiór
+<span class="math inline">\([n]=\{1,2, \ldots , n\}\)</span>. Skonstruuj odpowiednią przestrzeń probabilistyczną.
+Dla <span class="math inline">\(k \in [n]\)</span> niech <span class="math inline">\(A_k\)</span> będzie zdarzeniem, że wylosowany zbiór zawiera <span class="math inline">\(k\)</span>.
+Pokaż, że zdarzenia <span class="math inline">\(\{A_k\}_{k \in [n]}\)</span> są niezależne.</p></li>
+<li><p>Niech <span class="math inline">\(n \in \mathbb{N}\)</span>. Losujemy jednostajnie podzbiór <span class="math inline">\(\{1,2, \ldots , n\}\)</span>.
+Niech <span class="math inline">\(X\)</span> będzie liczebnością
+wylosowanego zbioru. Znajdź rozkład <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Zdarzenia <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są niezależne oraz <span class="math inline">\(A \cup B = \Omega\)</span>.
+Wykazać, że <span class="math inline">\(\mathbb{P}(A) = 1\)</span> lub <span class="math inline">\(\mathbb{P}(B) = 1\)</span>.</p></li>
+<li><p>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
+Dla zdarzeń <span class="math inline">\(\{A_k\}_{k \in [n]}\)</span> i <span class="math inline">\(\{\epsilon_k\}_{k\in [n]} \in \{0,1\}^n\)</span>
+niech
+<span class="math display">\[\begin{equation*}
+A_k^{\epsilon_k} = \left\{ \begin{array}{cc} A_k, &amp; \epsilon_k=1 \\ A_k^c, &amp; \epsilon_k=0 \end{array} \right..
+\end{equation*}\]</span>
+Pokaż, że <span class="math inline">\(\{A_k\}_{k \in [n]}\)</span> są niezależne wtedy i tylko wtedy, gdy dla każdego
+<span class="math inline">\(\{\epsilon_k\}_{k \in [n]} \in \{0,1\}^n\)</span>,<br><span class="math display">\[\begin{equation*}
+\mathbb{P}\left[A_1^{\epsilon_1}\cap A_2^{\epsilon_2}\cap \ldots \cap A_{n}^{\epsilon_n}\right] =
+     \mathbb{P}\left[A_1^{\epsilon_1}\right]
+\mathbb{P}\left[A_2^{\epsilon_2}\right] \cdots
+\mathbb{P}\left[A_{n}^{\epsilon_n}\right].
+\end{equation*}\]</span></p></li>
+<li><p>Niech <span class="math inline">\(\Omega\)</span> będzie zbiorem wszystkich grafów prostych na wierzchołkach
+<span class="math inline">\(\{1, 2, \ldots , n\}\)</span>.
+Rozważmy <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span> oraz <span class="math inline">\(\mathbb{P}[A] = |A|/|\Omega|\)</span>.
+Dla każdej pary <span class="math inline">\(i&lt;j\)</span> niech <span class="math inline">\(A_{i,j}\)</span> będzie zdarzeniem, że wylosowany graf
+zawiera krawędź <span class="math inline">\(\{i,j\}\)</span>. Pokaż, że <span class="math inline">\((A_{i,j})_{i&lt;j}\)</span> są niezależne.</p></li>
+<li><p>Rozważmy przestrzeń probabilistyczną z poprzedniego zadania. Niech <span class="math inline">\(X\)</span> będzie liczbą trójkątów
+w wylosowanym grafie, tj. liczbą trójek <span class="math inline">\(i&lt;j&lt;k\)</span> takich, że wylosowany graf zawiera krawędzie
+<span class="math inline">\(\{i,j\}\)</span>, <span class="math inline">\(\{j,k\}\)</span> oraz <span class="math inline">\(\{k,i\}\)</span>. Znajdź <span class="math inline">\(\mathbb{E}[X]\)</span>.</p></li>
+<li><p>Niech
+<span class="math display">\[\begin{equation*}
+\Omega = \{ \omega=(\omega_j)_{j \in [n]} \in \mathbb{N}^n \: : \: |\omega_1| = |\omega_{j}-\omega_{j-1}|=1\}
+\end{equation*}\]</span>
+Niech <span class="math inline">\(\mathcal{F}=2^\Omega\)</span> i <span class="math inline">\(\mathbb{P}[A] = |A|/|\Omega|\)</span>.
+Niech <span class="math inline">\(A_1 = \{\omega_1=1\}\)</span>.
+Dla <span class="math inline">\(k \in [n]\)</span>, <span class="math inline">\(k \geq 2\)</span> połóżmy <span class="math inline">\(A_k = \{\omega_k-\omega_{k-1}=1\}\)</span>.
+Pokaż, że <span class="math inline">\(\{A_k\}_{k \in [n]}\)</span> są niezależne.</p></li>
+<li><p>Rozważmy przestrzeń probabilistyczną z poprzedniego zadania. Rozważmy <span class="math inline">\(X(\omega) =\omega_n\)</span>. Znajdź rozkład <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Na odcinku <span class="math inline">\([0, 1]\)</span> umieszczono losowo punkty <span class="math inline">\(A_1\)</span> , <span class="math inline">\(A_2\)</span> i <span class="math inline">\(A_3\)</span> .
+Obliczyć prawdopodobieństwo, że <span class="math inline">\(A_1 \leq A_2 \leq A_3\)</span> .</p></li>
+<li>
+<p>Niech <span class="math inline">\(Q\)</span> będzie wielomianem rzeczywistym stopnia <span class="math inline">\(2n\)</span> o losowych współczynnikach.
+Każdy współczynnik jest losowany niezależnie i może wynieść <span class="math inline">\(1\)</span> z prawdopodobienstawem <span class="math inline">\(p\)</span>
+oraz <span class="math inline">\(-1\)</span> z prawdopodobieństwem <span class="math inline">\(1-p\)</span>. Znaleźć:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mathbb{P}[Q(2) &gt; 0];\)</span></li>
+<li>
+<span class="math inline">\(\mathbb{P}[Q(1) &gt; 0]\)</span>;</li>
+<li>
+<span class="math inline">\(\mathbb{P}[Q(2) &gt; 0|Q(1) &gt; 0]\)</span>.</li>
+</ol>
+</li>
+<li><p>Przypomnijmy, że
+<span class="math display">\[\begin{equation*}
+\frac{\pi^2}{6} = \sum_{n=1}^\infty \frac{1}{n^2}.
+\end{equation*}\]</span>
+Rozważmy <span class="math inline">\(\Omega = \mathbb{N}\)</span>, <span class="math inline">\(\mathcal{F}=2^\Omega\)</span> oraz <span class="math inline">\(\mathbb{P}[\{n\}]=6n^{-2}\pi^{-2}\)</span>.
+Niech <span class="math inline">\(\mathcal{P}\)</span> oznacza zbiór liczb pierwszych.
+Pokaż, że <span class="math inline">\(\{p\mathbb{N}\}_{p \in \mathcal{P}}\)</span> są niezależne. Wywnioskuj, że
+<span class="math display">\[\begin{equation*}
+\prod_{p \in \mathcal{P}}\left(1 -\frac{1}{p^2} \right) = \frac{6}{\pi^2}.
+\end{equation*}\]</span></p></li>
+<li><p>Rodzina <span class="math inline">\(\mathcal{R}_1\)</span> składa się z jednego zdarzenia <span class="math inline">\(A = \{1,2\}\)</span> zaś rodzina
+<span class="math inline">\(\mathcal{R}_2\)</span> z dwóch zdarzeń <span class="math inline">\(B = \{1,3\}\)</span> i <span class="math inline">\(C = \{2,3\}\)</span>.
+Wiemy, że <span class="math inline">\(\Omega = \{1,2,3,4\}\)</span> i że wszystkie zdarzenia elementarne są jednakowo prawdopodobne.
+Czy <span class="math inline">\(\sigma\)</span>-algebry <span class="math inline">\(\sigma(\mathcal{R}_1)\)</span> i <span class="math inline">\(\sigma(\mathcal{R}_2)\)</span> są niezależne?</p></li>
+<li><p>Czy funkcja<br><span class="math display">\[
+G(x) =
+\begin{cases}
+0, &amp; \text{dla } x \leq 0, \\
+1, &amp; \text{dla } x \geq 1, \\
+x^2, &amp; \text{dla } 0 \leq x &lt; \frac{1}{2}, \\
+x, &amp; \text{dla } \frac{1}{2} \leq x \leq 1
+\end{cases}
+\]</span>
+jest dystrybuantą? Naszkicuj wykres funkcji <span class="math inline">\(G\)</span> i wyznacz jej uogólnioną funkcję odwrotną.
+Znajdź przestrzeń probabilistyczną <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> oraz zmienną losową <span class="math inline">\(Y\)</span>,
+dla której funkcja <span class="math inline">\(G\)</span> jest dystrybuantą. Znajdź <span class="math inline">\(\mathbb{E}[e^{Y}]\)</span>.</p></li>
+<li><p>Niech <span class="math inline">\(X\)</span> będzie zmienną losową o gęstości <span class="math inline">\(\alpha x^{\alpha-1}\mathbf{1}_{[0,1]}(x)\)</span>. Niech
+<span class="math inline">\(\varphi(s) = \max\{ \frac 14, s-s^2\}\)</span>. Oblicz <span class="math inline">\(\mathbb{E} \varphi(X)\)</span>.</p></li>
+<li><p>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą na <span class="math inline">\(\mathbb{R}\)</span>. Pokaż, że dla dowolnego <span class="math inline">\(a \geq 0\)</span>,
+<span class="math display">\[
+             \int_{\mathbb{R}} F(x+a) - F(x) \mathrm{d}x =a.
+         \]</span></p></li>
+<li><p>Z urny, w której jest <span class="math inline">\(6\)</span> kul czarnych i <span class="math inline">\(4\)</span> białe losujemy kolejno bez zwracania po
+jednej kuli tak długo, aż wylosujemy kulę czarną. Obliczyć wartość oczekiwaną
+liczby wylosowanych kul białych.</p></li>
+<li><p>Rzucamy sześcienną kostką aż do momentu, gdy wypadną pod rząd dwie „szóstki”.
+Znaleźć wartość oczekiwaną liczby rzutów.</p></li>
+<li><p>Niech <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> będą niezależnymi zdarzeniami o jednakowym
+prawdopodobieństwie <span class="math inline">\(p_n\)</span>. Przy pomocy <em>nierówności Boole’a</em> oraz
+<em>nierówności Bonferroniego</em> oszacować (z góry i z dołu)
+<span class="math display">\[ \mathbf{P}_n \; = \; \frac{\mathbb{P}[\bigcup_{i=1}^n A_i]}{np_n} \; . \]</span>
+Jak sprawdza się to szacowanie dla <span class="math inline">\(p_n = 1/n\)</span>? Wyznaczyć <span class="math inline">\(\lim_{n \to \infty} \mathbf{P}_n\)</span>
+w przypadku, gdy <span class="math inline">\(\lim_{n \to \infty} n p_n = 0\)</span>.]</p></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-7-powt%C3%B3rka-przed-kolokwium">Lista 7: Powtórka przed kolokwium</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-6">Zadania do samodzielnego rozwiązania</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-26.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>7 Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R</title>
+<title>8 Wartość oczekiwana: zastosowania | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Definicja 7.1 Niech \(X\) będzie zmienną losową określoną na przestrzeni probabilistycznej \((\Omega, \mathcal{F}, \mathbb{P})\). Mówimy, że \(X\) ma wartość oczekiwaną jeżeli \[  \int_\Omega |X|...">
+<meta name="description" content="Twierdzenie 8.1 Niech \(f:\mathbb{R}\to \mathbb{R}\) będzie funkcją borelowską, a \(X\) zmienną losową o rozkładzie \(\mu_X\). Wówczas \[  \mathbb{E}\left[ f(X)\right] = \int_{\mathbb{R}}...">
 <meta name="generator" content="bookdown 0.41 with bs4_book()">
-<meta property="og:title" content="7 Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="8 Wartość oczekiwana: zastosowania | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Definicja 7.1 Niech \(X\) będzie zmienną losową określoną na przestrzeni probabilistycznej \((\Omega, \mathcal{F}, \mathbb{P})\). Mówimy, że \(X\) ma wartość oczekiwaną jeżeli \[  \int_\Omega |X|...">
+<meta property="og:description" content="Twierdzenie 8.1 Niech \(f:\mathbb{R}\to \mathbb{R}\) będzie funkcją borelowską, a \(X\) zmienną losową o rozkładzie \(\mu_X\). Wówczas \[  \mathbb{E}\left[ f(X)\right] = \int_{\mathbb{R}}...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="7 Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Definicja 7.1 Niech \(X\) będzie zmienną losową określoną na przestrzeni probabilistycznej \((\Omega, \mathcal{F}, \mathbb{P})\). Mówimy, że \(X\) ma wartość oczekiwaną jeżeli \[  \int_\Omega |X|...">
+<meta name="twitter:title" content="8 Wartość oczekiwana: zastosowania | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Twierdzenie 8.1 Niech \(f:\mathbb{R}\to \mathbb{R}\) będzie funkcją borelowską, a \(X\) zmienną losową o rozkładzie \(\mu_X\). Wówczas \[  \mathbb{E}\left[ f(X)\right] = \int_{\mathbb{R}}...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -56,8 +56,9 @@
 <li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
 <li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
 <li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
-<li><a class="active" href="warto%C5%9B%C4%87-oczekiwana.html"><span class="header-section-number">7</span> Wartość oczekiwana</a></li>
-<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">8</span> Przegląd ważniejszych rozkładów</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="active" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -73,166 +74,21 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="wartość-oczekiwana" class="section level1" number="7">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="wartość-oczekiwana-zastosowania" class="section level1" number="8">
 <h1>
-<span class="header-section-number">7</span> Wartość oczekiwana<a class="anchor" aria-label="anchor" href="#warto%C5%9B%C4%87-oczekiwana"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8</span> Wartość oczekiwana: zastosowania<a class="anchor" aria-label="anchor" href="#warto%C5%9B%C4%87-oczekiwana-zastosowania"><i class="fas fa-link"></i></a>
 </h1>
-<div class="definition">
-<p><span id="def:unlabeled-div-78" class="definition"><strong>Definicja 7.1  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową określoną na przestrzeni probabilistycznej
-<span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>. Mówimy, że <strong><span class="math inline">\(X\)</span> ma wartość oczekiwaną</strong> jeżeli
-<span class="math display">\[
-  \int_\Omega |X| \mathrm{d} \mathbb{P} = \int_\Omega |X(\omega)|\mathbb{P}(\mathrm{d}\omega) &lt;\infty.
-\]</span>
-Wówczas <strong>wartością oczekiwaną</strong> zmiennej losowej <span class="math inline">\(X\)</span> nazywamy liczbę
-<span class="math display">\[
-    \mathbb{E}[ X ] =  \int_\Omega X \mathrm{d}\mathbb{P} =
-    \int_{\Omega}X(\omega) \mathbb{P}(\mathrm{d}\omega).
-\]</span></p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-79" class="example"><strong>Przykład 7.1  </strong></span>Rzucamy kostką. Niech <span class="math inline">\(X\)</span> oznacza liczbę wyrzuconych oczek.
-Wówczas, dla <span class="math inline">\(\Omega = [6]=\{1,2, \ldots, 6\}\)</span>,
-<span class="math display">\[\begin{equation*}
-    \mathbb{E}[X] = \sum_{k=1}^6 k \mathbb{P}[\{ k\}] = 3,5.
-\end{equation*}\]</span></p>
-</div>
-<p>Jak widzimy po powyższym przykładzie nazwy “wartość oczekiwana” nie należy interpretować
-dosłownie. W rzucie kostką nie będziemy oczekiwać wartości <span class="math inline">\(3,5\)</span>.</p>
-<p>Zauważmy, że jeżeli <span class="math inline">\(\Omega = \{\omega_j\}_j\)</span> jest przestrzenią dyskretną
-i <span class="math inline">\(\mathbb{P}[\{\omega_i\}]=p_i\)</span>, to
-<span class="math display">\[
-\mathbb{E} [X] =\sum_{i=1}^n X(\omega_i)p_i.
-\]</span>
-Wartość oczekiwaną należy rozumieć jako średnią ważoną <span class="math inline">\(X\)</span>.</p>
-<p>Istnieje jeszcze jedno spojrzenie na wartość oczekiwaną. Załóżmy, że rzucamy kostką <span class="math inline">\(n\)</span> razy.
-Niech <span class="math inline">\(X_j\)</span> oznacza wynik <span class="math inline">\(j\)</span>tego rzutu. Wówczas średnia empiryczna (uzyskanych wyników) to
-<span class="math display">\[\begin{equation*}
-    \frac 1n \sum_{j=1}^n X_j.
-\end{equation*}\]</span>
-Możemy ją napisać równoważnie jako
-<span class="math display">\[\begin{multline*}
-    \frac 1n \sum_{j=1}^n X_j=
-    1 \frac{\# \{ j \leq n \: : \: X_j=1\}}{n}+
-    2 \frac{\# \{ j \leq n \: : \: X_j=2\}}{n}+ \\  
-    +6 \frac{\# \{ j \leq n \: : \: X_j=6}{n}.
-\end{multline*}\]</span>
-Jeżeli <span class="math inline">\(n\)</span> jest bardzo duże, to spodziewamy się, że
-<span class="math display">\[\begin{equation*}
-\frac{\# \{ j \leq n \: : \: X_j=k\}}{n} \to \mathbb{P}[\{k\}]=\frac 16.
-\end{equation*}\]</span>
-Dokładne uzasadnienie powyższego faktu zobaczymy w dalszej części wykładu.
-Chcąc zaagitować za naturalnością przyjętej przez nas definicji wartości oczekiwanej
-przyjmijmy go chwilowo za prawdziwy. Wówczas średnia empiryczna zbiega do
-<span class="math display">\[\begin{equation*}
-    \frac 1n \sum_{j=1}^n X_j \to \sum_{k=1}^6 k \mathbb{P}[\{ k\}]
-\end{equation*}\]</span>
-czyli wartości oczekiwanej wyniku jednego rzutu. Powyższy heurystyczny argument nie
-jest zależny od wyważenia czy też liczby ścian na kostce.</p>
-<div class="example">
-<p><span id="exm:unlabeled-div-80" class="example"><strong>Przykład 7.2  </strong></span>Dwaj gracze <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> grają w następującą grę.
-Rzucają kostką. Niech <span class="math inline">\(k\)</span> będzie wynikiem rzutu.
-Jeżeli <span class="math inline">\(k\)</span> jest nieparzyste, to <span class="math inline">\(A\)</span> wygrywa <span class="math inline">\(k\)</span> złotych, jeżeli <span class="math inline">\(k\)</span> jest parzyste,
-to <span class="math inline">\(B\)</span> wygrywa <span class="math inline">\(k\)</span> złotych. Czy gra jest uczciwa?</p>
-Załóżmy, że wykonano <span class="math inline">\(n\)</span> rzutów. Wówczas oczekujemy, że gracz <span class="math inline">\(A\)</span> wygra w przybliżeniu
-<span class="math display">\[
-\approx \frac n6\cdot 1 - \frac n6\cdot 2 + \frac n6\cdot 3 - \frac n6\cdot 4 + \frac n6\cdot 5 - \frac n6\cdot 6 = -\frac n2.
-\]</span>
-Formalnie: niech <span class="math inline">\(X\)</span> oznacza wygraną gracza <span class="math inline">\(A\)</span> podczas jednej rundy, wtedy
-<span class="math display">\[\begin{multline*}
-\mathbb{E} X = 1\cdot \mathbb{P}[X=1] - 2\cdot \mathbb{P}[X=2] + 3\cdot \mathbb{P}[X=3] \\
-- 4\cdot \mathbb{P}[X=4] + 5\cdot \mathbb{P}[X=5] - 6\cdot \mathbb{P}[X=6]= -\frac 12.
-\end{multline*}\]</span>
-<div class="rw-container">
-
-</div>
-<div class="input-container">
-
-</div>
-<script src="JAVA/rw2.js"></script>
-</div>
-<p>Wartość oczekiwana jest najważniejszym parametrem decydującym o opłacalności np gier
-hazardowych <a href="https://www.theatlantic.com/business/archive/2016/02/how-mit-students-gamed-the-lottery/470349/">How MIT Students Won 8 Millions in the Massachusetts Lottery</a>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-81" class="theorem"><strong>Twierdzenie 7.1  </strong></span>Załóżmy, że <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są zmiennymi losowymi takimi, że <span class="math inline">\(\mathbb{E} X\)</span> i <span class="math inline">\(\mathbb{E} Y\)</span> istnieją.
-Wtedy
-1. Jeżeli <span class="math inline">\(X\ge 0\)</span>, to <span class="math inline">\(\mathbb{E} X \ge 0\)</span>.
-2. <span class="math inline">\(|\mathbb{E} X| \le \mathbb{E} |X|\)</span>.
-3. Dla dowolnych <span class="math inline">\(a,b\in \mathbb{R}\)</span>
-<span class="math display">\[
-            \mathbb{E}[aX+bY] = a\mathbb{E} X + b\mathbb{E}[Y].
-        \]</span></p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-82" class="example"><strong>Przykład 7.3  </strong></span>Rzucamy <span class="math inline">\(100\)</span> razy kostką. Niech <span class="math inline">\(X\)</span> oznacza sumę wyrzuconych oczek. Jaka jest wartość oczekiwana <span class="math inline">\(X\)</span>?
-Bezpośrednie użycie definicji jest kłopotliwe, ponieważ przestrzeń zdarzeń elementarnych jest
-bardzo duża. Rozważymy inne podejścia.
-Niech <span class="math inline">\(X_i\)</span> oznacza liczbę oczek uzyskanych w <span class="math inline">\(i\)</span>-tym rzucie. Wtedy
-<span class="math display">\[
-X = \sum_{i=1}^{100} X_i.
-\]</span>
-Ponadto <span class="math inline">\(\mathbb{E} X_i = 3,5\)</span>.
-Zatem z liniowości wartości oczekiwanej
-<span class="math display">\[
-\mathbb{E} X = \sum_{i=1}^{100} \mathbb{E} X_i = 350.
-\]</span></p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-83" class="example"><strong>Przykład 7.4  </strong></span>Niech <span class="math inline">\(\sigma\)</span> będzie losową permutacją zbioru <span class="math inline">\(\{1,\ldots,n\}\)</span>
-(losujemy jednostajnie element grupy permutacji <span class="math inline">\(S_n\)</span>).
-Niech <span class="math inline">\(X\)</span> oznacza liczbę punktów stałych. Obliczymy <span class="math inline">\(\mathbb{E} X\)</span>.
-Ten przykład ma wiele alternatywnych sformułowań np. wkładamy losowo <span class="math inline">\(n\)</span>
-listów do zaadresowanych kopert, ilu adresatów otrzyma właściwy list.
-Oznaczmy
-<span class="math display">\[X_i = \left\{\begin{array}{cc}
-                 1 &amp; \mbox{ jeżeli $i$-ty punkt jest stały} \\
-                 0 &amp; \mbox{ jeżeli $i$-ty punkt nie jest stały}
-               \end{array}
-\right.
-\]</span>
-Jeżeli oznaczymy przez <span class="math inline">\(A_i\)</span> zdarzenie, że <span class="math inline">\(i\)</span>-ty punkt jest stały, to <span class="math inline">\(X_i = \mathbf{1}_{A_i}\)</span>.
-Wtedy
-<span class="math display">\[
-\mathbb{E} X_i = \int_\Omega \mathbf{1}_{A_i}(\omega) \mathbb{P}(\mathrm{d}\omega) = \mathbb{P}[A_i] = 1/n
-\]</span>
-oraz <span class="math inline">\(X = \sum_{i=1}^n X_i\)</span>, stąd
-<span class="math display">\[\mathbb{E} X  = \sum_{i=1}^n \mathbb{E} X_i = n\cdot \frac 1n = 1.\]</span></p>
-</div>
-<div class="theorem">
-<p><span id="thm:unlabeled-div-84" class="theorem"><strong>Twierdzenie 7.2  </strong></span>Załóżmy, że <span class="math inline">\(\{X_n\}\)</span> jest ciągiem zmiennych losowych takich,
-że <span class="math inline">\(\mathbb{E} X_n\)</span> istnieją. Wtedy</p>
-<ol style="list-style-type: decimal">
-<li>(Lemat Fatou) Jeżeli <span class="math inline">\(X\ge 0\)</span>, to
-<span class="math display">\[
-\mathbb{E} \liminf_{n\to\infty} X_n \le \liminf_{n\to\infty} \mathbb{E} X_n
-\]</span>
-</li>
-<li>(tw. o zbieżności monotonicznej)
-Jeżeli <span class="math inline">\(X_n\ge 0\)</span> oraz <span class="math inline">\(\{X_n\}\)</span> jest ciągiem monotonicznym, to
-<span class="math display">\[
-            \mathbb{E} \lim_{n\to\infty} X_n = \lim_{n\to\infty} \mathbb{E} X_n
-        \]</span>
-</li>
-<li>(tw. Lebesgue’a o zbieżności zmajoryzowanej) Jeżeli <span class="math inline">\(|X_n|\le Y\)</span> dla pewnej
-zmiennej losowej <span class="math inline">\(Y\)</span> takiej, że
-<span class="math inline">\(\mathbb{E} |Y|&lt;\infty\)</span> oraz istnieje granica <span class="math inline">\(\lim_{n\to\infty} X_n(\omega) = X(\omega)\)</span>
-dla <span class="math inline">\(\mathbb{P}\)</span><sub>p.k.</sub><span class="math inline">\(\omega\)</span>, to
-<span class="math display">\[
-\mathbb{E} X =  \mathbb{E} \lim_{n\to\infty} X_n = \lim_{n\to\infty} \mathbb{E} X_n.
-\]</span>
-</li>
-</ol>
-</div>
-<div class="theorem">
-<p><span id="thm:pull" class="theorem"><strong>Twierdzenie 7.3  </strong></span>Niech <span class="math inline">\(f:\mathbb{R}\to \mathbb{R}\)</span> będzie funkcją borelowską, a <span class="math inline">\(X\)</span> zmienną
+<p><span id="thm:pull" class="theorem"><strong>Twierdzenie 8.1  </strong></span>Niech <span class="math inline">\(f:\mathbb{R}\to \mathbb{R}\)</span> będzie funkcją borelowską, a <span class="math inline">\(X\)</span> zmienną
 losową o rozkładzie <span class="math inline">\(\mu_X\)</span>. Wówczas
 <span class="math display">\[
-  \mathbb{E} f(X)  = \int_{\mathbb{R}} f(x)\mu(\mathrm{d}x),
+  \mathbb{E}\left[ f(X)\right]  = \int_{\mathbb{R}} f(x)\mu_X(\mathrm{d}x),
 \]</span>
 o ile jedna z tych całek istnieje.</p>
 </div>
 <p>Przed dowodem zobaczmy proste zastosowanie tego faktu.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-85" class="example"><strong>Przykład 7.5  </strong></span>Ile średnio należy wykonać rzutów kostką, aby otrzymać pierwszą szóstkę?
+<p><span id="exm:unlabeled-div-86" class="example"><strong>Przykład 8.1  </strong></span>Ile średnio należy wykonać rzutów kostką, aby otrzymać pierwszą szóstkę?
 Ogólniej wykonujemy doświadczenie o prawdopodobieństwie sukcesu <span class="math inline">\(p\)</span>.
 Ile średnio razy należy je powtórzyć, aby otrzymać sukces.</p>
 <p>Niech <span class="math inline">\(X\)</span> będzie liczbą prób, które należy wykonać, aby otrzymać pierwszy sukces. Wówczas
@@ -243,14 +99,14 @@ Zatem rozkład <span class="math inline">\(X\)</span> zadaje się przez
 <span class="math display">\[\begin{equation*}
     \mu_X(\cdot) = \sum_{k=1}^\infty p_k\delta_k(\cdot).
 \end{equation*}\]</span>
-Wzór z Twierdzenia <a href="warto%C5%9B%C4%87-oczekiwana.html#thm:pull">7.3</a> zapisuje się jako
+Wzór z Twierdzenia <a href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html#thm:pull">8.1</a> zapisuje się jako
 <span class="math display">\[\begin{equation*}
     \mathbb{E}[f(X)] = \int_\mathbb{R} f(x) \mu_X(\mathrm{d}x)
     = \sum_{k=1}^\infty f(k) p_k.
 \end{equation*}\]</span>
 Biorąc <span class="math inline">\(f(x)=x\)</span> otrzymujemy interesująca nas wartość oczekiwaną <span class="math inline">\(X\)</span>,
 <span class="math display">\[
-\mathbb{E} X  =
+\mathbb{E}\left[ X\right]  =
 \sum_{k=1}^{\infty} kp(1-p)^{k-1} =
 p \sum_{k=1}^{\infty} k (1-p)^{k-1} = \frac 1p.
 \]</span>
@@ -263,22 +119,8 @@ absolutnie zbieżnego dla <span class="math inline">\(q\in (0,1)\)</span>. Po zr
     \sum_{k=1}^\infty kq^{k-1} = \frac{1}{(1-q)^2}.
 \end{equation*}\]</span></p>
 </div>
-<p>Zauważmy, że powyższy przykład uogólnia się do dowolnych zmiennych losowych
-o rozkładzie dyskretnym.</p>
-<div class="corollary">
-<p><span id="cor:unlabeled-div-86" class="corollary"><strong>Wniosek 7.1  </strong></span>Jeżeli zmienna losowa <span class="math inline">\(X\)</span> jest taka, że
-<span class="math display">\[
-    \sum_{k =0}^\infty \mathbb{P}[X=x_k]
-\]</span>
-dla pewnego ciągu <span class="math inline">\(\{x_k\}_k\)</span>, a <span class="math inline">\(\varphi \colon \mathbb{R} \to \mathbb{R}\)</span> jest funkcją borelowską,
-to <span class="math inline">\(\mathbb{E} \phi(X)\)</span> istnieje wtedy i tylko wtedy, gdy
-<span class="math inline">\(\sum |\phi(x_i)|\mathbb{P}[X=x_k]&lt;\infty\)</span>. Wówczas
-<span class="math display">\[
-  \mathbb{E} \phi(X) = \sum \phi(x_i)\mathbb{P}[X=x_i].
-\]</span></p>
-</div>
 <div class="proof">
-<p><span id="unlabeled-div-87" class="proof"><em>Proof</em> (Twierdzenia <a href="warto%C5%9B%C4%87-oczekiwana.html#thm:pull">7.3</a>). </span>Dowód używa standardowych metod z teorii miary.
+<p><span id="unlabeled-div-87" class="proof"><em>Proof</em> (Twierdzenia <a href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html#thm:pull">8.1</a>). </span>Dowód używa standardowych metod z teorii miary.
 Przybliża się funkcję <span class="math inline">\(f\)</span> funkcjami prostymi.</p>
 <p><strong>Krok 1.</strong>
 Jeżeli <span class="math inline">\(f = {\bf 1}_A\)</span> dla <span class="math inline">\(A\in \mathcal{B}or(\mathbb{R})\)</span>, to <span class="math inline">\(f(X)\)</span> jest zmienną
@@ -296,7 +138,7 @@ prostych zbiegającym punktowo do <span class="math inline">\(f\)</span>. Wtedy 
 <p><strong>Krok 4.</strong> Dla dowolnej funkcji <span class="math inline">\(f\)</span> zapisujemy ją w postaci <span class="math inline">\(f = f^+ - f^-\)</span> i korzystamy z kroku 3.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-88" class="example"><strong>Przykład 7.6  </strong></span>Kupujemy <span class="math inline">\(k\)</span> losów w loterii, w której <span class="math inline">\(M\)</span> losów jest przegrywających,
+<p><span id="exm:unlabeled-div-88" class="example"><strong>Przykład 8.2  </strong></span>Kupujemy <span class="math inline">\(k\)</span> losów w loterii, w której <span class="math inline">\(M\)</span> losów jest przegrywających,
 a <span class="math inline">\(N\)</span> wygrywających (zakładamy <span class="math inline">\(k\le M,N\)</span>).
 Niech <span class="math inline">\(X\)</span> będzie liczbą losów wygrywających wśród
 tych, które kupiliśmy. Znajddziemy <span class="math inline">\(\mathbb{E} X\)</span>.
@@ -319,7 +161,7 @@ Obie metody muszą prowadzić do tego samego wyniku, stąd
 \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-89" class="example"><strong>Przykład 7.7  </strong></span>Tasujemy talię 52 kart metodą <em>Top to random</em>, tzn. kartę, która znajduje się na górze
+<p><span id="exm:unlabeled-div-89" class="example"><strong>Przykład 8.3  </strong></span>Tasujemy talię 52 kart metodą <em>Top to random</em>, tzn. kartę, która znajduje się na górze
 wkładamy w losowe miejsce w talii (są 52 możliwości), a następnie powtarzamy czynność.
 Ile należy wykonać tasowań, aby można było uznać talię za potasowaną.
 Jaka jest średnia liczba tasowań?</p>
@@ -361,11 +203,11 @@ Kroki: 0
 
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></div>
-<div class="next"><a href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">8</span> Przegląd ważniejszych rozkładów</a></div>
+<div class="prev"><a href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></div>
+<div class="next"><a href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#warto%C5%9B%C4%87-oczekiwana"><span class="header-section-number">7</span> Wartość oczekiwana</a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#warto%C5%9B%C4%87-oczekiwana-zastosowania"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -381,7 +223,7 @@ Kroki: 0
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-24.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-03-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
