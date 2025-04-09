@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lista 8: wketory losowe | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Zadania na ćwiczenia: 2025-04-14 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Niech \(\vec{X}=(X_1, X_2)\) będzie dwuwymiarowym wektorem losowym o standardowym rozkładzie...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="Lista 8: wketory losowe | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Zadania na ćwiczenia: 2025-04-14 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Niech \(\vec{X}=(X_1, X_2)\) będzie dwuwymiarowym wektorem losowym o standardowym rozkładzie...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lista 8: wketory losowe | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-04-14 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania Niech \(\vec{X}=(X_1, X_2)\) będzie dwuwymiarowym wektorem losowym o standardowym rozkładzie...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+<li><a class="active" href="lista-8-wketory-losowe.html">Lista 8: wketory losowe</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-8-wketory-losowe" class="section level1 unnumbered">
+<h1>Lista 8: wketory losowe<a class="anchor" aria-label="anchor" href="#lista-8-wketory-losowe"><i class="fas fa-link"></i></a>
+</h1>
+<p>Zadania na ćwiczenia: 2025-04-14</p>
+<p><a href="L8_wektory_losowe.pdf">Lista zadań w formacie PDF</a></p>
+<div id="zadania-do-samodzielnego-rozwiązania-7" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-7"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Niech <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> będzie dwuwymiarowym wektorem losowym o standardowym rozkładzie normalnym.
+Znajdź rozkłady brzegowe.</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad8_1">
+Odpowiedź
+</button>
+<div id="zad8_1" class="collapse">
+<p class="text-primary">
+Oba rozkłady brzegowe to standardowe rozkłady normalne.
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<p>Niech <span class="math inline">\(\vec{X}=(X,Y)\)</span> będzie dwuwymiarowym wektorem losowym o gęstości
+<span class="math display">\[
+f(x, y) =
+\begin{cases}
+4x^2y + 2y^5 &amp; 0 \leq x, y \leq 1, \\
+0 &amp; \mbox{w przeciwnym razie}
+\end{cases}
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Sprawdź, że <span class="math inline">\(f\)</span> jest rzeczywiście gęstością.</li>
+<li>Oblicz <span class="math inline">\(\mathbb{P}[1/2 \leq X \leq 3/4, 1/4 \leq Y \leq 1/2]\)</span>.</li>
+<li>Znajdź rozkłady brzegowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>. Czy są one absolutnie ciągłe?<br>
+Jeżeli tak, to oblicz ich gęstości.</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad8_2">
+Odpowiedź
+</button>
+<div id="zad8_2" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int_0^1 \int_0^1 f(x, y) = 1\)</span></li>
+<li><span class="math inline">\(\frac{595}{16384}\)</span></li>
+<li>
+<span class="math inline">\(F_X(t) =
+\begin{cases}
+0 &amp; t &lt; 0 \\
+\frac{2 t^3 + t}{3} &amp; 0 \le t \le 1\\
+1 &amp; t &gt; 1
+\end{cases}\)</span>
+<span class="math inline">\(f_X(t) = (2 t^2 + 1/3) \mathbf{1}_{[0,1]}(t)\)</span>
+<span class="math inline">\(F_Y (t) =
+\begin{cases}
+0 &amp; t&lt;0 \\
+\frac{2t^2 + t^6}{3} &amp; t \in [0,1] \\
+1 &amp; t &gt; 1
+\end{cases}\)</span>
+<span class="math inline">\(f_Y(t) = (4/3 t + 2 t^5) \mathbf{1}_{[0,1]} (t)\)</span>
+</li>
+</ol>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>
+<p>Niech <span class="math inline">\((X,Y)\)</span> będzie dwuwymiarowym wektorem losowym o gęstości
+<span class="math display">\[
+f(x, y) =
+\begin{cases}
+Cye^{-xy} &amp; 0 \leq x, y \leq 1, \\
+0 &amp; \text{w przeciwnym razie}
+\end{cases}
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Oblicz wartość stałej <span class="math inline">\(C\)</span>.</li>
+<li>Oblicz <span class="math inline">\(\mathbb{P}[1/2 \leq X \leq 3/4, 1/4 \leq Y \leq 1/2]\)</span>.</li>
+<li>Znajdź rozkłady brzegowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>. Czy są one absolutnie ciągłe? Jeżeli tak, to oblicz ich gęstości.</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad8_3">
+Odpowiedź
+</button>
+<div id="zad8_3" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(C = e\)</span></li>
+<li><span class="math inline">\(e (2(e^{-3/8} - e^{-1/4}) + 4 (e^{-3/16} - e^{-1/8}))\)</span></li>
+<li>
+<span class="math inline">\(F_X (t) =
+\begin{cases}
+0 &amp; t&lt;0 \\
+e(1+ e^{-t}/t - 1/t) &amp; t \in [0,1] \\
+1 &amp; t &gt; 1
+\end{cases}\)</span>
+<span class="math inline">\(f_X(t) = e(e^{-t}/t - e^{-t}/t^2 + 1/t^2)\)</span>
+<span class="math inline">\(F_Y (t) =
+\begin{cases}
+0 &amp; t&lt;0 \\
+e((e^{-t} - 1) + t)&amp; t \in [0,1] \\
+1 &amp; t &gt; 1
+\end{cases}\)</span>
+<span class="math inline">\(f_Y(t) = e(-e^{-t} + 1)\)</span>
+</li>
+</ol>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Udowodnij, że wektor losowy <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> ma rozkład duskretny wtedy i tylko wtedy, gdy
+zmienne losowe <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> mają rozkłady dyskretne.</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad8_4">
+Odpowiedź
+</button>
+<div id="zad8_4" class="collapse">
+<p class="text-primary">
+Załóżmy, że <span class="math inline">\(\vec{X}\)</span> ma rozkład dyskretny. Wówczas zbiór
+istnieje przeliczalny zbiór <span class="math inline">\(S\subseteq \mathbb{R}^2\)</span> taki, że
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}\left[\vec{X}\in S\right]=1.
+\end{equation*}\]</span>
+Pokażemy jedynie, że <span class="math inline">\(X_1\)</span> ma rozkład dyskretny. Dyskretność rozkładu <span class="math inline">\(X_2\)</span> będzie
+wynikała z analogicznego argumentu. Rozważmy <span class="math inline">\(S_1\)</span> będący rzutem <span class="math inline">\(S\)</span> na pierwszą oś, tj.
+<span class="math display">\[\begin{equation*}
+    S_1 = \{ x \in \mathbb{R} \: : \: \exists y \in \mathbb{R}, \: (x,y) \in S\}
+    \subseteq \mathbb{R}.
+\end{equation*}\]</span>
+Wówczas <span class="math inline">\(|S_1|\leq |S|\)</span>. W szczególności <span class="math inline">\(S_1\)</span> jest zbiorem przeliczalnym. Mamy
+<span class="math display">\[\begin{equation*}
+    \left\{ \vec{X} \in S \right\} \subseteq \{X_1 \in S_1\}.
+\end{equation*}\]</span>
+Rzeczywiście, niech <span class="math inline">\(\omega \in \{\vec{X}\in S\}\)</span>. Wówczas <span class="math inline">\(\vec{X}(\omega) \in S\)</span>.
+Mamy <span class="math inline">\(\vec{X}(\omega) = (X_1(\omega), X_2(\omega))\)</span>. Innymi słowy dla <span class="math inline">\(y =X_2(\omega)\)</span> mamy
+<span class="math inline">\((X_1(\omega), y) \in S\)</span>. Oznacza to, że <span class="math inline">\(X_1(\omega) \in S_1\)</span>, czyli <span class="math inline">\(\omega \in \{ X_1\in S\}\)</span>.
+To dowodzi postulowanej inkluzji. Z mnotoniczności prawdopodobieństwa
+<span class="math display">\[\begin{equation*}
+    1=\mathbb{P}\left[\vec{X}\in S \right] \leq \mathbb{P}[X_1 \in S_1].
+\end{equation*}\]</span>
+Co kończy dowód jednej implikacji.
+Załóżmy teraz, że rozkłady <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> są dyskretne. Istnieją zatem przeliczalne
+<span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2 \subseteq \mathbb{R}\)</span> takie, że
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}\left[X_1\in S_1\right]=\mathbb{P}[X_2\in S_2]=1.
+\end{equation*}\]</span>
+Rozważmy zbiór <span class="math inline">\(S = S_1 \times S_2 \subseteq \mathbb{R}^2\)</span>. Wówczas <span class="math inline">\(S\)</span> jest zbiorem przeliczalnym.
+Mamy
+<span class="math display">\[\begin{equation*}
+\left\{ \vec{X} \in S \right\} = \{(X_1, X_2) \in S_1\times S_2\}
+= \bigcup_{x \in S_1} \{X_1 = x, \: X_2\in S_2 \}.
+\end{equation*}\]</span>
+Skoro powyższa suma jest przeliczalna a zbiory rozłaczne
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}\left[\vec{X} \in S \right] = \sum_{x \in S_1} \mathbb{P}[X_1 =x, \: X_2 \in S_2].
+\end{equation*}\]</span>
+Zauważmy, że <span class="math inline">\(\mathbb{P}[X_1=x, \: X_2 \in S_2] = \mathbb{P}[X_1=x]\)</span>, ponieważ
+<span class="math display">\[\begin{multline*}
+    0 \leq \mathbb{P}[X_1 =x]-\mathbb{P}[X_1=x,\: X_2 \in S_2] \\=
+    \mathbb{P}[X_1=x, \: X_2 \notin S_2] \leq \mathbb{P}[X_2 \notin S_2]=0.
+\end{multline*}\]</span>
+Mamy zatem
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}\left[\vec{X} \in S \right] = \sum_{x \in S_1} \mathbb{P}[X_1 =x] = \mathbb{P}[X_1\in S_1] =1.
+\end{equation*}\]</span>
+</p>
+</div>
+</div>
+<div id="zadania-na-ćwiczenia-6" class="section level2 unnumbered">
+<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-6"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Niech <span class="math inline">\((X,Y)\)</span> będzie dwuwymiarowym wektorem losowym o rozkładzie zadanym gęstością
+<span class="math display">\[
+f(x, y) = C(x+y)
+\]</span>
+dla <span class="math inline">\(0 \leq y \leq x \leq 1\)</span>, i <span class="math inline">\(f(x, y) = 0\)</span> poza tym zbiorem.
+Znajdź wartość <span class="math inline">\(C\)</span>. Znajdź rozkłady brzegowe.</p></li>
+<li>
+<p>Zmienna losowa <span class="math inline">\((X,Y)\)</span> ma rozkład z gęstością
+<span class="math display">\[
+g(x, y) = C \cdot xy \cdot \mathbf{1}_{[0,1]^2}(x, y)
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Wyznaczyć <span class="math inline">\(C\)</span>.</li>
+<li>Obliczyć <span class="math inline">\(\mathbb{P}(X + Y \leq 1)\)</span>.</li>
+<li>Wyznaczyć rozkład zmiennej losowej <span class="math inline">\(X/Y\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Rzucamy trzy razy kostką. Niech <span class="math inline">\(X_1\)</span> będzie liczbą wyrzuconych jedynek. Niech <span class="math inline">\(X_2\)</span> będzie liczbą
+wyrzuconych dwójek.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Znajdź rozkład wektora losowego <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span>.</li>
+<li>Znajdź <span class="math inline">\(\mathbb{P}[X_1=1, \: X_2=2 \: | \: X_1+X_2=3]\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Losujemy liczbę <span class="math inline">\(\omega\)</span> z odcinka <span class="math inline">\([0,2\pi]\)</span> w sposób jednostajny.
+Niech <span class="math inline">\(X_1(\omega)=\cos(\omega)\)</span>, <span class="math inline">\(X_2(\omega) = \sin(\omega)\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Znajdź rozkład zmiennej <span class="math inline">\(X_1\)</span>.</li>
+<li>Niech <span class="math inline">\(\vec{X} = (X_1, X_2)\)</span>. Znajdź
+<span class="math inline">\(\mathbb{P}\left[\vec{X} \in [1/\sqrt{2},1]\times [-2,3]\right]\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Losujemy punkt. znajdz dystrybuante dwiwymiarowa i gestosc
+Losujemy punkt z trójkąta równobocznego <span class="math inline">\(ABC\)</span>. niech <span class="math inline">\(X_1\)</span> będzie odległością wylosowanego punktu
+od boku <span class="math inline">\(AB\)</span>, a <span class="math inline">\(X_2\)</span> odległością wylosowanego punktu od boku <span class="math inline">\(CB\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Znajdź <span class="math inline">\(\mathbb{P}[X_1\leq t]\)</span> dla <span class="math inline">\(t \in [0. \sqrt{3}/2]\)</span>.</li>
+<li>Znajdź <span class="math inline">\(\mathbb{P} [X_2 \leq s \: | \: X_1 \leq t]\)</span> dla <span class="math inline">\(s,t \in [0, \sqrt{3}/2]\)</span>.</li>
+<li>Znajdź dystrybuantę wektora losowego <span class="math inline">\(\vec{X} =(X_1, X_2)\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Załóżmy, że wektor losowy <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> ma dwuwymiarowy standardowy
+rozkład normalny. Rozważmy zmienne losowe <span class="math inline">\(Y_1 = ax_1+bX_2\)</span> oraz
+<span class="math inline">\(Y_2=-X_1/a+X_2/b\)</span> dla <span class="math inline">\(a, b&gt;0\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Znajdź rozkład wektora losowego <span class="math inline">\(\vec{Y} = (Y_1, Y_2)\)</span>.</li>
+<li>Znajdź rozkład zmiennej losowej <span class="math inline">\(Y_1\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Niech <span class="math inline">\(X = (X_1, X_2)\)</span> będzie wektorem z dwuwymiarowym rozkładem normalnym o parametrach <span class="math inline">\(\vec{m}=(0,0)\)</span> oraz
+<span class="math display">\[\begin{equation*}
+\Sigma = \left( \begin{array}{cc} 1 &amp; \rho \\ \rho &amp; 1 \end{array} \right).
+\end{equation*}\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Pokaż, że <span class="math inline">\(\Sigma\)</span> jest dodatnio określona wtedy i tylko wtedy, gdy <span class="math inline">\(\rho \in (-1,1)\)</span>.</li>
+<li>Niech <span class="math inline">\(f_{\vec{X}}\)</span> będzie gęstością <span class="math inline">\(\vec{X}\)</span>. Wyznacz poziomice <span class="math inline">\(f_{\vec{X}}\)</span>,
+<span class="math display">\[\begin{equation*}
+\left\{ (x,y) \in \mathbb{R}^2 \: : \: f_{\vec{X}}(x,y) = c \right\}, \qquad c&gt;0
+\end{equation*}\]</span>
+w zależności od parametru <span class="math inline">\(\rho\in (-1,1)\)</span>.</li>
+</ol>
+</li>
+<li><p>Niech <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> będzie wektorem losowym o dwuwymiarowym standardowym rozkładzie normalnym.
+Rozważamy wektor <span class="math inline">\(\vec{X}\)</span> we współrzędnych biegunowych. Niech <span class="math inline">\(R = \sqrt{X_1^2+X_2^2}\)</span> i niech
+<span class="math inline">\(S = \mathrm{arccos}(X_1/R)\)</span>. Znajdź rozkład wektora losowego <span class="math inline">\((R, S)\)</span>.</p></li>
+</ol>
+</div>
+<div id="zadania-dodatkowe-5" class="section level2 unnumbered">
+<h2>Zadania dodatkowe<a class="anchor" aria-label="anchor" href="#zadania-dodatkowe-5"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="13" style="list-style-type: decimal">
+<li>Wektor losowy <span class="math inline">\(\vec{U} = (X, Y, Z)\)</span> ma następującą własność:
+jeżeli<br><span class="math display">\[
+a^2 + b^2 + c^2 = 1,
+\]</span>
+to zmienna losowa
+<span class="math display">\[
+aX + bY + cZ
+\]</span>
+ma rozkład jednostajny na <span class="math inline">\([-1, 1]\)</span>. Jaki rozkład ma wektor <span class="math inline">\(\vec{U}\)</span>?</li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-8-wketory-losowe">Lista 8: wketory losowe</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-7">Zadania do samodzielnego rozwiązania</a></li>
+<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia-6">Zadania na ćwiczenia</a></li>
+<li><a class="nav-link" href="#zadania-dodatkowe-5">Zadania dodatkowe</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-09.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
