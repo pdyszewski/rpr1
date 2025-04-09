@@ -165,7 +165,7 @@ prostokąty
     B_1\times B_2 \times \cdots \times B_n \times \mathbb{R} \times \mathbb{R} \times \cdots,
 \end{equation*}\]</span>
 dla <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(B_1, \ldots B_n \in \mathcal{B}or(\mathbb{R})\)</span>.</p>
-<p>Powyższe twierdzenie dostarcza ogólne narzędzie gwarantujące istnienie miary probabilisycznej.
+<p>Powyższe twierdzenie dostarcza ogólne narzędzie gwarantujące istnienie miary probabilistycznej.
 Zauważmy też, że działa ono nie tylko dla niezależnych eksperymentów.
 Jedynym warunkiem jest zgodność miar.
 W niektórych przypadkach można bezpośrednio skonstruować przestrzeń probabilistyczną.</p>
@@ -229,13 +229,13 @@ oraz ciąg zdarzeń <span class="math inline">\(\{A_n\}_{n\in \mathbb{N}} \subse
 <p>Przypomnijmy, że element należy do przekroju zbiorów wtedy i tylko wtedy, gdy należy
 do każdego z nich. Element należy do sumy zbiorów wtedy i tylko wtedy, gdy należy
 do jednego ze zbiorów. Mamy więc
-<span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{multline*}
 \omega \in \bigcap_{m=1}^\infty\bigcup_{n=m}^{\infty }A_n \iff
-\forall m \geq 1, \: \omega \in \bigcup_{n=m}^{\infty} A_m \iff
+\forall m \geq 1, \: \omega \in \bigcup_{n=m}^{\infty} A_m \\ \iff
 \forall m\geq 1, \: \exists n\geq m, \: \omega \in A_n.
-\end{equation*}\]</span>
-Reasumując <span class="math inline">\(\omega\in \limsup A_n\)</span> wtedy i tylko wtedy, gdy <span class="math inline">\(\omega\)</span>
-należy do nieskończenie wielu zbiorów <span class="math inline">\(A_i\)</span>. Innymi słowy
+\end{multline*}\]</span>
+Reasumując, <span class="math inline">\(\omega\in \limsup A_n\)</span> wtedy i tylko wtedy, gdy <span class="math inline">\(\omega\)</span>
+należy do nieskończenie wielu zbiorów <span class="math inline">\(A_i\)</span>. Innymi słowy,
 <span class="math inline">\(\limsup A_n\)</span> to zdarzenie polegające na tym, że
 zaszło nieskończenie wiele spośród zdarzeń <span class="math inline">\(A_1, A_2, \ldots\)</span>.
 Dla przykładu, rzucamy nieskończenie wiele razy kostką i <span class="math inline">\(A_n\)</span> oznacza zdarzenie,
@@ -254,7 +254,7 @@ tzn. z prawdopodobieństwem <span class="math inline">\(1\)</span> zachodzi nies
 </ul>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-54" class="proof"><em>Proof</em>. </span>Korzystając z ciągłości miary a następnie z jej podaddytywności otrzymujemy
+<p><span id="unlabeled-div-54" class="proof"><em>Proof</em>. </span>Korzystając z ciągłości miary, a następnie z jej podaddytywności otrzymujemy
 <span class="math display">\[\begin{equation*}
 \mathbb{P}[\limsup A_n] = \mathbb{P}\left[ \bigcap_{m=1}^\infty \bigcup_{n=m}^\infty A_n \right]
 =\lim_{m\to\infty} \mathbb{P}\left[ \bigcup_{n=m}^\infty A_n \right]\le
@@ -309,7 +309,7 @@ Niech <span class="math inline">\(\Omega = \{1,2,\ldots,6\}^\mathbb{N}\)</span>,
 Ponadto niech <span class="math inline">\(\mathbb{P}\)</span> będzie odpowiednią miarą probabilistyczną.
 Oznaczmy przez <span class="math inline">\(A_n\)</span> zdarzenie, że w rzutach o numerach <span class="math inline">\(n, n+1, \ldots, n+19\)</span> wypadnie żądany ciąg.
 Wówczas <span class="math inline">\(\mathbb{P}[A_n] = 1/6^{20}\)</span>.</p>
-<p>Zdarzania <span class="math inline">\(A_i\)</span> nie są niezależne, więc nie możemy dla nich użyć lematu Borela-Cantalliego.
+<p>Zdarzania <span class="math inline">\(A_i\)</span> nie są niezależne, więc nie możemy dla nich użyć lematu Borela-Cantallego.
 Zdefiniujmy jednak <span class="math inline">\(\widetilde A_n = A_{20n}\)</span>.
 Wówczas zbiory <span class="math inline">\(\widetilde A_n\)</span> są
 niezależne oraz
@@ -324,7 +324,7 @@ a więc z prawdopodobieństwem <span class="math inline">\(1\)</span> zdarzenia 
 W szczególności z prawdopodobieństwem <span class="math inline">\(1\)</span> zajdzie przynajmniej jedno ze zdarzeń <span class="math inline">\(A_n\)</span>.</p>
 </div>
 <p>Ostatni przykład można powtórzyć dla dowolnego ciągu wyników. W szczególności pociąga to
-<a href="https://pl.wikipedia.org/wiki/Twierdzenie_o_niesko%C5%84czonej_liczbie_ma%C5%82p">Twierdzenie o nieskończonej liczbie małp</a>
+<a href="https://pl.wikipedia.org/wiki/Twierdzenie_o_niesko%C5%84czonej_liczbie_ma%C5%82p">Twierdzenie o nieskończonej liczbie małp</a>,
 które można sparafrazować w następujący sposób: jeżeli małpa będzie naciskać w sposób losowy klawisze maszyny do pisania przez nieskończenie długi czas, to z prawdopodobieństwem jeden napisze ona wszystkie dzieła Mickiewicza.</p>
 <div class="example">
 <p><span id="exm:unlabeled-div-57" class="example"><strong>Przykład 5.4  </strong></span>Rzucamy nieskończenie wiele razy niesymetryczną monetą (orzeł wypada na niej z prawdopodobieństwem <span class="math inline">\(p\not=1/2\)</span>).
@@ -342,7 +342,7 @@ n! \sim \sqrt{2\pi n} \bigg(\frac{n}{e}\bigg)^n,
 a to z kolei, na mocy kryterium Cauchy’ego oznacza zbieżność szeregu
 <span class="math display">\[
 \sum_n \mathbb{P}[A_n] &lt;\infty.
-\]</span> Z lematu Borella-Cantalliego zdarzenia <span class="math inline">\(A_n\)</span> z prawdopodobieństwem jeden zachodzą
+\]</span> Z lematu Borella-Cantallego zdarzenia <span class="math inline">\(A_n\)</span> z prawdopodobieństwem jeden zachodzą
 jedynie skończenie wiele razy. (Zauważmy jednak, że liczba tych zdarzeń jest losowa).</p>
 </div>
 W celu zilustrowania ostatniego przykładu rozważmy poniższą symulację.

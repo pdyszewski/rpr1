@@ -99,7 +99,7 @@ na obroty
 <span class="math display">\[\begin{multline*}
     X_1(\omega) = X_1(\theta,\phi) = X_1(\theta-\phi,0) \\
     = \sqrt{(1-\cos(2\pi (\theta -\phi))^2 + (\sin(2\pi (\theta - \phi)))^2}
-    = 2 \sin \left( \pi(\theta-\phi) \right).
+    = 2 \sin \left( \pi|\theta-\phi| \right).
 \end{multline*}\]</span>
 Zauważmy, że interesująca nas wielkość jest funkcją rzeczywistą
 zdarzenia elementarnego, tj. <span class="math inline">\(X_1 \colon \Omega \to \mathbb{R}\)</span>.</p>
@@ -120,7 +120,7 @@ i miarą Lebesgue’a. Wówczas dla <span class="math inline">\(\omega \in \Omeg
 We wszystkich trzech przykładach otrzymaliśmy różne przestrzenie probabilistyczne.
 Aby rzeczywiście stwierdzić, że powyższe trzy metody nie są równoważne musimy
 porównać funkcje <span class="math inline">\(X_i\colon \Omega_i \to \mathbb{R}\)</span> dla <span class="math inline">\(i=1,2,3\)</span> pod kątem probabilistycznym.
-Powyższe stanowi przykład sytuacji w której bardziej od samych zdarzeń elementarnych
+Powyższe stanowi przykład sytuacji, w której bardziej od samych zdarzeń elementarnych
 interesują nas wartości funkcji zdarzeń elementarnych. Pamiętajmy, że struktura przestrzeni <span class="math inline">\(\Omega\)</span> może być niemal dowolna.
 Elementami przestrzeni zdarzeń elementarnych mogą być liczby,
 wyniki rzutów monetą, ciągi, zbiory (kart), wykresy (kursy akcji) itd.
@@ -305,11 +305,11 @@ Analogicznie dowodzimy drugiej części.</p>
 \bigcap_n (t,t_n] = \emptyset.
 \]</span>
 Z twierdzenia o ciągłości otrzymujemy:
-<span class="math display">\[
-\lim_{n\to\infty} \big( F(t_n) - F(t) \big)
-= \lim_{n\to\infty} \big( \mu((-\infty,t_n]) - \mu((-\infty, t]) \big)
+<span class="math display">\[\begin{multline*}
+\lim_{n\to\infty} \left( F(t_n) - F(t) \right)
+= \lim_{n\to\infty} \left( \mu((-\infty,t_n]) - \mu((-\infty, t]) \right)\\
 = \lim_{n\to\infty} \mu((t,t_n]) = \mu(\emptyset) = 0.
-\]</span></p>
+\end{multline*}\]</span></p>
 <p><strong>Punkt 4.</strong> Dowód przebiega analogicznie jak w punkcie 3.</p>
 <p><strong>Punkt 5.</strong> Jest konsekwencją punktu 4.</p>
 </div>
@@ -334,12 +334,12 @@ takiej, że
     F(t) = \mathbb{P}[X\le t]
 \tag{6.1}
 \end{equation}\]</span>
-Zdefiniujmy <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P}) = \big( (0,1), \mathcal{B}or(0,1), {\rm Leb} \big)\)</span>.</p>
+Zdefiniujmy <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P}) = \big( (0,1), \mathcal{B}or((0,1)), {\rm Leb} \big)\)</span>.</p>
 <p>Załóżmy najpierw, że funkcja <span class="math inline">\(F\)</span> jest odwracalna i zdefiniujmy
 <span class="math display">\[
 X(\omega) = F^{-1}(\omega).
 \]</span>
-Musimy najpierw sprawdzić, że <span class="math inline">\(X\)</span> jest zmienną losową, tzn, że jest mierzalna.
+Musimy najpierw sprawdzić, że <span class="math inline">\(X\)</span> jest mierzalna.
 Zauważmy, że dla dowolnego <span class="math inline">\(t\in \mathbb{R}\)</span>,
 <span class="math display">\[
 X^{-1}((-\infty, t]) = \{\omega:\; X(\omega) \le t \} = \{\omega:\; \omega \le F(t)\} = [0,F(t)] \in \mathcal{B}or(0,1).
@@ -442,7 +442,7 @@ ale ponadto <span class="math inline">\(\mathcal{K}_1^A\)</span> jest <span clas
 <li>
 <span class="math inline">\(\Omega \in \mathcal{K}_1^A\)</span>;</li>
 <li>jeżeli <span class="math inline">\(B_1,B_2\in \mathcal{K}_1^A\)</span> oraz <span class="math inline">\(B_1\subset B_2\)</span>, to
-<span class="math display">\[A\cap (B_2\setminus B_1) = (A\cap B_2) \setminus (A\cap B_1) \in \mathcal{L}_0\]</span>
+<span class="math display">\[A\cap (B_2\setminus B_1) = (A\cap B_2) \setminus (A\cap B_1) \in \mathcal{L}_0;\]</span>
 </li>
 <li>jeżeli <span class="math inline">\(B_n\)</span> jest wstępującą rodziną elementów <span class="math inline">\(\mathcal{K}_1^A\)</span>, to
 <span class="math display">\[
