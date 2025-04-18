@@ -60,6 +60,8 @@
 <li><a class="active" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
 <li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -68,7 +70,8 @@
 <li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
 <li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
 <li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
-<li><a class="" href="lista-8-wketory-losowe.html">Lista 8: wketory losowe</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 </ul>
 
         <div class="book-extra">
@@ -143,8 +146,8 @@ prostych zbiegającym punktowo do <span class="math inline">\(f\)</span>. Wtedy 
 <p><span id="exm:unlabeled-div-88" class="example"><strong>Przykład 8.2  </strong></span>Kupujemy <span class="math inline">\(k\)</span> losów w loterii, w której <span class="math inline">\(M\)</span> losów jest przegrywających,
 a <span class="math inline">\(N\)</span> wygrywających (zakładamy <span class="math inline">\(k\le M,N\)</span>).
 Niech <span class="math inline">\(X\)</span> będzie liczbą losów wygrywających wśród
-tych, które kupiliśmy. Znajddziemy <span class="math inline">\(\mathbb{E} X\)</span>.
-} Zdefiniujmy
+tych, które kupiliśmy. Znajdziemy <span class="math inline">\(\mathbb{E} [X]\)</span>.</p>
+<p><strong>1 sposób</strong> Zdefiniujmy
 <span class="math display">\[X_i = \left\{\begin{array}{cc}
                  1 &amp; \mbox{ jeżeli $i$-ty los wygrywa} \\
                  0 &amp; \mbox{ jeżeli $i$-ty los przegrywa}
@@ -153,7 +156,7 @@ tych, które kupiliśmy. Znajddziemy <span class="math inline">\(\mathbb{E} X\)<
 \]</span>
 Wtedy <span class="math inline">\(X = \sum_{i=1}^k X_i\)</span> oraz <span class="math inline">\(\mathbb{E} X_i = \frac{N}{N+M}\)</span>
 <span class="math display">\[ \mathbb{E} X = \sum_{i=1}^k \mathbb{E} X_i  =  \frac{kN}{N+M}.\]</span>
-{} Szkolna metoda:
+<strong>2 sposób</strong> Szkolna metoda:
 <span class="math display">\[
 \mathbb{E} X = \sum_{j=0}^k j \mathbb{P}[X=j] = \sum_{j=0}^k j\cdot \frac{{N\choose j}{M\choose k-j}}{{N+M \choose k}}
 \]</span>
@@ -167,10 +170,10 @@ Obie metody muszą prowadzić do tego samego wyniku, stąd
 wkładamy w losowe miejsce w talii (są 52 możliwości), a następnie powtarzamy czynność.
 Ile należy wykonać tasowań, aby można było uznać talię za potasowaną.
 Jaka jest średnia liczba tasowań?</p>
-<p>Kluczowa jest karta, która początkowo znajduję się na samym dole talii. Oznaczmy ją przez <span class="math inline">\(A\)</span>.
+<p>Kluczowa jest karta, która początkowo znajduje się na samym dole talii. Oznaczmy ją przez <span class="math inline">\(A\)</span>.
 Zauważmy, że w trakcie tasowania będzie się ona przemieszczać powoli do góry talii.
 Prawdopodobieństwo, że w pierwszym ruchu karta z góry talii znajdzie się pod <span class="math inline">\(A\)</span> wynosi <span class="math inline">\(1/52\)</span>.
-Jest ono małe, ale z prawdopodobieństwem 1 (Lemat Borela-Cantelliego) nastąpi moment,
+Jest ono małe, ale z prawdopodobieństwem 1 (Lemat Borela-Cantellego) nastąpi moment,
 gdy pod <span class="math inline">\(A\)</span> znajdzie się jakaś karta, oznaczmy ją przez <span class="math inline">\(K_1\)</span>.</p>
 <p>Po wykonaniu losowej liczby tasowań kolejna karta <span class="math inline">\(K_2\)</span> zostanie wstawiona poniżej <span class="math inline">\(A\)</span>.
 Wzajemne ułożenie kart <span class="math inline">\(K_1\)</span> i <span class="math inline">\(K_2\)</span> jest losowe (tzn. z prawdopodobieństwem <span class="math inline">\(1/2\)</span> karta <span class="math inline">\(K_1\)</span>
@@ -188,7 +191,7 @@ losową o rozkładzie Geom(<span class="math inline">\(1/52\)</span>), zatem <sp
 Podobnie dla każdego <span class="math inline">\(i\)</span>: <span class="math inline">\(\mathbb{E} X_i = 52/i\)</span>. Podsumowując
 <span class="math display">\[\mathbb{E} X = \mathbb{E} \sum_{i=1}^{52 } X_i = \sum_{i=1}^{52} \mathbb{E} X_i = \sum_{i=1}^{52} \frac{52}i
 = 52 \sum_{i=1}^{52} \frac 1i \sim 52 (\log 52 + \gamma) \sim 235, \]</span>
-gdzie <span class="math inline">\(\gamma\)</span> jest stałą Eulera–Mascheroni’ego znaną z wykładu z analizy (<span class="math inline">\(\gamma \sim 0,577\)</span>).</p>
+gdzie <span class="math inline">\(\gamma\)</span> jest stałą Eulera–Mascheroniego znaną z wykładu z analizy (<span class="math inline">\(\gamma \sim 0,577\)</span>).</p>
 </div>
 <div style="text-align: center">
 <div id="top2random-container">
@@ -225,7 +228,7 @@ Kroki: 0
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-09.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

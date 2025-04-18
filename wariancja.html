@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Rachunek Prawdopodobieństwa 1R</title>
+<title>13 Wariancja | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Krótki opis książki.">
+<meta name="description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
 <meta name="generator" content="bookdown 0.41 with bs4_book()">
-<meta property="og:title" content="Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="13 Wariancja | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Krótki opis książki.">
+<meta property="og:description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Krótki opis książki.">
+<meta name="twitter:title" content="13 Wariancja | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -47,7 +47,7 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="active" href="index.html"></a></li>
+<li><a class="" href="index.html"></a></li>
 <li><a class="" href="sylabus.html">Sylabus</a></li>
 <li class="book-part">Notatki</li>
 <li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
@@ -62,6 +62,7 @@
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
 <li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
 <li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
+<li><a class="active" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -71,7 +72,6 @@
 <li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
 <li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
 <li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
-<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 </ul>
 
         <div class="book-extra">
@@ -79,49 +79,63 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="section" class="section level1 unnumbered">
-<h1 class="unnumbered"><a class="anchor" aria-label="anchor" href="#section"><i class="fas fa-link"></i></a></h1>
-<div style="text-align: center">
-<div id="galton-container">
-
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="wariancja" class="section level1" number="13">
+<h1>
+<span class="header-section-number">13</span> Wariancja<a class="anchor" aria-label="anchor" href="#wariancja"><i class="fas fa-link"></i></a>
+</h1>
+<p>Dla zmiennej losowej <span class="math inline">\(X\)</span> jej wartość oczekiwana <span class="math inline">\(\mathbb{E}[X]\)</span> jest średnią ważoną.
+W niektórych przypadkach, kiedy zmienna <span class="math inline">\(X\)</span> jest skomplikowana,
+aby wydobyć jakiekolwiek ilościowe informacje o <span class="math inline">\(X\)</span>,
+zmuszeni jesteśmy przybliżać <span class="math inline">\(X\)</span> przez jej średnią <span class="math inline">\(\mathbb{E}[X]\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-133" class="definition"><strong>Definicja 13.1  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową taką, że <span class="math inline">\(\mathbb{E}\left[ X^2 \right]&lt;\infty\)</span>. Liczbę
+<span class="math display">\[\mathbb{V}ar  [X] =\mathbb{E}[X-\mathbb{E} [X]]^2
+  \]</span> nazywamy <strong>wariancją</strong> zmiennej losowej <span class="math inline">\(X\)</span>.</p>
+<p>Pierwiastek z wariancji nazywamy <strong>odchyleniem standardowym</strong>
+<span class="math display">\[
+  \sigma_X =  \sqrt{\mathbb{V}ar[ X]}.
+  \]</span></p>
 </div>
-<script src="JAVA/galton1.js"></script><script>
-  // Po załadowaniu strony uruchom skrypt
-  document.addEventListener("DOMContentLoaded", function() {
-  init(); // Wywołaj funkcję `init` z `galton1.js`
-  });
-</script>
-</div>
-<div style="text-align:center; font-size: 2em; font-weight: bold; margin-top: 20px;">
-Rachunek prawdopodobieństwa
-</div>
-<div style="text-align:center; font-size: 1.5em; margin-top: 20px;">
-Dariusz Buraczewski, Piotr Dyszewski
-</div>
-<div style="text-align:center; font-size: 1.2em; margin-top: 20px;">
-2025-04-18
-</div>
-<hr>
-<p>Notatki te powstały na potrzeby kursu o tej samej nazwie, prowadzonego w Instytucie Matematycznym Uniwersytetu
-Wrocławskiego w semestrze letnim 2024/2025.
-Pierwsza wersja tych notatek jak i plan merytoryczny wykładu zostały przygotowane przez DB w latach 2020-2024.
-Interaktywna wersja notatek została przygotowana przez PD w semestrze letnim roku akademickiego 2024/2025.</p>
-<p>Interaktywny charakter notatek był zainspirowany książkami <a href="https://complex-analysis.com/">Complex Analysis</a> autorstwa Juana Carlosa Ponce Campuzano oraz <a href="https://www.jeffreythompson.org/collision-detection/index.php">Collision Detection</a> Jeffreya Thompsona.</p>
-<p>Notatki te wciąż znajdują się we wstępnej fazie i mogą zawierać błędy. Jeśli zauważysz jakiekolwiek nieścisłości, niedociągnięcia lub inne problemy, gorąco zachęcam do ich zgłaszania na
-<a href="https://github.com/pdyszewski/rpr1/issues">GitHubie</a>.</p>
-<p>Do napisania książki wykorzystałem bibliotekę <a href="https://bookdown.org/">bookdown</a> z pakietu R, a symulacje zostały stworzone przy użyciu javascript (<a href="https://p5js.org/">p5.js</a>). Rysunki w przeważającej większości są generowane przy użyciu TikZ.</p>
-<div style="text-align: right">
-<p>Wrocław, luty 2025</p>
-<p>Piotr Dyszewski</p>
+<p>Wartość oczekiwana odpowiada średniej wartości,
+a wariancja opisuje odchylenie od wartości oczekiwanej.
+Dla przykładu instytucje finansowe
+opisując inwestycję podają dwa kluczowe parametry:
+stopę zwrotu (wartość oczekiwaną zysku) oraz ryzyko (odchylenie standardowe).
+Celem inwestycji jest taki dobór instrumentów,
+aby przy określonej stopie zwrotu zminimalizować ryzyko.</p>
+<p>Zauważmy, że założenie <span class="math inline">\(\mathbb{E}\left[ X^2 \right]&lt;\infty\)</span> jest mocniejsze
+niż <span class="math inline">\(\mathbb{E}[|X|]&lt;\infty\)</span>, które było niezbędne do zdefiniowania wartości oczekiwanej.
+Rzeczywiście, mamy
+<span class="math display">\[\begin{multline*}
+\mathbb{E}\left[X^2\right] =
+\int_0^\infty \mathbb{P}\left[X^2&gt;s\right] \mathrm{d}s \geq
+\int_1^\infty \mathbb{P}\left[|X|&gt;s\right] \mathrm{d}s \geq \\
+\int_0^\infty \mathbb{P}\left[|X|&gt;s\right] \mathrm{d}s-1  = \mathbb{E}[|X|]-1.
+\end{multline*}\]</span>
+Innymi słowy jeżeli <span class="math inline">\(\mathbb{E}\left[X^2 \right]&lt;\infty\)</span>, to <span class="math inline">\(\mathbb{E}[|X|]&lt;\infty\)</span>.</p>
+<p>Zauważmy, że wariancja ma również następująca reprezentację
+<span class="math display">\[\begin{multline*}
+    \mathbb{V}ar[X] = \mathbb{E}\left[X^2 -2X\mathbb{E}[X] + \mathbb{E}[X]^2\right]\\
+    = \mathbb{E}\left[X^2 \right] - 2 \mathbb{E}\left[X\mathbb{E}[X] \right] + \mathbb{E}[X]^2
+    = \mathbb{E}\left[X^2 \right] - \mathbb{E}[X]^2.
+\end{multline*}\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-134" class="example"><strong>Przykład 13.1  </strong></span>Załóżmy, że zmienna losowa <span class="math inline">\(X\)</span> ma rozkład geometryczny z parametrem <span class="math inline">\(p&gt;0\)</span>
+(<span class="math inline">\(X\sim{\rm Geom}(p)\)</span>), tzn. <span class="math inline">\(\mathbb{P}[X=k] = p(1-p)^{k-1}\)</span>, dla <span class="math inline">\(k\in \mathbb{N}\)</span>.
+Przypomnijmy, że <span class="math inline">\(X\)</span> oznacza moment pierwszego sukcesu w nieskończonym schemacie Bernoulliego. Wówczas
+<span class="math display">\[\begin{align*}
+   \mathbb{E}[ X] &amp;  = \sum_{k=1}^\infty k p(1-p)^{k-1} = \frac 1p,\\
+   \mathbb{V}ar[ X] &amp; = \frac{1-p}{p^2}
+\end{align*}\]</span></p>
 </div>
 
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="next"><a href="sylabus.html">Sylabus</a></div>
+<div class="prev"><a href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#section"></a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#wariancja"><span class="header-section-number">13</span> Wariancja</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

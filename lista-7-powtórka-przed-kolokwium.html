@@ -60,6 +60,8 @@
 <li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
 <li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -68,7 +70,8 @@
 <li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
 <li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
 <li><a class="active" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
-<li><a class="" href="lista-8-wketory-losowe.html">Lista 8: wketory losowe</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 </ul>
 
         <div class="book-extra">
@@ -89,7 +92,7 @@ Obliczyć prawdopodobieństwo, że wybrana liczba jest podzielna przez co najmni
 jedną z liczb: <span class="math inline">\(4\)</span>, <span class="math inline">\(6\)</span>, <span class="math inline">\(9\)</span>.</p></li>
 <li><p>Co jest bardziej prawdopodobne: otrzymanie co najmniej jednej jedynki przy
 rzucie <span class="math inline">\(4\)</span> kostek, czy co najmniej raz dwóch jedynek na obu kostkach przy <span class="math inline">\(24\)</span>
-rzutach obu kostek</p></li>
+rzutach obu kostek?</p></li>
 <li><p>Znaleźć prawdopodobieństwo, że przy wielokrotnym rzucaniu parą kostek sześciennych suma
 oczek <span class="math inline">\(8\)</span> wypadnie przed sumą oczek <span class="math inline">\(7\)</span>.</p></li>
 <li>
@@ -133,7 +136,7 @@ w wylosowanym grafie, tj. liczbą trójek <span class="math inline">\(i&lt;j&lt;
 <span class="math inline">\(\{i,j\}\)</span>, <span class="math inline">\(\{j,k\}\)</span> oraz <span class="math inline">\(\{k,i\}\)</span>. Znajdź <span class="math inline">\(\mathbb{E}[X]\)</span>.</p></li>
 <li><p>Niech
 <span class="math display">\[\begin{equation*}
-\Omega = \{ \omega=(\omega_j)_{j \in [n]} \in \mathbb{N}^n \: : \: |\omega_1| = |\omega_{j}-\omega_{j-1}|=1\}
+\Omega = \{ \omega=(\omega_j)_{j \in [n]} \in \mathbb{Z}^n \: : \: |\omega_1| = |\omega_{j}-\omega_{j-1}|=1\}
 \end{equation*}\]</span>
 Niech <span class="math inline">\(\mathcal{F}=2^\Omega\)</span> i <span class="math inline">\(\mathbb{P}[A] = |A|/|\Omega|\)</span>.
 Niech <span class="math inline">\(A_1 = \{\omega_1=1\}\)</span>.
@@ -189,20 +192,20 @@ dla której funkcja <span class="math inline">\(G\)</span> jest dystrybuantą. Z
 <li><p>Z urny, w której jest <span class="math inline">\(6\)</span> kul czarnych i <span class="math inline">\(4\)</span> białe losujemy kolejno bez zwracania po
 jednej kuli tak długo, aż wylosujemy kulę czarną. Obliczyć wartość oczekiwaną
 liczby wylosowanych kul białych.</p></li>
-<li><p>Rzucamy sześcienną kostką aż do momentu, gdy wypadną pod rząd dwie „szóstki”.
+<li><p>Rzucamy sześcienną kostką aż do momentu, gdy wypadną z rzędu dwie „szóstki”.
 Znaleźć wartość oczekiwaną liczby rzutów.</p></li>
 <li><p>Niech <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> będą niezależnymi zdarzeniami o jednakowym
 prawdopodobieństwie <span class="math inline">\(p_n\)</span>. Przy pomocy <em>nierówności Boole’a</em> oraz
 <em>nierówności Bonferroniego</em> oszacować (z góry i z dołu)
 <span class="math display">\[ \mathbf{P}_n \; = \; \frac{\mathbb{P}[\bigcup_{i=1}^n A_i]}{np_n} \; . \]</span>
 Jak sprawdza się to szacowanie dla <span class="math inline">\(p_n = 1/n\)</span>? Wyznaczyć <span class="math inline">\(\lim_{n \to \infty} \mathbf{P}_n\)</span>
-w przypadku, gdy <span class="math inline">\(\lim_{n \to \infty} n p_n = 0\)</span>.]</p></li>
+w przypadku, gdy <span class="math inline">\(\lim_{n \to \infty} n p_n = 0\)</span>.</p></li>
 </ol>
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></div>
-<div class="next"><a href="lista-8-wketory-losowe.html">Lista 8: wketory losowe</a></div>
+<div class="next"><a href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -224,7 +227,7 @@ w przypadku, gdy <span class="math inline">\(\lim_{n \to \infty} n p_n = 0\)</sp
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-09.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

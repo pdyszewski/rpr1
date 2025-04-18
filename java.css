@@ -74,3 +74,10 @@
   height: 300px; /* lub jak chcesz */
   position: relative;
 }
+
+    #kwadrat4-container {
+      width: 80%;
+      margin: 50px;
+      display: inline-block;
+      position: relative;
+    }

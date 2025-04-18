@@ -60,6 +60,8 @@
 <li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
 <li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li><a class="active" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -68,7 +70,8 @@
 <li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
 <li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
 <li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
-<li><a class="" href="lista-8-wketory-losowe.html">Lista 8: wketory losowe</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 </ul>
 
         <div class="book-extra">
@@ -225,7 +228,7 @@ to
     \: \: \mu_{\vec{X}}(A) = \mu_{\vec{Y}}(A) \}.
 \end{equation*}\]</span>
 Sprawdzaliśmy już, że zbiory <span class="math inline">\(\mathcal{L}\)</span> postaci jak wyżej są <span class="math inline">\(\lambda\)</span>-układami.
-Z lematu o <span class="math inline">\(\pi\)</span>-$$ układach
+Z lematu o <span class="math inline">\(\pi\)</span>-<span class="math inline">\(\lambda\)</span> układach
 <span class="math inline">\(\mu_{\vec{X}}(A) = \mu_{\vec{Y}}(A)\)</span> dla każdego borelowskiego <span class="math inline">\(A\)</span>.</p>
 </div>
 <p>Okazuje się, że podobnie jak w przypadku jednowymiarowym rozkład wektora losowego
@@ -243,10 +246,10 @@ Losujemy punkt z kwadratu <span class="math inline">\([0,1]^2\)</span>. Dla <spa
 będzie odległością
 wylosowanego punktu od przekątnej kwadratu łączącej wierzchołki
 <span class="math inline">\((0,0)\)</span> oraz (1,1).
-Wtedy <span class="math inline">\(X_1(\omega) = |\omega_1-\omega_2|/sqrt{2}\)</span> dla <span class="math inline">\(\omega=(\omega_1, \omega_2)\)</span>.
+Wtedy <span class="math inline">\(X_1(\omega) = |\omega_1-\omega_2|/\sqrt{2}\)</span> dla <span class="math inline">\(\omega=(\omega_1, \omega_2)\)</span>.
 Niech <span class="math inline">\(X_2\)</span> będzie odległością od przekątnej łączącej
 <span class="math inline">\((1,0)\)</span> oraz <span class="math inline">\((0,1)\)</span>. Wówczas
-<span class="math inline">\(X_2(\omega) = |x+y-1|/sqrt{2}\)</span>.
+<span class="math inline">\(X_2(\omega) = |x+y-1|/\sqrt{2}\)</span>.
 Wówczas <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> jest wektorem losowym.
 <span class="math display">\[\begin{equation*}
     F_X(t_1, t_2) = \mathbb{P}[X_1\leq t_1, X_2\leq t_2]
@@ -343,7 +346,7 @@ Ponadto, jeżeli <span class="math inline">\(F\in C^d(\mathbb{R}^d)\)</span>, to
 każdy <span class="math inline">\(X_k\)</span> dla <span class="math inline">\(k \leq d\)</span> ma rozkład absolutnie ciągły. Implikacja przeciwna nie jest
 jednak prawdziwa.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-105" class="example"><strong>Przykład 10.5  </strong></span>Niech <span class="math inline">\(\Omega = [0,1]\)</span> z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów boreloskich i jednowymiarową miara Lebesgue’a.
+<p><span id="exm:unlabeled-div-105" class="example"><strong>Przykład 10.5  </strong></span>Niech <span class="math inline">\(\Omega = [0,1]\)</span> z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów borelowskich i jednowymiarową miara Lebesgue’a.
 Rozważmy <span class="math inline">\(X_1(\omega)=\omega\)</span> oraz <span class="math inline">\(X_2(\omega) = 1-\omega\)</span>.
 Wówczas <span class="math inline">\(\vec{X} = (X_1, X_2)\)</span> ma rozkład skupiony na nieprzeliczalnym zbiorze
 o płaskiej mierze Lebesgue’a zero
@@ -474,7 +477,7 @@ Oznaczmy <span class="math inline">\(\Sigma = AA^T\)</span>. Wówczas macierz <s
 Gęstość wektora losowego <span class="math inline">\(\vec{Y}\)</span> zapisuje się jako
 <span class="math display">\[\begin{equation*}
     f_\vec{Y}(y) =
-    \mathrm{det}(\Sigma)^{-1}(2\pi)^{-d/2}
+    \mathrm{det}(\Sigma)^{-1/2}(2\pi)^{-d/2}
     \exp \left\{ -\langle \Sigma^{-1}(y-\vec{m}), y-\vec{m} \rangle /2  \right\}.
 \end{equation*}\]</span>
 Jeżeli <span class="math inline">\(\Sigma\)</span> jest symetryczną macierzą dodatnio określoną, <span class="math inline">\(\vec{m} \in \mathbb{R}^d\)</span> a wektor
@@ -483,7 +486,7 @@ losowy <span class="math inline">\(\vec{Y}\)</span> ma rozkład o gęstości jak
 <span class="math inline">\(\vec{Y} \sim \mathcal{N}(\vec{m}, \Sigma)\)</span>. Niebawem dowiemy się, jak dobór macierzy <span class="math inline">\(\Sigma\)</span> wpływa
 na kształt gęstości <span class="math inline">\(f_{\vec{Y}}\)</span> oraz na własności probabilistyczne wektora <span class="math inline">\(\vec{Y}\)</span>.
 Zauważmy jedynie teraz, że <span class="math inline">\(\vec{Y}\)</span> powstał z <span class="math inline">\(\vec{X}\)</span> poprzez przekształcenie liniowe
-i przesunięcie. To samo będzie tyczyło się związku między <span class="math inline">\(f\vec{X}\)</span> oraz <span class="math inline">\(f_\vec{Y}\)</span>.</p>
+i przesunięcie. To samo będzie tyczyło się związku między <span class="math inline">\(f_\vec{X}\)</span> oraz <span class="math inline">\(f_\vec{Y}\)</span>.</p>
 </div>
 <div class="example">
 <p><span id="exm:unlabeled-div-108" class="example"><strong>Przykład 10.8  </strong></span>Rozważmy poprzedni przykład dla macierzy <span class="math inline">\(A\)</span> zadanej przez
@@ -604,14 +607,14 @@ Dla <span class="math inline">\(B \in \mathcal{B}or([0,1])\)</span> mamy
 \end{equation*}\]</span>
 Jest to kolejny raz rozkład jednostajny na <span class="math inline">\([0,1]\)</span>.</p>
 </div>
-<p>Zauważmy, że w dwóch ostatnich przykładach rozkłady różne rozkłady łączne miały takie same rozkłady brzegowe.
+<p>Zauważmy, że w dwóch ostatnich przykładach różne rozkłady łączne miały takie same rozkłady brzegowe.
 Wynika z tego, że rozkłady brzegowe nie determinują rozkładu łącznego.</p>
 
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></div>
-<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+<div class="next"><a href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -634,7 +637,7 @@ Wynika z tego, że rozkłady brzegowe nie determinują rozkładu łącznego.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-09.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -60,6 +60,8 @@
 <li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
 <li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -68,7 +70,8 @@
 <li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
 <li><a class="active" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
 <li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
-<li><a class="" href="lista-8-wketory-losowe.html">Lista 8: wketory losowe</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 </ul>
 
         <div class="book-extra">
@@ -216,29 +219,29 @@ Czy rozkład ten jest absolutnie ciągły? Wyznacz gęstość. Znajdź <span cla
 <li><p>Każdy bok i każda przekątna <span class="math inline">\(2n\)</span>-kąta foremnego malujemy losowo na jeden z trzech kolorów.
 Wybór każdego koloru jest jednakowo prawdopodobny, a kolorowania różnych odcinków są niezależne.
 Niech <span class="math inline">\(X\)</span> oznacza liczbę jednobarwnych trójkątów prostokątnych o wierzchołkach będących
-wierzchołkami <span class="math inline">\(2n\)</span>-kąta. Obliczyć <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
+wierzchołkami <span class="math inline">\(2n\)</span>-kąta. Obliczyć <span class="math inline">\(\mathbb{E}[X]\)</span>.</p></li>
 <li><p>W urnie znajduje się 50 białych kul. Losujemy ze zwracaniem po jednej kuli,
 przy czym wyciągniętą kulę malujemy na czerwono, jeśli jest biała.
 Niech <span class="math inline">\(X\)</span> będzie liczbą czerwonych kul w urnie po 20 losowaniach.
-Obliczyć <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
+Obliczyć <span class="math inline">\(\mathbb{E}[X]\)</span>.</p></li>
 <li><p>Na płaszczyźnie zaznaczono <span class="math inline">\(n\)</span> punktów w taki sposób, że żadne trzy nie są współliniowe.
 Każda para punktów została połączona odcinkiem z prawdopodobieństwem <span class="math inline">\(p\)</span>.
 Niech <span class="math inline">\(X\)</span> oznacza liczbę powstałych trójkątów.
 Oblicz <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
 <li><p>Pokaż, że jeżeli zmienna losowa <span class="math inline">\(X\)</span> ma rozkład dyskretny skoncentrowany na liczbach całkowitych nieujemnych, to
 <span class="math display">\[
-     \mathbb{E}X = \sum_{k=1}^{\infty} \mathbb{P}(X \geq k).
+     \mathbb{E}[X] = \sum_{k=1}^{\infty} \mathbb{P}(X \geq k).
 \]</span></p></li>
 <li>
 <p>Niech <span class="math inline">\(X\)</span> będzie zmienną losową o dystrybuancie <span class="math inline">\(F\)</span>. Wykaż, że</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Jeżeli <span class="math inline">\(X \geq 0\)</span>, to <span class="math inline">\(\mathbb{E}[X]  =  \int_0^\infty \mathbb{P}(X&gt;t)\: d t
 =  \int_0^\infty \mathbb{P}(X \geq t)\:d t\)</span> przy czym istnienie
-jednej strony implikuje istnienie drugiej i ich równość;</p></li>
+jednej strony implikuje istnienie drugiej i ich równość.</p></li>
 <li><p>Jeżeli <span class="math inline">\(X\)</span> jest dowolną zmienną losową o skończonej wartości oczekiwanej,
 to <span class="math inline">\(\mathbb{E}[X] =
 \int_0^\infty \left( 1 - F(t) \right)\: d t - \int_{-\infty}^0 F(t)\: d t\)</span>.</p></li>
-<li><p>jeżeli <span class="math inline">\(X \geq 0\)</span>, <span class="math inline">\(\varphi\)</span> jest rosnąca i różniczkowalna,
+<li><p>Jeżeli <span class="math inline">\(X \geq 0\)</span>, <span class="math inline">\(\varphi\)</span> jest rosnąca i różniczkowalna,
 <span class="math inline">\(\varphi(0) = 0\)</span>, to
 <span class="math inline">\(\mathbb{E}[\varphi(X)]  =  \int_0^\infty \varphi '(t) \mathbb{P}(X&gt;t)\: d t\)</span>.
 W szczególności, jeżeli <span class="math inline">\(r &gt; 0\)</span>, to <span class="math inline">\(\mathbb{E}[X^r] =
@@ -275,7 +278,7 @@ W szczególności, jeżeli <span class="math inline">\(r &gt; 0\)</span>, to <sp
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-09.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
