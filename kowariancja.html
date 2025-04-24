@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>14 Kowariancja | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej. Opiszemy teraz jej dwuliniowy odpowiednik, który można traktować jak ilościowy opis zależności dwóch zmiennych losowych. Definicja...">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="14 Kowariancja | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej. Opiszemy teraz jej dwuliniowy odpowiednik, który można traktować jak ilościowy opis zależności dwóch zmiennych losowych. Definicja...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="14 Kowariancja | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej. Opiszemy teraz jej dwuliniowy odpowiednik, który można traktować jak ilościowy opis zależności dwóch zmiennych losowych. Definicja...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled"><li><a class="" href="index.html"><span class="header-section-number">14</span> Kowariancja</a></li></ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="kowariancja" class="section level1" number="14">
+<h1>
+<span class="header-section-number">14</span> Kowariancja<a class="anchor" aria-label="anchor" href="#kowariancja"><i class="fas fa-link"></i></a>
+</h1>
+<p>Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej.
+Opiszemy teraz jej dwuliniowy odpowiednik, który można
+traktować jak ilościowy opis zależności dwóch zmiennych losowych.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definicja 14.1  </strong></span>Niech <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> będą zmiennymi losowymi całkowalnymi z kwadratem.<br>
+Liczbę
+<span class="math display">\[
+  {\rm Cov}(X,Y) = \mathbb{E}\left[ (X-\mathbb{E}[X])(Y-\mathbb{E}[Y]) \right]
+  \]</span> nazywamy <strong>kowariancją</strong> <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>.</p>
+<p>Jeżeli <span class="math inline">\(\mathrm{Cov}(X,Y)=0\)</span>, to <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> nazywamy <strong>nieskorelowanymi</strong>.</p>
+</div>
+<p>Zauważmy, że przy powyższych założeniach kowariancja jest dobrze zdefiniowana.</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-2" class="lemma"><strong>Lemma 14.1  (Nierówność Schwarza) </strong></span>Dla zmiennych losowych <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>,
+<span class="math display">\[
+\mathbb{E}[|XY|] \le \big( \mathbb{E}[X^2] \big)^{1/2}\big( \mathbb{E}[ Y^2] \big)^{1/2},
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie.
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<p>Zastępując <span class="math inline">\(X\)</span> przez <span class="math inline">\(X -\mathbb{E}[X]\)</span> oraz <span class="math inline">\(Y\)</span> przez <span class="math inline">\(Y -\mathbb{E}[Y]\)</span> otrzymujemy
+<span class="math display">\[
+{\rm Cov}(X,Y) \le \big( \mathbb{V}ar[ X] \big)^{1/2}\big( \mathbb{V}ar[ Y] \big)^{1/2}.
+\]</span>
+Jeżeli więc <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są całkowalne z kwadratem, to <span class="math inline">\(\mathrm{Cov}(X,Y)&lt;\infty\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-4" class="theorem"><strong>Twierdzenie 14.1  </strong></span>Niech <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> i <span class="math inline">\(Z\)</span> będą zmiennymi losowymi całkowalnymi z kwadratem</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\mathrm{ Cov}(X,Y) = \mathbb{E}[XY] -\mathbb{E}[X] \mathbb{E}[Y]\)</span>.</li>
+<li>
+<span class="math inline">\(\mathrm{Cov}(X,X) = \mathbb{V}ar [X]\)</span>.</li>
+<li>
+<span class="math inline">\(\mathrm{Cov} (X,Y) = \mathrm{Cov} (Y,X)\)</span>.</li>
+<li>Kowariancja jest operatorem dwuliniowym</li>
+</ol>
+<p><span class="math display">\[\begin{equation*}
+    {\rm Cov}(aX+bY,Z) = a{\rm Cov}(X,Z)
+  + b  {\rm Cov}(Y,Z).
+\end{equation*}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>Ćwiczenie.
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-6" class="example"><strong>Przykład 14.1  </strong></span>Niech <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> będą takie, że dwuwymiarowy wektor losowy <span class="math inline">\(\vec{X}=(X,Y)\)</span>
+ma dwuwymiarowy rozkład normalny z parametrami <span class="math inline">\(\vec{m}=(0,0)\)</span> oraz
+<span class="math display">\[\begin{equation*}
+    \Sigma = \left( \begin{array}{cc} 1 &amp; \rho \\ \rho &amp; 1 \end{array} \right)
+\end{equation*}\]</span>
+dla <span class="math inline">\(\rho \in (-1,1)\)</span>.
+Przypomnijmy, że wektor <span class="math inline">\(\vec{X}\)</span> ma rozkład o gęstości
+<span class="math display">\[\begin{equation*}
+f_\vec{X}(x,y) =
+\frac{1}{2 \pi \mathrm{det}(\Sigma)^{1/2}} e^{ -\langle \Sigma^{-1}(x,y)^T, (x,y)^T \rangle /2}
+\end{equation*}\]</span>
+Sprawdzimy najpierw ile wynosi średnia <span class="math inline">\(X\)</span>. Stosując podstawienie <span class="math inline">\(z=-x\)</span> i <span class="math inline">\(w=-y\)</span>
+otrzymujemy
+<span class="math display">\[\begin{align*}
+    \mathbb{E}[X] &amp; = \int_{\mathbb{R}^2} x f_{\vec{X}}(x,y) \mathrm{d}xy \\
+    &amp; = \int_{\mathbb{R}^2} -z f_{\vec{X}}(z,w) \mathrm{d}zw.
+\end{align*}\]</span>
+Wobec czego <span class="math inline">\(\mathbb{E}[X]=0\)</span>. Podobnie sprawdzamy, że <span class="math inline">\(\mathbb{E}[Y]=0\)</span>.
+Ile wynosi <span class="math inline">\(\mathrm{Cov}(X,Y)\)</span>? Na pierwszy rzut oka wyrażenie całkowe
+<span class="math display">\[\begin{align*}
+    &amp;\mathrm{Cov}(X,Y) = \\ &amp;\int_{\mathbb{R}^2}
+\frac{xy}{2 \pi \mathrm{det}(\Sigma)^{1/2}} e^{ -\langle \Sigma^{-1}(x,y)^T, (x,y)^T \rangle /2}
+\mathrm{d}xy
+\end{align*}\]</span>
+wygląda niezachęcająco. Aby się z nim efektywnie uporać musimy przedstawić
+wyraz wykładniczy w prostszej postaci. Sprowadza się to do analizy wykładnika
+<span class="math display">\[\begin{equation*}
+\langle \Sigma^{-1}(x,y)^T, (x,y)^T \rangle
+\end{equation*}\]</span>
+czyli formy kwadratowej związanej z macierzą <span class="math inline">\(\Sigma\)</span>. W pierwszym kroku diagonalizujemy
+<span class="math inline">\(\Sigma\)</span>. Otrzymując
+<span class="math display">\[\begin{equation*}
+    \Sigma = Q \left( \begin{array}{cc} 1+\rho &amp; 0 \\ 0 &amp; 1-\rho \end{array} \right) Q^T,
+\end{equation*}\]</span>
+gdzie
+<span class="math display">\[\begin{equation*}
+    Q = \left( \begin{array}{cc} \sqrt{2}/2 &amp; \sqrt{2}/2 \\ \sqrt{2}/2 &amp; -\sqrt{2}/2 \end{array} \right)
+\end{equation*}\]</span>
+jest macierzą symetrii względem prostej <span class="math inline">\(y=\tan(\pi/8)x\)</span>. Jeżeli zatem położymy
+<span class="math display" id="eq:sub">\[\begin{equation}
+\left( \begin{array}{c} z  \\ w \end{array} \right) = Q^T
+\left( \begin{array}{c} x  \\ y \end{array} \right)
+\tag{14.1}
+\end{equation}\]</span>
+to
+<span class="math display">\[\begin{equation*}
+\langle \Sigma^{-1}(x,y)^T, (x,y)^T \rangle =\\
+\left\langle\left( \begin{array}{cc} 1/(1+\rho) &amp; 0 \\ 0 &amp; 1/(1-\rho) \end{array} \right)  
+\left( \begin{array}{c} z  \\ w \end{array} \right) ,
+\left( \begin{array}{c} z  \\ w \end{array} \right) \right\rangle \\
+=\frac{z^2}{1+\rho} + \frac{w^2}{1-\rho}.
+\end{equation*}\]</span>
+Współrzędne <span class="math inline">\((z,w)\)</span> do odpowiednie podstawienie dla naszej całki. Zauważmy, że <span class="math inline">\(\mathrm{det}(Q)=1\)</span>
+oraz, że
+<span class="math display">\[\begin{equation*}
+xy=\frac{z^2-w^2}{2}.
+\end{equation*}\]</span>
+Stąd, stosując podstawienie <a href="kowariancja.html#eq:sub">(14.1)</a> w całce otrzymujemy
+<span class="math display">\[\begin{equation*}
+\mathrm{Cov}(X,Y) = \\\int_{\mathbb{R}^2} \frac{z^2-w^2}{2}
+\frac{1}{\sqrt{2\pi}(1+\rho)} e^{-z^2/2(1+\rho)} \\
+\frac{1}{\sqrt{2\pi}(1-\rho)} e^{-w^2/2(1-\rho)} \mathrm{d}zw.
+\end{equation*}\]</span>
+Wykorzystując znane nam już tożsamości
+<span class="math display">\[\begin{equation*}
+\int_\mathbb{R}\frac{1}{\sqrt{2\pi}(1+\rho)} e^{-z^2/2(1+\rho)}\mathrm{d}z =\\
+\int_\mathbb{R}\frac{1}{\sqrt{2\pi}(1-\rho)} e^{-w^2/2(1-\rho)} \mathrm{d}w=1
+\end{equation*}\]</span>
+oraz
+<span class="math display">\[\begin{equation*}
+\int_\mathbb{R}\frac{z^2}{\sqrt{2\pi}(1+\rho)} e^{-z^2/2(1+\rho)}\mathrm{d}z = 1+\rho
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\int_\mathbb{R}\frac{w^2}{\sqrt{2\pi}(1-\rho)} e^{-w^2/2(1-\rho)} \mathrm{d}w=1-\rho
+\end{equation*}\]</span>
+Otrzymujemy
+<span class="math display">\[\begin{equation*}
+\mathrm{Cov}(X,Y) = \frac{1+\rho}{2} - \frac{1-\rho}{2} = \rho.
+\end{equation*}\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-7" class="remark"><em>Remark</em>. </span>Przy użyciu powyższych rachunków można pokazać, że zmienne losowe <span class="math inline">\(Z\)</span> i <span class="math inline">\(W)\)</span> dane przez
+<span class="math display">\[\begin{equation*}
+\left( \begin{array}{c} Z  \\ W \end{array} \right) = Q^T
+\left( \begin{array}{c} X  \\ Y \end{array} \right)
+\end{equation*}\]</span>
+są niezależne. Jeżeli wylosujemy <span class="math inline">\(100\)</span> punktów z rozkładu normalnego z powyższego przykładu
+(dla <span class="math inline">\(\rho=2/3\)</span>) to widzimy, że we współrzędnych <span class="math inline">\(x,y\)</span> punkty układają się wzdłuż prostej <span class="math inline">\(x=y\)</span>.
+<img src="TIKZ/gauss4.svg" style="display: block; margin: auto;">
+We współrzędnych <span class="math inline">\(zw\)</span> natomiast punkty układają się wzdłuż osi <span class="math inline">\(z\)</span>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-8" class="remark"><em>Remark</em>. </span>Jeżeli <span class="math inline">\(X,Y\)</span> są niezależne, to <span class="math inline">\(\mathrm{Cov}(X,Y)=0\)</span> (wynika to z pkt. 1 powyższego twierdzenia),
+ale nie jest prawdziwa odwrotna implikacja.
+Kowariancja mierzy jak bardzo zmienne losowe <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> są zależne.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-9" class="theorem"><strong>Twierdzenie 14.2  </strong></span>Jeżeli <span class="math inline">\(\mathrm{E}[ X_i^2]&lt;\infty\)</span> dla <span class="math inline">\(i=1,\ldots, n\)</span>, to
+<span class="math display">\[
+  \mathbb{V}ar(X_1+\ldots+ X_n) = \sum_{k=1}^n \mathbb{V}ar X_k \\+ 2 \sum_{k&lt;l}{\rm  Cov}(X_k,X_l).
+  \]</span>
+W szczególności jeżeli <span class="math inline">\(X_i\)</span> są wzajemnie nieskorelowane, to
+<span class="math display">\[
+  \mathbb{V}ar(X_1+\ldots+ X_n) = \sum_{k=1}^n \mathbb{V}ar X_k .
+  \]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-10" class="proof"><em>Proof</em>. </span>Teza wynika z bezpośredniego rachunku. Mamy
+<span class="math display">\[\begin{align*}
+  &amp;\mathbb{V}ar(X_1+\ldots+ X_n)    \\
+  = &amp; \mathbb{E}\Big[  X_1+\ldots + X_n - \mathbb{E}\big[X_1+\ldots + X_n \big]  \Big]^2\\
+  = &amp; \mathbb{E}\bigg[ \sum_{j=1}^n (X_j -\mathbb{E} X_j) \bigg]^2\\
+  = &amp;  \sum_{j=1}^n\mathbb{E}(X_j-\mathbb{E} X_j)^2 \\
+  &amp; + 2\sum_{k&lt;l} \mathbb{E}\big[(X_k-\mathbb{E} X_k)(X_l-\mathbb{E} X_l,)\big]\\
+  = &amp; \sum_{k=1}^n \mathbb{V}ar X_k + 2 \sum_{k&lt;l}{\rm Cov}(X_k,X_l).
+  \end{align*}\]</span>
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-11" class="example"><strong>Przykład 14.2  </strong></span>Niech <span class="math inline">\(\sigma\)</span> będzie losową permutacją liczb <span class="math inline">\(1,\ldots,n\)</span> i niech
+<span class="math inline">\(X\)</span> oznacza liczbę punktów stałych <span class="math inline">\(\sigma\)</span>. Szukamy <span class="math inline">\(\mathbb{V}ar [X]\)</span>.</p>
+<p>Niech <span class="math display">\[X_i = \left\{\begin{array}{cc}
+                 1 &amp; \mbox{ jeżeli $i$ jest punktem  stałym} \\
+                 0 &amp; \mbox{ jeżeli $i$ nie jest punktem  stałym}
+               \end{array}
+\right.
+\]</span> Wtedy <span class="math inline">\(X = \sum_{i=1}^n X_i\)</span>. Wyliczamy
+<span class="math display">\[\begin{align*}
+\mathbb{E} [X_i] &amp;= \frac 1n,\quad \mathbb{E} [X] = 1,\\
+\mathbb{E} [X_iX_j] &amp;= \mathbb{P}[X_i X_j = 1] = \frac{1}{n(n-1)},\quad \mbox{dla }i\not=j \\
+\mathbb{V}ar [X_i] &amp;= \mathbb{E} \left[X_i^2\right] - (\mathbb{E} [X_i])^2 = \frac{n-1}{n^2}.
+\end{align*}\]</span>
+Wówczas z powyższego twierdzenia
+<span class="math display">\[\begin{align*}
+\mathbb{V}ar X = &amp;  n\cdot \frac{n-1}{n^2} \\
+&amp; +  2\cdot \frac{n(n-1)}2\cdot\bigg( \frac 1{n(n-1)}  - \frac 1{n^2} \bigg)
+\\ =&amp; \frac{n-1}n + n\bigg(1 - \frac{n-1}{n}\bigg) = 1.
+\end{align*}\]</span></p>
+</div>
+
+</div>
+  <div class="chapter-nav">
+<div class="empty"></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-24.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
