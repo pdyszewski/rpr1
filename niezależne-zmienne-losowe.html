@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną i niech \(X\) będzie zmienną losową. Definicja 12.1 \(\sigma\)-ciało generowane przez \(X\) to \(\sigma\)-ciało...">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="12 Niezależne zmienne losowe | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną i niech \(X\) będzie zmienną losową. Definicja 12.1 \(\sigma\)-ciało generowane przez \(X\) to \(\sigma\)-ciało...">
@@ -62,6 +62,8 @@
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
 <li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
 <li><a class="active" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
+<li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
+<li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -241,7 +243,25 @@ Dla dowolnych podzbiorów borelowskich <span class="math inline">\(B_1,\ldots, B
 \mathbb{P}\big[ X_1\in B_1,\ldots, X_n\in B_n \big] = \mu_X(B_1\times \cdots \times B_n) \\
 = \mu_{X_1}(B_1)\cdot\ldots\cdot \mu_{X_n}(B_n) =
 \mathbb{P}[X_1\in B_1]  \cdot \ldots \cdot \mathbb{P}[X_n\in B_n].
-\end{multline*}\]</span></p>
+\end{multline*}\]</span>
+Pokażemy wreszcie, że 3. pociąga też 5. Mamy
+<span class="math display">\[\begin{multline*}
+      \mathbb{E}[f_1(X_1) f_2(X_2) \cdots f_n(X_n)] =
+      \int_{\mathbb{R}^n} \prod_{j=1}^nf_j(x_j) \mu_{\vec{X}}(\mathrm{d}x_1\ldots x_n) =\\
+      \prod_{j=1}^n \int_\mathbb{R} f_j(x_j) \mu_{X_j}(\mathrm{d}x_j)=
+       \mathbb{E}[f_1(X_1)] \cdot \mathbb{E}[f_2(X_2)]
+      \cdots \mathbb{E}[f_n(X_n)].
+\end{multline*}\]</span>
+Na koniec uzasadnimy, że 5. pociąga 2. Jeżeli rozważymy <span class="math inline">\(f_j(y) = \mathbf{1}_{B_j}(y)\)</span>, to
+<span class="math inline">\(f_j(X_j(\omega)) = \mathbf{1}_{X_j \in B_j}(\omega)\)</span> oraz
+<span class="math display">\[\begin{equation*}
+\mathbb{E}[f_j(X_j)] = \mathbb{P}[X_j\in B_j]
+\end{equation*}\]</span>
+oraz
+<span class="math display">\[\begin{equation*}
+\mathbb{E}[f_1(X_1) f_2(X_2) \cdots f_n(X_n)] =
+  \mathbb{P}[X_1\in B_1, X_2\in B_2 \ldots X_n \in B_n]
+\end{equation*}\]</span></p>
 </div>
 <div class="corollary">
 <p><span id="cor:unlabeled-div-124" class="corollary"><strong>Wniosek 12.1  </strong></span>Zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> mające rozkłady dyskretne są niezależne wtedy i tylko wtedy gdy dla dowolnych
@@ -265,25 +285,7 @@ Korzystając z warunku
 \mathbb{P}[X_1 = x_1, X_2 = x_2]
 = \sum_{x_1 \in B_1 \cap S_{X_1}}\sum_{x_2 \in B_2 \cap S_{X_2}} \mathbb{P}[X_1 = x_1]\mathbb{P}[X_2 = x_2]\\
 = \mathbb{P}[X_1 \in B_1]\mathbb{P}[X_2\in B_2]
-\end{multline*}\]</span>
-Pokażemy wreszcie, że 3. pociąga też 5. Mamy
-<span class="math display">\[\begin{multline*}
-      \mathbb{E}[f_1(X_1) f_2(X_2) \cdots f_n(X_n)] =
-      \int_{\mathbb{R}^n} \prod_{j=1}^nf_j(x_j) \mu_{\vec{X}}(\mathrm{d}x_1\ldots x_n) =\\
-      \prod_{j=1}^n \int_\mathbb{R} f_j(x_j) \mu_{X_j}(\mathrm{d}x_j
-       \mathbb{E}[f_1(X_1)] \cdot \mathbb{E}[f_2(X_2)]
-      \cdots \mathbb{E}[f_n(X_n)].
-\end{multline*}\]</span>
-Na koniec uzasadnimy, że %. pociąga 2. Jeżeli rozważymy <span class="math inline">\(f_j(y) = \mathbf{1}_{B_j}(y)\)</span>, to
-<span class="math inline">\(f_j(X_j(\omega)) = \mathbf{1}_{X_j \in B_j}(\omega)\)</span> oraz
-<span class="math display">\[\begin{equation*}
-\mathbb{E}[f_j(X_j)] = \mathbb{P}[X_j\in B_j]
-\end{equation*}\]</span>
-oraz
-<span class="math display">\[\begin{equation*}
-\mathbb{E}[f_1(X_1) f_2(X_2) \cdots f_n(X_n)] =
-  \mathbb{P}[X_1\in B_1, X_2\in B_2 \ldots X_n \in B_n]
-\end{equation*}\]</span></p>
+\end{multline*}\]</span></p>
 </div>
 <div class="corollary">
 <p><span id="cor:unlabeled-div-126" class="corollary"><strong>Wniosek 12.2  </strong></span>Jeżeli zmienne losowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są niezależne i mają wartości oczekiwane, to
@@ -323,7 +325,7 @@ Funkcję <span class="math inline">\(f_Z\)</span> nazywamy splotem funkcji <span
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-130" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span>.
-Dla dowolnego $ t $:
+Dla dowolnego <span class="math inline">\(t \in \mathbb{R}\)</span>:
 <span class="math display">\[\begin{align*}
     F_Z(t)=\mathbb{P}[X_1+X_2 \leq t] &amp; = \mu_{\vec{X}}\left( \{(x_1,x_2):\; x_1+x_2 \leq t\} \right)\\
     &amp;= \int\int_{\{(x_1,x_2):\; x_1+x_2\leq t \}} \mu_{\vec{X}}(\mathrm{d}x_1x_2)\\
@@ -394,7 +396,7 @@ Zatem <span class="math inline">\(X_1+X_2\)</span> ma rozkład <span class="math
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></div>
-<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+<div class="next"><a href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li><a class="nav-link" href="#niezale%C5%BCne-zmienne-losowe"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li></ul>
@@ -413,7 +415,7 @@ Zatem <span class="math inline">\(X_1+X_2\)</span> ma rozkład <span class="math
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-18.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-24.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
