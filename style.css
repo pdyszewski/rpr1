@@ -508,3 +508,9 @@ h6 {
   border-radius: 5px; /* Zaokrąglone rogi */
   background-color: #073642
 }
+
+pre.sourceCode {
+  background-color: #eee8d5;
+  padding: 1em;
+  border-radius: 5px;
+}

@@ -65,6 +65,8 @@
 <li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
 <li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
 <li><a class="active" href="regresja-liniowa.html"><span class="header-section-number">15</span> Regresja liniowa</a></li>
+<li><a class="" href="parametry-wielowymiarowe.html"><span class="header-section-number">16</span> Parametry wielowymiarowe</a></li>
+<li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -75,6 +77,7 @@
 <li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
 <li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
 <li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
+<li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
 </ul>
 
         <div class="book-extra">
@@ -86,32 +89,256 @@
 <h1>
 <span class="header-section-number">15</span> Regresja liniowa<a class="anchor" aria-label="anchor" href="#regresja-liniowa"><i class="fas fa-link"></i></a>
 </h1>
-<p>Dane są dwie zmienne losowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>. Załóżmy, że są one skorelowane. Możemy myśleć, że <span class="math inline">\(Y\)</span> zależy od <span class="math inline">\(X\)</span>
-(np. <span class="math inline">\((X,Y)\)</span> to (wzrost, waga), (liczba klientów, dochód), (przebieg samochodu, zużycie paliwa), (indeks Dow Jones, indeks Wig 20)). Chcemy na podstawie obserwacji <span class="math inline">\(X\)</span> wyznaczyć Y. W tym celu szukamy funkcji <span class="math inline">\(f\)</span> takiej, że <span class="math inline">\(Y = f(X)\)</span>.</p>
-Regresja liniowa polega na tym, że szuka się funkcji liniowej. Pokażemy, że optymalnym wyborem jest
+<p>Dane są dwie zmienne losowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>.
+Załóżmy, że są one skorelowane. Możemy myśleć, że <span class="math inline">\(Y\)</span> zależy od <span class="math inline">\(X\)</span>
+(np. <span class="math inline">\((X,Y)\)</span> to (wzrost, waga), (liczba klientów, dochód), (przebieg samochodu, zużycie paliwa),
+(indeks Dow Jones, indeks Wig 20)).
+Chcemy na podstawie obserwacji <span class="math inline">\(X(\omega_0)\)</span> wyznaczyć <span class="math inline">\(Y(\omega_0)\)</span>.
+W tym celu szukamy funkcji <span class="math inline">\(f\)</span> takiej, że <span class="math inline">\(Y = f(X)\)</span>.</p>
+<p>Regresja liniowa polega na tym, że szuka się funkcji liniowej.
+Innymi słowy pracujemy przy założeniu, że zależność <span class="math inline">\(Y\)</span> od <span class="math inline">\(X\)</span> jest liniowa.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-155" class="example"><strong>Przykład 15.1  </strong></span>Niech <span class="math inline">\(X(\omega)\)</span> i <span class="math inline">\(Y(\omega)\)</span> będzie budżetem filmu <span class="math inline">\(\omega\)</span>. Za zbiór zdarzeń elementarnych
+przyjmujemy <span class="math inline">\(\Omega\)</span> będące zbiorem filmów (bazą internetową) zawierającą informacje o budżecie.
+Dla potrzeby tego przykładu posłużymy się bazą <a href="R/tmdb_5000_movies.csv">TMDB</a>.
+Poniżej przedstawiamy wstępną analizę naszych zmiennych wykonaną w języku R.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># wczytujemy i czyścimy dane</span></span>
+<span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"R/tmdb_5000_movies.csv"</span><span class="op">)</span></span>
+<span><span class="va">movies_clean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">movies</span>, <span class="va">budget</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">vote_average</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Ustawiamy tło i kolory na wykresie</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bg <span class="op">=</span> <span class="st">"#002b36"</span>, col.axis <span class="op">=</span> <span class="st">"#eee8d5"</span>, col.lab <span class="op">=</span> <span class="st">"#eee8d5"</span>, </span>
+<span>    col.main <span class="op">=</span> <span class="st">"#eee8d5"</span>, fg <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Zaznaczamy punkty</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span>, <span class="va">movies_clean</span><span class="op">$</span><span class="va">vote_average</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"Ocena filmu vs budżet"</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"Budżet (USD)"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"Średnia ocena"</span>,</span>
+<span>     pch <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>     col <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="RachunekPrawdopodobienstwa2025_files/figure-html/regresja1-1.png" width="672" style="display: block; margin: auto;"></div>
+<p>Na pierwszy rzut oka widzimy, że dane układają się symetrycznie wzdłuż osi budżetu. Sugeruje to
+niezależność bądź bardzo niska korelację.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-156" class="example"><strong>Przykład 15.2  </strong></span>Rozważmy podobny przykład, lecz tym razem badać będziemy <span class="math inline">\(X\)</span> będące i rokiem produkcji i <span class="math inline">\(Y\)</span> będące
+średnią ocen na IMBD. Za <span class="math inline">\(\Omega\)</span> obieramy bazę
+<a href="R/imdb_top_1000.csv">1000 najwyżej ocenianych filmów z IMDB</a>. Należy mieć na względzie, że
+tutaj oceny liczone są z dokładnością do jednego miejsca po przecinku.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"R/imdb_top_1000.csv"</span><span class="op">)</span></span>
+<span><span class="va">imdb_clean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">imdb</span>, <span class="fu"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span><span class="op">(</span><span class="st">"^[0-9]{4}$"</span>, </span>
+<span>                 <span class="va">Released_Year</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">IMDB_Rating</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bg <span class="op">=</span> <span class="st">"#002b36"</span>, col.axis <span class="op">=</span> <span class="st">"#eee8d5"</span>, col.lab <span class="op">=</span> <span class="st">"#eee8d5"</span>, </span>
+<span>    col.main <span class="op">=</span> <span class="st">"#eee8d5"</span>, fg <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Punkty</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span>, <span class="va">imdb_clean</span><span class="op">$</span><span class="va">IMDB_Rating</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"Ocena IMDb względem roku produkcji"</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"Rok produkcji"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"Ocena IMDb"</span>,</span>
+<span>     pch <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>     col <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="RachunekPrawdopodobienstwa2025_files/figure-html/regresja2-1.png" width="672" style="display: block; margin: auto;"></div>
+<p>W tym przypadku widzimy tendencję spadkową.</p>
+</div>
+<p>Zanim dokończymy analizę przedstawionych wyżej przypadków omówimy problem ogólny.
+Będziemy chcieli wyznaczyć liniową zależność między <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>. Pytamy dla jakich
+wartości <span class="math inline">\(a,b \in \mathbb{R}\)</span> zmienna
+<span class="math display">\[\begin{equation*}
+\hat{Y} = aX+b
+\end{equation*}\]</span>
+najlepiej przybliża <span class="math inline">\(Y\)</span>?
+Błąd naszego przybliżenia będziemy liczyli w sensie średniokwadratowym
+Chcemy zminimalizować wartość
 <span class="math display">\[
-f(x) = y = \frac{{\rm Cov}(X,Y)}{\var X}(x-\E X) + \E Y.
+g(a,b) = \mathbb{E} \left[ \left( Y - \hat{Y} \right)^2 \right].
 \]</span>
-<p>Mając danych <span class="math inline">\(n\)</span> próbek <span class="math inline">\((X_i,Y_i)\)</span> zaznaczamy je na wykresie. Zakładamy, że każda para jest jednakowo prawdopodobna i pojawia się z em <span class="math inline">\(1/n\)</span>. Na podstawie tej próbki wyliczamy Cov<span class="math inline">\((X,Y)\)</span>, <span class="math inline">\(\var X\)</span>, <span class="math inline">\(\E X\)</span>, <span class="math inline">\(\E Y\)</span> (to są estymatory). Następnie minimalizujemy odległości punktów od prostej
-(liczymy tylko składową pionową). Chcemy zminimalizować wartość
-<span class="math display">\[
-f(a,b) = \E \big[ Y - (aX+b)\big]^2.
-\]</span> W tym celu liczymy pochodne cząstkowe i szukamy punktu, w którym zeruje się gradient
+W tym celu liczymy pochodne cząstkowe i szukamy punktu,
+w którym zeruje się gradient
 <span class="math display">\[\begin{align*}
-   \frac{\partial f}{\partial a} &amp; = 2a\E X^2 - 2\E XY + 2 b \E X = 0,\\
-   \frac{\partial f}{\partial b} &amp; =  2b - 2\E Y + 2a \E X  = 0.
+   \frac{\partial g}{\partial a} &amp; = 2a\mathbb{E}\left[ X^2 \right] -
+   2\mathbb{E} [XY] + 2 b \mathbb{E}[X] = 0,\\
+   \frac{\partial g}{\partial b} &amp; =  2b - 2\mathbb{E}[ Y] + 2a \mathbb{E}[ X]  = 0.
 \end{align*}\]</span>
 Rozwiązując powyższy układ równań otrzymujemy
 <span class="math display">\[
-a = \frac{{\rm Cov}(X,Y)}{\var X}, \qquad b=\ldots
+a = \frac{{\rm Cov}(X,Y)}{\mathbb{V}ar[ X] }, \qquad
+b= -\frac{{\rm Cov}(X,Y)}{\mathbb{V}ar[ X]} \mathbb{E}[ X] + \mathbb{E}[ Y].
 \]</span>
-Zauważmy, że do wyznaczenia prostej regresji nie trzeba znać całego rozkładu łącznego <span class="math inline">\((X,Y)\)</span>, ale wystarczy <span class="math inline">\(\E X\)</span>, <span class="math inline">\(\E Y\)</span>, <span class="math inline">\(\var X\)</span>,
-Cov<span class="math inline">\((X,Y)\)</span>.</p>
+Oznacza to, że szukana przez nas funkcja <span class="math inline">\(f\)</span> ma postać
+<span class="math display">\[
+f(x) = y = \frac{{\rm Cov}(X,Y)}{\mathbb{V}ar[ X]}(x-\mathbb{E}[ X]) + \mathbb{E}[Y].
+\]</span>
+Czyli
+<span class="math display">\[
+\hat{Y}(\omega) =
+\frac{{\rm Cov}(X,Y)}{\mathbb{V}ar[ X]}(X(\omega)-\mathbb{E}[ X]) + \mathbb{E}[Y].
+\]</span>
+Zauważmy, że do wyznaczenia prostej regresji nie trzeba znać całego rozkładu
+łącznego <span class="math inline">\((X,Y)\)</span>, ale wystarczy <span class="math inline">\(\mathbb{E}[ X]\)</span>, <span class="math inline">\(\mathbb{E}[ Y]\)</span>, <span class="math inline">\(\mathbb{V}ar[ X]\)</span>,
+Cov<span class="math inline">\((X,Y)\)</span>. Zauważmy też, że jeżeli <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są dodatnio skorelowane, czyli <span class="math inline">\(\mathrm{Cov}(X,Y)&gt;0\)</span>,
+to “rosnące wartości <span class="math inline">\(X\)</span> oznaczają rosnące wartości <span class="math inline">\(Y\)</span>’’</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-157" class="example"><strong>Przykład 15.3  </strong></span>Wróćmy do przykładu oceny filmu i jego budżetu. Mając
+nasze dane możemy obliczyć
+średnie, kowariancję oraz odpowiednią wariancję. Zakładamy, że wylosowanie każdego filmu
+jest jednakowo prawdopodobne.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># wczytujemy i czyścimy dane</span></span>
+<span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"R/tmdb_5000_movies.csv"</span><span class="op">)</span></span>
+<span><span class="va">movies_clean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">movies</span>, <span class="va">budget</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">vote_average</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liczymy wartości oczekiwane</span></span>
+<span><span class="va">Ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span><span class="op">)</span></span>
+<span><span class="va">Ey</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">vote_average</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Kowariancja</span></span>
+<span><span class="va">CovXY</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span> <span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span> <span class="op">-</span> <span class="va">Ex</span><span class="op">)</span> <span class="op">*</span> </span>
+<span>         <span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">vote_average</span> <span class="op">-</span> <span class="va">Ey</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># wariancja X -budżetu</span></span>
+<span><span class="va">VarX</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span> <span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span> <span class="op">-</span> <span class="va">Ex</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span> <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liczymy współczynniki</span></span>
+<span><span class="va">a</span> <span class="op">&lt;-</span> <span class="va">CovXY</span> <span class="op">/</span> <span class="va">VarX</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="va">Ey</span> <span class="op">-</span> <span class="va">a</span> <span class="op">*</span> <span class="va">Ex</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">'&lt;span style="color: #eee8d5;"&gt;Ocena = '</span>, </span>
+<span>    <span class="va">b</span>, <span class="st">' + '</span>, <span class="va">a</span>, <span class="st">' * budżet&lt;/span&gt;&lt;br&gt;'</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color: #eee8d5;">Ocena = 6.210116 + 4.41581e-10 * budżet</span><br></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Ustawiamy tło i kolory na wykresie</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bg <span class="op">=</span> <span class="st">"#002b36"</span>, col.axis <span class="op">=</span> <span class="st">"#eee8d5"</span>, col.lab <span class="op">=</span> <span class="st">"#eee8d5"</span>, </span>
+<span>    col.main <span class="op">=</span> <span class="st">"#eee8d5"</span>, fg <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Zaznaczamy punkty</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span>, <span class="va">movies_clean</span><span class="op">$</span><span class="va">vote_average</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"Ocena filmu vs budżet"</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"Budżet (USD)"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"Średnia ocena"</span>,</span>
+<span>     pch <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>     col <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Prosta regresji</span></span>
+<span></span>
+<span><span class="co"># Zakres budżetu (x)</span></span>
+<span><span class="va">x_vals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span><span class="op">)</span></span>
+<span><span class="co"># Odpowiednie wartości y</span></span>
+<span><span class="va">y_vals</span> <span class="op">&lt;-</span> <span class="va">b</span> <span class="op">+</span> <span class="va">a</span> <span class="op">*</span> <span class="va">x_vals</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x_vals</span>, <span class="va">y_vals</span>, col <span class="op">=</span> <span class="st">"#2aa198"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="RachunekPrawdopodobienstwa2025_files/figure-html/regresja3-1.png" width="672" style="display: block; margin: auto;"></div>
+<p>Widzimy, że w tym wypadku współczynnik korelacji jest bardzo mały.
+Przy tego typu wynikach nie ma statystycznej istotności:
+nie możemy stwierdzić, że budżet cokolwiek tłumaczy.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-158" class="example"><strong>Przykład 15.4  </strong></span>Na koniec wróćmy do przykładu oceny filmu i roku produkcji.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"R/imdb_top_1000.csv"</span><span class="op">)</span></span>
+<span><span class="va">imdb_clean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">imdb</span>, <span class="fu"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span><span class="op">(</span><span class="st">"^[0-9]{4}$"</span>, </span>
+<span>                 <span class="va">Released_Year</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">IMDB_Rating</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liczymy wartości oczekiwane</span></span>
+<span><span class="va">Ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span><span class="op">)</span></span>
+<span><span class="va">Ey</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">IMDB_Rating</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Kowariancja</span></span>
+<span><span class="va">CovXY</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span> <span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span> <span class="op">-</span> <span class="va">Ex</span><span class="op">)</span> <span class="op">*</span> </span>
+<span>         <span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">IMDB_Rating</span> <span class="op">-</span> <span class="va">Ey</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># wariancja X -budżetu</span></span>
+<span><span class="va">VarX</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span> <span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span> <span class="op">-</span> <span class="va">Ex</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span> <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liczymy współczynniki</span></span>
+<span><span class="va">a</span> <span class="op">&lt;-</span> <span class="va">CovXY</span> <span class="op">/</span> <span class="va">VarX</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="va">Ey</span> <span class="op">-</span> <span class="va">a</span> <span class="op">*</span> <span class="va">Ex</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">'&lt;span style="color: #eee8d5;"&gt;Ocena = '</span>, </span>
+<span>    <span class="va">b</span>, <span class="st">' + '</span>, <span class="va">a</span>, <span class="st">' * rok&lt;/span&gt;&lt;br&gt;'</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color: #eee8d5;">Ocena = 11.03454 + -0.001549247 * rok</span><br></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bg <span class="op">=</span> <span class="st">"#002b36"</span>, col.axis <span class="op">=</span> <span class="st">"#eee8d5"</span>, col.lab <span class="op">=</span> <span class="st">"#eee8d5"</span>, </span>
+<span>    col.main <span class="op">=</span> <span class="st">"#eee8d5"</span>, fg <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Punkty</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span>, <span class="va">imdb_clean</span><span class="op">$</span><span class="va">IMDB_Rating</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"Ocena IMDb względem roku produkcji"</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"Rok produkcji"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"Ocena IMDb"</span>,</span>
+<span>     pch <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>     col <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Prosta regresji</span></span>
+<span></span>
+<span><span class="co"># Zakres budżetu (x)</span></span>
+<span><span class="va">x_vals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="va">imdb_clean</span><span class="op">$</span><span class="va">Released_Year</span><span class="op">)</span></span>
+<span><span class="co"># Odpowiednie wartości y</span></span>
+<span><span class="va">y_vals</span> <span class="op">&lt;-</span> <span class="va">b</span> <span class="op">+</span> <span class="va">a</span> <span class="op">*</span> <span class="va">x_vals</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x_vals</span>, <span class="va">y_vals</span>, col <span class="op">=</span> <span class="st">"#2aa198"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="RachunekPrawdopodobienstwa2025_files/figure-html/regresja4-1.png" width="672" style="display: block; margin: auto;"></div>
+<p>W tym przypadku widzimy, że wpływ roku jest mały (ale istotnie większy niż w przypadku budżetu!).</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-159" class="example"><strong>Przykład 15.5  </strong></span>Rozwazmy ostatni przykład. Jak budżet filmu ma się do jego dochodów?</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># wczytujemy i czyścimy dane</span></span>
+<span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"R/tmdb_5000_movies.csv"</span><span class="op">)</span></span>
+<span><span class="va">movies_clean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">movies</span>, <span class="va">budget</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">vote_average</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liczymy wartości oczekiwane</span></span>
+<span><span class="va">Ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span><span class="op">)</span></span>
+<span><span class="va">Ey</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">revenue</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Kowariancja</span></span>
+<span><span class="va">CovXY</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span> <span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span> <span class="op">-</span> <span class="va">Ex</span><span class="op">)</span> <span class="op">*</span> </span>
+<span>         <span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">revenue</span> <span class="op">-</span> <span class="va">Ey</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># wariancja X -budżetu</span></span>
+<span><span class="va">VarX</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span> <span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span> <span class="op">-</span> <span class="va">Ex</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span> <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># liczymy współczynniki</span></span>
+<span><span class="va">a</span> <span class="op">&lt;-</span> <span class="va">CovXY</span> <span class="op">/</span> <span class="va">VarX</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="va">Ey</span> <span class="op">-</span> <span class="va">a</span> <span class="op">*</span> <span class="va">Ex</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">'&lt;span style="color: #eee8d5;"&gt;Dochody = '</span>, </span>
+<span>    <span class="va">b</span>, <span class="st">' + '</span>, <span class="va">a</span>, <span class="st">' * budżet&lt;/span&gt;&lt;br&gt;'</span><span class="op">)</span></span></code></pre></div>
+<p><span style="color: #eee8d5;">Dochody = -5579407 + 2.956959 * budżet</span><br></p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Ustawiamy tło i kolory na wykresie</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bg <span class="op">=</span> <span class="st">"#002b36"</span>, col.axis <span class="op">=</span> <span class="st">"#eee8d5"</span>, col.lab <span class="op">=</span> <span class="st">"#eee8d5"</span>, </span>
+<span>    col.main <span class="op">=</span> <span class="st">"#eee8d5"</span>, fg <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Zaznaczamy punkty</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span>, <span class="va">movies_clean</span><span class="op">$</span><span class="va">revenue</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"Dochody filmu vs budżet"</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"Budżet (USD)"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"Dochody (USD)"</span>,</span>
+<span>     pch <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>     col <span class="op">=</span> <span class="st">"#eee8d5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Prosta regresji</span></span>
+<span><span class="co"># Zakres budżetu (x)</span></span>
+<span><span class="va">x_vals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="va">movies_clean</span><span class="op">$</span><span class="va">budget</span><span class="op">)</span></span>
+<span><span class="co"># Odpowiednie wartości y</span></span>
+<span><span class="va">y_vals</span> <span class="op">&lt;-</span> <span class="va">b</span> <span class="op">+</span> <span class="va">a</span> <span class="op">*</span> <span class="va">x_vals</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">x_vals</span>, <span class="va">y_vals</span>, col <span class="op">=</span> <span class="st">"#2aa198"</span>, lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="RachunekPrawdopodobienstwa2025_files/figure-html/regresja5-1.png" width="672" style="display: block; margin: auto;"></div>
+<p>Widzimy, że w tym wypadku współczynnik korelacji jest duży.</p>
+</div>
 
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></div>
-<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+<div class="next"><a href="parametry-wielowymiarowe.html"><span class="header-section-number">16</span> Parametry wielowymiarowe</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li><a class="nav-link" href="#regresja-liniowa"><span class="header-section-number">15</span> Regresja liniowa</a></li></ul>
@@ -130,7 +357,7 @@ Cov<span class="math inline">\((X,Y)\)</span>.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-04-23.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
