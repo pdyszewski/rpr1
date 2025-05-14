@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>20 Mocne prawo wielkich liczb | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Celem wykładu jest pokazanie jednego z kluczowych wyników w rachunku prawdopodobieństwa: Mocnego Prawa Wielkich Liczb. Mówi ono, że jeżeli danych jest ciąg zmiennych losowych \(\{X_n\}_{n\in...">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="20 Mocne prawo wielkich liczb | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Celem wykładu jest pokazanie jednego z kluczowych wyników w rachunku prawdopodobieństwa: Mocnego Prawa Wielkich Liczb. Mówi ono, że jeżeli danych jest ciąg zmiennych losowych \(\{X_n\}_{n\in...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="20 Mocne prawo wielkich liczb | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Celem wykładu jest pokazanie jednego z kluczowych wyników w rachunku prawdopodobieństwa: Mocnego Prawa Wielkich Liczb. Mówi ono, że jeżeli danych jest ciąg zmiennych losowych \(\{X_n\}_{n\in...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
+<li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
+<li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
+<li><a class="" href="regresja-liniowa.html"><span class="header-section-number">15</span> Regresja liniowa</a></li>
+<li><a class="" href="parametry-wielowymiarowe.html"><span class="header-section-number">16</span> Parametry wielowymiarowe</a></li>
+<li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
+<li><a class="" href="rodzaje-zbie%C5%BCno%C5%9Bci-zmiennych-losowych.html"><span class="header-section-number">18</span> Rodzaje zbieżności zmiennych losowych</a></li>
+<li><a class="" href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></li>
+<li><a class="active" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
+<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
+<li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
+<li><a class="" href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></li>
+<li class="book-part">Dodatek</li>
+<li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="mocne-prawo-wielkich-liczb" class="section level1" number="20">
+<h1>
+<span class="header-section-number">20</span> Mocne prawo wielkich liczb<a class="anchor" aria-label="anchor" href="#mocne-prawo-wielkich-liczb"><i class="fas fa-link"></i></a>
+</h1>
+<p>Celem wykładu jest pokazanie jednego z kluczowych wyników w rachunku prawdopodobieństwa:
+Mocnego Prawa Wielkich Liczb. Mówi ono, że
+jeżeli danych jest ciąg zmiennych losowych <span class="math inline">\(\{X_n\}_{n\in \mathbb{N}}\)</span>
+o takim samym rozkładzie i takich, że <span class="math inline">\(\mathbb{E}|X_n|&lt;\infty\)</span>,
+to <span class="math display">\[
+\frac{X_1 + \ldots + X_n}{n} \to \mathbb{E} [X_1],\qquad p.n.
+\]</span></p>
+<div id="twierdzenie-o-dwóch-szeregach" class="section level2" number="20.1">
+<h2>
+<span class="header-section-number">20.1</span> Twierdzenie o dwóch szeregach<a class="anchor" aria-label="anchor" href="#twierdzenie-o-dw%C3%B3ch-szeregach"><i class="fas fa-link"></i></a>
+</h2>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-212" class="theorem"><strong>Twierdzenie 20.1  (Nierówność Kołmogorowa) </strong></span>Niech <span class="math inline">\(X_1,\ldots, X_n\)</span> będą niezależnymi zmiennymi losowymi takimi, że
+<span class="math inline">\(\mathbb{E} [X_i] = 0\)</span> i <span class="math inline">\(\mathbb{E}\left[ X_i^2\right]&lt;\infty\)</span>. Wtedy dla dowolnego <span class="math inline">\(t&gt;0\)</span>
+<span class="math display">\[
+  \mathbb{P}\left[ \max_{1\le k\le n} |X_1+\ldots + X_k| \ge t
+  \right] \le \frac 1{t^2} \mathbb{V}ar(X_1+\ldots + X_n).
+  \]</span></p>
+</div>
+<figure style="width: 100%; text-align: center;"><img src="PICS/Andrej_Nikolajewitsch_Kolmogorov.jpg" style="width: 40%; display: block; margin: auto"><p style="text-align: center">
+Andrey Nikolaevich Kolmogorov
+</p>
+</figure><div class="proof">
+<p><span id="unlabeled-div-213" class="proof"><em>Proof</em>. </span>Oznaczmy <span class="math inline">\(S_0 = 0\)</span>, <span class="math inline">\(S_k = X_1+\ldots + X_k\)</span>. Zdefiniujmy zdarzenia
+<span class="math display">\[ A_k = \big\{ |S_j| &lt; t \mbox{ dla } j&lt;k, |S_k|\ge t
+  \big\}.
+  \]</span> Są to zbiory tych trajektorii, które dokładnie w <span class="math inline">\(k\)</span>-tym kroku przekraczają poziom <span class="math inline">\(t\)</span>. Wówczas <span class="math inline">\(A_k\in\sigma\{X_1,\ldots, X_k\}\)</span>. Ponadto zbiory <span class="math inline">\(A_k\)</span> są rozłączne parami oraz
+<span class="math display">\[\begin{equation}\label{eq:abk}
+  \bigcup_{k=1}^n A_k = B = \left\{ \max_{1\le k \le n}  |S_k| \ge t \right\}.
+  \end{equation}\]</span>
+Wtedy
+<span class="math display">\[\begin{align*}
+    \mathbb{V}ar [S_n] &amp; =\mathbb{E}\left[ S_n^2\right] = \int _{\Omega} S_n^2 \mathrm{d}\mathbb{P} \ge \int_B S_n^2 \mathrm{d}\mathbb{P}\\
+    &amp;= \sum_{k=1}^n \int_{A_k} S_n^2 \mathrm{d}\mathbb{P} = \sum_{k=1}^n \int_{A_k} (S_k+S_n-S_k)^2 \mathrm{d}\mathbb{P}\\
+    &amp;=\sum_{k=1}^n \bigg( \int_{A_k} S_k^2 \mathrm{d}\mathbb{P} + 2\int_{A_k}(S_n-S_k)S_k \mathrm{d}\mathbb{P} + \int_{A_k}(S_n-S_k)^2 \mathrm{d}\mathbb{P}\bigg)\\
+    &amp;\ge \sum_{k=1}^n \bigg(  \int_{A_k} S_k^2 \mathrm{d}\mathbb{P} + 2\int (S_n-S_k) S_k {\bf 1}_{A_k}\mathrm{d}\mathbb{P}
+    \bigg).
+  \end{align*}\]</span>
+Zmienne losowe <span class="math inline">\(S_n-S_k\)</span> oraz <span class="math inline">\(S_k{\bf 1}_{A_k}\)</span> są niezależne zatem
+<span class="math display">\[\begin{multline*}
+  \int (S_n-S_k) S_k {\bf 1}_{A_k}d\mathbb{P} = \mathbb{E}\big[ (S_n-S_k)S_k{\bf 1}_{A_k} \big]\\
+  = \mathbb{E}\big[ S_n-S_k\big]\mathbb{E}\big[S_k{\bf 1}_{A_k} \big] = \mathbb{E}\big[S_k{\bf 1}_{A_k} \big] \cdot \sum_{j=k+1}^n \mathbb{E} X_j = 0.
+  \end{multline*}\]</span>
+A stąd wynika
+<span class="math display">\[
+  \mathbb{V}ar[ S_n] \ge \sum_{k=1}^n \int_{A_k} S_k^2d\mathbb{P} \ge \sum_{k=1}^n \int_{A_k} t^2 d\mathbb{P}
+  \ge t^2 \int_B d\mathbb{P} = t^2 \mathbb{P}[B]
+  \]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-214" class="theorem"><strong>Twierdzenie 20.2  (Twierdzenie Kołmogorowa o dwóch szeregach) </strong></span>Załóżmy, że <span class="math inline">\(X_1,X_2,...\)</span> jest ciągiem niezależnych zmiennych losowych takich, że <span class="math inline">\(\mathbb{E}\left[ X_i^2\right]&lt;\infty\)</span>.
+Jeżeli
+<span class="math display">\[  \sum_{i=1}^\infty \mathbb{E} [X_i] &lt;\infty \quad \mbox{oraz}  \quad \sum_{i=1}^\infty \mathbb{V}ar[ X_i]&lt;\infty,\]</span> to
+<span class="math display">\[\sum_{i=1}^\infty X_i &lt;\infty \quad \mbox{p.n.}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-215" class="example"><strong>Przykład 20.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że dla każdego <span class="math inline">\(n\)</span> zmienna <span class="math inline">\(X_n\)</span>
+ma rozkład <span class="math inline">\(\mathcal{N}(n^{-a}, n^{-b})\)</span> dla pewnych <span class="math inline">\(a, b \in (0,2)\)</span>. Wówczas szereg <span class="math inline">\(\sum_nX_n\)</span> jest zbieżny wtedy i tylko wtedy, gdy <span class="math inline">\(a,b&gt;1\)</span>.
+Poniżej widzimy realizację ciągu sum częściowych tego szeregu.</p>
+<div class="rw-container">
+
+</div>
+<div class="input-container">
+
+</div>
+<script src="JAVA/rw3.js"></script><p>Co się dzieje dla małych wartości <span class="math inline">\(a\)</span>? Co się dzieje dla małych wartości <span class="math inline">\(b\)</span>?</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-216" class="remark"><em>Remark</em>. </span>W założeniach Twierdzenia o dwóch szeregach warunek
+<span class="math display">\[  
+   \sum_{i=1}^\infty \mathbb{E} [X_i] &lt;\infty
+\]</span>
+kontroluje trend ciągu sum częściowych (który musi być ograniczony, aby suma nie była <span class="math inline">\(\pm \infty\)</span>).
+Natomiast założenie
+<span class="math display">\[
+\sum_{i=1}^\infty \mathbb{V}ar[ X_i]&lt;\infty
+\]</span>
+kontroluje oscylacje ciągu sum częściowych.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-217" class="example"><strong>Przykład 20.2  </strong></span>Czy szereg <span class="math inline">\(\sum \frac {U_n}n\)</span> jest zbieżny, gdzie <span class="math inline">\(U_n\)</span> jest
+ciągiem niezależnych zmiennych losowych takich, że <span class="math inline">\(U_n = \pm 1\)</span> z prawdopodobieństwem <span class="math inline">\(1/2\)</span>?
+Zdefiniujmy <span class="math inline">\(X_n = \frac{U_n}{n}\)</span>. Wówczas
+<span class="math inline">\(\mathbb{E} [X_n] = 0\)</span>, <span class="math inline">\(\mathbb{V}ar[ X_n] = \frac 1{n^2}\)</span>.
+Z powyższego twierdzenia wnioskujemy więc, że szereg <span class="math inline">\(\sum \frac {U_n}n\)</span> jest zbieżny p.n.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-218" class="proof"><em>Proof</em>. </span>Możemy założyć, że <span class="math inline">\(\mathbb{E} [X_i] = 0\)</span>,
+bo przy powyższych założeniach <span class="math inline">\(\sum X_i\)</span> jest zbieżny p.n. wtedy i tylko wtedy, gdy <span class="math inline">\(\sum_i (X_i - \mathbb{E} [X_i])\)</span> jest zbieżny p.n.</p>
+<p>Niech <span class="math inline">\(S_N = \sum_{n=1}^N X_n\)</span>. Chcemy pokazać, że <span class="math inline">\(\{S_N\}_N\)</span> jest ciągiem Cauchy’ego.
+Z nierówności Kołmogorowa
+<span class="math display">\[
+  \mathbb{P}\left[ \max_{M\le m \le N} |S_m-S_M| &gt;\varepsilon
+  \right] \le \frac 1{\varepsilon^2} \mathbb{V}ar(S_N - S_M) = \frac{1}{\varepsilon^2} \sum_{n=M+1}^N\mathbb{V}ar (X_n).
+  \]</span>
+Przechodząc z <span class="math inline">\(N\)</span> do nieskończoności i korzystając z ciągłości miary, otrzymujemy
+<span class="math display">\[
+  \mathbb{P}\left[ \sup _{m\ge M} |S_m-S_M| &gt;\varepsilon \right] \le \frac 1{\varepsilon^2}\sum_{n=M+1}^\infty \mathbb{V}ar(X_n)
+  \]</span>
+Przypomnijmy, że <span class="math inline">\(\sum_n \mathbb{V}ar [X_n]&lt;\infty\)</span>, a więc przechodząc z <span class="math inline">\(M\to\infty\)</span>,
+dla każdego <span class="math inline">\(\varepsilon &gt; 0\)</span>
+<span class="math display">\[\begin{align*}
+&amp;\mathbb{P}\left[ \sup _{n,m\ge M} |S_m-S_n| &gt; 2 \varepsilon \right] \le \\
+&amp; \mathbb{P}\left[ \sup _{n\ge M} |S_m-S_M| &gt;  \varepsilon \right] +\\
+&amp;\mathbb{P}\left[ \sup _{m\ge M} |S_n-S_M| &gt;  \varepsilon \right]
+\overset{M\to \infty}{\to} 0.
+  \end{align*}\]</span>
+Powyższy warunek przypomina definicję Cuachy’ego zbieżności ciągów, ale otrzymaliśmy zbieżność według prawdopodobieństwa,
+a nie punktową.
+Oznaczmy <span class="math display">\[W_M = \sup_{m,n \ge M} |S_n - S_m|.\]</span> Wtedy <span class="math inline">\(W_M \overset{\mathbb{P}}{\to} 0\)</span>.
+Skoro <span class="math inline">\(W_M\)</span> jest niemalejący, to jest zbieżny p.n. Z jedyności granica musi być równa <span class="math inline">\(0\)</span> p.n.<br>
+To pokazuje, że <span class="math inline">\(S_n\)</span> jest ciągiem Cauchy’ego p.n., a więc ciąg <span class="math inline">\(S_n\)</span> jest zbieżny p.n.
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-219" class="lemma"><strong>Lemma 20.1  (Lemat Kroneckera) </strong></span>Załóżmy, że <span class="math inline">\(a_n\)</span> jest ciągiem liczbowym takim, że szereg <span class="math inline">\(\sum_{n=1}^\infty \frac{a_n}n\)</span> jest zbieżny. Wtedy
+<span class="math display">\[
+   \lim_{n\to\infty} \frac{a_1+\ldots+a_n}{n} = 0.
+   \]</span></p>
+</div>
+<figure style="width: 100%; text-align: center;"><img src="PICS/Leopold_Kronecker_1865.jpg" style="width: 40%; display: block; margin: auto"><p style="text-align: center">
+Leopold Kronecker (1823-1891)
+</p>
+</figure><div class="proof">
+<p><span id="unlabeled-div-220" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(S_n = \sum_{k=1}^n \frac{a_k}k\)</span>, wtedy <span class="math inline">\(a_n = n(S_n - S_{n-1})\)</span>. Skorzystamy z lematu (zadanie z analizy I) mówiącego, że
+jeżeli <span class="math inline">\(S_n\to S\)</span>, to również średnie arytmetyczne zbiegają do <span class="math inline">\(S\)</span>:
+<span class="math display">\[
+   \frac{S_1 +\ldots + S_n}{n} \to S.
+   \]</span>
+Wówczas
+<span class="math display">\[\begin{align*}
+     \frac{a_1+\ldots+a_n}{n} &amp; = \frac{S_1 + 2(S_2-S_1) + \ldots + n(S_n - S_{n-1})}{n}\\
+     &amp;= \frac{nS_n - S_1 - S_2 -\ldots - S_{n-1}}{n} \to 0
+   \end{align*}\]</span>
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-221" class="theorem"><strong>Twierdzenie 20.3  (Mocne Prawo Wielkich Liczb Kołmogorowa) </strong></span>Załóżmy, że <span class="math inline">\(\{X_n\}\)</span> jest ciągiem niezależnych zmiennych losowych o tym samym rozkładzie.</p>
+<ol style="list-style-type: decimal">
+<li>Jeżeli <span class="math inline">\(\mathbb{E} [|X_1|]&lt;\infty\)</span> i <span class="math inline">\(m = \mathbb{E} [X_1]\)</span>, to
+<span class="math display">\[
+     \lim_{n\to\infty} \frac{X_1+\ldots +X_n}n = m,\qquad \mbox{p.n.}
+     \]</span>
+</li>
+<li>Jeżeli <span class="math inline">\(\mathbb{E} [|X_1|]=\infty\)</span>, to
+<span class="math display">\[
+     \mathbb{P}\bigg[ \limsup_{n\to\infty} \bigg| \frac{X_1+\ldots + X_n}{n} \bigg| = \infty
+     \bigg] = 1.
+     \]</span>
+</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-222" class="proof"><em>Proof</em>. </span><strong>przy dodatkowym założeniu <span class="math inline">\(\mathbb{E} X_1^2&lt;\infty\)</span>.</strong> Przy silniejszym warunku MPWL wynika natychmiast w poprzedniego twierdzenia Kołmogorowa o dwóch szeregach. Mianowicie zauważmy, że
+<span class="math display">\[
+\sum_n  \mathbb{V}ar\bigg(\frac{X_n-m}n\bigg) = \sum_n \frac{\mathbb{V}ar X_n}{n^2} = \mathbb{V}ar X_1 \sum_n \frac{1}{n^2} &lt;\infty
+  \]</span>
+oraz
+<span class="math display">\[
+\sum_n \mathbb{E}\bigg[\frac{X_n-m}n\bigg]=0.
+   \]</span> Zatem szereg <span class="math inline">\(\sum_{n=1}^\infty \frac{X_n-m}n\)</span> jest zbieżny p.n. Korzystając następnie z lematu Kroneckera otrzymujemy
+<span class="math display">\[ 0 \leftarrow \frac{X_1+\ldots + X_n - nm}n = \frac{X_1 + \ldots + X_n}n - m \qquad \mbox{p.n.}
+   \]</span>
+to dowodzi MPWL w tym szczególnym przypadku.
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+</div>
+<div id="dowód-mpwl-w-ogólnym-przypadku" class="section level2" number="20.2">
+<h2>
+<span class="header-section-number">20.2</span> Dowód MPWL w ogólnym przypadku<a class="anchor" aria-label="anchor" href="#dow%C3%B3d-mpwl-w-og%C3%B3lnym-przypadku"><i class="fas fa-link"></i></a>
+</h2>
+<p>Zdefiniujmy
+<span class="math display">\[
+X_n' = {\bf 1}_{(-n,n)}(X_n) = \left\{
+\begin{array}{cc}
+  X_n &amp; \ \mbox{jeżeli } |X_n| &lt; n \\
+  0 &amp;  \ \mbox{jeżeli } |X_n| \ge  n \\
+\end{array}
+\right.
+\]</span> Zmienne losowe <span class="math inline">\(X_n'\)</span> są niezależne oraz ograniczone, więc również <span class="math inline">\(\mathbb{E} (X_n')^2&lt;\infty\)</span>. Mamy
+<span class="math display">\[\begin{multline*}
+  \frac{X_1+\ldots + X_n}n  - m
+=   \frac{(X_1+\ldots + X_n) - (X'_1+\ldots + X'_n)}{n}\\
++   \frac{(X'_1+\ldots + X'_n) - ( \mathbb{E} X'_1+\ldots + \mathbb{E} X'_n)}{n}
++  \frac{\mathbb{E} X'_1+\ldots \mathbb{E} X'_n}n  - m \\
+  = I_n + II_n + III_n.
+\end{multline*}\]</span>
+Pokażemy, że wszystkie powyższe wyrażenie zbiegają do 0 p.n.</p>
+<p>Z twierdzenia Lebesgue’a o zbieżności zdominowanej
+<span class="math display">\[\mathbb{E} X_n' = \mathbb{E} \big[ X_n {\bf 1}_{(-n,n)}(X_n)  \big] = \mathbb{E} \big[ X_1 {\bf 1}_{(-n,n)} (X_n) \big] \to \mathbb{E} X_1 = m,\]</span>
+a zatem <span class="math inline">\(III_n\to 0\)</span> (ponownie korzystamy z lematu mówiącego, że jeżeli ciąg jest zbieżny, to średnia arytmetyczna zbiega do tej samej granicy).</p>
+<p>Badamy teraz <span class="math inline">\(I_n\)</span>. Pokażemy, że ciągi <span class="math inline">\(\{X_n\}\)</span> oraz <span class="math inline">\(\{X'_n\}\)</span> od pewnego miejsca się zgadzają. W tym celu skorzystamy z lematu Borela-Cantelliego. Zauważmy najpierw
+<span class="math display">\[
+  \sum_{n=1}^\infty\mathbb{P}[ X_n\not= X_n' ]  = \sum_{n=1}^\infty \mathbb{P}[|X_n|\ge n] = \sum_{n=1}^\infty \mathbb{P}[|X_1|\ge n]
+\]</span> Przypomnijmy, że jeżeli zmienna losowa przyjmuje dyskretne wartości, to powyższa suma jest równa <span class="math inline">\(\mathbb{E} |X_1|\)</span>. W ogólnej sytuacji nie zachodzi równość, ale obie wartości są ze sobą porównywalne, a więc założenie <span class="math inline">\(\mathbb{E} |X_1|&lt;\infty\)</span> powinno implikować zbieżność powyższego szeregu. Poniższe rachunki pokazują, że to rzeczywiście zachodzi:
+<span class="math display">\[\begin{align*}
+  \sum_{n=1}^\infty\mathbb{P}[ X_n\not= X_n' ] &amp; = \sum_{n=1}^\infty \mathbb{P}[|X_n|\ge n]
+  = \sum_{n=1}^\infty \mathbb{P}[|X_1|\ge n]\\
+  &amp;= \sum_{n=1}^\infty \sum_{k=n}^{\infty} \mathbb{P}[k\le |X_1| &lt; k+1]
+  = \sum_{k=1}^\infty \sum_{n=1}^k \mathbb{P}[k\le |X_1| &lt; k+1]\\
+  &amp; = \sum_{k=1}^\infty k \mathbb{P}[k\le |X_1| &lt; k+1] \le \sum_{k=1}^\infty \int_{\{k\le |X_1|&lt; k+1\}} k d\mathbb{P}\\
+  &amp;  \le \sum_{k=1}^\infty \int_{\{k\le |X_1|&lt; k+1\}} |X_1| d\mathbb{P}\le \mathbb{E} |X_1| &lt;\infty.
+\end{align*}\]</span> Zatem z lematu Borela-Cantelliego z em 1 zachodzi tylko skończenie wiele zdarzeń <span class="math inline">\(\{X_n\not= X_n'\}\)</span>, a więc
+p.n. od pewnego miejsca <span class="math inline">\(X_n = X'_n\)</span>. Zatem <span class="math display">\[I_n
+= \frac{(X_1-X'_1)+\ldots + (X_n -X'_n)}{n} \to 0\quad \mbox{p.n.}\]</span></p>
+<p>Pozostaje składnik <span class="math display">\[II_n =
+\frac{(X'_1 - \mathbb{E} X'_1) +\ldots + (X'_n- \mathbb{E} X'_n)}{n}
+\]</span> Z lematu Kroneckera wystarczy pokazać, że suma <span class="math display">\[\sum_{n=1}^\infty \frac{X_n' - \mathbb{E} X_n'}{n}\]</span> jest zbieżna p.n. Skorzystamy z poprzedniego
+twierdzenia Kołmogorowa o dwóch szeregach, które mówi, że wystarczy pokazać, że szereg wariancji jest zbieżny:
+<span class="math display">\[\begin{align*}
+  \sum_{n=1}^\infty \mathbb{V}ar\bigg( \frac{X_n' - \mathbb{E} X_n'}n \bigg) &amp; = \sum_{n=1}^\infty \mathbb{V}ar \bigg( \frac{X_n'}n\bigg)\\
+  &amp;= \sum_{n=1}^\infty \frac 1{n^2} \big( \mathbb{E} (X_n')^2 - (\mathbb{E} X_n')^2  \big) \le \sum_{n=1}^\infty \frac 1{n^2}\mathbb{E} (X_n')^2\\
+  &amp;= \sum_{n=1}^\infty \frac 1{n^2} \sum_{k=1}^\infty \int_{\{ k-1 \le |X_n'|&lt;k \}} (X_n')^2 d\mathbb{P}\\
+  &amp;= \sum_{n=1}^\infty \frac 1{n^2} \sum_{k=1}^n \int_{\{ k-1 \le |X_1|&lt;k \}} (X_1)^2 d\mathbb{P}
+  \le  \sum_{n=1}^\infty \frac k{n^2} \sum_{k=1}^n \int_{\{ k-1 \le |X_1|&lt;k \}} |X_1| d\mathbb{P}\\
+  &amp;= \sum_{k=1}^\infty \sum_{n=k}^{\infty} \frac k{n^2} \mathbb{E} \big[|X_1|{\bf 1}_{[k-1,k)}(|X_1|)  \big]\\
+  &amp;\le \sum_{k=1}^\infty \bigg( \sum_{n=k}^{\infty}  \frac 1{n^2} \bigg) k \mathbb{E} \big[|X_1|{\bf 1}_{[k-1,k)}(|X_1|)  \big]\\
+  &amp; \le 2 \sum_{k=1}^\infty  \mathbb{E} \big[|X_1|{\bf 1}_{[k-1,k)}(|X_1|)  \big] = 2\mathbb{E}|X_1| &lt;\infty.
+\end{align*}\]</span>
+W przedostatniej nierówności skorzystaliśmy z nierówności znanej z analizy I:
+<span class="math display">\[
+\sum_{n=k}^{\infty}  \frac 1{n^2} \le \frac 2k.
+\]</span>
+Dowód pkt 1. jest więc kompletny.</p>
+<p><strong>Dowód pkt. 2</strong> Załóżmy, że <span class="math inline">\(\mathbb{E} |X_1|=\infty\)</span>. Chcemy pokazać, że ciąg <span class="math inline">\(\{\big|\frac{S_n}n\big|\}\)</span> nie może być ograniczony.
+Pokażemy najpierw, że ciąg <span class="math inline">\(X_n\)</span> nieskończenie wiele razy przyjmuje duże wartości, większe niż <span class="math inline">\(na\)</span> dla
+dowolnego <span class="math inline">\(a&gt;0\)</span>. W tym celu piszemy
+<span class="math display">\[\begin{align*}
+  \sum_{n}\mathbb{P}[|X_n| &gt; na] &amp;  =  \sum_{n}\mathbb{P}[|X_1| &gt; na]\\
+  &amp;  = \sum_{n=1}^\infty \sum_{k=n}^\infty \mathbb{P}[ka  &lt; |X_1| \le (k+1) a]\\
+  &amp;  = \sum_{k=1}^\infty \sum_{n\le k} \mathbb{P}[ka  &lt; |X_1| \le (k+1) a]\\
+  &amp;  = \frac 1a \sum_{k=1}^\infty ka   \mathbb{P}[ka  &lt; |X_1| \le (k+1) a]\\
+  &amp;  = \frac 1a \sum_{k=1}^\infty \int_{\{ ak&lt; |X_1| \le a(k+1) \}} ka d\mathbb{P} \\
+  &amp;  \ge \frac 1a \sum_{k=1}^\infty  \int_{\{ ak&lt; |X_1| \le a(k+1) \}} (|X_1|-a) d\mathbb{P} \\
+  &amp;\ge \frac 1a ( \mathbb{E}|X_1|-2a) = \infty.
+\end{align*}\]</span>
+Zatem korzystając z lematu Borela - Cantelliego
+<span class="math display">\[
+\mathbb{P}[|X_n|&gt;na\ \mbox{i.o}] = 1,
+\]</span> a więc z em 1, <span class="math inline">\(|X_n|&gt;na\)</span> dla nieskończenie wielu indeksów <span class="math inline">\(n\)</span>. Wówczas <span class="math display">\[\mathbb{P}\big[ |S_n-S_{n-1}| &gt; na \ \ {\mbox i.o}\big]  =1,\]</span> a zatem
+<span class="math display">\[
+\mathbb{P}\bigg[ \bigg| \frac{S_n}n\bigg| &gt; \frac a2\ \ \ \mbox{ lub }\ \ \  \bigg|\frac{S_{n-1}}n\bigg| &gt; \frac a2 \ \ \ \mbox{i.o.}\bigg] = 1
+\]</span> a to z kolei implikuje, że
+<span class="math display">\[
+\mathbb{P}[|S_n/n| &gt; a/3\ \mbox{i.o}] = 1.
+\]</span>
+Z dowolności <span class="math inline">\(a\)</span> wynika, że ciąg <span class="math inline">\(\{S_n/n\}\)</span> niekończenie wiele razy przekracza dowolnie dużą wartość, a więc
+<span class="math display">\[
+\mathbb{P}\bigg[\limsup_{n\to\infty} \bigg|\frac{S_n}n\bigg| = \infty \bigg] = 1.
+\]</span></p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></div>
+<div class="next"><a href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#mocne-prawo-wielkich-liczb"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="nav-link" href="#twierdzenie-o-dw%C3%B3ch-szeregach"><span class="header-section-number">20.1</span> Twierdzenie o dwóch szeregach</a></li>
+<li><a class="nav-link" href="#dow%C3%B3d-mpwl-w-og%C3%B3lnym-przypadku"><span class="header-section-number">20.2</span> Dowód MPWL w ogólnym przypadku</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-14.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Twierdzenie Fubiniego | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  25.1...">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="Twierdzenie Fubiniego | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  25.1...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Twierdzenie Fubiniego | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  25.1...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
+<li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
+<li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
+<li><a class="" href="regresja-liniowa.html"><span class="header-section-number">15</span> Regresja liniowa</a></li>
+<li><a class="" href="parametry-wielowymiarowe.html"><span class="header-section-number">16</span> Parametry wielowymiarowe</a></li>
+<li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
+<li><a class="" href="rodzaje-zbie%C5%BCno%C5%9Bci-zmiennych-losowych.html"><span class="header-section-number">18</span> Rodzaje zbieżności zmiennych losowych</a></li>
+<li><a class="" href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></li>
+<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
+<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
+<li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
+<li><a class="" href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></li>
+<li class="book-part">Dodatek</li>
+<li><a class="active" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="twierdzenie-fubiniego" class="section level1 unnumbered">
+<h1>Twierdzenie Fubiniego<a class="anchor" aria-label="anchor" href="#twierdzenie-fubiniego"><i class="fas fa-link"></i></a>
+</h1>
+<p>Przedstawimy pokrótce elementarne własności i przykłady miar produktowych.
+Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego.
+Wszystkie twierdzenia będą przytoczone bez dowodów.</p>
+<div id="miary-sigma-skończone" class="section level2" number="25.1">
+<h2>
+<span class="header-section-number">25.1</span> Miary <span class="math inline">\(\sigma\)</span>-skończone<a class="anchor" aria-label="anchor" href="#miary-sigma-sko%C5%84czone"><i class="fas fa-link"></i></a>
+</h2>
+<p>Rozważać będziemy przestrzeń miarową <span class="math inline">\((A, \mathcal{A}, \mu)\)</span>.
+Przypomnijmy, że <span class="math inline">\(\mathcal{A}\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem podzbiorów <span class="math inline">\(A\)</span> oraz <span class="math inline">\(\mu \colon \mathcal{A} \to [0, +\infty]\)</span>
+jest funkcją przeliczalnie addytywną. Dokładniej, dla każdych parami rozłącznych <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> z <span class="math inline">\(\mathcal{A}\)</span>,
+<span class="math display">\[\begin{equation*}
+    \mu \left( \bigcup_{n \in \mathbb{N}} A_n \right) = \sum_{n \in \mathbb{N}} \mu(A_n).
+\end{equation*}\]</span>
+Będziemy zakładać, że przestrzeń jest <span class="math inline">\(\sigma\)</span>-skończona. Oznacza to, że istnieją zbiory <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> w <span class="math inline">\(\mathcal{A}\)</span>
+takie, że
+<span class="math display">\[\begin{equation*}
+    \bigcup_{n \in \mathbb{N}} A_n = A
+\end{equation*}\]</span>
+oraz <span class="math inline">\(\mu(A_n) &lt;\infty\)</span> dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-237" class="example"><strong>Przykład 25.1  </strong></span>Rozważmy <span class="math inline">\((\mathbb{N}, 2^{\mathbb{N}}, \#)\)</span>, gdzie <span class="math inline">\(\#\)</span> jest miarą liczącą,
+<span class="math display">\[\begin{equation*}
+    \# A = \mbox{liczba elementów w $A$}.
+\end{equation*}\]</span>
+Dla <span class="math inline">\(A_n = \{n\}\)</span> mamy
+<span class="math display">\[\begin{equation*}
+    \bigcup_{n \in \mathbb{N}} \{n\} = \mathbb{N}
+\end{equation*}\]</span>
+oraz <span class="math inline">\(\# A_n =1\)</span>. Zbiór liczb naturalnych z miarą liczącą jest zatem <span class="math inline">\(\sigma\)</span>-skończony.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-238" class="example"><strong>Przykład 25.2  </strong></span>Rozważmy przestrzeń <span class="math inline">\(\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
+Rozważmy <span class="math inline">\(A_n = [-n, n]\)</span>. Wówczas
+<span class="math display">\[\begin{equation*}
+    \bigcup_{n \in \mathbb{N}} [-n,n] = \mathbb{R}
+\end{equation*}\]</span>
+oraz <span class="math inline">\(\lambda_1([-n,n]) = 2n &lt;\infty\)</span>. Prosta rzeczywista z miarą Lebesgue’a jest zatem <span class="math inline">\(\sigma\)</span>-skończona.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-239" class="example"><strong>Przykład 25.3  </strong></span>Rozważmy <span class="math inline">\((\mathbb{R}, 2^{\mathbb{R}}, \mu_\mathbb{Q})\)</span>, gdzie miara <span class="math inline">\(\mu_{\mathbb{Q}}\)</span> jest zadana przez
+<span class="math display">\[\begin{equation*}
+    \mu_\mathbb{Q}(A) = \# A \cap \mathbb{Q}
+\end{equation*}\]</span>
+liczbę liczb wymiernych w <span class="math inline">\(A\)</span>. Zauważmy, że dla każdego otwartego przedziału <span class="math inline">\((a,b)\)</span>,
+<span class="math display">\[\begin{equation*}
+\mu_\mathbb{Q}(a,b) = \infty.
+\end{equation*}\]</span>
+Jednak przestrzeń ta jest <span class="math inline">\(\sigma\)</span>-skończona.
+Niech <span class="math inline">\(A_1 = \mathbb{R}\setminus \mathbb{Q}\)</span> będzie zbiorem liczb niewymiernych.
+Wówczas <span class="math inline">\(\mu_{\mathbb{Q}}(A_0)=0\)</span>. Ustawmy liczby wymierne w ciąg <span class="math inline">\(\mathbb{Q} = \{q_2, q_3, \ldots\}\)</span> i połóżmy
+<span class="math inline">\(A_n = \{q_n\}\)</span>. Wtedy <span class="math inline">\(\mu_{\mathbb{Q}}(A_n) = 1\)</span> dla <span class="math inline">\(n \geq 2\)</span>.
+Zbiory <span class="math inline">\(\{A_n\}_n\)</span> są świadkami na to, że rozważana przestrzeń jest <span class="math inline">\(\sigma\)</span>-skończona.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-240" class="example"><strong>Przykład 25.4  </strong></span>Rozważmy modyfikację ostatniej przestrzeni <span class="math inline">\((\mathbb{R}, 2^{\mathbb{R}}, \mu_{\mathbb{R}\setminus \mathbb{Q}})\)</span>, gdzie miara <span class="math inline">\(\mu_{\mathbb{R}\setminus \mathbb{Q}}\)</span> jest zadana przez
+<span class="math display">\[\begin{equation*}
+    \mu_{ \mathbb{R}\setminus \mathbb{Q}}(A) = \# A \cap (\mathbb{R}\setminus \mathbb{Q})
+\end{equation*}\]</span>
+jest liczbą liczb niewymiernych w <span class="math inline">\(A\)</span>. Taka przestrzeń nie jest <span class="math inline">\(\sigma\)</span>-skończona. Załóżmy nie wprost, że
+<span class="math display">\[
+\bigcup_{n \in \mathbb{N}} A_n = \mathbb{R},
+\]</span>
+gdzie każdy <span class="math inline">\(A_n\)</span> zawiera skończenie wiele liczb wymiernych. Wówczas
+<span class="math display">\[\begin{equation*}
+\mathbb{R} \setminus \mathbb{Q} = \bigcup_{n \in \mathbb{N}} A_n \cap (\mathbb{R}\setminus \mathbb{Q}).
+\end{equation*}\]</span>
+Skoro każdy ze zbiorów <span class="math inline">\(A_n \cap(\mathbb{R} \setminus \mathbb{Q})\)</span> jest skończony, to przeliczalna suma zbiorów po prawej stronie jest przeliczalna.
+Oznacza to, że <span class="math inline">\(\mathbb{R}\setminus \mathbb{Q}\)</span> jest przeliczalny. Sprzeczność pokazuje, że rozważana przez nasz przestrzeń nie jest <span class="math inline">\(\sigma\)</span>-skończona.</p>
+</div>
+</div>
+<div id="miary-produktowe" class="section level2" number="25.2">
+<h2>
+<span class="header-section-number">25.2</span> Miary produktowe<a class="anchor" aria-label="anchor" href="#miary-produktowe"><i class="fas fa-link"></i></a>
+</h2>
+<p>Rozważmy teraz dwie <span class="math inline">\(\sigma\)</span>-skończone przestrzenie miarowe <span class="math inline">\((A, \mathcal{A}, \mu)\)</span> oraz <span class="math inline">\((B, \mathcal{B}, \nu)\)</span>.
+Niech <span class="math inline">\(\Omega = A\times B\)</span> i niech
+<span class="math display">\[\begin{equation*}
+    \mathcal{S} = \left\{ A \times B \: : \: A \in \mathcal{A}, \: B \in \mathcal{B} \right\}.
+\end{equation*}\]</span>
+Wówczas <span class="math inline">\(\mathcal{S}\)</span> jest zbiorem prostokątów o bokach w <span class="math inline">\(\mathcal{A}\)</span> i <span class="math inline">\(\mathcal{B}\)</span>.
+Rodzina ta jest zamknięta na przekroje
+<span class="math display">\[\begin{equation*}
+    (A \times B) \cap (C \times D) = (A\cap C) \times (B \cap D).
+\end{equation*}\]</span></p>
+<div style="margin:2px; padding:1px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/app.svg" style="display: block; margin: auto;"></div>
+</div>
+<p>Dopełnienie prostokąta jest sumą prostokątów.</p>
+<p>Niech <span class="math inline">\(\mathcal{F}\)</span> będzie najmniejszym <span class="math inline">\(\sigma\)</span>-ciałem podzbiorów <span class="math inline">\(\Omega\)</span> zawierającym <span class="math inline">\(\mathcal{S}\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-241" class="theorem"><strong>Twierdzenie 25.1  </strong></span>Załóżmy, że przestrzenie miarowe <span class="math inline">\((A, \mathcal{A}, \mu)\)</span> oraz <span class="math inline">\((B, \mathcal{B}, \nu)\)</span> są <span class="math inline">\(\sigma\)</span>-skończone.
+Wówczas istnieje dokładnie jedna miary <span class="math inline">\(\eta\)</span> na <span class="math inline">\((\Omega, \mathcal{F})\)</span> taka, że
+<span class="math display">\[\begin{equation*}
+    \eta(A \times B) = \mu(A) \cdot \nu(B).
+\end{equation*}\]</span>
+Będziemy korzystać z oznaczenia <span class="math inline">\(\mu\otimes \nu = \eta\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-242" class="example"><strong>Przykład 25.5  </strong></span>Rozważmy dwie kopie liczb naturalnych wraz z miarami liczącymi. Dokładniej niech
+<span class="math inline">\((A, \mathcal{A}, \mu)= (B, \mathcal{B}, \nu) = (\mathbb{N}, 2^{\mathbb{N}}, \#)\)</span>,
+gdzie <span class="math inline">\(\#\)</span> jest miarą liczącą. Wówczas <span class="math inline">\(\Omega = \mathbb{N}\times \mathbb{N}\)</span> jest kratą liczb naturalnych.
+Jak wygląda <span class="math inline">\(\mu \otimes \nu\)</span>?
+Dla każdych <span class="math inline">\(A, B \subseteq \mathbb{N}\)</span>, mamy
+<span class="math display">\[\begin{equation*}
+\mu\otimes \nu(A \times B) = \mu(A) \cdot \nu(B) = \# (A) \cdot \# (B)
+\end{equation*}\]</span>
+Zauważmy, że
+<span class="math display">\[\begin{equation*}
+    \# (A) \cdot \# (B) = \# (A \times B).
+\end{equation*}\]</span>
+W tym przypadku <span class="math inline">\(\mu\otimes \nu\)</span> jest po prostu miarą liczącą na produkcie <span class="math inline">\(\mathbb{N}^2\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-243" class="example"><strong>Przykład 25.6  </strong></span>Niech <span class="math inline">\((A, \mathcal{A}, \mu) = (B, \mathcal{B}, \nu) = (\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
+Jak wygląda <span class="math inline">\(\lambda_1 \otimes \lambda1\)</span> na <span class="math inline">\(\mathbb{R}^2\)</span>? Dla dowolnych borelowskich <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>
+<span class="math display">\[\begin{equation*}
+\lambda_1\otimes \lambda_1(A \times B) = \lambda_1(A) \cdot \lambda_1(B).
+\end{equation*}\]</span>
+Zauważmy, że
+<span class="math display">\[\begin{equation*}
+    \lambda_1 (A) \cdot \lambda_1 (B) = \lambda_2(A \times B),
+\end{equation*}\]</span>
+gdzie <span class="math inline">\(\lambda_2\)</span> jest dwuwymiarową miarą Lebesgue’a.
+Czyli <span class="math inline">\(\lambda_1\otimes \lambda_1 = \lambda_2\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-244" class="example"><strong>Przykład 25.7  </strong></span>Niech <span class="math inline">\((A, \mathcal{A}, \mu) = (\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
+i <span class="math inline">\((B, \mathcal{B}, \nu) = (\mathbb{Z}, 2^{\mathbb{Z}}, \#)\)</span>. Wówczas <span class="math inline">\(\Omega = \mathbb{R} \times \mathbb{Z} \subseteq \mathbb{R}^2\)</span>
+jest nieskończoną kolekcją poziomych prostych. Wówczas każdy prostokąt postaci $ A {k}$ jest kopią <span class="math inline">\(A\)</span>
+na poziomie <span class="math inline">\(k\)</span>. May
+<span class="math display">\[\begin{equation*}
+    \mu \otimes \nu(A \times \{ k\}) = \lambda_1(A).
+\end{equation*}\]</span>
+Jeżeli więc rozważymy okrąg
+<span class="math display">\[\begin{equation*}
+    C = \{ ( x, j) \in \mathbb{R} \times \mathbb{Z} \: : \:  x^2+j^2\leq 10 \}
+\end{equation*}\]</span>
+to
+<span class="math display">\[\begin{equation*}
+\mu \otimes \nu(C) = \sum_{j=-3}^3 \lambda_1( x \: : \: x^2 \leq 10-j^2 ) = 16+4\sqrt{6} +2 \sqrt{10}
+\end{equation*}\]</span></p>
+<div style="margin:2px; padding:1px; text-align:center;">
+<div class="inline-figure"><img src="TIKZ/app2.svg" style="display: block; margin: auto;"></div>
+</div>
+</div>
+</div>
+<div id="całki-względem-miar-produktowych" class="section level2" number="25.3">
+<h2>
+<span class="header-section-number">25.3</span> Całki względem miar produktowych<a class="anchor" aria-label="anchor" href="#ca%C5%82ki-wzgl%C4%99dem-miar-produktowych"><i class="fas fa-link"></i></a>
+</h2>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-245" class="theorem"><strong>Twierdzenie 25.2  </strong></span>Jeżeli <span class="math inline">\(f\colon A \times B \to \mathbb{R}\)</span> jest taka, że
+<span class="math inline">\(f \geq 0\)</span> lub <span class="math inline">\(\int_{A\times B} f \mathrm{d}\mu\otimes \nu &lt;\infty\)</span>, to
+<span class="math display">\[\begin{equation*}
+\int_A \int_B f(x,y) \nu(\mathrm{d}y) \mu(\mathrm{d}x) =
+\int_B \int_A f(x,y) \mu(\mathrm{d}x) \nu(\mathrm{d}y) =
+\int_{A\times B} f   \mathrm{d} \mu \otimes \nu.
+\end{equation*}\]</span></p>
+</div>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#twierdzenie-fubiniego">Twierdzenie Fubiniego</a></li>
+<li><a class="nav-link" href="#miary-sigma-sko%C5%84czone"><span class="header-section-number">25.1</span> Miary \(\sigma\)-skończone</a></li>
+<li><a class="nav-link" href="#miary-produktowe"><span class="header-section-number">25.2</span> Miary produktowe</a></li>
+<li><a class="nav-link" href="#ca%C5%82ki-wzgl%C4%99dem-miar-produktowych"><span class="header-section-number">25.3</span> Całki względem miar produktowych</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-14.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

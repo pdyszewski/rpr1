@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Definicja 7.1 Niech \(X\) będzie zmienną losową określoną na przestrzeni probabilistycznej \((\Omega, \mathcal{F}, \mathbb{P})\). Mówimy, że \(X\) ma wartość oczekiwaną jeżeli \[  \int_\Omega |X|...">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="7 Wartość oczekiwana: definicja i własności | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Definicja 7.1 Niech \(X\) będzie zmienną losową określoną na przestrzeni probabilistycznej \((\Omega, \mathcal{F}, \mathbb{P})\). Mówimy, że \(X\) ma wartość oczekiwaną jeżeli \[  \int_\Omega |X|...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Definicja 7.1 Niech \(X\) będzie zmienną losową określoną na przestrzeni probabilistycznej \((\Omega, \mathcal{F}, \mathbb{P})\). Mówimy, że \(X\) ma wartość oczekiwaną jeżeli \[  \int_\Omega |X|...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -69,6 +69,10 @@
 <li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
 <li><a class="" href="rodzaje-zbie%C5%BCno%C5%9Bci-zmiennych-losowych.html"><span class="header-section-number">18</span> Rodzaje zbieżności zmiennych losowych</a></li>
 <li><a class="" href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></li>
+<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
+<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -80,6 +84,9 @@
 <li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
 <li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 <li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
+<li><a class="" href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></li>
+<li class="book-part">Dodatek</li>
+<li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
 </ul>
 
         <div class="book-extra">
@@ -92,7 +99,7 @@
 <span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności<a class="anchor" aria-label="anchor" href="#warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci"><i class="fas fa-link"></i></a>
 </h1>
 <div class="definition">
-<p><span id="def:unlabeled-div-78" class="definition"><strong>Definicja 7.1  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową określoną na przestrzeni probabilistycznej
+<p><span id="def:unlabeled-div-77" class="definition"><strong>Definicja 7.1  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową określoną na przestrzeni probabilistycznej
 <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>. Mówimy, że <strong><span class="math inline">\(X\)</span> ma wartość oczekiwaną</strong> jeżeli
 <span class="math display">\[
   \int_\Omega |X| \mathrm{d} \mathbb{P} = \int_\Omega |X(\omega)|\mathbb{P}(\mathrm{d}\omega) &lt;\infty.
@@ -104,7 +111,7 @@ Wówczas <strong>wartością oczekiwaną</strong> zmiennej losowej <span class="
 \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-79" class="example"><strong>Przykład 7.1  </strong></span>Rzucamy kostką. Niech <span class="math inline">\(X\)</span> oznacza liczbę wyrzuconych oczek.
+<p><span id="exm:unlabeled-div-78" class="example"><strong>Przykład 7.1  </strong></span>Rzucamy kostką. Niech <span class="math inline">\(X\)</span> oznacza liczbę wyrzuconych oczek.
 Wówczas, dla <span class="math inline">\(\Omega = [6]=\{1,2, \ldots, 6\}\)</span>,
 <span class="math display">\[\begin{equation*}
     \mathbb{E}[X] = \sum_{k=1}^6 k \mathbb{P}[\{ k\}] = 3,5.
@@ -143,7 +150,7 @@ przyjmijmy go chwilowo za prawdziwy. Wówczas średnia empiryczna zbiega do
 czyli wartości oczekiwanej wyniku jednego rzutu. Powyższy heurystyczny argument nie
 jest zależny od wyważenia czy też liczby ścian na kostce.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-80" class="example"><strong>Przykład 7.2  </strong></span>Dwaj gracze <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> grają w następującą grę.
+<p><span id="exm:unlabeled-div-79" class="example"><strong>Przykład 7.2  </strong></span>Dwaj gracze <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> grają w następującą grę.
 Rzucają kostką. Niech <span class="math inline">\(k\)</span> będzie wynikiem rzutu.
 Jeżeli <span class="math inline">\(k\)</span> jest nieparzyste, to <span class="math inline">\(A\)</span> wygrywa <span class="math inline">\(k\)</span> złotych, jeżeli <span class="math inline">\(k\)</span> jest parzyste,
 to <span class="math inline">\(B\)</span> wygrywa <span class="math inline">\(k\)</span> złotych. Czy gra jest uczciwa?</p>
@@ -171,7 +178,7 @@ co widać na symulacji poniżej. Wykres przedstawia stan portfela gracza <span c
 <p>Wartość oczekiwana jest najważniejszym parametrem decydującym o opłacalności np. gier
 hazardowych. <a href="https://www.theatlantic.com/business/archive/2016/02/how-mit-students-gamed-the-lottery/470349/">How MIT Students Won 8 Millions in the Massachusetts Lottery</a>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-81" class="theorem"><strong>Twierdzenie 7.1  </strong></span>Załóżmy, że <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są zmiennymi losowymi takimi, że <span class="math inline">\(\mathbb{E} X\)</span> i <span class="math inline">\(\mathbb{E} Y\)</span> istnieją.
+<p><span id="thm:unlabeled-div-80" class="theorem"><strong>Twierdzenie 7.1  </strong></span>Załóżmy, że <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są zmiennymi losowymi takimi, że <span class="math inline">\(\mathbb{E} X\)</span> i <span class="math inline">\(\mathbb{E} Y\)</span> istnieją.
 Wtedy</p>
 <ol style="list-style-type: decimal">
 <li>Jeżeli <span class="math inline">\(X\ge 0\)</span>, to <span class="math inline">\(\mathbb{E} [X] \ge 0\)</span>.</li>
@@ -185,7 +192,7 @@ Wtedy</p>
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-82" class="proof"><em>Proof</em>. </span>Wszystkie własności są konsekwencją definicji wartości oczekiwanej jako całki z funkcji
+<p><span id="unlabeled-div-81" class="proof"><em>Proof</em>. </span>Wszystkie własności są konsekwencją definicji wartości oczekiwanej jako całki z funkcji
 mierzalnej <span class="math inline">\(X\)</span>.
 Trzeci punkt wynika z liniowości całki
 <span class="math display">\[\begin{multline*}
@@ -217,7 +224,7 @@ czyli
 co pociąga drugi punkt.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-83" class="example"><strong>Przykład 7.3  </strong></span>Rzucamy <span class="math inline">\(100\)</span> razy kostką. Niech <span class="math inline">\(X\)</span> oznacza sumę wyrzuconych oczek. Jaka jest wartość oczekiwana <span class="math inline">\(X\)</span>?
+<p><span id="exm:unlabeled-div-82" class="example"><strong>Przykład 7.3  </strong></span>Rzucamy <span class="math inline">\(100\)</span> razy kostką. Niech <span class="math inline">\(X\)</span> oznacza sumę wyrzuconych oczek. Jaka jest wartość oczekiwana <span class="math inline">\(X\)</span>?
 Bezpośrednie użycie definicji jest kłopotliwe, ponieważ przestrzeń zdarzeń elementarnych jest
 bardzo duża. Rozważymy inne podejście.
 Niech <span class="math inline">\(X_i\)</span> oznacza liczbę oczek uzyskanych w <span class="math inline">\(i\)</span>-tym rzucie. Wtedy
@@ -231,7 +238,7 @@ Zatem z liniowości wartości oczekiwanej
 \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-84" class="example"><strong>Przykład 7.4  </strong></span>Niech <span class="math inline">\(\sigma\)</span> będzie losową permutacją zbioru <span class="math inline">\(\{1,\ldots,n\}\)</span>
+<p><span id="exm:unlabeled-div-83" class="example"><strong>Przykład 7.4  </strong></span>Niech <span class="math inline">\(\sigma\)</span> będzie losową permutacją zbioru <span class="math inline">\(\{1,\ldots,n\}\)</span>
 (losujemy jednostajnie element grupy permutacji <span class="math inline">\(S_n\)</span>).
 Niech <span class="math inline">\(X\)</span> oznacza liczbę punktów stałych. Obliczymy <span class="math inline">\(\mathbb{E} X\)</span>.
 Ten przykład ma wiele alternatywnych sformułowań np. wkładamy losowo <span class="math inline">\(n\)</span>
@@ -252,7 +259,7 @@ oraz <span class="math inline">\(X = \sum_{i=1}^n X_i\)</span>, stąd
 <span class="math display">\[\mathbb{E} [X]  = \sum_{i=1}^n \mathbb{E} [X_i] = n\cdot \frac 1n = 1.\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-85" class="theorem"><strong>Twierdzenie 7.2  </strong></span>Załóżmy, że <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> jest ciągiem zmiennych losowych takich,
+<p><span id="thm:unlabeled-div-84" class="theorem"><strong>Twierdzenie 7.2  </strong></span>Załóżmy, że <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> jest ciągiem zmiennych losowych takich,
 że <span class="math inline">\(\mathbb{E} [X_n]\)</span> istnieją. Wtedy</p>
 <ol style="list-style-type: decimal">
 <li>(Lemat Fatou) Jeżeli <span class="math inline">\(X\ge 0\)</span>, to
@@ -299,7 +306,7 @@ dla <span class="math inline">\(\mathbb{P}\)</span><sub>p.k.</sub><span class="m
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-07.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

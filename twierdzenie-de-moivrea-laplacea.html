@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>23 Twierdzenie de Moivre’a-Laplace’a | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Z MPWL wielkich liczb wynika, że jeżeli zmienne \(\{X_k\}_{k\in \mathbb{N}}\) są niezależne i mają ten sam rozkład, to dla \(S_n = \sum_{k=1}^nX_k\) zachodzi \(S_n/n \to \mathbb{E} [X]\) p.n....">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="23 Twierdzenie de Moivre’a-Laplace’a | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Z MPWL wielkich liczb wynika, że jeżeli zmienne \(\{X_k\}_{k\in \mathbb{N}}\) są niezależne i mają ten sam rozkład, to dla \(S_n = \sum_{k=1}^nX_k\) zachodzi \(S_n/n \to \mathbb{E} [X]\) p.n....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="23 Twierdzenie de Moivre’a-Laplace’a | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Z MPWL wielkich liczb wynika, że jeżeli zmienne \(\{X_k\}_{k\in \mathbb{N}}\) są niezależne i mają ten sam rozkład, to dla \(S_n = \sum_{k=1}^nX_k\) zachodzi \(S_n/n \to \mathbb{E} [X]\) p.n....">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
+<li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
+<li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
+<li><a class="" href="regresja-liniowa.html"><span class="header-section-number">15</span> Regresja liniowa</a></li>
+<li><a class="" href="parametry-wielowymiarowe.html"><span class="header-section-number">16</span> Parametry wielowymiarowe</a></li>
+<li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
+<li><a class="" href="rodzaje-zbie%C5%BCno%C5%9Bci-zmiennych-losowych.html"><span class="header-section-number">18</span> Rodzaje zbieżności zmiennych losowych</a></li>
+<li><a class="" href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></li>
+<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
+<li><a class="active" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
+<li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
+<li><a class="" href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></li>
+<li class="book-part">Dodatek</li>
+<li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="twierdzenie-de-moivrea-laplacea" class="section level1" number="23">
+<h1>
+<span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a<a class="anchor" aria-label="anchor" href="#twierdzenie-de-moivrea-laplacea"><i class="fas fa-link"></i></a>
+</h1>
+<p>Z MPWL wielkich liczb wynika, że
+jeżeli zmienne <span class="math inline">\(\{X_k\}_{k\in \mathbb{N}}\)</span> są niezależne i mają ten sam rozkład, to dla <span class="math inline">\(S_n = \sum_{k=1}^nX_k\)</span> zachodzi
+<span class="math inline">\(S_n/n \to \mathbb{E} [X]\)</span> p.n. Chcemy teraz zrozumieć jak szybka jest ta zbieżność.
+Zauważmy, że powyższe mówi, że z prawdopodobieństwem jeden, dla każdego <span class="math inline">\(\epsilon&gt;0\)</span>,
+<span class="math display">\[\begin{equation*}
+    n(\mathbb{E}[X_1] -\epsilon ) \leq S_n \leq n(\mathbb{E}[X_1] +\epsilon).
+\end{equation*}\]</span>
+Czyli wykres ciągu <span class="math inline">\(\{S_n\}_{n \in \mathbb{N}}\)</span> od pewnego miejsca będzie znajdował się między prostymi o nachyleniach
+<span class="math inline">\(\mathbb{E}[X_1] \pm \epsilon\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-232" class="example"><strong>Przykład 23.1  </strong></span>Jeżeli <span class="math inline">\(X_j\)</span> mają rozkład jednostajny na przedziale <span class="math inline">\([-1,3]\)</span>, to <span class="math inline">\(\mathbb{E}[X_j]=1\)</span>.
+Zatem dla dostatecznie dużego <span class="math inline">\(n\)</span>,
+<span class="math display">\[\begin{equation*}
+0.9 n \leq S_n \leq 1.1n.
+\end{equation*}\]</span></p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Ustawienie liczby obserwacji</span></span>
+<span><span class="va">n_vals</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">200</span></span>
+<span></span>
+<span><span class="co"># Spacer losowy o średniej 1 (np. suma zmiennych U(0.5, 1.5))</span></span>
+<span><span class="co">#set.seed(123)  # dla powtarzalności</span></span>
+<span><span class="va">steps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">n_vals</span><span class="op">)</span>, min <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, max <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">walk</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span><span class="op">(</span><span class="va">steps</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Proste referencyjne</span></span>
+<span><span class="va">line_1.1</span> <span class="op">&lt;-</span> <span class="fl">1.1</span> <span class="op">*</span> <span class="va">n_vals</span></span>
+<span><span class="va">line_0.9</span> <span class="op">&lt;-</span> <span class="fl">0.9</span> <span class="op">*</span> <span class="va">n_vals</span></span>
+<span></span>
+<span><span class="co"># Ustawienia kolorystyczne (Solarized)</span></span>
+<span><span class="va">bg_color</span> <span class="op">&lt;-</span> <span class="st">"#002b36"</span></span>
+<span><span class="va">fg_color</span> <span class="op">&lt;-</span> <span class="st">"#eee8d5"</span></span>
+<span><span class="va">primary_color</span> <span class="op">&lt;-</span> <span class="st">"#2aa198"</span></span>
+<span><span class="va">ref_line_color</span> <span class="op">&lt;-</span> <span class="st">"#586e75"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>bg <span class="op">=</span> <span class="va">bg_color</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Rysowanie wykresu</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">n_vals</span>, <span class="va">walk</span>,</span>
+<span>     type <span class="op">=</span> <span class="st">"l"</span>,</span>
+<span>     col <span class="op">=</span> <span class="va">primary_color</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"n"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"S_n"</span>,</span>
+<span>     col.lab <span class="op">=</span> <span class="va">fg_color</span>,</span>
+<span>     col.main <span class="op">=</span> <span class="va">fg_color</span>,</span>
+<span>     col.axis <span class="op">=</span> <span class="va">fg_color</span>,</span>
+<span>     fg <span class="op">=</span> <span class="va">fg_color</span>,</span>
+<span>     panel.first <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/graphics/grid.html">grid</a></span><span class="op">(</span>col <span class="op">=</span> <span class="va">fg_color</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Dodanie prostych o nachyleniu 1.1 i 0.9</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">n_vals</span>, <span class="va">line_1.1</span>, col <span class="op">=</span> <span class="va">ref_line_color</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">n_vals</span>, <span class="va">line_0.9</span>, col <span class="op">=</span> <span class="va">ref_line_color</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="va">n_vals</span>, <span class="va">n_vals</span>, col <span class="op">=</span> <span class="va">fg_color</span>, lty <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Dodanie legendy</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="st">"topleft"</span>, legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"S_n"</span>, <span class="st">"Nachylenie 1"</span>,  <span class="st">"Nachylenie 1.1"</span>, <span class="st">"Nachylenie 0.9"</span><span class="op">)</span>,</span>
+<span>       col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">primary_color</span>, <span class="va">fg_color</span>, <span class="va">ref_line_color</span>, <span class="va">ref_line_color</span><span class="op">)</span>,</span>
+<span>       lty <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span>, text.col <span class="op">=</span> <span class="va">fg_color</span>, bg <span class="op">=</span> <span class="va">bg_color</span><span class="op">)</span></span></code></pre></div>
+<p><img src="RachunekPrawdopodobienstwa2025_files/figure-html/rw123-1.png" width="672">
+Na symulacji widzimy, że <span class="math inline">\(S_n\)</span> oscyluje wokół prostej o nachyleniu <span class="math inline">\(1 =\mathbb{E}[X_1]\)</span>.</p>
+</div>
+<p>Przesuwając zmienne losowe, tzn. przyjmując <span class="math inline">\(X' = X - \mathbb{E} [X]\)</span>, możemy założyć, że
+<span class="math inline">\(\mathbb{E} X = 0\)</span>, a więc
+<span class="math inline">\(S_n/n \to 0\)</span>. Oznacza to w szczególności, że <span class="math inline">\(|S_n| \le \varepsilon n\)</span> od pewnego miejsca dla każdego <span class="math inline">\(\varepsilon&gt;0\)</span>.
+Chcielibyśmy lepiej zrozumieć zachowanie <span class="math inline">\(S_n\)</span> i opisać dokładniej strukturę tego ciągu.
+Interesują nas podstawowe pytania. Jak szybko ciąg <span class="math inline">\(S_n/n\)</span> zbiega do zera, tzn. jak należy znormalizować <span class="math inline">\(S_n\)</span>,
+aby otrzymać nietrywialną granicę? Jaka jest typowa odległość <span class="math inline">\(S_n\)</span> od zera?
+Na to ostatnie pytanie już teraz możemy odpowiedzieć już teraz.
+Obliczenie <span class="math inline">\(\mathbb{E} |S_n|\)</span> jest kłopotliwe, ale policzmy drugi moment:
+<span class="math display">\[
+\mathbb{E} [S_n^2] = \mathbb{V}ar [S_n] = n \mathbb{V}ar X_1 = n\mathbb{E} \left[X_1^2\right],
+\]</span>
+a więc <span class="math inline">\(S_n^2\approx n\)</span>, czyli właściwą normalizacją jest <span class="math inline">\(|S_n|\approx \sqrt n\)</span>.
+Powstaje więc kolejne pytanie. Czy ciąg <span class="math inline">\(S_n/\sqrt n\)</span> ma jakąś strukturę, którą można opisać.</p>
+<p>Rozważmy najprostszą możliwą sytuację. Naszym celem będzie teraz udowodnienie szczególnej wersji centralnego twierdzenia granicznego (CTG)
+dla niezależnych zmiennych losowych <span class="math inline">\(\{X_n\}\)</span> o rozkładzie <span class="math inline">\(X_n = \pm 1\)</span> z em <span class="math inline">\(1/2\)</span>.
+Po łatwym przesunięciu (<span class="math inline">\(Y_n = 2 X_n - 1\)</span>) twierdzenie pozwala analizować liczbę orłów w wielokrotnym rzucie monetą.
+Oznaczmy przez <span class="math inline">\(S_n = X_1+\ldots + X_n\)</span>.</p>
+<p>Przypomnijmy doświadczenie z deską Galtona</p>
+<div style="text-align: center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kq7e6cj2nDw?si=NOHs2kru4e3wafJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</div>
+<p>Pokazuje ono, że każdym razem histogramy otrzymanych wyników układają się w krzywą Gaussa.
+Badany model jest stosunkowo łatwy. Przy pomocy wzorów kombinatorycznych potrafimy obliczyć <span class="math inline">\(\mathbb{P}[S_n = k]\)</span>;
+przypomnijmy, że <span class="math inline">\((S_n+n)/2\)</span> ma rozkład <span class="math inline">\({\rm Bin}(n,1/2)\)</span>.</p>
+<div style="text-align: center">
+<div id="galton-container-2">
+
+</div>
+<script src="JAVA/galton2.js"></script>
+</div>
+<p>Chcemy więc pokazać, że przy odpowiedniej normalizacji prawdopodobieństwa te będą zbiegać do funkcji Gaussa.
+Jest to treścią poniższego twierdzenia, pochodzącego z pierwszej połowy XVIII wieku:</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-233" class="theorem"><strong>Twierdzenie 23.1  (de Moivre'a - Laplace'a) </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich,
+że <span class="math inline">\(\mathbb{P}[X_1=1] = \mathbb{P}[X_1 = -1] = 1/2\)</span> i niech
+<span class="math inline">\(S_n = X_1+\ldots + X_n\)</span>. Wówczas dla dowolnych <span class="math inline">\(a&lt;b\)</span>
+<span class="math display">\[
+  \lim_{n \to \infty}\mathbb{P}\bigg[ a\le \frac{S_n}{\sqrt n} \le b \bigg] =
+  \frac 1{\sqrt{2\pi}}\int_a^b e^{-\frac{x^2}2}\mathrm{d}x.
+  \]</span></p>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+<figure style="width: 48%; text-align: center;"><img src="PICS/Abraham_de_moivre.jpg" style="width: 100%;"><p>
+Abraham de Moivre
+</p>
+</figure><figure style="width: 48%; text-align: center;"><img src="PICS/Pierre-Simon_Laplace.jpg" style="width: 100%;"><p>
+Pierre-Simon Laplace
+</p>
+</figure>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-234" class="proof"><em>Proof</em>. </span>Przedstawiony poniżej dowód nie jest w pełni precyzyjny i zawiera drobne luki
+(przejścia graniczne wymagają dokładniejszej wersji wzoru Stirlinga i dokładniejszych szacowań).
+Pokazuje jednak istotę dowodu, a pozostałe do uzupełnienia dosyć techniczne szczegóły można znaleźć w literaturze.</p>
+<p>Zacznijmy od oczywistej obserwacji, że w parzystych krokach spacer losowy <span class="math inline">\(S_n\)</span> jest w parzystych punktach.
+Należy więc rozpatrzyć dwa podciągi po <span class="math inline">\(n\)</span> parzystych oraz nieparzystych i pokazać, że obie granice są identyczne.
+Załóżmy <span class="math inline">\(n=2m\)</span>, wtedy dla liczb nieparzystych mamy
+<span class="math display">\[
+  \mathbb{P}[S_{2m} = 2k+1]=0.
+  \]</span>
+Chcemy więc oszacować wartość
+<span class="math display">\[\begin{equation*}%\label{eq:ma1}
+    \mathbb{P}\bigg[ a\le \frac{S_{2m}}{\sqrt{2m}} \le b \bigg] =
+  \sum_{x\in[a,b]\cap \frac{2\mathbb{Z}}{\sqrt{2m}}} \mathbb{P}\big[ S_{2m} = x\sqrt{2m} \big],
+\end{equation*}\]</span>
+gdzie w powyższej sumie <span class="math inline">\(x\)</span> jest postaci <span class="math inline">\(x = \frac{2k}{\sqrt{2m}}\)</span> i ponadto <span class="math inline">\(k\)</span> spełniają <span class="math inline">\(|k|\le m\)</span>.
+Powinniśmy zatem opisać asymptotyczne zachowanie wyrażeń
+<span class="math display">\[
+  \mathbb{P}\big[ S_{2m} = 2k \big],
+  \]</span> gdy <span class="math inline">\(2k = x\sqrt{2m}\)</span>, <span class="math inline">\(x\)</span> jest ustalone, a <span class="math inline">\(m\)</span> zbiega do <span class="math inline">\(\infty\)</span> </p>
+<p>W dowodzie będziemy korzystać z formuły Stirlinga:
+<span class="math display">\[
+  n! \sim \sqrt{2\pi n} \cdot \frac{n^n}{e^n}, \quad n\to\infty.
+  \]</span></p>
+<p>Dla liczb parzystych postaci <span class="math inline">\(2k\)</span> i <span class="math inline">\(|k|\le m\)</span>, proces <span class="math inline">\(S_{2m}\)</span> znajduje się w punkcie <span class="math inline">\(2k\)</span>,
+gdy w <span class="math inline">\(2m\)</span> próbach wylosowano dokładnie <span class="math inline">\(m+k\)</span> jedynek.
+Zatem korzystając z definicji rozkładu dwumianowego
+<span class="math display">\[\begin{align*}
+    \mathbb{P}[S_{2m}=2k] &amp; = {2m \choose m+k} \frac 1{2^{2m}} = \frac{(2m)!}{(m+k)! (m-k)! 2^{2m}}\\
+    &amp;\overset{{\rm \small Stirling}}{\sim} \frac{e^{m+k}e^{m-k}}{e^{2m}}\frac{(2m)^{2m}}{(m+k)^{m+k}(m-k)^{m-k}}\cdot \frac{\sqrt{ 4\pi m}}{\sqrt{2\pi(m+k)}\sqrt{2\pi (m-k)}}\cdot \frac 1{2^{2m}}\\
+    &amp;= \bigg(\frac {m}{m+k}\bigg)^{m+k}\bigg( \frac{m}{m-k}\bigg)^{m-k} \cdot \sqrt{\frac{m}{(m+k)(m-k)}} \cdot \frac 1{\sqrt \pi}\\
+    &amp; = \bigg( 1+\frac km \bigg)^{-(m+k)}\bigg( 1-\frac km \bigg)^{-(m-k)} \cdot \frac 1{\sqrt{\pi m}}\cdot \frac{1}{\sqrt{1+\frac km}\sqrt{1-\frac km}}\\
+    &amp; = \bigg( 1-\frac {k^2}{m^2} \bigg)^{-m}\bigg( 1+\frac km \bigg)^{-k} \bigg( 1-\frac {k}{m} \bigg)^k
+    \cdot \frac 1{\sqrt{\pi m}}\cdot \frac{1}{\sqrt{1+\frac km}\sqrt{1-\frac km}}\\
+  \end{align*}\]</span>
+Przypomnijmy, że interesuje nas sytuacja, gdy
+<span class="math inline">\(x\in \mathbb{R}\)</span> jest ustalone oraz <span class="math inline">\(\frac{k^2}{m} = \frac{x^2}{2}\)</span>. Wówczas, gdy <span class="math inline">\(m\)</span> zbiega do <span class="math inline">\(\infty\)</span> (a więc również <span class="math inline">\(k \to\infty\)</span>),
+z własności liczby <span class="math inline">\(e\)</span> otrzymujemy
+<span class="math display">\[\begin{align*}
+  \bigg( 1-\frac {k^2}{m^2} \bigg)^{-m} &amp;= \bigg( 1-\frac {k^2}{m^2} \bigg)^{- \frac {m^2}{k^2} \cdot \frac{x^2}2 }  \to e^{\frac{x^2}{2}},\\
+  \bigg( 1+\frac km \bigg)^{-k} &amp;=  \bigg( 1+\frac km \bigg)^{-\frac mk \cdot \frac{x^2}{2}}  \to e^{-\frac{x^2}2},\\
+   \bigg( 1-\frac {k}{m} \bigg)^k&amp;\to e^{-\frac{x^2}{2}}.
+  \end{align*}\]</span>
+Stad wynika <span class="math display">\[\mathbb{P}[S_{2m} = 2k] \sim e^{-x^2/2}\cdot \frac 1 {\sqrt{\pi m}}.\]</span>
+Dalej
+<span class="math display">\[\begin{multline*}
+  \mathbb{P}\bigg[ a\le \frac{S_{2m}}{\sqrt{2m}} \le b \bigg] =
+  \sum_{x\in[a,b]\cap \frac{2\mathbb{Z}}{\sqrt{2m}}} \mathbb{P}\big[ S_{2m} = x\sqrt{2m} \big] \\
+  \sim \sum_{x\in[a,b]\cap \frac{2\mathbb{Z}}{\sqrt{2m}}} \frac 1{\sqrt{2\pi}} \sqrt{\frac 2m} e^{-x^2/2}
+  \sim \int_a^b \frac 1{\sqrt{2\pi}} e^{-x^2/2}dx,
+  \end{multline*}\]</span>
+gdzie ostatnia implikacja wynika z definicji całki Riemanna.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-235" class="example"><strong>Przykład 23.2  </strong></span>Jakie jest prawdopodobieństwo, że w 100 rzutach kostką otrzymamy co najmniej 60 orłów?
+Sformułujmy to zadanie w terminach zmiennych losowych, które były używane w powyższym twierdzeniu. Niech <span class="math inline">\(X_i = 1\)</span>, gdy wyrzucono w <span class="math inline">\(i\)</span>-tym rzucie orła i <span class="math inline">\(X_i=-1\)</span> w przeciwnym razie. Oznaczmy przez <span class="math inline">\(S_n = X_1+\ldots+X_n\)</span>. Wówczas 60 orłów i 40 reszek daje <span class="math inline">\(S_{100} = 20\)</span>. Z powyższego twierdzenia mamy więc
+<span class="math display">\[
+\mathbb{P}[S_{100}\ge 20] = \mathbb{P}[S_{100}/10 \ge 2] \approx 1- \mathbb{P}hi(2) \approx 0,02.
+\]</span>
+Analogicznie można obliczyć o wyrzucenia co najmniej 540 orłów w 1000 rzutach:
+<span class="math display">\[
+\mathbb{P}[S_{1000}\ge 80] \approx 0,006.
+\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-236" class="theorem"><strong>Twierdzenie 23.2  </strong></span>Niech <span class="math inline">\(S_n\)</span> będzie liczbą sukcesów w <span class="math inline">\(n\)</span> próbach przy ie sukcesu <span class="math inline">\(p\)</span> (<span class="math inline">\(S_n\sim {\rm Bin}(n,p)\)</span>). Wówczas
+<span class="math display">\[
+  \lim_{n \to \infty}\mathbb{P}\bigg(a \leq \frac{S_n-np}{\sqrt{n pq}} \leq b \bigg) \to \frac{1}{\sqrt{2\pi}} \int_a^b e^{-s^2/2}\mathrm{d}s.
+  \]</span></p>
+</div>
+<p>Przypomnijmy, że <span class="math inline">\(\mathbb{E} S_n = np\)</span>, a <span class="math inline">\(\mathbb{V}ar S_n = npq\)</span>. Więc powyższy wynik można zapisać w postaci
+<span class="math display">\[
+  \lim_{n \to \infty}\mathbb{P}\bigg(a \leq \frac{S_n-\mathbb{E}[S_n]}{\sqrt{\mathbb{V}ar[S_n]}} \leq b \bigg)
+\to \frac{1}{\sqrt{2\pi}} \int_a^b e^{-s^2/2}\mathrm{d}s.
+  \]</span>
+Podczas kolejnych wykładów pokażemy, że analogiczny wynik zachodzi w znacznie większej ogólności.</p>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#twierdzenie-de-moivrea-laplacea"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-14.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

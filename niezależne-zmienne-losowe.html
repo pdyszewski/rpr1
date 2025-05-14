@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną i niech \(X\) będzie zmienną losową. Definicja 12.1 \(\sigma\)-ciało generowane przez \(X\) to \(\sigma\)-ciało...">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="12 Niezależne zmienne losowe | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną i niech \(X\) będzie zmienną losową. Definicja 12.1 \(\sigma\)-ciało generowane przez \(X\) to \(\sigma\)-ciało...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną i niech \(X\) będzie zmienną losową. Definicja 12.1 \(\sigma\)-ciało generowane przez \(X\) to \(\sigma\)-ciało...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -69,6 +69,10 @@
 <li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
 <li><a class="" href="rodzaje-zbie%C5%BCno%C5%9Bci-zmiennych-losowych.html"><span class="header-section-number">18</span> Rodzaje zbieżności zmiennych losowych</a></li>
 <li><a class="" href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></li>
+<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
+<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -80,6 +84,9 @@
 <li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
 <li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
 <li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
+<li><a class="" href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></li>
+<li class="book-part">Dodatek</li>
+<li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
 </ul>
 
         <div class="book-extra">
@@ -94,7 +101,7 @@
 <p>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną i
 niech <span class="math inline">\(X\)</span> będzie zmienną losową.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-116" class="definition"><strong>Definicja 12.1  </strong></span><span class="math inline">\(\sigma\)</span>-ciało generowane przez <span class="math inline">\(X\)</span> to <span class="math inline">\(\sigma\)</span>-ciało podzbiorów <span class="math inline">\(\Omega\)</span> zadane przez
+<p><span id="def:unlabeled-div-115" class="definition"><strong>Definicja 12.1  </strong></span><span class="math inline">\(\sigma\)</span>-ciało generowane przez <span class="math inline">\(X\)</span> to <span class="math inline">\(\sigma\)</span>-ciało podzbiorów <span class="math inline">\(\Omega\)</span> zadane przez
 <span class="math display">\[\begin{equation*}
     \sigma(X) = \{ X^{-1}(B) \: : \: B \in \mathcal{B}or(\mathbb{R})\}.
 \end{equation*}\]</span></p>
@@ -109,7 +116,7 @@ Zauważmy też, że <span class="math inline">\(\sigma(X)\)</span> jest to najmn
 jest mierzalne. <span class="math inline">\(\sigma(X)\)</span> zawiera informacje o eksperymencie losowym, które możemy
 wywnioskować wyłącznie na podstawie wartości <span class="math inline">\(X\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-117" class="example"><strong>Przykład 12.1  </strong></span>Losujemy liczbę z odcinka <span class="math inline">\([0,1)\)</span>. Niech <span class="math inline">\(X(\omega)\)</span> będzie pierwszą cyfrą
+<p><span id="exm:unlabeled-div-116" class="example"><strong>Przykład 12.1  </strong></span>Losujemy liczbę z odcinka <span class="math inline">\([0,1)\)</span>. Niech <span class="math inline">\(X(\omega)\)</span> będzie pierwszą cyfrą
 po przecinku <span class="math inline">\(\omega \in [0,1)\)</span> w zapisie dziesiętnym. Jak wygląda <span class="math inline">\(\sigma(X)\)</span>?
 Zauważmy, że <span class="math inline">\(X(\omega) = \lfloor 10\omega\rfloor\)</span> oraz
 <span class="math display">\[\begin{equation*}
@@ -125,7 +132,7 @@ Stąd
     \omega_1 \in A \iff \omega_2 \in A.
 \end{equation*}\]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-118" class="definition"><strong>Definicja 12.2  </strong></span>Niech <span class="math inline">\(\{X_i\}_{i\in I}\)</span> będzie rodziną zmiennych losowych określonych na <span class="math inline">\(\Omega\)</span>.
+<p><span id="def:unlabeled-div-117" class="definition"><strong>Definicja 12.2  </strong></span>Niech <span class="math inline">\(\{X_i\}_{i\in I}\)</span> będzie rodziną zmiennych losowych określonych na <span class="math inline">\(\Omega\)</span>.
 Zmienne te są <strong>niezależne</strong>, jeżeli <span class="math inline">\(\sigma(X_i)\)</span> (<span class="math inline">\(\sigma\)</span>-ciała generowane przez <span class="math inline">\(X_i\)</span>)
 są niezależne. Innymi słowy <span class="math inline">\(\{X_i\}_{i\in I}\)</span> są niezależne,
 gdy dla dowolnych parami różnych <span class="math inline">\(i_1,i_2,\ldots, i_n\in I\)</span> oraz dowolnych
@@ -135,7 +142,7 @@ gdy dla dowolnych parami różnych <span class="math inline">\(i_1,i_2,\ldots, i
 \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-119" class="example"><strong>Przykład 12.2  </strong></span>Losujemy jednostajnie punkt z prostokąta <span class="math inline">\([0,3]\times[0,1]\)</span>.
+<p><span id="exm:unlabeled-div-118" class="example"><strong>Przykład 12.2  </strong></span>Losujemy jednostajnie punkt z prostokąta <span class="math inline">\([0,3]\times[0,1]\)</span>.
 Wówczas <span class="math inline">\(\mathbb{P}[\cdot] = \lambda_2(\cdot)/3\)</span>.
 Niech <span class="math inline">\(X_1(\omega) = \omega_1\)</span> i <span class="math inline">\(X_2(\omega) = \omega_2\)</span> dla
 <span class="math inline">\(\omega=(\omega_1, \omega_2) \in \Omega = [0,3]\times [0,1]\)</span>.
@@ -156,7 +163,7 @@ Czyli
 Zmienne losowe <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> są zatem niezależne.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-120" class="example"><strong>Przykład 12.3  </strong></span>Rozważmy schemat Bernoulliego na przestrzeni <span class="math inline">\(\Omega = \{0,1\}^n\)</span> z <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>
+<p><span id="exm:unlabeled-div-119" class="example"><strong>Przykład 12.3  </strong></span>Rozważmy schemat Bernoulliego na przestrzeni <span class="math inline">\(\Omega = \{0,1\}^n\)</span> z <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>
 oraz miarą produktową jako probabilistyczną. Zdefiniujmy
 <span class="math display">\[
 X_i(\omega) = X_i(\omega_1,\ldots,\omega_n) = \left\{
@@ -169,7 +176,7 @@ X_i(\omega) = X_i(\omega_1,\ldots,\omega_n) = \left\{
 Wynika to bezpośrednio z definicji miary produktowej.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-121" class="example"><strong>Przykład 12.4  </strong></span></p>
+<p><span id="exm:unlabeled-div-120" class="example"><strong>Przykład 12.4  </strong></span></p>
 Losujemy punkt z <span class="math inline">\([0,1]^2\)</span>. Niech <span class="math inline">\(X_1\)</span> będzie odległością wylosowanego punktu od prostej <span class="math inline">\(x=y\)</span>.
 Niech <span class="math inline">\(X_2\)</span> będzie odległością wylosowanego punktu od prostej <span class="math inline">\(y=1-x\)</span>. Jak wyglądają <span class="math inline">\(\sigma(X_1)\)</span> i
 <span class="math inline">\(\sigma(X_2)\)</span>? Czy zmienne <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> są niezależne?
@@ -209,7 +216,7 @@ Z kolei
 Wobec tego zmienne <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> nie są niezależne.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-122" class="theorem"><strong>Twierdzenie 12.1  </strong></span>Niech <span class="math inline">\(X_1,\ldots,X_n\)</span> będą zmiennymi losowymi i niech
+<p><span id="thm:unlabeled-div-121" class="theorem"><strong>Twierdzenie 12.1  </strong></span>Niech <span class="math inline">\(X_1,\ldots,X_n\)</span> będą zmiennymi losowymi i niech
 <span class="math inline">\(X = (X_1,\ldots, X_n)\)</span>. Następujące warunki są równoważne:</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -228,7 +235,7 @@ Wobec tego zmienne <span class="math inline">\(X_1\)</span> i <span class="math 
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-123" class="proof"><em>Proof</em>. </span>Równoważność 1 i 2 wynika z definicji.
+<p><span id="unlabeled-div-122" class="proof"><em>Proof</em>. </span>Równoważność 1 i 2 wynika z definicji.
 Pokażemy, że 2 implikuje 4. Weźmy <span class="math inline">\(B_i \in (-\infty,t_i]\)</span>. Wówczas
 <span class="math display">\[\begin{multline*}
      F_X(t_1,\ldots, t_n) = \mathbb{P}[X_1\le t_1,\ldots, X_n\le t_n] \\ =
@@ -270,7 +277,7 @@ oraz
 \end{equation*}\]</span></p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-124" class="corollary"><strong>Wniosek 12.1  </strong></span>Zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> mające rozkłady dyskretne są niezależne wtedy i tylko wtedy gdy dla dowolnych
+<p><span id="cor:unlabeled-div-123" class="corollary"><strong>Wniosek 12.1  </strong></span>Zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> mające rozkłady dyskretne są niezależne wtedy i tylko wtedy gdy dla dowolnych
 <span class="math inline">\(s_1\in S_{X_1},\ldots, s_n\in S_{X_n}\)</span> zachodzi
 <span class="math display" id="eq:kwt1">\[\begin{equation}\label{eq:kwt1}
 \mathbb{P}[X_1=s_1,\ldots, X_n = s_n] = \mathbb{P}[X_1=s_1]\cdot\ldots\cdot \mathbb{P}[X_n=s_n]
@@ -278,7 +285,7 @@ oraz
 \end{equation}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-125" class="proof"><em>Proof</em>. </span>Jeżeli zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> są niezależne, to warunek <a href="niezale%C5%BCne-zmienne-losowe.html#eq:kwt1">(12.1)</a>
+<p><span id="unlabeled-div-124" class="proof"><em>Proof</em>. </span>Jeżeli zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> są niezależne, to warunek <a href="niezale%C5%BCne-zmienne-losowe.html#eq:kwt1">(12.1)</a>
 jest oczywiście spełniony.
 Implikację odwrotną pokażemy jedynie dla <span class="math inline">\(n=2\)</span> (dla uproszczenia dowodu).
 Oznaczmy przez <span class="math inline">\(S_{X_1}\)</span> oraz <span class="math inline">\(S_{X_2}\)</span>
@@ -294,13 +301,13 @@ Korzystając z warunku
 \end{multline*}\]</span></p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-126" class="corollary"><strong>Wniosek 12.2  </strong></span>Jeżeli zmienne losowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są niezależne i mają wartości oczekiwane, to
+<p><span id="cor:unlabeled-div-125" class="corollary"><strong>Wniosek 12.2  </strong></span>Jeżeli zmienne losowe <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są niezależne i mają wartości oczekiwane, to
 <span class="math display">\[\begin{equation*}
 \mathbb{E}[XY] = \mathbb{E}[X]\mathbb{E}[Y].
 \end{equation*}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-127" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(\vec{X}=(X,Y)\)</span>.
+<p><span id="unlabeled-div-126" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(\vec{X}=(X,Y)\)</span>.
 Rozważmy rozkład łączny <span class="math inline">\(\mu_{\vec{X}}\)</span> zmiennych <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>.
 Wówczas <span class="math inline">\(\mu_{\vec{X}} = \mu_{X}\otimes \mu_Y\)</span>. Mamy zatem
 <span class="math display">\[\begin{multline*}
@@ -311,7 +318,7 @@ Wówczas <span class="math inline">\(\mu_{\vec{X}} = \mu_{X}\otimes \mu_Y\)</spa
 \end{multline*}\]</span></p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-128" class="corollary"><strong>Wniosek 12.3  </strong></span>Zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> o gęstościach <span class="math inline">\(f_1,\ldots, f_n\)</span> są niezależne wtedy i tylko wtedy,
+<p><span id="cor:unlabeled-div-127" class="corollary"><strong>Wniosek 12.3  </strong></span>Zmienne losowe <span class="math inline">\(X_1,\ldots, X_n\)</span> o gęstościach <span class="math inline">\(f_1,\ldots, f_n\)</span> są niezależne wtedy i tylko wtedy,
 gdy wektor
 <span class="math inline">\(\vec{X} = (X_1,\ldots, X_n)\)</span> ma gęstość
 <span class="math display">\[
@@ -321,7 +328,7 @@ f(x_1,x_2,\ldots,x_n) = f_1(x_1)f_2(x_2)\ldots f_n(x_n).
 <p>Jeżeli zmienne losowe <span class="math inline">\(X_1,X_2\)</span> są niezależne i mają absolutnie ciągły rozkład,
 to można skutecznie liczyć rozkłady ich sum:</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-129" class="theorem"><strong>Twierdzenie 12.2  </strong></span>Załóżmy, że <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> są niezależnymi zmiennymi losowymi o rozkładach
+<p><span id="thm:unlabeled-div-128" class="theorem"><strong>Twierdzenie 12.2  </strong></span>Załóżmy, że <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> są niezależnymi zmiennymi losowymi o rozkładach
 absolutnie ciągłych z gęstościami <span class="math inline">\(f_1\)</span> i <span class="math inline">\(f_2\)</span>. Wówczas
 zmienna losowa <span class="math inline">\(Z=X_1+X_2\)</span> ma rozkład absolutnie ciągły z gęstością
 <span class="math display">\[
@@ -330,7 +337,7 @@ zmienna losowa <span class="math inline">\(Z=X_1+X_2\)</span> ma rozkład absolu
 Funkcję <span class="math inline">\(f_Z\)</span> nazywamy splotem funkcji <span class="math inline">\(f_1\)</span> i <span class="math inline">\(f_2\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-130" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span>.
+<p><span id="unlabeled-div-129" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span>.
 Dla dowolnego <span class="math inline">\(t \in \mathbb{R}\)</span>:
 <span class="math display">\[\begin{align*}
     F_Z(t)=\mathbb{P}[X_1+X_2 \leq t] &amp; = \mu_{\vec{X}}\left( \{(x_1,x_2):\; x_1+x_2 \leq t\} \right)\\
@@ -349,7 +356,7 @@ Granta Sandersona.</p>
 </iframe>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-131" class="example"><strong>Przykład 12.5  </strong></span>Niech <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> będą niezależnymi zmiennymi losowymi o rozkładzie jednostajnym na <span class="math inline">\([0,1]\)</span>,
+<p><span id="exm:unlabeled-div-130" class="example"><strong>Przykład 12.5  </strong></span>Niech <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> będą niezależnymi zmiennymi losowymi o rozkładzie jednostajnym na <span class="math inline">\([0,1]\)</span>,
 czyli <span class="math inline">\(U([0,1])\)</span>. Szukamy gęstości <span class="math inline">\(X_1+X_2\)</span>.
 Znamy gęstości <span class="math inline">\(X_1\)</span> oraz <span class="math inline">\(X_2\)</span>
 <span class="math display">\[
@@ -374,7 +381,7 @@ f_1\ast f_2(x) = \left\{
 \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-132" class="example"><strong>Przykład 12.6  </strong></span>Przypomnijmy, że zmienna losowa
+<p><span id="exm:unlabeled-div-131" class="example"><strong>Przykład 12.6  </strong></span>Przypomnijmy, że zmienna losowa
 <span class="math inline">\(X\)</span> ma rozkład normalny z parametrami <span class="math inline">\(m\in \mathbb{R}\)</span> i <span class="math inline">\(\sigma&gt;0\)</span>,
 <span class="math inline">\(\mathcal{N}(m,\sigma^2)\)</span> jeżeli jej gęstość
 jest zadana wzorem
@@ -421,7 +428,7 @@ Zatem <span class="math inline">\(X_1+X_2\)</span> ma rozkład <span class="math
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-07.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

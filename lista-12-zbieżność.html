@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>7 Lista 12: Zbieżność | Rachunek Prawdopodobieństwa 1R</title>
+<meta name="author" content="Dariusz Buraczewski">
+<meta name="author" content="Piotr Dyszewski">
+<meta name="description" content="Zadania na ćwiczenia: 2025-05-26 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania  Niech \(\Omega = [0,1]\), \(\mathcal{F}=\mathcal{B}or([0,1])\) i \[\mathbb{P} = \frac 13\delta_0 +...">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta property="og:title" content="7 Lista 12: Zbieżność | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Zadania na ćwiczenia: 2025-05-26 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania  Niech \(\Omega = [0,1]\), \(\mathcal{F}=\mathcal{B}or([0,1])\) i \[\mathbb{P} = \frac 13\delta_0 +...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7 Lista 12: Zbieżność | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-05-26 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania  Niech \(\Omega = [0,1]\), \(\mathcal{F}=\mathcal{B}or([0,1])\) i \[\mathbb{P} = \frac 13\delta_0 +...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="java.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Notatki do wykładu">Rachunek Prawdopodobieństwa 1R</a>:
+        <small class="text-muted">Notatki do wykładu</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="sylabus.html">Sylabus</a></li>
+<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">1</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">2</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">3</span> Dygresja: kompresja</a></li>
+<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">4</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
+<li><a class="" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">5</span> Zbieżność według rozkładu</a></li>
+<li class="book-part">Listy zadań</li>
+<li><a class="active" href="lista-12-zbie%C5%BCno%C5%9B%C4%87.html"><span class="header-section-number">7</span> Lista 12: Zbieżność</a></li>
+<li><a class="" href="lista-13-s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87.html"><span class="header-section-number">8</span> Lista 13: Słaba zbieżność</a></li>
+<li><a class="" href="powt%C3%B3rka-przez-kolokwium.html"><span class="header-section-number">9</span> Powtórka przez kolokwium</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-12-zbieżność" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Lista 12: Zbieżność<a class="anchor" aria-label="anchor" href="#lista-12-zbie%C5%BCno%C5%9B%C4%87"><i class="fas fa-link"></i></a>
+</h1>
+<p>Zadania na ćwiczenia: 2025-05-26</p>
+<p><a href="L11_zbieznosc.pdf">Lista zadań w formacie PDF</a></p>
+<div id="zadania-do-samodzielnego-rozwiązania" class="section level2 unnumbered">
+<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>
+<p>Niech <span class="math inline">\(\Omega = [0,1]\)</span>, <span class="math inline">\(\mathcal{F}=\mathcal{B}or([0,1])\)</span> i
+<span class="math display">\[\mathbb{P} = \frac 13\delta_0 + \frac 13\delta_{1/3} + \frac 13 \delta_1.\]</span>
+Rozważmy <span class="math inline">\(X(\omega) = 0\)</span>, <span class="math inline">\(Y(\omega) = \mathbf{1}_{\{1\}}(\omega)\)</span> oraz <span class="math inline">\(Z(\omega) = \mathbf{1}_{[1/2,1)}(\omega)\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Czy <span class="math inline">\(X=Y\)</span> p. n?</li>
+<li>Czy <span class="math inline">\(X=Z\)</span> p. n?</li>
+</ol>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad12_1">
+Odpowiedź
+</button>
+<div id="zad12_1" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>nie, b. tak</li>
+</ol>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Nech <span class="math inline">\(\Omega =\mathbb{R}\)</span> i <span class="math inline">\(\mathcal{F}=\mathcal{B}or(\mathbb{R})\)</span>.
+Rozważmy <span class="math inline">\(X_n(\omega) = \cos(\omega)^n\)</span>. Zbadaj zbieżność prawie na
+pewno ciągu <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span>
+jeżeli</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>
+<span class="math inline">\(\mathbb{P}\)</span> jest jednowymiarową miarą Lebesgue’s obciętą do odcinka <span class="math inline">\([0,1]\)</span>.</li>
+<li>
+<span class="math inline">\(\mathbb{P}\)</span> jest rozkładem normalnym o średniej zero i wariancji <span class="math inline">\(1\)</span>.</li>
+<li>
+<span class="math inline">\(\mathbb{P} = \sum_{k=1}^{\infty}2^{-k}\delta_{k\pi}\)</span>.</li>
+<li>
+<span class="math inline">\(\mathbb{P} = \sum_{k=1}^{\infty}2^{-k}\delta_{2k\pi}\)</span>.</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad12_2">
+Odpowiedź
+</button>
+<div id="zad12_2" class="collapse">
+<p class="text-primary">
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>i b. ciąg jest zbieżny do zera p.n. c. ciąg nie jest zbieżny p.n. d. ciąg jest zbieżny do <span class="math inline">\(1\)</span> p.n.</li>
+</ol>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Rozważmy zmienne losowe <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> i <span class="math inline">\(Z\)</span>. Pokaż, że jeżeli <span class="math inline">\(X=Y\)</span> p.n. oraz <span class="math inline">\(Y=Z\)</span> p.n, to <span class="math inline">\(X=Z\)</span> p. n.</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad12_3">
+Odpowiedź
+</button>
+<div id="zad12_3" class="collapse">
+<p class="text-primary">
+Niech
+<span class="math display">\[\begin{equation*}
+    A = \{ \omega \: : \: X(\omega) = Y(\omega)\}
+\end{equation*}\]</span>
+oraz
+<span class="math display">\[\begin{equation*}
+    B = \{ \omega \: : \: Y(\omega) = Z(\omega)\}.
+\end{equation*}\]</span>
+Z założenia <span class="math inline">\(\mathbb{P}[A] = \mathbb{P}[B]=1\)</span>. Dla <span class="math inline">\(\omega \in A\cap B\)</span>,
+<span class="math display">\[\begin{equation*}
+    X(\omega) = Y(\omega) = Z(\omega)
+\end{equation*}\]</span>
+przy czym <span class="math inline">\(\mathbb{P}[A\cap B]=1\)</span>.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Niech <span class="math inline">\(\{X_n\}_{n\in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych taki, że <span class="math inline">\(X_{2n}\)</span> ma rozkład
+<span class="math inline">\(\mathrm{Exp}(1)\)</span>, a <span class="math inline">\(X_{2n+1}\)</span> ma rozkład <span class="math inline">\(\mathrm{Pois}(3)\)</span>. Znajdź granicę według prawdopodobieństwa
+<span class="math display">\[\begin{equation*}
+\frac{X_1+X_2+ \ldots + X_n}{n}.
+\end{equation*}\]</span>
+</li>
+</ol>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad12_2">
+Odpowiedź
+</button>
+<div id="zad12_2" class="collapse">
+<p class="text-primary">
+2
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Niech <span class="math inline">\(X_n \to^\mathbb{P} X\)</span> oraz <span class="math inline">\(Y_n \to^\mathbb{P} Y\)</span> i załóżmy, że <span class="math inline">\(X=Y\)</span> p.n.
+Pokaż, że <span class="math inline">\(X_n-Y_n \to^\mathbb{P} 0\)</span>.</p></li>
+<li><p>Załóżmy, że <span class="math inline">\(\sigma\)</span>-ciała <span class="math inline">\(\{\mathcal{F}_n\}_{n\in \mathbb{N}}\)</span> są niezależne. Pokaż, że jeżeli <span class="math inline">\(X\)</span>
+jest zmienną losową <span class="math inline">\(\mathcal{F}_\infty\)</span>-mierzalną, to <span class="math inline">\(\mathbb{P}[X=c]=1\)</span> dla pewnej stałej <span class="math inline">\(c\in \mathbb{R}\)</span>.</p></li>
+</ol>
+</div>
+<div id="zadania-na-ćwiczenia" class="section level2 unnumbered">
+<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Pokaż, że jeżeli <span class="math inline">\(X_n \to^\mathbb{P}X\)</span> oraz <span class="math inline">\(X_n \to^{\mathbb{P}} Y\)</span>, to <span class="math inline">\(X = Y\)</span> p.n.</p></li>
+<li><p>Pokaż, że jeżeli <span class="math inline">\(\vec{X}_n \to^\mathbb{P} \vec{X}\)</span> i <span class="math inline">\(\vec{Y}_n \to \vec{Y}\)</span>,
+to <span class="math inline">\(a\vec{X}_n+b\vec{Y}_n \to a\vec{X}+b\vec{Y}\)</span> dla dowolnych rzeczywistych <span class="math inline">\(a, b\)</span>.</p></li>
+<li><p>Niech <span class="math inline">\(X_n\)</span> będzie ciągiem monotonicznym zbieżnym według prawdiopdobieństwa do <span class="math inline">\(X\)</span>. Pokaż, że zbieżność zachodzi p.n.</p></li>
+<li><p>Dany jest ciąg <span class="math inline">\(\{X_n\}\)</span> niezależnych zmiennych losowych,
+przy czym dla <span class="math inline">\(n \geq 1\)</span> zmienna <span class="math inline">\(X_n\)</span> ma rozkład zadany przez
+<span class="math inline">\(\mathbb{P}[X_n = n] = \frac{1}{n} = 1 - \mathbb{P}[X_n = 0]\)</span>. Czy ten ciąg jest zbieżny p.w.?
+Czy jest zbieżny według prawdopodobieństwa? Czy jest zbieżny w <span class="math inline">\(L^p\)</span>?</p></li>
+<li><p>Niech <span class="math inline">\(X_1, X_2, \ldots\)</span> będą niezależnymi zmiennymi losowymi,
+które mają rozkład jednostajny na przedziale <span class="math inline">\([0, 1]\)</span>. Udowodnij, że
+<span class="math display">\[
+\mathbb{E} \left[ \sum_{k=1}^{n} X_k^2 \left( \sum_{k=1}^{n} X_k \right)^{-1} \right]
+\to \frac{2}{3}.
+\]</span></p></li>
+<li>
+<p>Załóżmy, że <span class="math inline">\(\vec{X}_n \to^\mathbb{P} \vec{X}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pokaż, że dla każdego <span class="math inline">\(\epsilon&gt;0\)</span> istnieje <span class="math inline">\(T&gt;0\)</span> takie, że
+<span class="math display">\[\begin{equation*}
+\sup_{n \in \mathbb{N}} \mathbb{P}\left[\left\| \vec{X}_n\right\|&gt;T\right] &lt;\epsilon.
+\end{equation*}\]</span>
+</li>
+<li>Pokaż, że jeżeli <span class="math inline">\(f \colon \mathbb{R}^d \to \mathbb{R}^k\)</span> jest funkcją ciągłą,
+to <span class="math inline">\(f(\vec{X}_n) \to^\mathbb{P} f(\vec{X})\)</span>.</li>
+</ol>
+</li>
+<li><p>Niech <span class="math inline">\(\{X_n\}_n\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że <span class="math inline">\(X_n\)</span> ma rozkład Poissona z parametrem
+<span class="math inline">\(n\)</span>. Pokaż, że
+<span class="math display">\[\begin{equation*}
+\frac{X_n}{n} \to 1.
+\end{equation*}\]</span></p></li>
+<li><p>Niech <span class="math inline">\(X_n(\omega)= \mathbf{1}_A([n\omega])\)</span>, gdzie <span class="math inline">\(A\)</span> to zbiór kwadratów liczb naturalnych.
+Pokaż, że zbiega według miary ale nie zbiega p.n. wskaż podciąg zbieżny p.n.</p></li>
+</ol>
+</div>
+<div id="zadania-dodatkowe" class="section level2 unnumbered">
+<h2>Zadania dodatkowe<a class="anchor" aria-label="anchor" href="#zadania-dodatkowe"><i class="fas fa-link"></i></a>
+</h2>
+<ol start="15" style="list-style-type: decimal">
+<li>Niech <span class="math inline">\((X_n)_{n \geq 1}\)</span> będzie ciągiem zmiennych losowych.
+Niech <span class="math inline">\(S_n=X_1+\ldots + X_n\)</span>. Udowodnij, że:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Jeżeli <span class="math inline">\(X_n \to 0\)</span> p. n, to <span class="math inline">\(S_n/n \to 0\)</span> p.n.</li>
+<li>Ogólnie, <span class="math inline">\(X_n \to^\mathbb{P} 0\)</span> nie implikuje <span class="math inline">\(S_n/n \to^{\mathbb{P}} 0\)</span>
+</li>
+<li>
+<span class="math inline">\(S_n/n \to 0\)</span> p.n. wtedy i tylko wtedy, gdy <span class="math inline">\(S_n/n \to^\mathbb{P} 0\)</span> oraz <span class="math inline">\(S_{2n}/2^n \to 0\)</span> p.n.</li>
+</ol>
+<ol style="list-style-type: decimal">
+<li><p>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną,
+na której <span class="math inline">\(X_n \to^\mathbb{P} X\)</span>.
+Udowodnij, że jeśli <span class="math inline">\(\Omega\)</span> jest przeliczalna, to <span class="math inline">\(X_n \to X\)</span> p.n.</p></li>
+<li><p>Niech <span class="math inline">\((X_n)_{n \geq 1}\)</span> będzie ciągiem niezależnych zmiennych losowych,
+dla którego <span class="math inline">\(X_n \to^\mathbb{P} X\)</span>, gdzie <span class="math inline">\(X\)</span> jest pewną zmienną losową.
+Udowodnij, że <span class="math inline">\(X\)</span> musi być zmienną losową zdegenerowaną.</p></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">5</span> Zbieżność według rozkładu</a></div>
+<div class="next"><a href="lista-13-s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87.html"><span class="header-section-number">8</span> Lista 13: Słaba zbieżność</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lista-12-zbie%C5%BCno%C5%9B%C4%87"><span class="header-section-number">7</span> Lista 12: Zbieżność</a></li>
+<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania">Zadania do samodzielnego rozwiązania</a></li>
+<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia">Zadania na ćwiczenia</a></li>
+<li><a class="nav-link" href="#zadania-dodatkowe">Zadania dodatkowe</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
