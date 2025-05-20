@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>5 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R</title>
+<title>24 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład \({\rm Bin(n,1/2)}\) zbiega w pewnym sensie do rozkładu normalnego. Podczas zajęć pojawiły się również podobne...">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
-<meta property="og:title" content="5 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="24 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład \({\rm Bin(n,1/2)}\) zbiega w pewnym sensie do rozkładu normalnego. Podczas zajęć pojawiły się również podobne...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:title" content="24 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R">
 <meta name="twitter:description" content="Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład \({\rm Bin(n,1/2)}\) zbiega w pewnym sensie do rozkładu normalnego. Podczas zajęć pojawiły się również podobne...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -49,13 +49,44 @@
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"></a></li>
 <li><a class="" href="sylabus.html">Sylabus</a></li>
-<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">1</span> Mocne prawo wielkich liczb</a></li>
-<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">2</span> Zastosowania MPWL</a></li>
-<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">3</span> Dygresja: kompresja</a></li>
-<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">4</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
-<li><a class="active" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">5</span> Zbieżność według rozkładu</a></li>
+<li class="book-part">Notatki</li>
+<li><a class="" href="wprowadzenie.html"><span class="header-section-number">1</span> Wprowadzenie</a></li>
+<li><a class="" href="aksjomatyka-rachunku-prawdopodobie%C5%84stwa.html"><span class="header-section-number">2</span> Aksjomatyka rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="prawdopodobie%C5%84stwo-warunkowe.html"><span class="header-section-number">3</span> Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCno%C5%9B%C4%87-zdarze%C5%84.html"><span class="header-section-number">4</span> Niezależność zdarzeń</a></li>
+<li><a class="" href="lemat-borela-cantellego.html"><span class="header-section-number">5</span> Lemat Borela-Cantellego</a></li>
+<li><a class="" href="zmienne-losowe-i-ich-rozk%C5%82ady.html"><span class="header-section-number">6</span> Zmienne losowe i ich rozkłady</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-definicja-i-w%C5%82asno%C5%9Bci.html"><span class="header-section-number">7</span> Wartość oczekiwana: definicja i własności</a></li>
+<li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
+<li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
+<li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
+<li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
+<li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
+<li><a class="" href="regresja-liniowa.html"><span class="header-section-number">15</span> Regresja liniowa</a></li>
+<li><a class="" href="parametry-wielowymiarowe.html"><span class="header-section-number">16</span> Parametry wielowymiarowe</a></li>
+<li><a class="" href="nier%C3%B3wno%C5%9Bci.html"><span class="header-section-number">17</span> Nierówności</a></li>
+<li><a class="" href="rodzaje-zbie%C5%BCno%C5%9Bci-zmiennych-losowych.html"><span class="header-section-number">18</span> Rodzaje zbieżności zmiennych losowych</a></li>
+<li><a class="" href="prawo-0-1-ko%C5%82mogorowa.html"><span class="header-section-number">19</span> Prawo \(0-1\) Kołmogorowa</a></li>
+<li><a class="" href="mocne-prawo-wielkich-liczb.html"><span class="header-section-number">20</span> Mocne prawo wielkich liczb</a></li>
+<li><a class="" href="zastosowania-mpwl.html"><span class="header-section-number">21</span> Zastosowania MPWL</a></li>
+<li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
+<li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
+<li><a class="active" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
 <li class="book-part">Listy zadań</li>
+<li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
+<li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
+<li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
+<li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
+<li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
+<li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
+<li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
+<li><a class="" href="lista-10-wariancja.html">Lista 10: Wariancja</a></li>
 <li><a class="" href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></li>
+<li><a class="" href="lista-12-zbie%C5%BCno%C5%9B%C4%87.html">Lista 12: Zbieżność</a></li>
 <li class="book-part">Dodatek</li>
 <li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
 </ul>
@@ -65,9 +96,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="zbieżność-według-rozkładu" class="section level1" number="5">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="zbieżność-według-rozkładu" class="section level1" number="24">
 <h1>
-<span class="header-section-number">5</span> Zbieżność według rozkładu<a class="anchor" aria-label="anchor" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu"><i class="fas fa-link"></i></a>
+<span class="header-section-number">24</span> Zbieżność według rozkładu<a class="anchor" aria-label="anchor" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu"><i class="fas fa-link"></i></a>
 </h1>
 <p>Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład
 <span class="math inline">\({\rm Bin(n,1/2)}\)</span> zbiega w pewnym sensie do rozkładu normalnego.
@@ -82,7 +113,7 @@ Najbardziej naturalnie byłoby powiedzieć, że <span class="math inline">\(\mu_
 <span class="math inline">\(\mu_n(A)\to \mu(A)\)</span>. Okazuje się jednak, że takie podejście jest niewłaściwe i tak wprowadzona zbieżność
 nie ma dobrych własności (np. jest trudna do sprawdzenia i operowania).</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-26" class="example"><strong>Przykład 5.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
+<p><span id="exm:unlabeled-div-237" class="example"><strong>Przykład 24.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
 <span class="math display">\[\begin{equation*}
     \mathbb{P}[X_j=1]=\mathbb{P}[X_j=-1] =1/2.
 \end{equation*}\]</span>
@@ -103,34 +134,154 @@ ale
 \int_A \frac 1{\sqrt{2\pi}} e^{-x^2/2} \mathrm{d}x=0.
 \end{equation*}\]</span></p>
 </div>
-<div id="słaba-zbieżność" class="section level2" number="5.1">
+<p>Widzimy więc, że do zagadnienia zbieżności miar należy podejść ostrożnie.
+Zrobimy więc krok w tył i zastanowimy się najpierw w jaki sposób możemy rozróżnić miarę.</p>
+<div id="rozróżnianie-miar" class="section level2" number="24.1">
 <h2>
-<span class="header-section-number">5.1</span> Słaba zbieżność<a class="anchor" aria-label="anchor" href="#s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87"><i class="fas fa-link"></i></a>
+<span class="header-section-number">24.1</span> Rozróżnianie miar<a class="anchor" aria-label="anchor" href="#rozr%C3%B3%C5%BCnianie-miar"><i class="fas fa-link"></i></a>
 </h2>
-<p>Okazuje się, że najwygodniejszym sposobem zdefiniowania zbieżności miar
-jest badanie zachowania całek względem funkcji ciągłych.
+<div class="definition">
+<p><span id="def:unlabeled-div-238" class="definition"><strong>Definicja 24.1  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
+Powiemy, że <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> maja ten sam rozkład, jeżeli <span class="math inline">\(\mu_{\vec{X}} = \mu_{\vec{Y}}\)</span>.
+Piszemy wtedy <span class="math inline">\(\vec{X} \stackrel{d}{=} \vec{Y}\)</span>.</p>
+</div>
+<p>Jeżeli <span class="math inline">\(\mu\)</span> oraz <span class="math inline">\(\nu\)</span> są rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}^d\)</span> to powiemy, że są one równe,
+jeżeli są równe jako odwzorowania <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d) \to [0,1]\)</span>. Dokładniej <span class="math inline">\(\mu = \nu\)</span>
+wtedy gdy
+<span class="math display">\[\begin{equation*}
+    \nu(A) = \mu(A)
+\end{equation*}\]</span>
+dla każdego borelowskiego <span class="math inline">\(A \subseteq \mathbb{R}^d\)</span>.
+Klasa <span class="math inline">\(\mathcal{B}(\mathbb{R}^d)\)</span> jest stosunkowo duża i w wielu przypadkach obliczenie <span class="math inline">\(\nu(A)\)</span>
+jest kłopotliwe. Chcemy więc znaleźć prostszą klasę <span class="math inline">\(\mathcal{C} \subset \mathcal{B}or(\mathbb{R}^d)\)</span>
+na której możemy testować równość miar.</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-239" class="lemma"><strong>Lemma 24.1  </strong></span>Załóżmy, że <span class="math inline">\(\mathcal{C}\)</span> jest <span class="math inline">\(\pi\)</span>-układem generującym <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d)\)</span>. Jeżeli
+<span class="math inline">\(\nu(C) = \mu(C)\)</span> dla każdego <span class="math inline">\(C \in \mathcal{C}\)</span>, to <span class="math inline">\(\nu=\mu\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-240" class="proof"><em>Proof</em>. </span>Dowód przebiega tak samo jak dowód Twierdzenia o jednoznaczności. Przypomnijmy, że wystarczy sprawdzić, że
+<span class="math display">\[\begin{equation*}
+    \mathcal{L} = \left\{ A \in \mathcal{B}or(\mathbb{R}^d)
+    \: : \: \nu(A) = \mu(A) \right\}
+\end{equation*}\]</span>
+jest <span class="math inline">\(\lambda\)</span>-układem.
+Skoro <span class="math inline">\(\mathcal{C} \subseteq \mathcal{L}\)</span>, to <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d) = \mathcal{L}\)</span>.</p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<p>Z powyższego lematu płynie prosty wniosek.</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-241" class="corollary"><strong>Wniosek 24.1  </strong></span>Jeżeli <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> są rozkładami na <span class="math inline">\(\mathbb{R}\)</span> takimi, że dla każdych
+<span class="math inline">\(a&lt;b\)</span>, <span class="math inline">\(\nu((a,b)) = \mu((a,b))\)</span>, to <span class="math inline">\(\nu=\mu\)</span>.</p>
+</div>
+<p>Podobny wniosek można napisać o przedziałach domkniętych.
+Z rozkładami związana jest też operacja całkowania. Dla każdej ograniczonej borelowskiej
+<span class="math inline">\(f \colon \mathbb{R}^d \to \mathbb{R}\)</span> całka
+<span class="math display">\[\begin{equation*}
+    \int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x)
+\end{equation*}\]</span>
+jest zbieżna. Okazuje się, że znajomość wartości całki dla dostatecznie bogatej rodziny funkcji wystarcza
+do rozróżnienia miary</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-242" class="lemma"><strong>Lemma 24.2  </strong></span>Załóżmy, że
+<span class="math display">\[\begin{equation*}
+    \int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) = \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x)
+\end{equation*}\]</span>
+dla każdej ograniczonej borelowskiej funkcji <span class="math inline">\(f \colon \mathbb{R}^d \to \mathbb{R}\)</span>.
+Wówczas
+<span class="math inline">\(\nu = \mu\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-243" class="proof"><em>Proof</em>. </span>Zauważmy, że dla <span class="math inline">\(A \in \mathcal{B}or(\mathbb{R}^d)\)</span> funkcja <span class="math inline">\(f(x) = \mathbf{1}_A(x)\)</span> jest borelowska i ograniczona
+oraz
+<span class="math display">\[\begin{equation*}
+\nu(A)=\int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) =
+    \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x) = \mu(A).
+\end{equation*}\]</span>
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<p>Klasa wszystkich ograniczonych funkcji borelowskich, podobnie jak samych zbiorów borelowskich,
+jest niepraktyczna. Wygodniej jest pracować z ciągłymi funkcjami ograniczonymi.
 Oznaczmy
 <span class="math display">\[
-  C_b(\mathbb{R}) = \left\{ f:\mathbb{R}\to\mathbb{R}, f \mbox{ jest ciągła i ograniczona}  \right\}
+  C_b\left(\mathbb{R}^d\right) =
+  \left\{ f:\mathbb{R}^d\to\mathbb{R}, f \mbox{ jest ciągła i ograniczona}  \right\}.
 \]</span></p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-244" class="lemma"><strong>Lemma 24.3  </strong></span>Załóżmy, że
+<span class="math display">\[\begin{equation*}
+    \int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) = \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x)
+\end{equation*}\]</span>
+dla każdej <span class="math inline">\(f \in C_b(\mathbb{R}^d)\)</span>.
+Wówczas
+<span class="math inline">\(\nu = \mu\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-245" class="proof"><em>Proof</em>. </span>Pokażemy, że <span class="math inline">\(\nu(F) = \mu(F)\)</span> dla każdego domkniętego <span class="math inline">\(F \subseteq \mathbb{R}^d\)</span>. Ustalmy takie <span class="math inline">\(F\)</span>.
+Dla <span class="math inline">\(x \in \mathbb{R}^d\)</span> niech
+<span class="math display">\[\begin{equation*}
+    \mathrm{dist}(x, F) = \inf_{f \in F} \|x-f\|.
+\end{equation*}\]</span>
+Skoro <span class="math inline">\(F\)</span> jest domknięty, to <span class="math inline">\(x \in F\)</span> wtedy i tylko wtedy, gdy <span class="math inline">\(\mathrm{dist}(x, F)=0\)</span>.
+Niech
+<span class="math display">\[\begin{equation*}
+    f_n(x) = ( 1-n\mathrm{dist}(x,F))_+.
+\end{equation*}\]</span>
+Wówczas <span class="math inline">\(f_n(x) \to \mathbf{1}_F(x)\)</span>. Zauważmy, że korzystamy tutaj z tego, że <span class="math inline">\(F\)</span> jest domknięty.
+Z założenia
+<span class="math display">\[\begin{equation*}
+    \int_{\mathbb{R}^d} f_n(x) \nu(\mathrm{d}x) = \int_{\mathbb{R}^d} f_n(x) \mu(\mathrm{d}x)
+\end{equation*}\]</span>
+dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>. Przechodząc do granicy i korzystając z twierdzenia o zbieżności ograniczonej
+<span class="math display">\[\begin{equation*}
+\nu(F)=\int_{\mathbb{R}^d} \mathbf{1}_F(x) \nu(\mathrm{d}x) =
+    \int_{\mathbb{R}^d} \mathbf{1}_F(x) \mu(\mathrm{d}x) = \mu(A).
+\end{equation*}\]</span>
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+</div>
+<div id="słaba-zbieżność" class="section level2" number="24.2">
+<h2>
+<span class="header-section-number">24.2</span> Słaba zbieżność<a class="anchor" aria-label="anchor" href="#s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87"><i class="fas fa-link"></i></a>
+</h2>
+<p>Zastanówmy się przez chwilę, jaki test na zbieżność miar byłby najwygodniejszy.
+Jedyny warunek brzegowy jaki stawiamy jest to że ciąg miar <span class="math inline">\(\delta_{(-1)^n/n}\)</span> skupionych w
+punktach <span class="math inline">\((-1)^n/n\)</span> dla <span class="math inline">\(n \in \mathbb{N}\)</span> powinien być zbieżny do miary <span class="math inline">\(\delta_0\)</span> skupionej w <span class="math inline">\(0\)</span>.</p>
+<p>Sprawdźmy najpierw jak zachowuje się ten ciąg przy całkowaniu zbiorów otwartych.
+Zauważmy, że
+<span class="math display">\[\begin{align*}
+    &amp;\delta_{(-1)^n/n}(0,1) = (1+(-1)^n)/2 &amp; \delta_0(0,1) =0\\
+         &amp;\delta_{(-1)^n/n}(\{0\}) = 0 &amp; \delta_0(\{0\}) =1.
+\end{align*}\]</span>
+Okazuje się, że ciągi <span class="math inline">\(\delta_{(-1)^n/n}(A)\)</span> nie muszą być zbieżne. Jeżeli są zbieżne, to
+granica nie musi być równa <span class="math inline">\(\delta_0(A)\)</span>. Okazuje się jednak, że sytuacja nie jest aż tak dramatyczna
+i możliwe jest opisanie asymptotycznego zachowania <span class="math inline">\(\delta_{(-1)^n/n}(A)\)</span> w terminach <span class="math inline">\(\delta_0(A)\)</span>. Opis ten
+wymaga jednak informacji o topologicznych własnościach <span class="math inline">\(A\)</span>.</p>
+<p>W przypadku funkcji ciągłych sprawa jest o wiele prostsza. Dla dowolnej <span class="math inline">\(f \in C_n(\mathbb{R})\)</span>
+mamy bowiem
+<span class="math display">\[\begin{equation*}
+    \int_{\mathbb{R}} f(x) \delta_{(-1)^n/n} (\mathrm{d}x) = f((-1)^n/n) \to f(0) = \int_\mathbb{R} f(x) \delta_0(\mathrm{d}x).
+\end{equation*}\]</span>
+Funkcje ciągłe są zatem niewrażliwe na małe wahania miar. Są dobrą klasą do testowania zbieżności miar.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-27" class="definition"><strong>Definicja 5.1  </strong></span>Niech <span class="math inline">\(\mu_n\)</span> będzie ciągiem miar probabilistycznych na <span class="math inline">\(\mathcal{B}or(\mathbb{R})\)</span>.
+<p><span id="def:unlabeled-div-246" class="definition"><strong>Definicja 24.2  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem miar
+probabilistycznych na <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d)\)</span>.
 Mówimy, że <span class="math inline">\(\mu_n\)</span> <strong>zbiegają słabo</strong> do miary probabilistycznej <span class="math inline">\(\mu\)</span>
-jeżeli dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R})\)</span>
+jeżeli dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R}^d)\)</span>
 <span class="math display">\[
-    \int_\mathbb{R} f(x)\mu_n(\mathrm{d}x) \to \int_\mathbb{R} f(x)\mu(\mathrm{d}x).
+    \int_{\mathbb{R}^d} f(x)\mu_n(\mathrm{d}x) \to \int_{\mathbb{R}^d} f(x)\mu(\mathrm{d}x).
     \]</span>
 Piszemy wtedy <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-28" class="example"><strong>Przykład 5.2  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
+<p><span id="exm:unlabeled-div-247" class="example"><strong>Przykład 24.2  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
 Wtedy <span class="math inline">\(\delta_{a_n}\Rightarrow \delta_a\)</span>, bo dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R})\)</span>
 <span class="math display">\[
   \int_\mathbb{R} f(x) \delta_{a_n}(\mathrm{d}x) = f(a_n)\to f(a) = \int_\mathbb{R} f(x)\delta_a(\mathrm{d}x).
   \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-29" class="example"><strong>Przykład 5.3  </strong></span>Zdefiniujmy ciąg miar probabilistycznych
+<p><span id="exm:unlabeled-div-248" class="example"><strong>Przykład 24.3  </strong></span>Zdefiniujmy ciąg miar probabilistycznych
 <span class="math display">\[
   \mu_n\bigg(\bigg\{ \frac kn \bigg\}\bigg) = \frac 1n, \qquad k\in\{1,2,\ldots,n\}.
   \]</span> Wtedy dla <span class="math inline">\(f\in C(\mathbb{R})\)</span>
@@ -139,35 +290,339 @@ Wtedy <span class="math inline">\(\delta_{a_n}\Rightarrow \delta_a\)</span>, bo 
   \]</span>
 gdzie zbieżność wynika z własności całki Riemanna. Zatem <span class="math inline">\(\mu_n\)</span> zbiegają słabo do miary Lebesque’a na <span class="math inline">\([0,1]\)</span>.</p>
 </div>
-Przypomnijmy definicję
-<p>%{} Rozważana przez nas przestrzeń <span class="math inline">\(C(\mathbb{R}) = C_b(\mathbb{R})\)</span> (funkcji ciągłych i ograniczonych) z normą <span class="math inline">\(\sup\)</span> jest przestrzenią Banacha. Z twierdzenia Riesza o reprezentacji przestrzeń dualna <span class="math inline">\(C(\mathbb{R})^*\)</span> ciągłych i liniowych funkcjonałów
-%na <span class="math inline">\(C_b(\mathbb{R})\)</span> jest przestrzeń skończonych, przeliczalnie addytywnych, znakowanych miar Radona. W języku analizy funkcjonalnej wprowadzona słaba zbieżność odpowiada <span class="math inline">\(*\)</span>-słabej zbieżności w <span class="math inline">\(C(\mathbb{R})^*\)</span>.</p>
-Poniższe twierdzenie mówi, że słaba granica jest wyznaczona jednoznacznie:
-<p>Często będziemy używać nieco innej notacji i np. pisać <span class="math inline">\(X_n \overset{d}{\to} N(0,1)\)</span>, co oznacza, że <span class="math inline">\(X_n\)</span> zbiegają do według rozkładu do pewnej zmiennej losowej o rozkładzie <span class="math inline">\(N(0,1)\)</span>.</p>
-<p>{} <span class="math inline">\(X_n \overset{d}{\to} X\)</span> wtedy i tylko wtedy, gdy <span class="math inline">\(\mathbb{E} f(X_n)\to \mathbb{E} f(X)\)</span> dla każdej funkcji <span class="math inline">\(f\in C(\mathbb{R})\)</span>.</p>
-Zbieżność według rozkład jest najsłabszą z poznanych do tej pory zbieżności:
-<p>Dowód powyższego lematu pominiemy (pojawi się na liście zadań).</p>
-Zbieżność według rozkładu nie implikuje zbieżności według a, czy też zbieżności p.n. Można to zaobserwować na poniższym przykładzie.
-Powyższy przykłady pokazują, że zbieżność według rozkładu nie implikuje zbieżności p.n., ale zachodzi następujący wynik:
-<p>Z powyższej definicji wynika, że <span class="math inline">\(\lim_{t\to\infty} F(t) - \lim_{t\to -\infty} F(t) = p\le 1\)</span>,
-w szczególności może się zdarzyć, że <span class="math inline">\(p&lt;1\)</span>.</p>
-<p>Rozważamy zbiór dystrybuant ułomnych wraz ze słabą zbieżnością jak powyżej, tzn mówimy, że ciąg dystrybuant ułomnych <span class="math inline">\(F_n\)</span> zbiega słabo do dystrybuanty ułomnej <span class="math inline">\(F\)</span>, jeżeli <span class="math inline">\(F_n(x)\to F(x)\)</span> dla każdego <span class="math inline">\(x\)</span> będącego punktem ciągłości <span class="math inline">\(F\)</span>.</p>
-<p>{} Pierwsza część wykładu była poświęcona wprowadzeniu języka, którym posługuje się rachunek a. Zdefiniowaliśmy pojęcie przestrzeni probabilistycznej <span class="math inline">\(\pb\)</span>, a następnie dzięki zmiennym losowym mogliśmy zastąpić abstrakcyjną przestrzeń przez <span class="math inline">\((\mathbb{R}, \B(\mathbb{R}), \mu)\)</span>. Dodatkowo wprowadziliśmy pojęcie niezależności oraz dzięki twierdzeniu Kołomogorowa potrafiliśmy zdefiniować przestrzeń probabilistyczną na której można określić przeliczalnie wiele niezależnych zmiennych losowych. Sama przestrzeń odgrywa jednak drugorzędną rolę (np. jest niejednoznaczna), a kluczowe są rozkłady zmiennych losowych i ich wzajemne zależności.</p>
-<p>Naszym zasadniczym celem są jednak analityczne twierdzenia, które pozwalają opisać zachowanie się ciągów <span class="math inline">\(\{S_n\}\)</span>, gdzie <span class="math inline">\(S_n = X_1+\ldots+X_n\)</span> (zazwyczaj zakładamy, że <span class="math inline">\(X_i\)</span> są niezależne) bądź też ogólnych zmiennych losowych <span class="math inline">\(\{Y_n\}\)</span>, które nie muszą być takiej postaci. Chcemy zrozumieć jak szybko rosną te losowe ciągi. Jak należy je znormalizować, aby otrzymać nietrywialną granicę? W jakim sensie one zbiegają? Przypomnijmy, że badaliśmy różne rodzaje zbieżności: p.n., według a oraz według rozkładu. Ta ostatnia, chociaż najsłabsza daje najmocniejsze wyniki, najlepiej opisuje rozkłady graniczne, gdyż pozwala opisać ‘kształty’ rozkładów i jest niezależna od przestrzeni probabilistycznej</p>
-<p>Chcemy więc badać ciągi losowe. Metody znane z analizy nie mogą tu jednak być bezpośrednio zastosowane. Podczas wykładu przedstawimy więc inne techniki, które moga być użyte
-do badania zmiennych losowych. Warto zauważyć, że założenia są przedstawiane w terminach <span class="math inline">\(\mathbb{E} X\)</span> i <span class="math inline">\(\var X\)</span>, a nie całych rozkładów. Większość wyników formułujemy dla niezależnych zmiennych losowych o takim samym rozkładzie, ale przedstawione metody mają znacznie szersze zastosowanie, wystarczy dla ogólnego ciągu <span class="math inline">\(\{Y_n\}\)</span> kontrolować <span class="math inline">\(\mathbb{E} Y_n\)</span>, <span class="math inline">\(\var Y_n\)</span> (i może dodatkowo znaleźć trochę ‘niezależności’).</p>
-Podsumowując, przedstawione narzędzia może podzielić na 3 kategorie:
+<div class="example">
+<p><span id="exm:unlabeled-div-249" class="example"><strong>Przykład 24.4  </strong></span>Niech <span class="math inline">\(n \in \mathbb{N}\)</span>. Z liczb <span class="math inline">\(\{1, \ldots n\}\)</span> losujemy bez zwracania dwie liczby.
+Niech <span class="math inline">\(X_n\)</span> będzie większą z nich. Wówczas
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}[X_n=k] = \frac{2(k-1)}{n(n-1)}.
+\end{equation*}\]</span>
+Niech <span class="math inline">\(\mu_n\)</span> będzie rozkładem zmiennej <span class="math inline">\(X_n/n\)</span>. Wówczas dla każdej <span class="math inline">\(f \in C_b(\mathbb{R})\)</span>,
+<span class="math display">\[\begin{align*}
+    \int_\mathbb{R} f(x) \mu_n(\mathrm{d}x) &amp; = \sum_{k} f(k/n) \mathbb{P}[X_n/n=k/n] \\
+    &amp; = \sum_{k=2}^n f(k/n) \frac{2(k-1)}{n(n-1)} \to \int_0^1 f(x) 2x \mathrm{d}x.
+\end{align*}\]</span>
+Miary <span class="math inline">\(\mu_n\)</span> zbiegają zatem słabo do miary <span class="math inline">\(\mu\)</span> o gęstości <span class="math inline">\(2x \mathbf{1}_{[0,1]}(x)\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:port" class="theorem"><strong>Twierdzenie 24.1  (Portmanteau) </strong></span>Niech <span class="math inline">\(\mu_n,\mu\)</span> będą miarami probabilistycznymi na
+<span class="math inline">\((\mathbb{R}^d,\mathcal{B}or(\mathbb{R}^d))\)</span>.
+Następujące warunki są równoważne</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\mu_n \Rightarrow\mu\)</span>;</li>
+<li>dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R}^d)\)</span> i jednostajnie ciągłej:
+<span class="math display">\[\int_\mathbb{R} f(x)\mu_n(dx) \to \int_{\mathbb{R}^d} f(x)\mu(dx);\]</span>
+</li>
+<li>dla każdego domkniętego zbioru <span class="math inline">\(F\subset \mathbb{R}^d\)</span>:
+<span class="math display">\[\limsup_{n\to \infty} \mu_n(F) \le \mu(F);\]</span>
+</li>
+<li>dla każdego otwartego zbioru <span class="math inline">\(G\subset \mathbb{R}^d\)</span>:
+<span class="math display">\[\liminf_{n\to \infty} \mu_n(G) \ge \mu(G);\]</span>
+</li>
+<li>dla każdego zbioru <span class="math inline">\(A\in \mathcal{B}or(\mathbb{R}^d)\)</span> takiego, że <span class="math inline">\(\mu(\partial A)=0\)</span>:
+<span class="math display">\[\lim_{n\to\infty} \mu_n(A) = \mu(A).\]</span>
+</li>
+</ol>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-250" class="remark"><em>Remark</em>. </span>Przypomnijmy, że zbiór <span class="math inline">\(G \subseteq \mathbb{R}^d\)</span> nazywamy otwarty jeżeli dla każdego jest punktu
+<span class="math inline">\(x \in G\)</span> istnieje kula o dostatecznie małym promieniu <span class="math inline">\(\epsilon&gt;0\)</span> i środku w punkcie <span class="math inline">\(x\)</span>,
+<span class="math display">\[\begin{equation*}
+    B(x, \epsilon) = \left\{ y \in \mathbb{R}^d \: : \: \|x-y\| &lt; \epsilon \right\}
+\end{equation*}\]</span>
+taka, że <span class="math inline">\(B(x,\epsilon) \subseteq G\)</span>. Dla zbioru <span class="math inline">\(A \subseteq \mathbb{R}^d\)</span>
+przez <span class="math inline">\(A^\circ = \mathrm{int}(A)\)</span> oznaczamy największy zbiór otwarty zawarty w <span class="math inline">\(A\)</span>.</p>
+<p>Zbiór <span class="math inline">\(F \subseteq \mathbb{R}^d\)</span> nazywamy domkniętym, jeżeli jest dopełnienie
+<span class="math inline">\(F^c = \mathbb{R}^d\setminus F\)</span> jest otwarte. Równoważnie <span class="math inline">\(F\)</span> jest domknięty, jeżeli dla każdego
+punktu spoza <span class="math inline">\(F\)</span>, <span class="math inline">\(x \notin F\)</span> istnieje kula o środku w punkcie <span class="math inline">\(x\)</span> i promieniu <span class="math inline">\(\epsilon\)</span> rozłączna
+z <span class="math inline">\(F\)</span>, <span class="math inline">\(B(x, \epsilon) \cap F =\emptyset\)</span>.
+Jeżeli <span class="math inline">\(A \subseteq \mathbb{R}^d\)</span>, to przez <span class="math inline">\(\overline{A} = \mathrm{cl}(A)\)</span>
+oznaczamy najmniejszy zbiór domknięty zawierający <span class="math inline">\(A\)</span>.
+Dodatkowo <span class="math inline">\(\overline{A}\)</span> jest zbiorem
+wszystkich granic dla ciągów zawartych w <span class="math inline">\(A\)</span>.</p>
+<p>Wreszcie dla <span class="math inline">\(A \subseteq \mathbb{R}^d\)</span> określamy jego brzeg przez
+<span class="math display">\[\begin{equation*}
+    \partial(A) = \mathrm{fr}(A) = \mathrm{bd}(A) = \mathrm{cl}(A) \setminus \mathrm{int}(A).
+\end{equation*}\]</span>
+Zbiór <span class="math inline">\(\partial A\)</span> składa się z punktów, które są granicami ciągu zawartego w <span class="math inline">\(A\)</span> i ciągu zawartego
+w <span class="math inline">\(A^c\)</span>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-251" class="remark"><em>Remark</em>. </span><em>Potrmanteau</em> to zapożyczone z francuskiego określenie skórzanej walizki podróżnej na ubrania (<em>porter</em> (nosić) + <em>manteau</em> płaszcz).</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-252" class="proof"><em>Proof</em>. </span><strong><span class="math inline">\(1\rightarrow 2\)</span>.</strong> Oczywiste.</p>
+<p><strong><span class="math inline">\(2\rightarrow 3\)</span>.</strong>
+Ustalmy dowolny zbiór domknięty <span class="math inline">\(F\)</span>.
+Dla <span class="math inline">\(\varepsilon&gt;0\)</span> oznaczmy przez
+<span class="math display">\[
+F_{\varepsilon} = \big\{ x\in \mathbb{R} : d(x,F) &lt; \varepsilon\big\}
+\]</span>
+<span class="math inline">\(\varepsilon\)</span>-otoczkę zbioru <span class="math inline">\(F\)</span>.</p>
+<div class="inline-figure"><img src="TIKZ/otoczka.svg" style="display: block; margin: auto;"></div>
+<p>Ustalmy <span class="math inline">\(\delta &gt; 0\)</span> i weźmy <span class="math inline">\(\varepsilon&gt;0\)</span> taki, że
+<span class="math display">\[
+\mu(F_\varepsilon) &lt;\mu(F) + \delta.
+\]</span>
+Taki <span class="math inline">\(\varepsilon\)</span> musi istnieć, gdyż z domkniętości zbioru <span class="math inline">\(F\)</span>:
+<span class="math inline">\(F = \bigcap_{n=1}^{\infty} F_{\frac 1n}\)</span>, a z lematu o ciągłości miary
+<span class="math inline">\(\mu(F_{\frac 1n})\to \mu(F)\)</span>.
+Niech <span class="math inline">\(f\)</span> będzie jednostajnie ciągłą funkcją taką, że
+<span class="math display">\[
+{\bf 1}_F \le f \le {\bf 1}_{F_{\varepsilon}}
+\]</span>
+można np. przyjąć
+<span class="math display">\[
+f(x) = (1-d(x,F)/\varepsilon))_+.
+\]</span>
+Wówczas odwołując się do punktu <span class="math inline">\(2.\)</span>
+<span class="math display">\[
+\limsup \mu_n(F) \le \limsup \int f d\mu_n = \int f d\mu \le \mu(F_{\varepsilon}) \le \mu(F)+\delta.
+\]</span> Z dowolności <span class="math inline">\(\delta\)</span> otrzymujemy tezę.</p>
+<p><strong><span class="math inline">\(3\leftrightarrow 4\)</span></strong>. Dowód równoważności wynika z wzięcia dopełnienia zbioru.</p>
+<p><strong><span class="math inline">\(4,3\rightarrow 5\)</span></strong>
+Niech <span class="math inline">\(A \in \mathcal{B}or(\mathbb{R}^d)\)</span> będzie taki, że <span class="math inline">\(\mu(\partial(A))=0\)</span>.
+Mamy
+<span class="math display">\[\begin{align*}
+    \mu(\mathrm{cl}(A)) &amp; \geq \limsup_{n \to \infty} \mu_n(\mathrm{cl}(A)) \\
+    &amp; \geq \limsup_{n \to \infty} \mu_n(A) \\
+    &amp; \geq \liminf_{n \to \infty} \mu_n(\mathrm{int}(A)) \\
+    &amp; \geq \mu(\mathrm{int}(A)).
+\end{align*}\]</span>
+Zauważmy jednak, że
+<span class="math inline">\(\mu(\mathrm{cl}(A)) = \mu(\partial (A)) + \mu(\mathrm{int}(A)) = \mu(\mathrm{int}(A)\)</span>. Zatem wszystkie granice powyżej są sobie równe.</p>
+<p><strong><span class="math inline">\(5 \rightarrow 1\)</span></strong>
+Wybierzmy <span class="math inline">\(f \in C_b(\mathbb{R}^d)\)</span>.
+Z liniowości całki bez zmniejszania ogólności możemy założyć, że $f$.
+Wówczas dla dowolnego <span class="math inline">\(x \in \mathbb{R}^d\)</span>,
+<span class="math display">\[\begin{equation*}
+f(x) = \int_0^{f(x)} \mathrm{d}t = \int_0^\infty \mathbf{1}_{\{ f(x) &gt;t\}}(t) \mathrm{d}t.
+\end{equation*}\]</span>
+Stąd
+<span class="math display">\[\begin{equation*}
+  \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d} x) =
+  \int_0^1 \mu[x \: : \: f(x)&gt;t] \mathrm{d} t.
+\end{equation*}\]</span>
+Niech
+<span class="math display">\[\begin{equation*}
+B_t = \left\{ x\in \mathbb{R}^d \: : \: f(x) &gt;t \right\}.
+\end{equation*}\]</span>
+Zauważmy, że z ciągłości <span class="math inline">\(f\)</span>,
+<span class="math display">\[\begin{equation*}
+  {\rm cl} \{ x \: : \: f(x)&gt;t \} \subseteq \{ x \: : \: f(x)\geq t \}  
+\end{equation*}\]</span>
+oraz, skoro przeciwobrazy przez <span class="math inline">\(f\)</span> zbiorów otwartych są otwarte
+<span class="math display">\[\begin{equation*}
+  {\rm int} \{ x \: : \: f(x)&gt;t \} = \{ x \: : \: f(x)&gt; t \} .
+  \end{equation*}\]</span>
+Stąd
+<span class="math display">\[\begin{equation*}
+    \partial B_t=\partial \{ x \: : \: f(x)&gt;t \} \subseteq \{ x \: : \: f(x)= t \}.  
+  \end{equation*}\]</span>
+Zauważmy, że zbiory <span class="math inline">\(A_t = \{ x \: : \: f(x)= t \}\)</span>
+są parami rozłączne i wypełniają
+całe <span class="math inline">\(\mathbb{R}^d\)</span>.
+Wówczas <span class="math inline">\(\mu(A_t)&gt;0\)</span> tylko dla przeliczalnie wielu <span class="math inline">\(t \in \mathbb{R}\)</span>
+(jest co najwyżej <span class="math inline">\(n\in \mathbb{N}\)</span> zbiorów postaci <span class="math inline">\(A_t\)</span> dla których <span class="math inline">\(\mu(A_t) &gt; 1/n\)</span>).
+Oznacza to, że <span class="math inline">\(\mu(\partial B_t) =0\)</span> dla prawie wszystkich <span class="math inline">\(t\)</span>
+(wszystkich poza przeliczalną ilością).
+Z punktu 4
+<span class="math display">\[\begin{equation*}
+    \mu_n(B_t) \to \mu(B_t)
+  \end{equation*}\]</span>
+<span class="math inline">\(\lambda_1\)</span> -p.w.
+Stąd na mocy twierdzenia o zbieżności ograniczonej
+<span class="math display">\[\begin{align*}
+    \int f(x) \mu_n(\mathrm{d}x)  
+    &amp; = \int_0^\infty \mu_n (x \: : \: f(x) &gt;t) \mathrm{d} t
+    \\ &amp; \to \int_0^\infty \mu (x \: : \: f(x) &gt;t) \mathrm{d} t \\
+    &amp; = \int f(x) \mu(\mathrm{d}x).
+  \end{align*}\]</span>
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-253" class="theorem"><strong>Twierdzenie 24.2  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_n,\mu\)</span> będą rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}\)</span> o dystrybuantach
+odpowiednio <span class="math inline">\(\{F_n\}_n,F\)</span>.
+Wówczas <span class="math inline">\(\mu_n\Rightarrow \mu\)</span> wtedy i tylko wtedy, gdy
+<span class="math inline">\(F_n(x)\to F(x)\)</span> dla każdego punktu <span class="math inline">\(x\)</span>, w którym <span class="math inline">\(F\)</span> jest ciągła.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-254" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.
+Niech <span class="math inline">\(x\)</span> będzie punktem ciągłości <span class="math inline">\(F\)</span>.
+Zdefiniujmy <span class="math inline">\(A = (-\infty,x]\)</span>, wówczas <span class="math inline">\(\partial A = \{x\}\)</span> i
+<span class="math inline">\(\mu(\partial A) = 0\)</span>. Zatem
+<span class="math display">\[
+  F_n(x) = \mu_n(A) \to \mu(A) = F(x).
+\]</span></p>
+<p>Załóżmy teraz, że <span class="math inline">\(F_n(x)\to F(x)\)</span> dla każdego punktu <span class="math inline">\(x\)</span>, w którym <span class="math inline">\(F\)</span> jest ciągła.
+Niech <span class="math inline">\(G\subset \mathbb{R}\)</span> będzie dowolnym otwartym zbiorem.
+Wówczas możemy <span class="math inline">\(G\)</span> przedstawić w postaci
+<span class="math display">\[
+  G = \bigcup_{k=1}^\infty I_k,
+  \]</span>
+gdzie <span class="math inline">\(I_k = (a_k,b_k)\)</span> są rozłącznymi przedziałami (suma może też być skończona).
+Ustalmy <span class="math inline">\(\varepsilon&gt;0\)</span> i wybierzmy punkty ciągłości
+<span class="math inline">\(a_k', b_k'\in (a_k,b_k)\)</span> tak, aby
+<span class="math display">\[
+  F(b_k') - F(a_k') = \mu(a_k',b_k') \ge \mu(I_k) - \varepsilon 2^{-k}.
+  \]</span>
+Takie punkty istnieją z lematu o ciągłości miary oraz obserwacji,
+że <span class="math inline">\(F\)</span> ma co najwyżej przeliczalnie wiele punktów nieciągłości.</p>
+<p>Wówczas dla ustalonego <span class="math inline">\(m\)</span>:
+<span class="math display">\[\begin{align*}
+  \liminf_{n\to\infty} \mu_n(G) &amp; \ge \liminf_{n\to\infty}
+  \sum_{k=1}^m \big( F_n(b_k') - F_n(a_k') \big) \\ &amp;
+  =  \sum_{k=1}^m \big( F(b_k') - F(a_k') \big) \\
+  &amp; \ge \mu\bigg( \bigcup_{k=1}^m  I_k \bigg) - \varepsilon.
+  \end{align*}\]</span>
+Z dowolności <span class="math inline">\(m\)</span> i lematu o ciągłości miary:
+<span class="math display">\[
+  \liminf_{n\to\infty} \mu_n(G) \ge \mu(G) -\varepsilon.
+  \]</span> Następnie z dowolności <span class="math inline">\(\varepsilon\)</span>, przechodząc z tym parametrem do 0, otrzymujemy
+<span class="math display">\[
+  \liminf_{n\to\infty} \mu_n(G) \ge \mu(G).
+  \]</span> Zatem z twierdzenia <a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html#thm:port">24.1</a>, <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-255" class="example"><strong>Przykład 24.5  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
+Wtedy <span class="math inline">\(\delta_{a_n}\Rightarrow \delta_a\)</span>, bo dystrybuanta <span class="math inline">\(F\)</span> miary <span class="math inline">\(\delta_a\)</span>
+ma tylko jeden punkt nieciągłości: <span class="math inline">\(a\)</span>.
+Dla każdego <span class="math inline">\(x\not= a\)</span>, <span class="math inline">\(F_n(x)\to F(x)\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-256" class="example"><strong>Przykład 24.6  </strong></span>Niech
+<span class="math display">\[
+  \mu_n\bigg(\bigg\{ \frac kn \bigg\}\bigg) = \frac 1n.
+  \]</span> i <span class="math inline">\(\mu = {\bf 1}_{[0,1]}(x)dx\)</span>. Wykazana przez nas wcześniej zbieżność
+<span class="math inline">\(\mu_n\Rightarrow \mu\)</span> wynika z powyższego twierdzenia i poniższego rysunku, na którym
+na niebiesko zaznaczono dystrybuantę <span class="math inline">\(F\)</span>, a na czerwono dystrybuantę <span class="math inline">\(\mu_n\)</span>.</p>
+<div class="inline-figure"><img src="TIKZ/dystr10.svg" style="display: block; margin: auto;"></div>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-257" class="example"><strong>Przykład 24.7  </strong></span>Rozważmy zmienna losowe <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> takie, że dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>
+ma rozkład geometryczny z parametrem <span class="math inline">\(1/n\)</span>,
+<span class="math display">\[\begin{equation*}
+    \mathbb{P}\left[ X_n=k \right] = \left( 1-1/n\right)^{k-1}/n.
+\end{equation*}\]</span>
+Niech <span class="math inline">\(\mu_n\)</span> będzie rozkładem zmiennej losowej <span class="math inline">\(X_n/n\)</span>. Wówczas
+dla każdego <span class="math inline">\(t\in \mathbb{R}\)</span>,
+<span class="math display">\[\begin{align*}
+    \mu_n((t,+\infty)) &amp; = \mathbb{P}[X_n&gt; tn]  \\
+    &amp; = \mathbb{P}[X_n \geq [tn]+1] \\
+    &amp; = (1-1/n)^{[1n]+1} \to e^{-t}.
+\end{align*}\]</span>
+Powyższe jest równoważne zbieżności dystrybuant. Oznacza to, że <span class="math inline">\(\mu_n \Rightarrow \mathrm{Exp}(1)\)</span>.
+Zbieżnośc tę widać na rysunku poniżej.</p>
+<div class="inline-figure"><img src="TIKZ/dystr11.svg" style="display: block; margin: auto;"></div>
+</div>
+</div>
+<div id="zbieżność-według-rozkładu-1" class="section level2" number="24.3">
+<h2>
+<span class="header-section-number">24.3</span> Zbieżność według rozkładu<a class="anchor" aria-label="anchor" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>Wiele naturalnych rozkładów najwygodniej jest zdefiniowac w terminach zmiennych losowych.
+Aby uprośicć notację w takich przypadkach, zbieżność ich rozkładów
+będziemy wysławiali w terminach tych właśnie zmiennych.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-258" class="definition"><strong>Definicja 24.3  </strong></span>Mówimy, że ciąg wektorów losowych <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span>
+zbiega <strong>według rozkładu</strong> do wektora losowego <span class="math inline">\(\vec{X}\)</span>, jeżeli
+<span class="math inline">\(\mu_{\vec{X}_n} \Rightarrow \mu_\vec{X}\)</span>, czyli
+<span class="math display">\[\begin{equation*}
+    \mathbb{E} \left[ f\left(\vec{X}_n\right) \right] \to
+    \mathbb{E}\left[ f\left(\vec{X}\right) \right]
+\end{equation*}\]</span>
+dla każdej <span class="math inline">\(f \in C_b(\mathbb{R}^d)\)</span>.</p>
+</div>
+<p>W naturalny sposób Twierdzenie <a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html#thm:port">24.1</a> można przepisać w terminach zmiennych losowych.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-259" class="theorem"><strong>Twierdzenie 24.3  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\vec{X}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
+Następujące warunki są równoważne</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span>;</li>
+<li>dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R}^d)\)</span> i jednostajnie ciągłej:
+<span class="math display">\[
+\lim_{n \to \infty}\mathbb{E} \left[ f\left(\vec{X}_n\right) \right] =
+\mathbb{E}\left[ f\left(\vec{X}\right) \right]
+\]</span>
+</li>
+<li>dla każdego domkniętego zbioru <span class="math inline">\(F\subset \mathbb{R}^d\)</span>:
+<span class="math display">\[\limsup_{n\to \infty} \mathbb{P}\left[ \vec{X}_n \in F \right] \le
+\mathbb{P}\left[ \vec{X} \in F \right];\]</span>
+</li>
+<li>dla każdego otwartego zbioru <span class="math inline">\(G\subset \mathbb{R}^d\)</span>:
+<span class="math display">\[\liminf_{n\to \infty} \mathbb{P}\left[ \vec{X}_n \in G \right] \ge
+\mathbb{P}\left[ \vec{X} \in G \right];\]</span>
+</li>
+<li>dla każdego zbioru <span class="math inline">\(A\in \mathcal{B}or(\mathbb{R}^d)\)</span> takiego,
+że <span class="math inline">\(\mathbb{P}\left[ \vec{X} \in \partial A\right]=0\)</span>:
+<span class="math display">\[
+\lim_{n\to \infty} \mathbb{P}\left[ \vec{X}_n \in A \right] =
+\mathbb{P}\left[ \vec{X} \in A \right];\]</span>
+</li>
+</ol>
+</div>
+<p>Często będziemy używać nieco innej notacji i np. pisać <span class="math inline">\(X_n \Rightarrow \mu\)</span>, co oznacza,
+że <span class="math inline">\(X_n\)</span> zbiegają do według rozkładu do pewnej zmiennej losowej o rozkładzie <span class="math inline">\(\mu\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-260" class="example"><strong>Przykład 24.8  </strong></span>Niech <span class="math inline">\(\{X_n\}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
+<span class="math inline">\(\mathbb{P}[X_n = 1] = \mathbb{P}[X_n=-1] = 1/2\)</span> i niech <span class="math inline">\(S_n = X_1+\ldots+ X_n\)</span>.
+Wówczas ciąg zmiennych losowych <span class="math inline">\(S_n/\sqrt n\)</span> zbiega według rozkładu do <span class="math inline">\(N(0,1)\)</span>,
+co wynika z twierdzenie de Moivre’a - Laplace’a</p>
+</div>
+<p>Zbieżność według rozkład jest najsłabszą z poznanych do tej pory zbieżności.</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-261" class="lemma"><strong>Lemma 24.4  </strong></span>Niech <span class="math inline">\(\{X_n\}, \{Y_n\}\)</span> będą ciągiem zmiennych losowych. Wówczas</p>
+<ol style="list-style-type: decimal">
+<li>jeżeli <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} X\)</span>, to <span class="math inline">\(X_n \overset{d}{\to} X\)</span>;</li>
+<li>jeżeli <span class="math inline">\(X_n \overset{d}{\to} X\)</span> i <span class="math inline">\(\mathbb{P}[X=c]=1\)</span>, to <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} c\)</span>;</li>
+<li>jeżeli <span class="math inline">\(X_n \overset{d}{\to} X\)</span>, to <span class="math inline">\(aX_n+b \overset{d}{\to} aX+b\)</span>, dla <span class="math inline">\(a,b\in\mathbb{R}\)</span>;</li>
+<li>jeżeli <span class="math inline">\(X_n \overset{d}{\to} X\)</span>, <span class="math inline">\(Y_n \overset{d}{\to} c\)</span>, to <span class="math inline">\(X_n +Y_n\overset{d}{\to} X + c\)</span> oraz
+$X_n Y_n cX $.</li>
+</ol>
+</div>
+<p>Dowód powyższego lematu pozostawiamy jako ćwiczenie.</p>
+<p>Zbieżność według rozkładu nie implikuje zbieżności według prawdopodobieństwa,
+czy też zbieżności p.n. Można to zaobserwować na poniższym przykładzie.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-262" class="example"><strong>Przykład 24.9  </strong></span>Rozważmy przestrzeń probabilistyczną <span class="math inline">\(([0,1], \mathcal{B}or([0,1]), {\rm Leb})\)</span>.
+Zdefiniujmy ciąg zmiennych losowych <span class="math inline">\(X_{2n-1} = {\bf 1}_{[0,1/2]}\)</span>, <span class="math inline">\(X_{2n}= {\bf 1}_{[1/2,1]}\)</span>.
+Wówczas ciąg <span class="math inline">\(X_n\)</span> nie jest zbieżny ani punktowo, ani według prawdopodobieństwa,
+ale dla każdego <span class="math inline">\(n\)</span>, <span class="math inline">\(X_n\)</span> ma rozkład <span class="math inline">\(\frac 12 \delta_0 + \frac 12 \delta _1\)</span>, zatem
+<span class="math display">\[
+  X_n \Rightarrow \frac 12 \delta_0 + \frac 12 \delta _1
+\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-263" class="example"><strong>Przykład 24.10  </strong></span>Niech <span class="math inline">\(Y\)</span> będzie zmienną o rozkładzie <span class="math inline">\(N(0,1)\)</span>, wówczas ciąg zmiennych losowych
+<span class="math inline">\(X_n = (-1)^n Y\)</span> ma rozkład <span class="math inline">\(N(0,1)\)</span> (bo rozkład normalny jest symetryczny),
+a więc <span class="math inline">\(X_n \overset{d}{\to} N(0,1)\)</span>, ale ten ciąg nie jest zbieżny według prawdopodobieństwa.</p>
+</div>
+<p>Powyższy przykłady pokazują, że zbieżność według rozkładu nie implikuje zbieżności p.n.,
+ale zachodzi następujący wynik:</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-264" class="theorem"><strong>Twierdzenie 24.4  (Skorochoda) </strong></span>Załóżmy, że <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> jest ciągiem zmiennych losowych określonych na
+takich, że <span class="math inline">\(X_n\overset {d}{\to} X\)</span> dla pewnej zmiennej losowej <span class="math inline">\(X\)</span>.
+Istnieją zmienne losowe <span class="math inline">\(\{X'_n\}\)</span> oraz <span class="math inline">\(X'\)</span> określone na przestrzeni probabilistycznej
+<span class="math inline">\(((0,1), \mathcal{B}or(0,1), {\rm Leb})\)</span> takie, że <span class="math inline">\(X_n \overset{d}= X'_n\)</span>, <span class="math inline">\(X \overset{d}= X'\)</span>
+(a więc w szczególności <span class="math inline">\(X'_n \overset{d}{\to} X'\)</span>) oraz
+<span class="math display">\[
+X'_n \to X'\quad \mbox{p.n.}
+\]</span></p>
+</div>
 
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">4</span> Twierdzenie de Moivre’a-Laplace’a</a></div>
-<div class="next"><a href="lista-11-momenty-wielowymiarowe-i-nier%C3%B3wno%C5%9Bci.html">Lista 11: Momenty wielowymiarowe i nierówności</a></div>
+<div class="prev"><a href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu"><span class="header-section-number">5</span> Zbieżność według rozkładu</a></li>
-<li><a class="nav-link" href="#s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87"><span class="header-section-number">5.1</span> Słaba zbieżność</a></li>
+<li><a class="nav-link" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
+<li><a class="nav-link" href="#rozr%C3%B3%C5%BCnianie-miar"><span class="header-section-number">24.1</span> Rozróżnianie miar</a></li>
+<li><a class="nav-link" href="#s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87"><span class="header-section-number">24.2</span> Słaba zbieżność</a></li>
+<li><a class="nav-link" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu-1"><span class="header-section-number">24.3</span> Zbieżność według rozkładu</a></li>
 </ul>
 
       <div class="book-extra">
@@ -184,7 +639,7 @@ Podsumowując, przedstawione narzędzia może podzielić na 3 kategorie:
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-14.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
