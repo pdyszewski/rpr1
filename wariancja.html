@@ -7,14 +7,14 @@
 <title>13 Wariancja | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
+<meta name="description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest zbyt skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="13 Wariancja | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
+<meta property="og:description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest zbyt skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="13 Wariancja | Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
+<meta name="twitter:description" content="Dla zmiennej losowej \(X\) jej wartość oczekiwana \(\mathbb{E}[X]\) jest średnią ważoną. W niektórych przypadkach, kiedy zmienna \(X\) jest zbyt skomplikowana, aby wydobyć jakiekolwiek ilościowe...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -101,10 +101,10 @@
 <span class="header-section-number">13</span> Wariancja<a class="anchor" aria-label="anchor" href="#wariancja"><i class="fas fa-link"></i></a>
 </h1>
 <p>Dla zmiennej losowej <span class="math inline">\(X\)</span> jej wartość oczekiwana <span class="math inline">\(\mathbb{E}[X]\)</span> jest średnią ważoną.
-W niektórych przypadkach, kiedy zmienna <span class="math inline">\(X\)</span> jest skomplikowana,
+W niektórych przypadkach, kiedy zmienna <span class="math inline">\(X\)</span> jest zbyt skomplikowana,
 aby wydobyć jakiekolwiek ilościowe informacje o <span class="math inline">\(X\)</span>,
 zmuszeni jesteśmy przybliżać <span class="math inline">\(X\)</span> przez jej średnią <span class="math inline">\(\mathbb{E}[X]\)</span>.
-Chcielibyśmy wtedy wiedzieć jaki jest bład takiego przybliżenia.
+Chcielibyśmy wtedy wiedzieć jaki jest błąd takiego przybliżenia.
 Do tego będzie nam służyła wariancja.
 Wariancję będziemy definiować dla zmiennych losowych, które są dostatecznie regularne.</p>
 <div class="definition">
@@ -150,14 +150,14 @@ jest nie większe niż
 <p>Przypomnijmy, że jeżeli funkcja <span class="math inline">\(\varphi\)</span> jest dwukrotnie różniczkowalna,
 to jest ona wypukła wtedy i tylko wtedy, gdy <span class="math inline">\(\varphi''(x) \geq 0\)</span>
 dla wszystkich <span class="math inline">\(x \in \mathbb{R}\)</span>.</p>
-<p>Zauważmy, że stosując nierówność Jensana do funkcji wypukłej <span class="math inline">\(\varphi(x)=x^2\)</span> otrzymujemy
+<p>Zauważmy, że stosując nierówność Jensena do funkcji wypukłej <span class="math inline">\(\varphi(x)=x^2\)</span> otrzymujemy
 <span class="math display">\[\begin{equation*}
     \mathbb{E}[|X|]^2 \leq \mathbb{E}\left[X^2 \right].
 \end{equation*}\]</span>
 Oznacza to, że każda zmienna całkowalna z kwadratem posiada wartość oczekiwaną.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-135" class="definition"><strong>Definicja 13.2  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową całkowalną z kwadratem. Liczbę
-<span class="math display">\[\mathbb{V}ar  [X] =\mathbb{E}[X-\mathbb{E} [X]]^2
+<span class="math display">\[\mathbb{V}ar  [X] =\mathbb{E}\left[(X-\mathbb{E} [X])^2 \right]
   \]</span> nazywamy <strong>wariancją</strong> zmiennej losowej <span class="math inline">\(X\)</span>.</p>
 <p>Pierwiastek z wariancji nazywamy <strong>odchyleniem standardowym</strong>
 <span class="math display">\[
@@ -431,7 +431,7 @@ oraz
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-20.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-23.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
