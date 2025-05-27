@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>11 Rozkłady warunkowe | Rachunek Prawdopodobieństwa 1R</title>
+<title>25 Funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami wartości oczekiwanej i rozkładu zmiennej losowej. Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie...">
+<meta name="description" content="Funkcja charakterystyczna nazywana jest też (np. w analizie) transformatą Fouriera. Można zapisać ją też w postaci \[ \phi_X(t) = \int_\R e^{its}\mu_X(ds), \] gdzie \(\mu_X\) jest rozkładem \(X\)....">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
-<meta property="og:title" content="11 Rozkłady warunkowe | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="25 Funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami wartości oczekiwanej i rozkładu zmiennej losowej. Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie...">
+<meta property="og:description" content="Funkcja charakterystyczna nazywana jest też (np. w analizie) transformatą Fouriera. Można zapisać ją też w postaci \[ \phi_X(t) = \int_\R e^{its}\mu_X(ds), \] gdzie \(\mu_X\) jest rozkładem \(X\)....">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11 Rozkłady warunkowe | Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami wartości oczekiwanej i rozkładu zmiennej losowej. Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie...">
+<meta name="twitter:title" content="25 Funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Funkcja charakterystyczna nazywana jest też (np. w analizie) transformatą Fouriera. Można zapisać ją też w postaci \[ \phi_X(t) = \int_\R e^{its}\mu_X(ds), \] gdzie \(\mu_X\) jest rozkładem \(X\)....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -60,7 +60,7 @@
 <li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
 <li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
-<li><a class="active" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
 <li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
 <li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
 <li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
@@ -74,6 +74,7 @@
 <li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
 <li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li><a class="" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
+<li><a class="active" href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -98,101 +99,25 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rozkłady-warunkowe" class="section level1" number="11">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="funkcje-charakterystyczne" class="section level1" number="25">
 <h1>
-<span class="header-section-number">11</span> Rozkłady warunkowe<a class="anchor" aria-label="anchor" href="#rozk%C5%82ady-warunkowe"><i class="fas fa-link"></i></a>
+<span class="header-section-number">25</span> Funkcje charakterystyczne<a class="anchor" aria-label="anchor" href="#funkcje-charakterystyczne"><i class="fas fa-link"></i></a>
 </h1>
-<p>Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami
-wartości oczekiwanej i rozkładu zmiennej losowej.
-Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
-Rozważać będziemy zdarzenie <span class="math inline">\(A\)</span> o dodatnim prawdopodobieństwie.
-Przypomnijmy, że definiujemy prawdopodobieństwo warunkowe pod warunkiem zajścia zdarzenia <span class="math inline">\(A\)</span> poprzez
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[B | A] = \frac{\mathbb{P}[A\cap B]}{\mathbb{P}[A]}, \qquad B \in \mathcal{F}.    
-\end{equation*}\]</span></p>
-<div class="definition">
-<p><span id="def:unlabeled-div-111" class="definition"><strong>Definicja 11.1  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym.
-Rozkładem warunkowym <span class="math inline">\(\vec{X}\)</span> pod warunkiem zajścia zdarzenia <span class="math inline">\(A\)</span>
-nazywamy miarę probabilistyczną <span class="math inline">\(\mu_{\vec{X}|A}\)</span> na <span class="math inline">\(\mathbb{R}^d\)</span>
-zadaną przez
-<span class="math display">\[\begin{equation*}
-    \mu_{\vec{X}|A}(B) = \mathbb{P} \left[\left. \vec{X} \in B \right| A  \right],
-    \qquad B \in \mathcal{B}or\left(\mathbb{R}^d\right).
-\end{equation*}\]</span></p>
-</div>
-<p>Zauważmy, że powyższa konstrukcja nie różni się znacząco od rozkładu <span class="math inline">\(\mu_{\vec{X}}\)</span>
-wektora losowego <span class="math inline">\(\vec{X}\)</span>. Można wręcz powiedzieć, że jest taka sama. Istotnie,
-zauważmy, że funkcja zbioru <span class="math inline">\(\mathbb{P}[\cdot |A]\)</span> jest miarą probabilistyczną na
-<span class="math inline">\((\Omega, \mathcal{F})\)</span>. Mamy w takim przypadku dwie miary probabilistyczne na <span class="math inline">\(\Omega\)</span>.
-Są nimi wyjściowe prawdopodobieństwo <span class="math inline">\(\mathbb{P}[\cdot]\)</span> oraz prawdopodobieństwo warunkowe
-<span class="math inline">\(\mathbb{P}[\cdot|A]\)</span>. Wektor losowy <span class="math inline">\(\vec{X} \colon \Omega \to \mathbb{R}^d\)</span> ma więc dwa
-opisy probabilistyczne (rozkłady) w zależności od tego która z przestrzeni probabilistycznych
-<span class="math display">\[\begin{equation*}
-    (\Omega, \mathcal{F}, \mathbb{P}), \qquad (\Omega, \mathcal{F}, \mathbb{P}[\cdot | A])
-\end{equation*}\]</span>
-jest aktualnie rozważana. Oznacza to, że wszystkie związki między
-<span class="math inline">\(\mathbb{P}\)</span> a <span class="math inline">\(\mu_{\vec{X}}\)</span> zachodzą też między <span class="math inline">\(\mathbb{P}[\cdot|A]\)</span> a <span class="math inline">\(\mu_{\vec{X}|A}\)</span>.
-Jednym z najczęściej spotykanych przykładów jest związek między wartością oczekiwaną
-a całką względem rozkładu.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-112" class="definition"><strong>Definicja 11.2  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową posiadającą wartość oczekiwaną.
-Warunkową wartością oczekiwaną pod warunkiem zajścia zdarzenia <span class="math inline">\(A\)</span>
-nazywamy
-<span class="math display">\[\begin{equation*}
-    \mathbb{E}[X | A] = \int_\Omega X(\omega) \mathbb{P}[\mathrm{d}\omega |A].
-\end{equation*}\]</span></p>
-</div>
-<p>Według powyższej definicji <span class="math inline">\(\mathbb{E}[X|A]\)</span> jest po prostu całką z funkcji <span class="math inline">\(X\)</span> względem
-miary <span class="math inline">\(\mathbb{P}[\cdot |A]\)</span>. Oznacza to, że dla dowolnej
-funkcji borelowskiej <span class="math inline">\(\varphi \colon \mathbb{R} \to \mathbb{R}\)</span> zachodzi
-<span class="math display">\[\begin{equation*}
-    \mathbb{E} [\varphi(X) | A] = \int_\mathbb{R} \varphi(s) \mu_{X|A}(\mathrm{d}s).
-\end{equation*}\]</span>
-Powyższa dyskusja pokazuje, że pod kątem teoretycznym rozkłady warunkowe mają
-taką samą naturę jak zwykłe rozkłady poznane wcześniej.
-W praktyce jednak operacja warunkowania istotnie zmienia własności probabilistyczne zmiennych losowych.</p>
-<div class="example">
-<p><span id="exm:unlabeled-div-113" class="example"><strong>Przykład 11.1  </strong></span>Rzucamy nieskończenie wiele razy symetryczną monetą.
-Niech <span class="math inline">\(X\)</span> będzie liczbą rzutów potrzebnych do otrzymania pierwszego orła.
-Interesuje nas rozkład <span class="math inline">\(X\)</span> pod warunkiem zdarzenia <span class="math inline">\(A\)</span>, że w pierwszych <span class="math inline">\(n\)</span> rzutach pojawił
-się (co najmniej jeden) orzeł.
-Zauważmy najpierw, że <span class="math inline">\(A = \{ X \leq n\}\)</span>. Chcąc wyznaczyć rozkład <span class="math inline">\(X\)</span> wystarczy
-wyznaczyć prawdopodobieństwa zdarzeń <span class="math inline">\(\{X=k\}\)</span> względem prawdopodobieństwa warunkowego.
-Zauważmy, że
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[X \leq n] = 1-\mathbb{P}[X &gt; n] = 1-2^{-n}.
-\end{equation*}\]</span>
-Dla <span class="math inline">\(k \leq n\)</span> mamy
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[X =k | A] = \frac{2^{-k}}{1-2^{-n}}
-\end{equation*}\]</span>
-oraz <span class="math inline">\(\mathbb{P}[X =k | A] = 0\)</span> dla <span class="math inline">\(k&gt;n\)</span>.
-Dla porównania <span class="math inline">\(\mathbb{P}[X=k] = 2^{-k}\)</span>. Warunkowanie zmienia tylko
-prawdopodobieństwo o stałą na pierwszych <span class="math inline">\(n\)</span> liczbach naturalnych.</p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-114" class="example"><strong>Przykład 11.2  </strong></span>Ponownie rzucamy symetryczną monetą. Niech <span class="math inline">\(X\)</span> będzie liczbą rzutów potrzebną do otrzymania
-pierwszego orła. Tym razem niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że w pierwszych <span class="math inline">\(n\)</span> rzutach pojawił się
-dokładnie jeden orzeł.
-Wówczas
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[A] = n 2^{-n}.
-\end{equation*}\]</span>
-Dla <span class="math inline">\(k\leq n\)</span>,
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[X = k|A] = \frac{2^{-n}}{n2^{-n}} = \frac 1n.
-\end{equation*}\]</span>
-Tym razem warunkowanie całkowicie zmieniło charakter rozkładu. Rzeczywiście, pod warunkiem <span class="math inline">\(A\)</span>
-zmienna <span class="math inline">\(X\)</span> ma rozkład jednostajny na <span class="math inline">\([n] = \{1, 2, \ldots , n\}\)</span>.</p>
-</div>
+Funkcja charakterystyczna nazywana jest też (np. w analizie) transformatą Fouriera. Można zapisać ją też w postaci
+<span class="math display">\[
+\phi_X(t) = \int_\R e^{its}\mu_X(ds),
+\]</span> gdzie <span class="math inline">\(\mu_X\)</span> jest rozkładem <span class="math inline">\(X\)</span>. Powyższa formuła oznacza transformatę Fouriera miary <span class="math inline">\(\mu_X\)</span>.
+<p>Warto wyjaśnić dlaczego funkcje charakterystyczne będą dla nas przydatne. Wynika to m.in. z powyższego twierdzenia. Chcemy badać sumy niezależnych zmiennych losowych. Ich rozkłady są trudne do obliczenia (wyraziliśmy je wcześniej w terminach splotów). Zauważmy jednak, że na poziomie funkcji charakterystycznych jest to po prostu iloczyn funkcji. Okazuje się, że wiele problemów dla sum zmiennych losowych po wyrażeniu ich w terminach funkcji charakterystycznych staje się znacznie łatwiejszych do przeanalizowania. To jest zjawisko, które pojawia się w wielu innych miejscach (w równaniach różniczkowych transformata Fouriera zamienia różniczkowanie na mnożenie przez wielomian, a splot funkcji na iloczyn ich transformat; w kombinatoryce sploty dwóch ciągów wygodniej analizuje się używając funkcji generujących momenty lub dyskretnej transformaty Fouriera). Musimy więc lepiej zrozumieć związki pomiędzy zmiennymi losowymi, a ich funkcjami charakterystycznymi. W szczególności powinniśmy wiedzieć, że funkcja charakterystyczna jednoznacznie wyznacza rozkład zmiennej losowej (a nawet można ją stosunkowo łatwo odwrócić). Potrzebujemy więc dalszych własności funkcji charakterystycznych.
+Powyższe uwagi nie ograniczają się jedynie do sum niezależnych zmiennych losowych. Jak zobaczymy funkcje charakterystyczne mają znacznie
+szersze zastosowania.</p>
 
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></div>
-<div class="next"><a href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></div>
+<div class="prev"><a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></div>
+<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#rozk%C5%82ady-warunkowe"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#funkcje-charakterystyczne"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
