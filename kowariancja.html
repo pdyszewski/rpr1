@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej. Opiszemy teraz jej dwuliniowy odpowiednik, który można traktować jak ilościowy opis zależności dwóch zmiennych losowych. Definicja...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="14 Kowariancja | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej. Opiszemy teraz jej dwuliniowy odpowiednik, który można traktować jak ilościowy opis zależności dwóch zmiennych losowych. Definicja...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Wariancja stanowi ilościowy opis rozproszenia rozkładu zmiennej. Opiszemy teraz jej dwuliniowy odpowiednik, który można traktować jak ilościowy opis zależności dwóch zmiennych losowych. Definicja...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -106,7 +106,7 @@
 Opiszemy teraz jej dwuliniowy odpowiednik, który można
 traktować jak ilościowy opis zależności dwóch zmiennych losowych.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-143" class="definition"><strong>Definicja 14.1  </strong></span>Niech <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> będą zmiennymi losowymi całkowalnymi z kwadratem.<br>
+<p><span id="def:unlabeled-div-144" class="definition"><strong>Definicja 14.1  </strong></span>Niech <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> będą zmiennymi losowymi całkowalnymi z kwadratem.<br>
 Liczbę
 <span class="math display">\[
   {\rm Cov}(X,Y) = \mathbb{E}\left[ (X-\mathbb{E}[X])(Y-\mathbb{E}[Y]) \right]
@@ -115,13 +115,13 @@ Liczbę
 </div>
 <p>Zauważmy, że przy powyższych założeniach kowariancja jest dobrze zdefiniowana.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-144" class="lemma"><strong>Lemma 14.1  (Nierówność Schwarza) </strong></span>Dla zmiennych losowych <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>,
+<p><span id="lem:unlabeled-div-145" class="lemma"><strong>Lemma 14.1  (Nierówność Schwarza) </strong></span>Dla zmiennych losowych <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span>,
 <span class="math display">\[
 \mathbb{E}[|XY|] \le \big( \mathbb{E}[X^2] \big)^{1/2}\big( \mathbb{E}[ Y^2] \big)^{1/2},
 \]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-145" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie.</p>
+<p><span id="unlabeled-div-146" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie.</p>
 <p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <p>Zastępując <span class="math inline">\(X\)</span> przez <span class="math inline">\(X -\mathbb{E}[X]\)</span> oraz <span class="math inline">\(Y\)</span> przez <span class="math inline">\(Y -\mathbb{E}[Y]\)</span> otrzymujemy
@@ -130,7 +130,7 @@ Liczbę
 \]</span>
 Jeżeli więc <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są całkowalne z kwadratem, to <span class="math inline">\(\mathrm{Cov}(X,Y)&lt;\infty\)</span>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-146" class="theorem"><strong>Twierdzenie 14.1  </strong></span>Niech <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> i <span class="math inline">\(Z\)</span> będą zmiennymi losowymi całkowalnymi z kwadratem</p>
+<p><span id="thm:unlabeled-div-147" class="theorem"><strong>Twierdzenie 14.1  </strong></span>Niech <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> i <span class="math inline">\(Z\)</span> będą zmiennymi losowymi całkowalnymi z kwadratem</p>
 <ol style="list-style-type: decimal">
 <li>
 <span class="math inline">\(\mathrm{ Cov}(X,Y) = \mathbb{E}[XY] -\mathbb{E}[X] \mathbb{E}[Y]\)</span>.</li>
@@ -146,11 +146,11 @@ Jeżeli więc <span class="math inline">\(X\)</span> i <span class="math inline"
 \end{equation*}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-147" class="proof"><em>Proof</em>. </span>Ćwiczenie.
+<p><span id="unlabeled-div-148" class="proof"><em>Proof</em>. </span>Ćwiczenie.
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-148" class="example"><strong>Przykład 14.1  </strong></span>Niech <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> będą takie, że dwuwymiarowy wektor losowy <span class="math inline">\(\vec{X}=(X,Y)\)</span>
+<p><span id="exm:unlabeled-div-149" class="example"><strong>Przykład 14.1  </strong></span>Niech <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> będą takie, że dwuwymiarowy wektor losowy <span class="math inline">\(\vec{X}=(X,Y)\)</span>
 ma dwuwymiarowy rozkład normalny z parametrami <span class="math inline">\(\vec{m}=(0,0)\)</span> oraz
 <span class="math display">\[\begin{equation*}
     \Sigma = \left( \begin{array}{cc} 1 &amp; \rho \\ \rho &amp; 1 \end{array} \right)
@@ -231,7 +231,7 @@ Otrzymujemy
 \end{equation*}\]</span></p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-149" class="remark"><em>Remark</em>. </span>Przy użyciu powyższych rachunków można pokazać, że zmienne losowe <span class="math inline">\(Z\)</span> i <span class="math inline">\(W)\)</span> dane przez
+<p><span id="unlabeled-div-150" class="remark"><em>Remark</em>. </span>Przy użyciu powyższych rachunków można pokazać, że zmienne losowe <span class="math inline">\(Z\)</span> i <span class="math inline">\(W)\)</span> dane przez
 <span class="math display">\[\begin{equation*}
 \left( \begin{array}{c} Z  \\ W \end{array} \right) = Q^T
 \left( \begin{array}{c} X  \\ Y \end{array} \right)
@@ -242,12 +242,12 @@ są niezależne. Jeżeli wylosujemy <span class="math inline">\(100\)</span> pun
 We współrzędnych <span class="math inline">\(zw\)</span> natomiast punkty układają się wzdłuż osi <span class="math inline">\(z\)</span>.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-150" class="remark"><em>Remark</em>. </span>Jeżeli <span class="math inline">\(X,Y\)</span> są niezależne, to <span class="math inline">\(\mathrm{Cov}(X,Y)=0\)</span> (wynika to z pkt. 1 powyższego twierdzenia),
+<p><span id="unlabeled-div-151" class="remark"><em>Remark</em>. </span>Jeżeli <span class="math inline">\(X,Y\)</span> są niezależne, to <span class="math inline">\(\mathrm{Cov}(X,Y)=0\)</span> (wynika to z pkt. 1 powyższego twierdzenia),
 ale nie jest prawdziwa odwrotna implikacja.
 Kowariancja mierzy jak bardzo zmienne losowe <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> są zależne.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-151" class="theorem"><strong>Twierdzenie 14.2  </strong></span>Jeżeli <span class="math inline">\(\mathrm{E}[ X_i^2]&lt;\infty\)</span> dla <span class="math inline">\(i=1,\ldots, n\)</span>, to
+<p><span id="thm:unlabeled-div-152" class="theorem"><strong>Twierdzenie 14.2  </strong></span>Jeżeli <span class="math inline">\(\mathrm{E}[ X_i^2]&lt;\infty\)</span> dla <span class="math inline">\(i=1,\ldots, n\)</span>, to
 <span class="math display">\[
   \mathbb{V}ar(X_1+\ldots+ X_n) = \sum_{k=1}^n \mathbb{V}ar X_k \\+ 2 \sum_{k&lt;l}{\rm  Cov}(X_k,X_l).
   \]</span>
@@ -257,7 +257,7 @@ W szczególności jeżeli <span class="math inline">\(X_i\)</span> są wzajemnie
   \]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-152" class="proof"><em>Proof</em>. </span>Teza wynika z bezpośredniego rachunku. Mamy
+<p><span id="unlabeled-div-153" class="proof"><em>Proof</em>. </span>Teza wynika z bezpośredniego rachunku. Mamy
 <span class="math display">\[\begin{align*}
   &amp;\mathbb{V}ar(X_1+\ldots+ X_n)    \\
   = &amp; \mathbb{E}\Big[  X_1+\ldots + X_n - \mathbb{E}\big[X_1+\ldots + X_n \big]  \Big]^2\\
@@ -269,7 +269,7 @@ W szczególności jeżeli <span class="math inline">\(X_i\)</span> są wzajemnie
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-153" class="example"><strong>Przykład 14.2  </strong></span>Niech <span class="math inline">\(\sigma\)</span> będzie losową permutacją liczb <span class="math inline">\(1,\ldots,n\)</span> i niech
+<p><span id="exm:unlabeled-div-154" class="example"><strong>Przykład 14.2  </strong></span>Niech <span class="math inline">\(\sigma\)</span> będzie losową permutacją liczb <span class="math inline">\(1,\ldots,n\)</span> i niech
 <span class="math inline">\(X\)</span> oznacza liczbę punktów stałych <span class="math inline">\(\sigma\)</span>. Szukamy <span class="math inline">\(\mathbb{V}ar [X]\)</span>.</p>
 <p>Niech <span class="math display">\[X_i = \left\{\begin{array}{cc}
                  1 &amp; \mbox{ jeżeli $i$ jest punktem  stałym} \\
@@ -312,7 +312,7 @@ Wówczas z powyższego twierdzenia
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-27.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Definicja 10.1 Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną. Niech \(d \in \mathbb{N}\). \(d\)-wymiarowym Wektorem losowym nazywamy dowolną funkcję mierzalną...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="10 Wektory losowe | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Definicja 10.1 Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną. Niech \(d \in \mathbb{N}\). \(d\)-wymiarowym Wektorem losowym nazywamy dowolną funkcję mierzalną...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Definicja 10.1 Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie przestrzenią probabilistyczną. Niech \(d \in \mathbb{N}\). \(d\)-wymiarowym Wektorem losowym nazywamy dowolną funkcję mierzalną...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -103,7 +103,7 @@
 <span class="header-section-number">10</span> Wektory losowe<a class="anchor" aria-label="anchor" href="#wektory-losowe"><i class="fas fa-link"></i></a>
 </h1>
 <div class="definition">
-<p><span id="def:unlabeled-div-93" class="definition"><strong>Definicja 10.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
+<p><span id="def:unlabeled-div-94" class="definition"><strong>Definicja 10.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
 Niech <span class="math inline">\(d \in \mathbb{N}\)</span>. <span class="math inline">\(d\)</span>-wymiarowym
 <strong>Wektorem losowym</strong>
 nazywamy dowolną funkcję mierzalną <span class="math inline">\(\vec{X}: (\Omega, \mathcal{F}) \to (\mathbb{R}^d, \mathcal{B}or(\mathbb{R}^d)\)</span>.</p>
@@ -123,12 +123,12 @@ każdego <span class="math inline">\(k\leq d\)</span>. Istotnie, wystarczy zauwa
 \end{equation*}\]</span>
 jako przekrój skończonej liczby zdarzeń.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-94" class="example"><strong>Przykład 10.1  </strong></span>Wylosowano 13 kart z 52.
+<p><span id="exm:unlabeled-div-95" class="example"><strong>Przykład 10.1  </strong></span>Wylosowano 13 kart z 52.
 Niech <span class="math inline">\(X_1\)</span> oznacza liczbę pików, a <span class="math inline">\(X_2\)</span> liczbę kierów.
 Wówczas <span class="math inline">\(\vec{X}=(X_1,X_2)\)</span> jest 2-wymiarowym wektorem losowym.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-95" class="example"><strong>Przykład 10.2  </strong></span>Losujemy punkt z kwadratu <span class="math inline">\([0,1]^2\)</span>. Dla <span class="math inline">\(\omega \in [0,1]^2\)</span> niech <span class="math inline">\(X_1\)</span> będzie odległością
+<p><span id="exm:unlabeled-div-96" class="example"><strong>Przykład 10.2  </strong></span>Losujemy punkt z kwadratu <span class="math inline">\([0,1]^2\)</span>. Dla <span class="math inline">\(\omega \in [0,1]^2\)</span> niech <span class="math inline">\(X_1\)</span> będzie odległością
 wylosowanego punktu od lewej krawędzi kwadratu. Wtedy <span class="math inline">\(X_1(\omega) = \omega_1\)</span> dla <span class="math inline">\(\omega=(\omega_1, \omega_2)\)</span>.
 Niech <span class="math inline">\(X_2\)</span> będzie odległością od punktu <span class="math inline">\((0,0)\)</span>. Wówczas <span class="math inline">\(X_2(\omega) = \sqrt{\omega_1^2+\omega_2^2}\)</span>.
 Wówczas <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> jest wektorem losowym.</p>
@@ -140,7 +140,7 @@ Wówczas <span class="math inline">\(\vec{X}=(X_1, X_2)\)</span> jest wektorem l
 <li>jeżeli <span class="math inline">\(\phi:\mathbb{R}^d\to \mathbb{R}^k\)</span> jest mierzalne, to <span class="math inline">\(\phi(\vec{X})\)</span> jest <span class="math inline">\(k\)</span>-wymiarowym wektorem losowym.</li>
 </ul>
 <div class="definition">
-<p><span id="def:unlabeled-div-96" class="definition"><strong>Definicja 10.2  </strong></span><strong>Rozkładem</strong> <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(\vec{X}=(X_1, \ldots , X_d)\)</span>
+<p><span id="def:unlabeled-div-97" class="definition"><strong>Definicja 10.2  </strong></span><strong>Rozkładem</strong> <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(\vec{X}=(X_1, \ldots , X_d)\)</span>
 nazywamy miarę probabilistyczną
 <span class="math inline">\(\mu_{\vec{X}}\)</span> na <span class="math inline">\(\mathbb{R}^d\)</span>
 zadaną wzorem
@@ -152,7 +152,8 @@ zadaną wzorem
 Rozkład <span class="math inline">\(\mu_X\)</span> nazywamy rozkładem łącznym zmiennych losowych <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2, \ldots , X_d\)</span>.</p>
 </div>
 <p>Niech <span class="math inline">\(\mu\)</span> będzie dowolną miarą probabilistyczną na <span class="math inline">\(\mathbb{R}^d\)</span>.
-Wówczas <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})  = (\mathbb{R}^d, \mathcal{B}or(\mathbb{R}^d),\mu_X)\)</span> jest przestrzenią probabilistyczną.
+Wówczas <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})
+  = (\mathbb{R}^d, \mathcal{B}or(\mathbb{R}^d),\mu_X)\)</span> jest przestrzenią probabilistyczną.
 Jeżeli zdefiniujemy <span class="math inline">\(\vec{X} \colon \Omega \to \mathbb{R}^d\)</span> poprzez <span class="math inline">\(\vec{X}(\omega) = \omega\)</span>,
 to rozkład wektora <span class="math inline">\(\vec{X}\)</span> to
 <span class="math display">\[\begin{equation*}
@@ -161,7 +162,7 @@ to rozkład wektora <span class="math inline">\(\vec{X}\)</span> to
 Oznacza to, że dowolna miara probabilistyczna <span class="math inline">\(\mu\)</span>
 na <span class="math inline">\(\mathbb{R}^d\)</span> jest rozkładem pewnego wektora losowego <span class="math inline">\(\vec{X}\)</span>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-97" class="definition"><strong>Definicja 10.3  </strong></span><span class="math inline">\(d\)</span>-wymiarowy wektor losowy <span class="math inline">\(X\)</span> ma rozkład dyskretny, jeżeli istnieje przeliczalny zbiór <span class="math inline">\(S\subseteq \mathbb{R}^d\)</span>
+<p><span id="def:unlabeled-div-98" class="definition"><strong>Definicja 10.3  </strong></span><span class="math inline">\(d\)</span>-wymiarowy wektor losowy <span class="math inline">\(X\)</span> ma rozkład dyskretny, jeżeli istnieje przeliczalny zbiór <span class="math inline">\(S\subseteq \mathbb{R}^d\)</span>
 taki, że <span class="math inline">\(\mu_X(S)=1\)</span>.</p>
 </div>
 <p>W takim przypadku zbiór atomów
@@ -175,7 +176,7 @@ można ustawić w ciąg <span class="math inline">\(S = \{s_j\}_{j \in \mathbb{N
 Wektor losowy <span class="math inline">\(X=(X_1, \ldots, X_d)\)</span> ma rozkład dyskretny wtedy i tylko wtedy, dla każdego <span class="math inline">\(j\leq d\)</span>
 zmienna losowa <span class="math inline">\(X_j\)</span> ma rozkład dyskretny.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-98" class="example"><strong>Przykład 10.3  </strong></span>W urnie są 2 kule czerwone, 5 białych i 3 zielone. Wybieramy losowo 3 kule (jednocześnie). Niech <span class="math inline">\(X_1\)</span> oznacza liczbę kul białych, a <span class="math inline">\(X_2\)</span> liczbę kul czerwonych. Wówczas <span class="math inline">\((X_1,X_2)\)</span> jest 2-wymiarową zmienną losową i ma rozkład dyskretny:
+<p><span id="exm:unlabeled-div-99" class="example"><strong>Przykład 10.3  </strong></span>W urnie są 2 kule czerwone, 5 białych i 3 zielone. Wybieramy losowo 3 kule (jednocześnie). Niech <span class="math inline">\(X_1\)</span> oznacza liczbę kul białych, a <span class="math inline">\(X_2\)</span> liczbę kul czerwonych. Wówczas <span class="math inline">\((X_1,X_2)\)</span> jest 2-wymiarową zmienną losową i ma rozkład dyskretny:
 <span class="math display">\[
   \begin{array}{c|c|c|c|c}
     X_1\setminus X_2 &amp; 0 &amp; 1 &amp; 2 &amp; \mathbb{P}[X_1 = x] \\[2mm] \hline
@@ -195,7 +196,7 @@ Mając dany powyższy rozkład możemy obliczyć:
 </div>
 <p>Aby badać rozkłady wektorów losowych, które nie są dyskretne musimy wprowadzić dodatkowe pojęcie.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-99" class="definition"><strong>Definicja 10.4  </strong></span><strong>Dystrybuanta</strong> <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(X=(X_1,\ldots,X_d)\)</span> jest to funkcja
+<p><span id="def:unlabeled-div-100" class="definition"><strong>Definicja 10.4  </strong></span><strong>Dystrybuanta</strong> <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(X=(X_1,\ldots,X_d)\)</span> jest to funkcja
 <span class="math inline">\(F:\mathbb{R}^d\mapsto [0,1]\)</span> zadana wzorem
 <span class="math display">\[\begin{multline*}
   F(t_1,t_2,\ldots, t_d) = \mu\big(
@@ -205,7 +206,7 @@ Mając dany powyższy rozkład możemy obliczyć:
   \end{multline*}\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-100" class="theorem"><strong>Twierdzenie 10.1  </strong></span>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą <span class="math inline">\(d\)</span>-wymiarowej zmiennej losowej <span class="math inline">\(\vec{X}\)</span>. Wówczas</p>
+<p><span id="thm:unlabeled-div-101" class="theorem"><strong>Twierdzenie 10.1  </strong></span>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą <span class="math inline">\(d\)</span>-wymiarowej zmiennej losowej <span class="math inline">\(\vec{X}\)</span>. Wówczas</p>
 <ol style="list-style-type: decimal">
 <li>jeżeli <span class="math inline">\(x_i\to -\infty\)</span> dla pewnego <span class="math inline">\(i\)</span>, to <span class="math inline">\(F(x_1,\ldots, x_d)\to 0\)</span>;</li>
 <li>jeżeli <span class="math inline">\(x_i\to +\infty\)</span> dla każdego <span class="math inline">\(i\)</span>, to <span class="math inline">\(F(x_1,\ldots, x_d)\to 1\)</span>;</li>
@@ -213,7 +214,7 @@ Mając dany powyższy rozkład możemy obliczyć:
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-101" class="proof"><em>Proof</em>. </span>Pierwsze dwa punkty wynikają z ciągłości miary. Trzeci jest zastosowaniem Lematu o <span class="math inline">\(\pi\)</span> i <span class="math inline">\(\lambda\)</span> układach.
+<p><span id="unlabeled-div-102" class="proof"><em>Proof</em>. </span>Pierwsze dwa punkty wynikają z ciągłości miary. Trzeci jest zastosowaniem Lematu o <span class="math inline">\(\pi\)</span> i <span class="math inline">\(\lambda\)</span> układach.
 Ustalmy <span class="math inline">\(i \leq d\)</span>. Zauważmy, że
 <span class="math display">\[\begin{equation*}
     \bigcap_{n\in \mathbb{N}}
@@ -259,7 +260,7 @@ W szczególności oznacza to, że dla dwuwymiarowej dystrybuanty prawa strona je
 dla każdych
 <span class="math inline">\(a &lt; b\)</span> oraz <span class="math inline">\(c &lt; d\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-102" class="example"><strong>Przykład 10.4  </strong></span></p>
+<p><span id="exm:unlabeled-div-103" class="example"><strong>Przykład 10.4  </strong></span></p>
 Losujemy punkt z kwadratu <span class="math inline">\([0,1]^2\)</span>. Dla <span class="math inline">\(\omega \in [0,1]^2\)</span> niech <span class="math inline">\(X_1\)</span>
 będzie odległością
 wylosowanego punktu od przekątnej kwadratu łączącej wierzchołki
@@ -344,7 +345,7 @@ parent.update(id);
 </div>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-103" class="definition"><strong>Definicja 10.5  </strong></span><span class="math inline">\(d\)</span>-wymiarowy wektor <span class="math inline">\(\vec{X}\)</span> ma rozkład absolutnie ciągły, jeżeli istnieje funkcja borelowska
+<p><span id="def:unlabeled-div-104" class="definition"><strong>Definicja 10.5  </strong></span><span class="math inline">\(d\)</span>-wymiarowy wektor <span class="math inline">\(\vec{X}\)</span> ma rozkład absolutnie ciągły, jeżeli istnieje funkcja borelowska
 <span class="math inline">\(f_\vec{X}:\mathbb{R}^d \mapsto [0,\infty)\)</span>
 taka, że
 <span class="math display">\[
@@ -364,7 +365,7 @@ Ponadto, jeżeli <span class="math inline">\(F\in C^d(\mathbb{R}^d)\)</span>, to
 każdy <span class="math inline">\(X_k\)</span> dla <span class="math inline">\(k \leq d\)</span> ma rozkład absolutnie ciągły. Implikacja przeciwna nie jest
 jednak prawdziwa.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-104" class="example"><strong>Przykład 10.5  </strong></span>Niech <span class="math inline">\(\Omega = [0,1]\)</span> z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów borelowskich i jednowymiarową miara Lebesgue’a.
+<p><span id="exm:unlabeled-div-105" class="example"><strong>Przykład 10.5  </strong></span>Niech <span class="math inline">\(\Omega = [0,1]\)</span> z <span class="math inline">\(\sigma\)</span>-ciałem zbiorów borelowskich i jednowymiarową miara Lebesgue’a.
 Rozważmy <span class="math inline">\(X_1(\omega)=\omega\)</span> oraz <span class="math inline">\(X_2(\omega) = 1-\omega\)</span>.
 Wówczas <span class="math inline">\(\vec{X} = (X_1, X_2)\)</span> ma rozkład skupiony na nieprzeliczalnym zbiorze
 o płaskiej mierze Lebesgue’a zero
@@ -373,7 +374,7 @@ o płaskiej mierze Lebesgue’a zero
 \end{equation*}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-105" class="example"><strong>Przykład 10.6  </strong></span>Niech <span class="math inline">\(S\)</span> będzie dowolnym mierzalnym i ograniczonym podzbiorem <span class="math inline">\(\mathbb{R}^2\)</span>,
+<p><span id="exm:unlabeled-div-106" class="example"><strong>Przykład 10.6  </strong></span>Niech <span class="math inline">\(S\)</span> będzie dowolnym mierzalnym i ograniczonym podzbiorem <span class="math inline">\(\mathbb{R}^2\)</span>,
 wtedy jego losowy punkt <span class="math inline">\(\vec{X}=(X_1,X_2)\)</span> (wybrany jednostajnie
 względem miary Lebesgue’a) jest 2-wymiarową zmienną losową. Mamy wówczas
 <span class="math display">\[
@@ -384,7 +385,7 @@ względem miary Lebesgue’a) jest 2-wymiarową zmienną losową. Mamy wówczas
 <h2>Wielowymiarowy rozkład normalny<a class="anchor" aria-label="anchor" href="#wielowymiarowy-rozk%C5%82ad-normalny"><i class="fas fa-link"></i></a>
 </h2>
 <div class="example">
-<p><span id="exm:unlabeled-div-106" class="example"><strong>Przykład 10.7  </strong></span>Powiemy, że <span class="math inline">\(d\)</span>-wymiarowy wektor <span class="math inline">\(\vec{X}\)</span> ma <span class="math inline">\(d\)</span>-wymiarowy standardowy rozkład normalny, jeżeli
+<p><span id="exm:unlabeled-div-107" class="example"><strong>Przykład 10.7  </strong></span>Powiemy, że <span class="math inline">\(d\)</span>-wymiarowy wektor <span class="math inline">\(\vec{X}\)</span> ma <span class="math inline">\(d\)</span>-wymiarowy standardowy rozkład normalny, jeżeli
 jego rozkład jest absolutnie ciągły z gęstością
 <span class="math display">\[\begin{equation*}
     f_{\vec{X}}(s_1, \ldots, s_d) =
@@ -507,7 +508,7 @@ Zauważmy jedynie teraz, że <span class="math inline">\(\vec{Y}\)</span> powsta
 i przesunięcie. To samo będzie tyczyło się związku między <span class="math inline">\(f_\vec{X}\)</span> oraz <span class="math inline">\(f_\vec{Y}\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-107" class="example"><strong>Przykład 10.8  </strong></span>Rozważmy poprzedni przykład dla macierzy <span class="math inline">\(A\)</span> zadanej przez
+<p><span id="exm:unlabeled-div-108" class="example"><strong>Przykład 10.8  </strong></span>Rozważmy poprzedni przykład dla macierzy <span class="math inline">\(A\)</span> zadanej przez
 <span class="math display">\[\begin{equation*}
     A = \left( \begin{array}{cc} 1 &amp; 1 \\ 0 &amp; 1 \end{array}\right).
 \end{equation*}\]</span>
@@ -585,13 +586,13 @@ zauważymy, że układają się one wzdłuż prostej <span class="math inline">\
 <h2>Rozkłady brzegowe<a class="anchor" aria-label="anchor" href="#rozk%C5%82ady-brzegowe"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-108" class="definition"><strong>Definicja 10.6  </strong></span>Niech <span class="math inline">\(X=(X_1,\ldots, X_d)\)</span> będzie <span class="math inline">\(d\)</span>-wymiarową zmienną losową.
+<p><span id="def:unlabeled-div-109" class="definition"><strong>Definicja 10.6  </strong></span>Niech <span class="math inline">\(X=(X_1,\ldots, X_d)\)</span> będzie <span class="math inline">\(d\)</span>-wymiarową zmienną losową.
 Wówczas dla każdego <span class="math inline">\(k\le d\)</span>, rozkład <span class="math inline">\(\mu_{X_k}\)</span> nazywamy rozkładem brzegowym <span class="math inline">\(\mu_X\)</span>.</p>
 </div>
 <p>Rozkłady brzegowe nie wyznaczają jednoznacznie rozkładu łącznego (poza pewnymi szczególnymi sytuacjami). To znaczy, może się
 zdarzyć, że jeżeli dane są cztery zmienne losowe <span class="math inline">\(X_1,X_2,Y_1, Y_2\)</span>, takie, że <span class="math inline">\(X_1\)</span> i <span class="math inline">\(Y_1\)</span> mają takie same rozkłady oraz <span class="math inline">\(X_2\)</span> i <span class="math inline">\(Y_2\)</span> mają takie same rozkłady, ale <span class="math inline">\((X_1,X_2)\)</span> i <span class="math inline">\((Y_1,Y_2)\)</span> mają różne rozkłady.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-109" class="example"><strong>Przykład 10.9  </strong></span>Losujemy punkt z odcinka <span class="math inline">\([0,1]\)</span>. Dla wylosowanej liczby <span class="math inline">\(\omega \in \Omega = [0,1]\)</span> niech
+<p><span id="exm:unlabeled-div-110" class="example"><strong>Przykład 10.9  </strong></span>Losujemy punkt z odcinka <span class="math inline">\([0,1]\)</span>. Dla wylosowanej liczby <span class="math inline">\(\omega \in \Omega = [0,1]\)</span> niech
 <span class="math inline">\(X_1(\omega) = \omega\)</span> i <span class="math inline">\(X_2(\omega)=1-\omega\)</span>. Wówczas wektor losowy <span class="math inline">\(\vec{X} = (X_1, X_2)\)</span>
 przyjmuje wartości w zbiorze
 <span class="math display">\[\begin{equation*}
@@ -614,7 +615,7 @@ Skoro symetria względem <span class="math inline">\(x=1/2\)</span> jest izometr
 Jest to również rozkład jednostajny na <span class="math inline">\([0,1]\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-110" class="example"><strong>Przykład 10.10  </strong></span>Losujemy punkt z kwadratu jednostkowego <span class="math inline">\([0,1]^2\)</span>. Dla <span class="math inline">\(\omega = (\omega_1, \omega_2) \in \Omega = [0,1]^2\)</span>
+<p><span id="exm:unlabeled-div-111" class="example"><strong>Przykład 10.10  </strong></span>Losujemy punkt z kwadratu jednostkowego <span class="math inline">\([0,1]^2\)</span>. Dla <span class="math inline">\(\omega = (\omega_1, \omega_2) \in \Omega = [0,1]^2\)</span>
 niech <span class="math inline">\(X_1(\omega) = \omega_1\)</span>, <span class="math inline">\(X_2(\omega) = \omega_2\)</span>. Wówczas rozkład wektora losowego
 <span class="math inline">\(\vec{X} = (X_1, X_2)\)</span> to płaska miara Lebesgue’a <span class="math inline">\(\lambda_2\)</span> ograniczona do <span class="math inline">\([0,1]^2\)</span>.
 Zauważmy, że z wagi na symetrię rozkłady brzegowe są takie same.
@@ -655,7 +656,7 @@ Wynika z tego, że rozkłady brzegowe nie determinują rozkładu łącznego.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-27.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

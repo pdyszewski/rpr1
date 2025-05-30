@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy rozwijać...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="6 Zmienne losowe i ich rozkłady | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy rozwijać...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Wróćmy na chwilę do paradoksu Bertranda. Wyposażeni w aparat zdobyty do tej pory jesteśmy w stanie dokładniej przeanalizować ten przykład. Zobaczymy też, w którym kierunku powinniśmy rozwijać...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -155,7 +155,7 @@ będziemy chcieli analizować funkcje <span class="math inline">\(X \colon \Omeg
 prawdopodobieństwa <span class="math inline">\(\mathbb{P}\)</span>. Oznacza to, że od funkcji <span class="math inline">\(X\)</span> będziemy wymagali
 odpowiedniej regularności.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-57" class="definition"><strong>Definicja 6.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
+<p><span id="def:unlabeled-div-58" class="definition"><strong>Definicja 6.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span>
 będzie przestrzenią probabilistyczną. <strong>Zmienna losowa</strong> jest to dowolna mierzalna funkcja
 <span class="math inline">\(X:(\Omega, \mathcal{F})\to (\mathbb{R}, \mathcal{B}or(\mathbb{R}))\)</span>.</p>
 </div>
@@ -165,20 +165,20 @@ dla każdego <span class="math inline">\(A\in \mathcal{B}or(\mathbb{R})\)</span>
 X^{-1}(A)= \{ \omega \in \Omega \: : \: X(\omega) \in A \}\in \mathcal{F}.
 \]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-58" class="example"><strong>Przykład 6.1  </strong></span>Jeżeli rzucamy pięć razy kostką, to
+<p><span id="exm:unlabeled-div-59" class="example"><strong>Przykład 6.1  </strong></span>Jeżeli rzucamy pięć razy kostką, to
 <span class="math inline">\(\Omega = \{(i_1,\ldots, i_5), i_j \in \{1,2,\ldots, 6\}\}\)</span>, <span class="math inline">\(\omega = (\omega_1,\ldots, \omega_5)\)</span>.
 Jeśli chcemy obliczyć sumę wyników (nie interesują nas konkretne wyniki rzutów, ale suma oczek). Wówczas
 rozważamy <span class="math inline">\(X(\omega) = \omega_1+\ldots + \omega_5\)</span>. Wtedy <span class="math inline">\(X \colon \Omega \to \mathbb{R}\)</span> jest zmienną losową.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-59" class="remark"><em>Remark</em>. </span>Jeżeli <span class="math inline">\(\Omega\)</span> jest przeliczalny i <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>, to każde odwzorowanie
+<p><span id="unlabeled-div-60" class="remark"><em>Remark</em>. </span>Jeżeli <span class="math inline">\(\Omega\)</span> jest przeliczalny i <span class="math inline">\(\mathcal{F} = 2^\Omega\)</span>, to każde odwzorowanie
 <span class="math inline">\(X:\Omega\mapsto \mathbb{R}\)</span> jest zmienną losową (jeżeli <span class="math inline">\(\mathcal{F}\not = 2^\Omega\)</span> to nie musi być już prawdą).</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-60" class="remark"><em>Remark</em>. </span><span class="math inline">\(X\)</span> jest zmienną losową jeżeli dla każdego <span class="math inline">\(t\in \mathbb{R}\)</span>, <span class="math inline">\(X^{-1}((-\infty,t])\in \mathcal{F}\)</span>.</p>
+<p><span id="unlabeled-div-61" class="remark"><em>Remark</em>. </span><span class="math inline">\(X\)</span> jest zmienną losową jeżeli dla każdego <span class="math inline">\(t\in \mathbb{R}\)</span>, <span class="math inline">\(X^{-1}((-\infty,t])\in \mathcal{F}\)</span>.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-61" class="theorem"><strong>Twierdzenie 6.1  </strong></span>Jeżeli <span class="math inline">\(X_1,X_2,\ldots\)</span> są zmiennymi losowymi, to</p>
+<p><span id="thm:unlabeled-div-62" class="theorem"><strong>Twierdzenie 6.1  </strong></span>Jeżeli <span class="math inline">\(X_1,X_2,\ldots\)</span> są zmiennymi losowymi, to</p>
 <ul>
 <li>
 <span class="math inline">\(X_1+X_2\)</span>, <span class="math inline">\(X_1-X_2\)</span>, <span class="math inline">\(X_1\cdot X_2\)</span>, <span class="math inline">\(X_1/X_2\)</span> (<span class="math inline">\(X_2\not=0\)</span>) są zmiennymi losowymi.</li>
@@ -188,7 +188,7 @@ rozważamy <span class="math inline">\(X(\omega) = \omega_1+\ldots + \omega_5\)<
 </ul>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-62" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie.</p>
+<p><span id="unlabeled-div-63" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie.</p>
 </div>
 </div>
 <div id="rozkłady-zmiennych-losowych" class="section level2 unnumbered">
@@ -200,7 +200,7 @@ na reprezentację ich na pewnej wspólnej przestrzeni. Tak się akurat składa, 
 funkcje mają takie same przeciwdziedziny. Jeżeli <span class="math inline">\(X\)</span> jest zmienną losową, to można jej użyć do
 przetransportowania miary <span class="math inline">\(\mathbb{P}\)</span> na <span class="math inline">\((\mathbb{R}, \mathcal{B}or(\mathbb{R}))\)</span>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-63" class="definition"><strong>Definicja 6.2  </strong></span>Miarę <span class="math inline">\(\mu_X\)</span> na <span class="math inline">\((\mathbb{R},\mathcal{B}or(\mathbb{R}))\)</span> zdefiniowaną wzorem
+<p><span id="def:unlabeled-div-64" class="definition"><strong>Definicja 6.2  </strong></span>Miarę <span class="math inline">\(\mu_X\)</span> na <span class="math inline">\((\mathbb{R},\mathcal{B}or(\mathbb{R}))\)</span> zdefiniowaną wzorem
 <span class="math display">\[
   \mu_X(B) = \mathbb{P}[X\in B] = \mathbb{P}\left[ \{\omega\in \Omega:\; X(\omega)\in B\} \right] = \mathbb{P}[X^{-1}(B)]
   \]</span> dla każdego <span class="math inline">\(B\in \mathcal{B}or(\mathbb{R})\)</span>, nazywamy <strong>rozkładem</strong> zmiennej losowej <span class="math inline">\(X\)</span>.</p>
@@ -209,7 +209,7 @@ przetransportowania miary <span class="math inline">\(\mathbb{P}\)</span> na <sp
 To nie jest już abstrakcyjna przestrzeń <span class="math inline">\(\Omega\)</span>, ale
 przestrzeń o której sporo wiemy (dysponujemy narzędziami analitycznymi, na <span class="math inline">\(\mathbb{R}\)</span> zachodzi twierdzenie Kołmogorowa).</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-64" class="example"><strong>Przykład 6.2  </strong></span>Wykonujemy <span class="math inline">\(n\)</span> prób Bernoulliego z prawdopodobieństwem sukcesu <span class="math inline">\(p\)</span> w pojedynczej próbie.
+<p><span id="exm:unlabeled-div-65" class="example"><strong>Przykład 6.2  </strong></span>Wykonujemy <span class="math inline">\(n\)</span> prób Bernoulliego z prawdopodobieństwem sukcesu <span class="math inline">\(p\)</span> w pojedynczej próbie.
 Niech <span class="math inline">\(S_n\)</span> będzie liczbą sukcesów. Wówczas
 <span class="math display">\[\begin{equation*}
     \mathbb{P}[S_n=k]=p_k={n \choose k}p^k(1-p)^{n-k}.
@@ -240,13 +240,13 @@ Powyższe stosuje się do każdej zmiennej losowej określonej na zbiorze przeli
 Aby móc w podobny sposób analizować zmienne losowe określone na większych przestrzeniach
 musimy wprowadzić dodatkowy aparat.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-65" class="definition"><strong>Definicja 6.3  </strong></span>Dystrybuantą zmiennej losowej <span class="math inline">\(X\)</span> nazywamy funkcję <span class="math inline">\(F:\; \mathbb{R} \to [0,1]\)</span> zadaną wzorem
+<p><span id="def:unlabeled-div-66" class="definition"><strong>Definicja 6.3  </strong></span>Dystrybuantą zmiennej losowej <span class="math inline">\(X\)</span> nazywamy funkcję <span class="math inline">\(F:\; \mathbb{R} \to [0,1]\)</span> zadaną wzorem
 <span class="math display">\[
   F(t) = \mathbb{P}[X\le t] = \mu_X\left((-\infty,t]\right).
   \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-66" class="example"><strong>Przykład 6.3  </strong></span>Rzucamy monetą. <span class="math inline">\(\Omega = \{O,R\}\)</span>, <span class="math inline">\(X(O)=1\)</span>, <span class="math inline">\(X(R) = -1\)</span>. Wtedy
+<p><span id="exm:unlabeled-div-67" class="example"><strong>Przykład 6.3  </strong></span>Rzucamy monetą. <span class="math inline">\(\Omega = \{O,R\}\)</span>, <span class="math inline">\(X(O)=1\)</span>, <span class="math inline">\(X(R) = -1\)</span>. Wtedy
 <span class="math display">\[
   F(t) = \mathbb{P}[X\le t] = \left\{
   \begin{array}{cc}
@@ -261,7 +261,8 @@ musimy wprowadzić dodatkowy aparat.</p>
 </div>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-67" class="example"><strong>Przykład 6.4  </strong></span>Losowa liczba z przedziału <span class="math inline">\([0,1]\)</span>: <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})  = ([0,1], \mathcal{B}or([0,1]), \lambda_1)\)</span>, <span class="math inline">\(X(\omega) = \omega\)</span>.
+<p><span id="exm:unlabeled-div-68" class="example"><strong>Przykład 6.4  </strong></span>Losowa liczba z przedziału <span class="math inline">\([0,1]\)</span>: <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})
+  = ([0,1], \mathcal{B}or([0,1]), \lambda_1)\)</span>, <span class="math inline">\(X(\omega) = \omega\)</span>.
 <span class="math display">\[
   F(t) = \mathbb{P}[X\le t] = \left\{
   \begin{array}{cc}
@@ -276,7 +277,7 @@ musimy wprowadzić dodatkowy aparat.</p>
 </div>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-68" class="example"><strong>Przykład 6.5  </strong></span>Rozważmy pierwszy sposób losowania w paradoksie Bertranda.
+<p><span id="exm:unlabeled-div-69" class="example"><strong>Przykład 6.5  </strong></span>Rozważmy pierwszy sposób losowania w paradoksie Bertranda.
 <span class="math display">\[
   F(t) = \mathbb{P}[X_1\le t] = \left\{
   \begin{array}{cc}
@@ -291,12 +292,12 @@ musimy wprowadzić dodatkowy aparat.</p>
 <div class="inline-figure"><img src="TIKZ/dystr3.svg" style="display: block; margin: auto;"></div>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-69" class="theorem"><strong>Twierdzenie 6.2  (Własności dystrybuanty) </strong></span>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą pewnej zmiennej losowej <span class="math inline">\(X\)</span>. Wówczas</p>
+<p><span id="thm:unlabeled-div-70" class="theorem"><strong>Twierdzenie 6.2  (Własności dystrybuanty) </strong></span>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą pewnej zmiennej losowej <span class="math inline">\(X\)</span>. Wówczas</p>
 <ol style="list-style-type: decimal">
 <li>
 <span class="math inline">\(F\)</span> jest niemalejąca.</li>
 <li>
-<span class="math inline">\(\lim_{t\to -\infty} F(t) = 0\)</span>, <span class="math inline">\(\lim_{t\to \infty} F(t) = 1\)</span>.</li>
+<span class="math inline">\(\lim_{t\to -\infty} F(t) = 0\)</span>, <span class="math inline">\(\lim_{t\to  \infty} F(t) = 1\)</span>.</li>
 <li>
 <span class="math inline">\(F\)</span> jest prawostronnie ciągła.</li>
 <li>dla dowolnego <span class="math inline">\(t\in \mathbb{R}\)</span> istnieje lewostronna granica
@@ -308,7 +309,7 @@ musimy wprowadzić dodatkowy aparat.</p>
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-70" class="proof"><em>Proof</em>. </span><strong>Punkt 1.</strong> Jeżeli <span class="math inline">\(t_1&lt;t_2\)</span>, to zachodzi inkluzja <span class="math inline">\((-\infty,t_1] \subset (-\infty, t_2]\)</span>. Wówczas:
+<p><span id="unlabeled-div-71" class="proof"><em>Proof</em>. </span><strong>Punkt 1.</strong> Jeżeli <span class="math inline">\(t_1&lt;t_2\)</span>, to zachodzi inkluzja <span class="math inline">\((-\infty,t_1] \subset (-\infty, t_2]\)</span>. Wówczas:
 <span class="math display">\[
 F(t_1) = \mu((-\infty,t_1]) \leq \mu((-\infty, t_2]) = F(t_2).
 \]</span></p>
@@ -340,14 +341,14 @@ Z twierdzenia o ciągłości otrzymujemy:
 <li>
 <span class="math inline">\(F\)</span> jest niemalejąca;</li>
 <li>
-<span class="math inline">\(\lim_{t\to -\infty} F(t) = 0\)</span>, <span class="math inline">\(\lim_{t\to \infty} F(t)\)</span> = 1;</li>
+<span class="math inline">\(\lim_{t\to -\infty} F(t) = 0\)</span>, <span class="math inline">\(\lim_{t\to  \infty} F(t)\)</span> = 1;</li>
 <li>
 <span class="math inline">\(F\)</span> jest prawostronnie ciągła;</li>
 </ol>
 <p>to <span class="math inline">\(F\)</span> jest dystrybuantą pewnego rozkładu.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-71" class="proof"><em>Proof</em>. </span>Naszym celem jest skonstruowanie przestrzeni probabilistycznej
+<p><span id="unlabeled-div-72" class="proof"><em>Proof</em>. </span>Naszym celem jest skonstruowanie przestrzeni probabilistycznej
 <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> oraz zmiennej losowej <span class="math inline">\(X\)</span> na niej określonej
 takiej, że
 <span class="math inline">\(F\)</span> jest dystrybuantą <span class="math inline">\(X\)</span>, tzn.
@@ -416,11 +417,11 @@ która jest miarą Lebesgue’a na <span class="math inline">\([0,1]\)</span>.</
 </div>
 <p>Powyższy wynik jest konsekwencją lematu o <span class="math inline">\(\pi-\lambda\)</span> układach zwanym też twierdzeniem Dynkina.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-72" class="definition"><strong>Definicja 6.4  </strong></span>Niepustą rodzinę <span class="math inline">\(\mathcal{K}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <strong><span class="math inline">\(\pi\)</span>-układem</strong>,
+<p><span id="def:unlabeled-div-73" class="definition"><strong>Definicja 6.4  </strong></span>Niepustą rodzinę <span class="math inline">\(\mathcal{K}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <strong><span class="math inline">\(\pi\)</span>-układem</strong>,
 jeżeli jest zamknięta na operację przekroju, tzn. <span class="math inline">\(A\cap B\in \mathcal{K}\)</span> dla wszystkich <span class="math inline">\(A,B\in\mathcal{K}\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-73" class="definition"><strong>Definicja 6.5  </strong></span>Niepustą rodzinę <span class="math inline">\(\mathcal{L}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <strong><span class="math inline">\(\lambda\)</span>-układem</strong>,
+<p><span id="def:unlabeled-div-74" class="definition"><strong>Definicja 6.5  </strong></span>Niepustą rodzinę <span class="math inline">\(\mathcal{L}\)</span> podzbiorów <span class="math inline">\(\Omega\)</span> nazywamy <strong><span class="math inline">\(\lambda\)</span>-układem</strong>,
 jeżeli</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -431,12 +432,12 @@ to <span class="math inline">\(\bigcup_{n=1}^\infty A_n \in \mathcal{L}\)</span>
 </ol>
 </div>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-74" class="lemma"><strong>Lemma 6.1  (Dynkin) </strong></span>Jeżeli <span class="math inline">\(\mathcal{L}\)</span> jest <span class="math inline">\(\lambda\)</span>-układem zawierającym <span class="math inline">\(\pi\)</span>-układ <span class="math inline">\(\mathcal{K}\)</span>,
+<p><span id="lem:unlabeled-div-75" class="lemma"><strong>Lemma 6.1  (Dynkin) </strong></span>Jeżeli <span class="math inline">\(\mathcal{L}\)</span> jest <span class="math inline">\(\lambda\)</span>-układem zawierającym <span class="math inline">\(\pi\)</span>-układ <span class="math inline">\(\mathcal{K}\)</span>,
 to <span class="math inline">\(\mathcal{L}\)</span> zawiera także <span class="math inline">\(\sigma(\mathcal{K})\)</span>,
 <span class="math inline">\(\sigma\)</span>-ciało generowane przez <span class="math inline">\(\mathcal{K}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-75" class="proof"><em>Proof</em>. </span><strong>Krok 1.</strong> Pokażemy najpierw, że jeżeli <span class="math inline">\(\mathcal{L}\)</span> jest jednocześnie <span class="math inline">\(\pi\)</span>-układem oraz <span class="math inline">\(\lambda\)</span>-układem, to jest <span class="math inline">\(\sigma\)</span>-ciałem. Istotnie
+<p><span id="unlabeled-div-76" class="proof"><em>Proof</em>. </span><strong>Krok 1.</strong> Pokażemy najpierw, że jeżeli <span class="math inline">\(\mathcal{L}\)</span> jest jednocześnie <span class="math inline">\(\pi\)</span>-układem oraz <span class="math inline">\(\lambda\)</span>-układem, to jest <span class="math inline">\(\sigma\)</span>-ciałem. Istotnie
 <span class="math inline">\(\mathcal{L}\)</span> jest zamknięte na operację sumy: jeżeli <span class="math inline">\(A,B\in \mathcal{L}\)</span>, to
 <span class="math display">\[
 A\cup B = A\cup \big(  B\setminus A\cap B \big) =
@@ -457,7 +458,7 @@ bo wówczas z kroku 1 jest <span class="math inline">\(\sigma\)</span>-ciałem i
 \]</span>
 Ustalmy <span class="math inline">\(A\in \mathcal{K}\)</span> i rozważmy rodzinę
 <span class="math display">\[\mathcal{K}_1^A = \{    B\subset \Omega:\; A\cap B\in \mathcal{L}_0   \}.\]</span>
-Wówczas <span class="math inline">\(\mathcal{K}\subset \mathcal{K}_1^A\)</span> (bo <span class="math inline">\(\mathcal{K}\)</span> jest <span class="math inline">\(\pi\)</span>-układem),
+Wówczas <span class="math inline">\(\mathcal{K}\subset  \mathcal{K}_1^A\)</span> (bo <span class="math inline">\(\mathcal{K}\)</span> jest <span class="math inline">\(\pi\)</span>-układem),
 ale ponadto <span class="math inline">\(\mathcal{K}_1^A\)</span> jest <span class="math inline">\(\lambda\)</span>-układem:</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -482,7 +483,7 @@ Podsumowując pokazaliśmy, że jeżeli
 co kończy dowód.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-76" class="proof"><em>Proof</em>. </span>Dowód twierdzenia o jednoznaczności (Twierdzenie <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#thm:jedn">6.4</a>)
+<p><span id="unlabeled-div-77" class="proof"><em>Proof</em>. </span>Dowód twierdzenia o jednoznaczności (Twierdzenie <a href="zmienne-losowe-i-ich-rozk%C5%82ady.html#thm:jedn">6.4</a>)
 Chcemy pokazać, że jeżeli <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są dwoma zmiennymi losowymi o tej samej dystrybuancie <span class="math inline">\(F\)</span>, to muszą mieć te same rozkłady:
 <span class="math display" id="eq:mu">\[\begin{equation}
 \mu_X(B) = \mu_Y(B),
@@ -529,7 +530,7 @@ a więc obie miary <span class="math inline">\(\mu_X\)</span> i <span class="mat
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-27.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
