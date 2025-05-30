@@ -21,14 +21,14 @@ text.f1 {font-family:cmr10;font-size:9.96264px}
 </style>
 <g id='page1'>
 <path d='M318.6641 138.238276C318.6641 91.2734 280.5899 53.1992 233.625007 53.1992C186.6563 53.1992 148.582 91.2734 148.582 138.238276C148.582 185.207 186.6563 223.2812 233.625007 223.2812C280.5899 223.2812 318.6641 185.207 318.6641 138.238276Z' stroke='#eee8d5' fill='none' stroke-width='.79701'/>
-<path d='M158.9414 178.9023L193.8359 63.0859' stroke='#2aa198' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
-<text class='f1' x='233.62391' y='138.239825' transform='matrix(1 0 0 1 -53.715 -14.754)'><tspan fill='#eee8d5'>(</tspan></text>
-<text class='f0' x='237.498284' y='138.239825' transform='matrix(1 0 0 1 -53.715 -14.754)'><tspan fill='#eee8d5'>x,</tspan><tspan fill='#eee8d5' x='247.620024'>y</tspan></text>
-<text class='f1' x='252.861967' y='138.239825' transform='matrix(1 0 0 1 -53.715 -14.754)'><tspan fill='#eee8d5'>)</tspan></text>
-<path d='M177.8086 120.9961C177.8086 120.2109 177.1719 119.5781 176.3906 119.5781C175.6055 119.5781 174.9727 120.2109 174.9727 120.9961C174.9727 121.7773 175.6055 122.4141 176.3906 122.4141C177.1719 122.4141 177.8086 121.7773 177.8086 120.9961Z' fill='#2aa198'/>
-<path d='M177.8086 120.9961C177.8086 120.2109 177.1719 119.5781 176.3906 119.5781C175.6055 119.5781 174.9727 120.2109 174.9727 120.9961C174.9727 121.7773 175.6055 122.4141 176.3906 122.4141C177.1719 122.4141 177.8086 121.7773 177.8086 120.9961Z' stroke='#2aa198' fill='none' stroke-width='.79701' stroke-miterlimit='10'/>
-<path d='M176.3906 120.9961L233.625007 138.238276' stroke='#eee8d5' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
-<path d='M158.9414 178.9023L233.625007 138.238276' stroke='#eee8d5' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
-<path d='M193.8359 63.0859L233.625007 138.238276' stroke='#eee8d5' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+<path d='M182.8399 70.0312L264.3399 58.9453' stroke='#2aa198' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+<text class='f1' x='233.62391' y='138.239825' transform='matrix(1 0 0 1 -6.513 -71.26)'><tspan fill='#eee8d5'>(</tspan></text>
+<text class='f0' x='237.498284' y='138.239825' transform='matrix(1 0 0 1 -6.513 -71.26)'><tspan fill='#eee8d5'>x,</tspan><tspan fill='#eee8d5' x='247.620024'>y</tspan></text>
+<text class='f1' x='252.861967' y='138.239825' transform='matrix(1 0 0 1 -6.513 -71.26)'><tspan fill='#eee8d5'>)</tspan></text>
+<path d='M225.00782 64.4883C225.00782 63.707 224.37501 63.0703 223.5899 63.0703C222.8086 63.0703 222.1719 63.707 222.1719 64.4883C222.1719 65.2734 222.8086 65.9062 223.5899 65.9062C224.37501 65.9062 225.00782 65.2734 225.00782 64.4883Z' fill='#2aa198'/>
+<path d='M225.00782 64.4883C225.00782 63.707 224.37501 63.0703 223.5899 63.0703C222.8086 63.0703 222.1719 63.707 222.1719 64.4883C222.1719 65.2734 222.8086 65.9062 223.5899 65.9062C224.37501 65.9062 225.00782 65.2734 225.00782 64.4883Z' stroke='#2aa198' fill='none' stroke-width='.79701' stroke-miterlimit='10'/>
+<path d='M223.5899 64.4883L233.625007 138.238276' stroke='#eee8d5' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+<path d='M182.8399 70.0312L233.625007 138.238276' stroke='#eee8d5' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+<path d='M264.3399 58.9453L233.625007 138.238276' stroke='#eee8d5' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
 </g>
 </svg>
