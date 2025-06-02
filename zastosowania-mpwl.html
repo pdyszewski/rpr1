@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="21.1 Metoda Monte Carlo Jednym z twórców tej metody był Stanisław Ulam. Problem jest następujący. Chcemy obliczyć całkę \(\int_0^1 f(x)dx\), ale jest to trudne, np. nie potrafimy znaleźć funkcji...">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="21 Zastosowania MPWL | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="21.1 Metoda Monte Carlo Jednym z twórców tej metody był Stanisław Ulam. Problem jest następujący. Chcemy obliczyć całkę \(\int_0^1 f(x)dx\), ale jest to trudne, np. nie potrafimy znaleźć funkcji...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="21.1 Metoda Monte Carlo Jednym z twórców tej metody był Stanisław Ulam. Problem jest następujący. Chcemy obliczyć całkę \(\int_0^1 f(x)dx\), ale jest to trudne, np. nie potrafimy znaleźć funkcji...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -116,7 +116,7 @@ Dla przykładu, jeżeli <span class="math inline">\(g=1\)</span>, to możemy wyg
 <span class="math inline">\(S_n\)</span> dla dużej wartości <span class="math inline">\(n\)</span> aproksymując w ten sposób wartość całki.</p>
 <p>W praktyce warto używać funkcji <span class="math inline">\(g\)</span>, ponieważ dobierając ją do kształtu funkcji <span class="math inline">\(f\)</span> można przyśpieszyć zbieżność. W jednym wymiarze metody numeryczne są efektywniejsze (chyba, że funkcja <span class="math inline">\(f\)</span> jest nieregularna). Jednak w wyższych wymiarach metoda Monte Carlo jest skuteczniejsza, gdyż tempo zbieżności zawsze jest rzędu <span class="math inline">\(c/\sqrt n\)</span> (to wynika z kolei z Centralnego Twierdzenia Granicznego), podczas gdy metody numeryczne w wyższych wymiarach są wolniejsze.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-224" class="example"><strong>Przykład 21.1  </strong></span>Chcemy poznać przybliżoną wartość całki
+<p><span id="exm:unlabeled-div-223" class="example"><strong>Przykład 21.1  </strong></span>Chcemy poznać przybliżoną wartość całki
 <span class="math display">\[\begin{equation*}
     \int_{-1}^1 e^{-x^2} \mathrm{d}x.
 \end{equation*}\]</span>
@@ -155,7 +155,7 @@ Z mocnego prawa wielkich liczb
 <p>Dokładna wartość całki: 1.493648</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-225" class="example"><strong>Przykład 21.2  (Igła Buffona) </strong></span>Igłę o długości <span class="math inline">\(l\)</span> rzucamy na podłogę z desek o szerokości <span class="math inline">\(a\)</span> (<span class="math inline">\(l\le a\)</span>). Wiemy, że
+<p><span id="exm:unlabeled-div-224" class="example"><strong>Przykład 21.2  (Igła Buffona) </strong></span>Igłę o długości <span class="math inline">\(l\)</span> rzucamy na podłogę z desek o szerokości <span class="math inline">\(a\)</span> (<span class="math inline">\(l\le a\)</span>). Wiemy, że
 o, przecięcia przez igłę krawędzi deski wynosi <span class="math inline">\(p = \frac{2l}{a\pi}\)</span>. Tej formuły użyto do wyznaczenia liczby <span class="math inline">\(\pi\)</span>. Mianowicie wykonujemy <span class="math inline">\(n\)</span> rzutów igłą dla bardzo dużego <span class="math inline">\(n\)</span> i
 definiujemy ciąg zmiennych losowych
 <span class="math display">\[
@@ -164,7 +164,7 @@ X_i = \left\{ \begin{array}{cc}
                 0 &amp; \mbox{w przeciwnym razie.}
               \end{array}
 \right.
-\]</span> Wówczas zmienne losowe <span class="math inline">\(X_i\)</span> są niezależne i mają ten sam rozkład. Ponadto <span class="math inline">\(\mathbb{E} X_i = \mathbb{P}[X_i=1] =  p\)</span>. Z~MPWL mamy
+\]</span> Wówczas zmienne losowe <span class="math inline">\(X_i\)</span> są niezależne i mają ten sam rozkład. Ponadto <span class="math inline">\(\mathbb{E} X_i = \mathbb{P}[X_i=1] = p\)</span>. Z~MPWL mamy
 <span class="math display">\[
 \frac kn = \frac{\mbox{liczba trafień w krawędź}}{n} = \frac{X_1+\ldots+X_n}{n} \to \mathbb{E} X_1 = p = \frac{2l}{a\pi},
 \]</span> a stąd wynika, że
@@ -176,7 +176,7 @@ X_i = \left\{ \begin{array}{cc}
 \]</span> Przypomnijmy <span class="math inline">\(\pi = 3,141592{\bf 65359}\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-226" class="example"><strong>Przykład 21.3  </strong></span>Rozważmy następujące zadanie: oblicz
+<p><span id="exm:unlabeled-div-225" class="example"><strong>Przykład 21.3  </strong></span>Rozważmy następujące zadanie: oblicz
 <span class="math display">\[
 \lim_{n\to\infty} \int_0^1\ldots \int_0^1 \frac{x_1^3+\ldots+ x_n^3}{x_1+\ldots+ x_n}dx_1\ldots dx_n.
 \]</span>
@@ -206,7 +206,7 @@ W tym celu definiujemy
 Zauważmy, że jest to naturalna definicja, dla danego <span class="math inline">\(x\)</span> zliczamy liczbę próbek mniejszych niż <span class="math inline">\(x\)</span> i uśredniamy wynik.
 Poniższe twierdzenie jest jednym z podstawowych wyników używanych w statystyce:</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-227" class="theorem"><strong>Twierdzenie 21.1  (Gliwienko - Cantelli) </strong></span>Zachodzi
+<p><span id="thm:unlabeled-div-226" class="theorem"><strong>Twierdzenie 21.1  (Gliwienko - Cantelli) </strong></span>Zachodzi
 <span class="math display">\[
   \sup_{x\in \mathbb{R}} |F_n(x) - F(x)| \to 0,\qquad \mbox{p.n.}
   \]</span></p>
@@ -236,16 +236,16 @@ a = \sum_{n=1}^{\infty} \frac{\varepsilon_n}{d^n},
 \]</span> dla <span class="math inline">\(\varepsilon_n\in\{0,1,\ldots,d-1\}\)</span> takie, że
 <span class="math display">\[
 \frac{\# \{i: \varepsilon_i = k, \ i\le n \}}{n} \to \frac 1d
-\]</span> dla każdego <span class="math inline">\(k=\{0,1,\ldots, d-1\}\)</span>.</p>
+\]</span> dla każdego <span class="math inline">\(k\in \{0,1,\ldots, d-1\}\)</span>.</p>
 <p>Dosyć łatwo jest wskazać liczby normalne o ustalonej podstawie <span class="math inline">\(d\)</span> (pozostawiamy to jako zadanie). Jednak wskazanie liczby (obliczalnej), która jest normalna przy każdej podstawie <span class="math inline">\(d\)</span> jest problemem otwartym. Tymczasem okazuje się, że prawie każda liczba ma tę własność:</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-228" class="theorem"><strong>Twierdzenie 21.2  (Borel) </strong></span>Prawie wszystkie liczby (względem miary Lebesgue’a) z przedziału <span class="math inline">\([0,1]\)</span> są normalne względem każdej podstawy.</p>
+<p><span id="thm:unlabeled-div-227" class="theorem"><strong>Twierdzenie 21.2  (Borel) </strong></span>Prawie wszystkie liczby (względem miary Lebesgue’a) z przedziału <span class="math inline">\([0,1]\)</span> są normalne względem każdej podstawy.</p>
 </div>
 <figure style="width: 100%; text-align: center;"><img src="PICS/Emile_Borel-1932.jpg" style="width: 40%; display: block; margin: auto"><p style="text-align: center">
 Émile Borel (1871-1956)
 </p>
 </figure><div class="proof">
-<p><span id="unlabeled-div-229" class="proof"><em>Proof</em>. </span>Niech
+<p><span id="unlabeled-div-228" class="proof"><em>Proof</em>. </span>Niech
 <span class="math display">\[\begin{align*}
     A_d &amp; = \big\{ x\in[0,1]: x \mbox{ jest normalna przy podstawie $d$}\big\},\\
     A &amp; =  \bigcap_{d=2}^{\infty} A_d =  \big\{ x\in[0,1]: x \mbox{ jest normalna przy każdej podstawie $d$}\big\}.
@@ -274,14 +274,14 @@ jednostajnym na <span class="math inline">\(\{ 0,1,\ldots,d-1 \}\)</span> (zadan
 <span class="header-section-number">21.4</span> Wokół MPWL<a class="anchor" aria-label="anchor" href="#wok%C3%B3%C5%82-mpwl"><i class="fas fa-link"></i></a>
 </h2>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-230" class="theorem"><strong>Twierdzenie 21.3  </strong></span>Jeżeli <span class="math inline">\(X_n\)</span> jest ciągiem niezależnych zmiennych losowych o takim samym rozkładzie oraz istnieje stała <span class="math inline">\(c\)</span> taka, że
+<p><span id="thm:unlabeled-div-229" class="theorem"><strong>Twierdzenie 21.3  </strong></span>Jeżeli <span class="math inline">\(X_n\)</span> jest ciągiem niezależnych zmiennych losowych o takim samym rozkładzie oraz istnieje stała <span class="math inline">\(c\)</span> taka, że
 <span class="math display">\[
   \mathbb{P}\bigg[ \lim_n \frac{X_1+\ldots+X_n}{n} = c
   \bigg] &gt;0,
   \]</span> to <span class="math inline">\(\mathbb{E}|X_1|&lt;\infty\)</span> oraz <span class="math inline">\(c=\mathbb{E} X_1\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-231" class="proof"><em>Proof</em>. </span>Z prawa 0-1 Kołmogorowa
+<p><span id="unlabeled-div-230" class="proof"><em>Proof</em>. </span>Z prawa 0-1 Kołmogorowa
 <span class="math display">\[
   \mathbb{P}\bigg[ \lim_n \frac{X_1+\ldots+X_n}{n} = c
   \bigg] = 1,
@@ -300,7 +300,7 @@ Z MPWL wynika więc
   \]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-232" class="theorem"><strong>Twierdzenie 21.4  (MPWL, Etemadi) </strong></span>Niech <span class="math inline">\(\{X_n\}\)</span> będzie ciągiem zmiennych losowych, które są {} niezależne i mają jednakowy rozkład. Jeżeli <span class="math inline">\(\mathbb{E}|X_1|&lt;\infty\)</span>, to
+<p><span id="thm:unlabeled-div-231" class="theorem"><strong>Twierdzenie 21.4  (MPWL, Etemadi) </strong></span>Niech <span class="math inline">\(\{X_n\}\)</span> będzie ciągiem zmiennych losowych, które są <strong>parami</strong> niezależne i mają jednakowy rozkład. Jeżeli <span class="math inline">\(\mathbb{E}|X_1|&lt;\infty\)</span>, to
 <span class="math display">\[
   \frac{X_1+\ldots+ X_n}{n} \to \mathbb{E} X_1\qquad \mbox{p.n.}
   \]</span></p>
@@ -315,17 +315,20 @@ X^{(c)} = \left\{
 \right.
 \]</span></p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-233" class="theorem"><strong>Twierdzenie 21.5  (Twierdzenie Kołmogorowa o 3 szeregach) </strong></span>Ustalmy <span class="math inline">\(c&gt;0\)</span>. Szereg <span class="math inline">\(\sum_n X_n\)</span> niezależnych zmiennych losowych jest zbieżny p.n. wtedy i tylko, gdy następujące 3 szeregi
+<p><span id="thm:unlabeled-div-232" class="theorem"><strong>Twierdzenie 21.5  (Twierdzenie Kołmogorowa o 3 szeregach) </strong></span>Ustalmy <span class="math inline">\(c&gt;0\)</span>. Szereg <span class="math inline">\(\sum_n X_n\)</span> niezależnych zmiennych losowych jest zbieżny p.n. wtedy i tylko, gdy następujące 3 szeregi
 <span class="math display">\[
-  \sum_{n=1}^\infty \mathbb{E} X_n^{(c)}, \quad \sum_{n=1}^{\infty} \var X_n^{(c)}, \quad \sum_{n=1}^{\infty} \mathbb{P}[|X_n|&gt;c]
+  \sum_{n=1}^\infty \mathbb{E} X_n^{(c)}, \quad \sum_{n=1}^{\infty} \mathbb{V}ar\left X_n^{(c)}\right],
+  \quad \sum_{n=1}^{\infty} \mathbb{P}[|X_n|&gt;c]
   \]</span> są zbieżne.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-234" class="remark"><em>Remark</em>. </span>Jeżeli powyższe twierdzenie zachodzi dla pewnego <span class="math inline">\(c_0\)</span>, to zachodzi również dla każdej innej wartości <span class="math inline">\(c&gt;0\)</span>.</p>
+<p><span id="unlabeled-div-233" class="remark"><em>Remark</em>. </span>Jeżeli powyższe twierdzenie zachodzi dla pewnego <span class="math inline">\(c_0\)</span>, to zachodzi również dla każdej innej wartości <span class="math inline">\(c&gt;0\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-235" class="proof"><em>Proof</em>. </span>Załóżmy, że wszystkie 3 powyższe szeregi są zbieżne. Wtedy z twierdzenie Kołmogorowa o 2 szeregach szereg
-$ _n {X_n^{(c)}}$ jest zbieżny p.n. Z warunku <span class="math inline">\(\sum_{n=1}^{\infty} \mathbb{P}[|X_n|&gt;c]&lt;\infty\)</span> i lematu Borela-Cantelliego
+<p><span id="unlabeled-div-234" class="proof"><em>Proof</em>. </span>Załóżmy, że wszystkie <span class="math inline">\(3\)</span> powyższe szeregi są zbieżne.
+Wtedy z twierdzenie Kołmogorowa o 2 szeregach szereg
+<span class="math inline">\(\sum_n {X_n^{(c)}}\)</span> jest zbieżny p.n.
+Z warunku <span class="math inline">\(\sum_{n=1}^{\infty} \mathbb{P}[|X_n|&gt;c]&lt;\infty\)</span> i lematu Borela-Cantellego
 otrzymujemy
 <span class="math display">\[
   \mathbb{P}\big[ |X_n| &gt;c \ \mbox{i.o}\big] = 0.
@@ -363,7 +366,7 @@ otrzymujemy
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

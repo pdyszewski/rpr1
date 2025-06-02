@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Omówimy pokrótce wielowymiarowe parametry wektorów losowych. Od tej pory przyjmujemy konwencję, że wszystkie rozważane wektory są pionowe.  16.1 Wektor średnich  Definicja 16.1 Niech...">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="16 Parametry wielowymiarowe | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Omówimy pokrótce wielowymiarowe parametry wektorów losowych. Od tej pory przyjmujemy konwencję, że wszystkie rozważane wektory są pionowe.  16.1 Wektor średnich  Definicja 16.1 Niech...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Omówimy pokrótce wielowymiarowe parametry wektorów losowych. Od tej pory przyjmujemy konwencję, że wszystkie rozważane wektory są pionowe.  16.1 Wektor średnich  Definicja 16.1 Niech...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -109,7 +109,7 @@ Od tej pory przyjmujemy konwencję, że wszystkie rozważane wektory są pionowe
 <span class="header-section-number">16.1</span> Wektor średnich<a class="anchor" aria-label="anchor" href="#wektor-%C5%9Brednich"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-160" class="definition"><strong>Definicja 16.1  </strong></span>Niech <span class="math inline">\(\vec{X}=(X_1, \ldots , X_d)^T\)</span> będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym. Powiemy, że
+<p><span id="def:unlabeled-div-159" class="definition"><strong>Definicja 16.1  </strong></span>Niech <span class="math inline">\(\vec{X}=(X_1, \ldots , X_d)^T\)</span> będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym. Powiemy, że
 <span class="math inline">\(\vec{X}\)</span> ma wartość oczekiwaną
 jeżeli wszystkie zmienne losowe <span class="math inline">\(X_1, \ldots , X_d\)</span> mają
 wartości oczekiwane. Wówczas wektor
@@ -119,7 +119,7 @@ wartości oczekiwane. Wówczas wektor
 nazywamy <strong>wartością oczekiwaną</strong> zmiennej losowej <span class="math inline">\(\vec{X}\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-161" class="example"><strong>Przykład 16.1  </strong></span>Niech <span class="math inline">\(\vec{Y}=(Y_1, \ldots, Y_d)^T\)</span>
+<p><span id="exm:unlabeled-div-160" class="example"><strong>Przykład 16.1  </strong></span>Niech <span class="math inline">\(\vec{Y}=(Y_1, \ldots, Y_d)^T\)</span>
 będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym z rozkładem <span class="math inline">\(\mathcal{N}(\vec{m}, \Sigma)\)</span>,
 gdzie <span class="math inline">\(\vec{m} = (m_1, m_2, \ldots, m_d)^T\)</span>.
 Przypomnijmy, że oznacza to, że ma on gęstość zadaną przez
@@ -153,7 +153,7 @@ Ostatecznie stąd <span class="math inline">\(\mathbb{E}[Y_j]=m_j\)</span> a co 
 \end{equation*}\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-162" class="theorem"><strong>Twierdzenie 16.1  </strong></span>Niech <span class="math inline">\(\vec{X}=(X_1, \ldots , X_d)^T\)</span> będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym. Wówczas <span class="math inline">\(\vec{X}\)</span> ma wartość oczekiwaną
+<p><span id="thm:unlabeled-div-161" class="theorem"><strong>Twierdzenie 16.1  </strong></span>Niech <span class="math inline">\(\vec{X}=(X_1, \ldots , X_d)^T\)</span> będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym. Wówczas <span class="math inline">\(\vec{X}\)</span> ma wartość oczekiwaną
 wtedy i tylko wtedy, gdy zmienna losowa
 <span class="math display">\[\begin{equation*}
     \left\|\vec{X} \right\| = \sqrt{\sum_{j=1}^d X_j^2}
@@ -176,7 +176,7 @@ Jeżeli <span class="math inline">\(\vec{Y}\)</span> jest wektorem losowy posiad
 dla dowolnych rzeczywistych <span class="math inline">\(a\)</span> i <span class="math inline">\(b\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-163" class="proof"><em>Proof</em>. </span>Pierwszy postulat wynika z nierówności
+<p><span id="unlabeled-div-162" class="proof"><em>Proof</em>. </span>Pierwszy postulat wynika z nierówności
 <span class="math display">\[\begin{equation*}
         |X_j| \le \left\|\vec{X}\right\| \le \sum_{i=1}^d|X_i|.
   \end{equation*}\]</span>
@@ -211,14 +211,14 @@ Ostatnia własność wynika wprost w liniowości wartości oczekiwanej zmiennych
 <span class="header-section-number">16.2</span> Macierz kowariancji<a class="anchor" aria-label="anchor" href="#macierz-kowariancji"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-164" class="definition"><strong>Definicja 16.2  </strong></span>Powiemy, że wektor losowy <span class="math inline">\(\vec{X}=(X_1, \ldots, X_d)\)</span> jest całkowalny z kwadratem jeżeli
+<p><span id="def:unlabeled-div-163" class="definition"><strong>Definicja 16.2  </strong></span>Powiemy, że wektor losowy <span class="math inline">\(\vec{X}=(X_1, \ldots, X_d)\)</span> jest całkowalny z kwadratem jeżeli
 wszystkie zmienne <span class="math inline">\(X_1, \ldots , X_d\)</span> są całkowalne z kwadratem.</p>
 </div>
 <p>Rozumując analogicznie jak w ostatnim twierdzeniu łatwo pokazać, że wektor
 <span class="math inline">\(\vec{X}\)</span> jest całkowalny z kwadratem wtedy i tylko wtedy, gdy zmienna losowa <span class="math inline">\(\|\vec{X}\|\)</span> jest
 całkowalna z kwadratem.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-165" class="definition"><strong>Definicja 16.3  </strong></span>Niech <span class="math inline">\(\vec{X}=(X_1,\ldots,X_n)\)</span> będzie <span class="math inline">\(n\)</span>-wymiarowym wektorem losowym całkowalnym z kwadratem.
+<p><span id="def:unlabeled-div-164" class="definition"><strong>Definicja 16.3  </strong></span>Niech <span class="math inline">\(\vec{X}=(X_1,\ldots,X_n)\)</span> będzie <span class="math inline">\(n\)</span>-wymiarowym wektorem losowym całkowalnym z kwadratem.
 Macierz <span class="math inline">\(Q^{\vec{X}} = \left( Q^{\vec{X}}_{i,j} \right)_{i,j\leq n}\)</span> daną przez
 <span class="math display">\[\begin{equation*}
     Q^{\vec{X}}_{i,j} = \mathrm{Cov}(X_i, X_j)
@@ -239,7 +239,7 @@ Mamy
   \]</span></p>
 <p>Jeżeli zmienne losowe <span class="math inline">\(X_i\)</span> są nieskorelowane, to <span class="math inline">\(Q\)</span> jest macierzą diagonalną.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-166" class="theorem"><strong>Twierdzenie 16.2  </strong></span>Macierz kowariancji <span class="math inline">\(Q^{\vec{X}}\)</span> wektora losowego <span class="math inline">\(\vec{X}\)</span> jest symetryczna oraz
+<p><span id="thm:unlabeled-div-165" class="theorem"><strong>Twierdzenie 16.2  </strong></span>Macierz kowariancji <span class="math inline">\(Q^{\vec{X}}\)</span> wektora losowego <span class="math inline">\(\vec{X}\)</span> jest symetryczna oraz
 nieujemnie określona (tzn. dla każdych <span class="math inline">\(t_1,\ldots, t_n\)</span>, <span class="math inline">\(\sum t_it_j {Q^{\vec{X}}_{ij}}\ge 0\)</span>).
 Dodatkowo, jeżeli <span class="math inline">\(A\)</span> jest macierzą <span class="math inline">\(m \times n\)</span>, to macierz kowariancji
 wektora losowego <span class="math inline">\(\vec{Y}=A\vec{X}\)</span> jest równa
@@ -252,7 +252,7 @@ Q^{\vec{Z}} = Q^{\vec{X}+\vec{a}} = Q^{\vec{X}}
 \end{equation*}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-167" class="proof"><em>Proof</em>. </span>Macierz jest symetryczna, bo <span class="math inline">\({\rm Cov}(X_i,X_j) = {\rm Cov}(X_j,X_i)\)</span>. Do dowodu drugiej części twierdzenia weźmy
+<p><span id="unlabeled-div-166" class="proof"><em>Proof</em>. </span>Macierz jest symetryczna, bo <span class="math inline">\({\rm Cov}(X_i,X_j) = {\rm Cov}(X_j,X_i)\)</span>. Do dowodu drugiej części twierdzenia weźmy
 dowolny ciąg <span class="math inline">\(t_1,\ldots,t_n\)</span> i zdefiniujmy <span class="math inline">\(Y = \sum_{j=1}^n t_j X_j\)</span>. Wtedy
 <span class="math display">\[\begin{multline*}
   0\le \mathbb{V}ar [Y] = \mathbb{E} \left[ \left(   \sum_{j=1}^n t_j(X_j - \mathbb{E} [X_j]) \right)^2    \right]\\
@@ -298,7 +298,7 @@ Ostatnia własność wynika z niezmienniczości kowariancji na przesunięcia, tj
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-168" class="example"><strong>Przykład 16.2  </strong></span>Załóżmy, że <span class="math inline">\(n\)</span>-wymiarowy wektor <span class="math inline">\(\vec{X}=(X_1, X_2, \ldots, X_n)\)</span>
+<p><span id="exm:unlabeled-div-167" class="example"><strong>Przykład 16.2  </strong></span>Załóżmy, że <span class="math inline">\(n\)</span>-wymiarowy wektor <span class="math inline">\(\vec{X}=(X_1, X_2, \ldots, X_n)\)</span>
 ma rozkład <span class="math inline">\(\mathcal{N}(\vec{0}, \mathrm{Id})\)</span>.
 Wówczas
 <span class="math display">\[\begin{equation*}
@@ -345,7 +345,7 @@ Mamy
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

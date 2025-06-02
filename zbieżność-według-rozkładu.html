@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład \({\rm Bin(n,1/2)}\) zbiega w pewnym sensie do rozkładu normalnego. Podczas zajęć pojawiły się również podobne...">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="24 Zbieżność według rozkładu | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład \({\rm Bin(n,1/2)}\) zbiega w pewnym sensie do rozkładu normalnego. Podczas zajęć pojawiły się również podobne...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Twierdzenie de Moivre’a - Laplace’a mówi, że odpowiednio znormalizowany rozkład \({\rm Bin(n,1/2)}\) zbiega w pewnym sensie do rozkładu normalnego. Podczas zajęć pojawiły się również podobne...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -115,7 +115,7 @@ Najbardziej naturalnie byłoby powiedzieć, że <span class="math inline">\(\mu_
 <span class="math inline">\(\mu_n(A)\to \mu(A)\)</span>. Okazuje się jednak, że takie podejście jest niewłaściwe i tak wprowadzona zbieżność
 nie ma dobrych własności (np. jest trudna do sprawdzenia i operowania).</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-241" class="example"><strong>Przykład 24.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
+<p><span id="exm:unlabeled-div-240" class="example"><strong>Przykład 24.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
 <span class="math display">\[\begin{equation*}
     \mathbb{P}[X_j=1]=\mathbb{P}[X_j=-1] =1/2.
 \end{equation*}\]</span>
@@ -143,7 +143,7 @@ Zrobimy więc krok w tył i zastanowimy się najpierw w jaki sposób możemy roz
 <span class="header-section-number">24.1</span> Rozróżnianie miar<a class="anchor" aria-label="anchor" href="#rozr%C3%B3%C5%BCnianie-miar"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-242" class="definition"><strong>Definicja 24.1  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
+<p><span id="def:unlabeled-div-241" class="definition"><strong>Definicja 24.1  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
 Powiemy, że <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> maja ten sam rozkład, jeżeli <span class="math inline">\(\mu_{\vec{X}} = \mu_{\vec{Y}}\)</span>.
 Piszemy wtedy <span class="math inline">\(\vec{X} \stackrel{d}{=} \vec{Y}\)</span>.</p>
 </div>
@@ -158,11 +158,11 @@ Klasa <span class="math inline">\(\mathcal{B}(\mathbb{R}^d)\)</span> jest stosun
 jest kłopotliwe. Chcemy więc znaleźć prostszą klasę <span class="math inline">\(\mathcal{C} \subset \mathcal{B}or(\mathbb{R}^d)\)</span>
 na której możemy testować równość miar.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-243" class="lemma"><strong>Lemma 24.1  </strong></span>Załóżmy, że <span class="math inline">\(\mathcal{C}\)</span> jest <span class="math inline">\(\pi\)</span>-układem generującym <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d)\)</span>. Jeżeli
+<p><span id="lem:unlabeled-div-242" class="lemma"><strong>Lemma 24.1  </strong></span>Załóżmy, że <span class="math inline">\(\mathcal{C}\)</span> jest <span class="math inline">\(\pi\)</span>-układem generującym <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d)\)</span>. Jeżeli
 <span class="math inline">\(\nu(C) = \mu(C)\)</span> dla każdego <span class="math inline">\(C \in \mathcal{C}\)</span>, to <span class="math inline">\(\nu=\mu\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-244" class="proof"><em>Proof</em>. </span>Dowód przebiega tak samo jak dowód Twierdzenia o jednoznaczności. Przypomnijmy, że wystarczy sprawdzić, że
+<p><span id="unlabeled-div-243" class="proof"><em>Proof</em>. </span>Dowód przebiega tak samo jak dowód Twierdzenia o jednoznaczności. Przypomnijmy, że wystarczy sprawdzić, że
 <span class="math display">\[\begin{equation*}
     \mathcal{L} = \left\{ A \in \mathcal{B}or(\mathbb{R}^d)
     \: : \: \nu(A) = \mu(A) \right\}
@@ -173,7 +173,7 @@ Skoro <span class="math inline">\(\mathcal{C} \subseteq \mathcal{L}\)</span>, to
 </div>
 <p>Z powyższego lematu płynie prosty wniosek.</p>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-245" class="corollary"><strong>Wniosek 24.1  </strong></span>Jeżeli <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> są rozkładami na <span class="math inline">\(\mathbb{R}\)</span> takimi, że dla każdych
+<p><span id="cor:unlabeled-div-244" class="corollary"><strong>Wniosek 24.1  </strong></span>Jeżeli <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> są rozkładami na <span class="math inline">\(\mathbb{R}\)</span> takimi, że dla każdych
 <span class="math inline">\(a&lt;b\)</span>, <span class="math inline">\(\nu((a,b)) = \mu((a,b))\)</span>, to <span class="math inline">\(\nu=\mu\)</span>.</p>
 </div>
 <p>Podobny wniosek można napisać o przedziałach domkniętych.
@@ -185,7 +185,7 @@ Z rozkładami związana jest też operacja całkowania. Dla każdej ograniczonej
 jest zbieżna. Okazuje się, że znajomość wartości całki dla dostatecznie bogatej rodziny funkcji wystarcza
 do rozróżnienia miary</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-246" class="lemma"><strong>Lemma 24.2  </strong></span>Załóżmy, że
+<p><span id="lem:unlabeled-div-245" class="lemma"><strong>Lemma 24.2  </strong></span>Załóżmy, że
 <span class="math display">\[\begin{equation*}
     \int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) = \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x)
 \end{equation*}\]</span>
@@ -194,7 +194,7 @@ Wówczas
 <span class="math inline">\(\nu = \mu\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-247" class="proof"><em>Proof</em>. </span>Zauważmy, że dla <span class="math inline">\(A \in \mathcal{B}or(\mathbb{R}^d)\)</span> funkcja <span class="math inline">\(f(x) = \mathbf{1}_A(x)\)</span> jest borelowska i ograniczona
+<p><span id="unlabeled-div-246" class="proof"><em>Proof</em>. </span>Zauważmy, że dla <span class="math inline">\(A \in \mathcal{B}or(\mathbb{R}^d)\)</span> funkcja <span class="math inline">\(f(x) = \mathbf{1}_A(x)\)</span> jest borelowska i ograniczona
 oraz
 <span class="math display">\[\begin{equation*}
 \nu(A)=\int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) =
@@ -210,7 +210,7 @@ Oznaczmy
   \left\{ f:\mathbb{R}^d\to\mathbb{R}, f \mbox{ jest ciągła i ograniczona}  \right\}.
 \]</span></p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-248" class="lemma"><strong>Lemma 24.3  </strong></span>Załóżmy, że
+<p><span id="lem:unlabeled-div-247" class="lemma"><strong>Lemma 24.3  </strong></span>Załóżmy, że
 <span class="math display">\[\begin{equation*}
     \int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) = \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x)
 \end{equation*}\]</span>
@@ -219,7 +219,7 @@ Wówczas
 <span class="math inline">\(\nu = \mu\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-249" class="proof"><em>Proof</em>. </span>Pokażemy, że <span class="math inline">\(\nu(F) = \mu(F)\)</span> dla każdego domkniętego <span class="math inline">\(F \subseteq \mathbb{R}^d\)</span>. Ustalmy takie <span class="math inline">\(F\)</span>.
+<p><span id="unlabeled-div-248" class="proof"><em>Proof</em>. </span>Pokażemy, że <span class="math inline">\(\nu(F) = \mu(F)\)</span> dla każdego domkniętego <span class="math inline">\(F \subseteq \mathbb{R}^d\)</span>. Ustalmy takie <span class="math inline">\(F\)</span>.
 Dla <span class="math inline">\(x \in \mathbb{R}^d\)</span> niech
 <span class="math display">\[\begin{equation*}
     \mathrm{dist}(x, F) = \inf_{f \in F} \|x-f\|.
@@ -266,7 +266,7 @@ mamy bowiem
 \end{equation*}\]</span>
 Funkcje ciągłe są zatem niewrażliwe na małe wahania miar. Są dobrą klasą do testowania zbieżności miar.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-250" class="definition"><strong>Definicja 24.2  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem miar
+<p><span id="def:unlabeled-div-249" class="definition"><strong>Definicja 24.2  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem miar
 probabilistycznych na <span class="math inline">\(\mathcal{B}or(\mathbb{R}^d)\)</span>.
 Mówimy, że <span class="math inline">\(\mu_n\)</span> <strong>zbiegają słabo</strong> do miary probabilistycznej <span class="math inline">\(\mu\)</span>
 jeżeli dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R}^d)\)</span>
@@ -276,14 +276,14 @@ jeżeli dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R}^d)\)
 Piszemy wtedy <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-251" class="example"><strong>Przykład 24.2  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
+<p><span id="exm:unlabeled-div-250" class="example"><strong>Przykład 24.2  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
 Wtedy <span class="math inline">\(\delta_{a_n}\Rightarrow \delta_a\)</span>, bo dla każdej funkcji <span class="math inline">\(f\in C_b(\mathbb{R})\)</span>
 <span class="math display">\[
   \int_\mathbb{R} f(x) \delta_{a_n}(\mathrm{d}x) = f(a_n)\to f(a) = \int_\mathbb{R} f(x)\delta_a(\mathrm{d}x).
   \]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-252" class="example"><strong>Przykład 24.3  </strong></span>Zdefiniujmy ciąg miar probabilistycznych
+<p><span id="exm:unlabeled-div-251" class="example"><strong>Przykład 24.3  </strong></span>Zdefiniujmy ciąg miar probabilistycznych
 <span class="math display">\[
   \mu_n\bigg(\bigg\{ \frac kn \bigg\}\bigg) = \frac 1n, \qquad k\in\{1,2,\ldots,n\}.
   \]</span> Wtedy dla <span class="math inline">\(f\in C(\mathbb{R})\)</span>
@@ -293,7 +293,7 @@ Wtedy <span class="math inline">\(\delta_{a_n}\Rightarrow \delta_a\)</span>, bo 
 gdzie zbieżność wynika z własności całki Riemanna. Zatem <span class="math inline">\(\mu_n\)</span> zbiegają słabo do miary Lebesgue’a na <span class="math inline">\([0,1]\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-253" class="example"><strong>Przykład 24.4  </strong></span>Niech <span class="math inline">\(n \in \mathbb{N}\)</span>. Z liczb <span class="math inline">\(\{1, \ldots n\}\)</span> losujemy bez zwracania dwie liczby.
+<p><span id="exm:unlabeled-div-252" class="example"><strong>Przykład 24.4  </strong></span>Niech <span class="math inline">\(n \in \mathbb{N}\)</span>. Z liczb <span class="math inline">\(\{1, \ldots n\}\)</span> losujemy bez zwracania dwie liczby.
 Niech <span class="math inline">\(X_n\)</span> będzie większą z nich. Wówczas
 <span class="math display">\[\begin{equation*}
     \mathbb{P}[X_n=k] = \frac{2(k-1)}{n(n-1)}.
@@ -327,7 +327,7 @@ Następujące warunki są równoważne</p>
 </ol>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-254" class="remark"><em>Remark</em>. </span>Przypomnijmy, że zbiór <span class="math inline">\(G \subseteq \mathbb{R}^d\)</span> nazywamy otwartym jeżeli dla każdego jest punktu
+<p><span id="unlabeled-div-253" class="remark"><em>Remark</em>. </span>Przypomnijmy, że zbiór <span class="math inline">\(G \subseteq \mathbb{R}^d\)</span> nazywamy otwartym jeżeli dla każdego jest punktu
 <span class="math inline">\(x \in G\)</span> istnieje kula o dostatecznie małym promieniu <span class="math inline">\(\epsilon&gt;0\)</span> i środku w punkcie <span class="math inline">\(x\)</span>,
 <span class="math display">\[\begin{equation*}
     B(x, \epsilon) = \left\{ y \in \mathbb{R}^d \: : \: \|x-y\| &lt; \epsilon \right\}
@@ -350,10 +350,10 @@ Zbiór <span class="math inline">\(\partial A\)</span> składa się z punktów, 
 w <span class="math inline">\(A^c\)</span>.</p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-255" class="remark"><em>Remark</em>. </span><em>Potrmanteau</em> to zapożyczone z francuskiego określenie skórzanej walizki podróżnej na ubrania (<em>porter</em> (nosić) + <em>manteau</em> płaszcz).</p>
+<p><span id="unlabeled-div-254" class="remark"><em>Remark</em>. </span><em>Potrmanteau</em> to zapożyczone z francuskiego określenie skórzanej walizki podróżnej na ubrania (<em>porter</em> (nosić) + <em>manteau</em> płaszcz).</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-256" class="proof"><em>Proof</em>. </span><strong><span class="math inline">\(1\rightarrow 2\)</span>.</strong> Oczywiste.</p>
+<p><span id="unlabeled-div-255" class="proof"><em>Proof</em>. </span><strong><span class="math inline">\(1\rightarrow 2\)</span>.</strong> Oczywiste.</p>
 <p><strong><span class="math inline">\(2\rightarrow 3\)</span>.</strong>
 Ustalmy dowolny zbiór domknięty <span class="math inline">\(F\)</span>.
 Dla <span class="math inline">\(\varepsilon&gt;0\)</span> oznaczmy przez
@@ -392,9 +392,7 @@ Mamy
     &amp; \geq \mu(\mathrm{int}(A)).
 \end{align*}\]</span>
 Zauważmy jednak, że
-<span class="math inline">\(\mu(\mathrm{cl}(A)) =
-\mu(\partial (A)) + \mu(\mathrm{int}(A))
-= \mu(\mathrm{int}(A))\)</span>. Zatem wszystkie granice powyżej są sobie równe.</p>
+<span class="math inline">\(\mu(\mathrm{cl}(A)) = \mu(\partial (A)) + \mu(\mathrm{int}(A)) = \mu(\mathrm{int}(A))\)</span>. Zatem wszystkie granice powyżej są sobie równe.</p>
 <p><strong><span class="math inline">\(5 \rightarrow 1\)</span></strong>
 Wybierzmy <span class="math inline">\(f \in C_b(\mathbb{R}^d)\)</span>.
 Z liniowości całki bez zmniejszania ogólności możemy założyć, że <span class="math inline">\(f\geq 0\)</span>.
@@ -445,13 +443,13 @@ Stąd na mocy twierdzenia o zbieżności ograniczonej
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-257" class="theorem"><strong>Twierdzenie 24.2  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_n,\mu\)</span> będą rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}\)</span> o dystrybuantach
+<p><span id="thm:unlabeled-div-256" class="theorem"><strong>Twierdzenie 24.2  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_n,\mu\)</span> będą rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}\)</span> o dystrybuantach
 odpowiednio <span class="math inline">\(\{F_n\}_n,F\)</span>.
 Wówczas <span class="math inline">\(\mu_n\Rightarrow \mu\)</span> wtedy i tylko wtedy, gdy
 <span class="math inline">\(F_n(x)\to F(x)\)</span> dla każdego punktu <span class="math inline">\(x\)</span>, w którym <span class="math inline">\(F\)</span> jest ciągła.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-258" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.
+<p><span id="unlabeled-div-257" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.
 Niech <span class="math inline">\(x\)</span> będzie punktem ciągłości <span class="math inline">\(F\)</span>.
 Zdefiniujmy <span class="math inline">\(A = (-\infty,x]\)</span>, wówczas <span class="math inline">\(\partial A = \{x\}\)</span> i
 <span class="math inline">\(\mu(\partial A) = 0\)</span>. Zatem
@@ -488,13 +486,13 @@ Z dowolności <span class="math inline">\(m\)</span> i lematu o ciągłości mia
   \]</span> Zatem z twierdzenia <a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html#thm:port">24.1</a>, <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-259" class="example"><strong>Przykład 24.5  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
+<p><span id="exm:unlabeled-div-258" class="example"><strong>Przykład 24.5  </strong></span>Niech <span class="math inline">\(a_n\to a\in \mathbb{R}\)</span>.
 Wtedy <span class="math inline">\(\delta_{a_n}\Rightarrow \delta_a\)</span>, bo dystrybuanta <span class="math inline">\(F\)</span> miary <span class="math inline">\(\delta_a\)</span>
 ma tylko jeden punkt nieciągłości: <span class="math inline">\(a\)</span>.
 Dla każdego <span class="math inline">\(x\not= a\)</span>, <span class="math inline">\(F_n(x)\to F(x)\)</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-260" class="example"><strong>Przykład 24.6  </strong></span>Niech
+<p><span id="exm:unlabeled-div-259" class="example"><strong>Przykład 24.6  </strong></span>Niech
 <span class="math display">\[
   \mu_n\bigg(\bigg\{ \frac kn \bigg\}\bigg) = \frac 1n.
   \]</span> i <span class="math inline">\(\mu = {\bf 1}_{[0,1]}(x)dx\)</span>. Wykazana przez nas wcześniej zbieżność
@@ -503,7 +501,7 @@ w kremowy beżu zaznaczono dystrybuantę <span class="math inline">\(F\)</span>,
 <div class="inline-figure"><img src="TIKZ/dystr10.svg" style="display: block; margin: auto;"></div>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-261" class="example"><strong>Przykład 24.7  </strong></span>Rozważmy zmienne losowe <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> takie, że dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>
+<p><span id="exm:unlabeled-div-260" class="example"><strong>Przykład 24.7  </strong></span>Rozważmy zmienne losowe <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> takie, że dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>
 ma rozkład geometryczny z parametrem <span class="math inline">\(1/n\)</span>,
 <span class="math display">\[\begin{equation*}
     \mathbb{P}\left[ X_n=k \right] = \left( 1-1/n\right)^{k-1}/n.
@@ -528,7 +526,7 @@ Zbieżność tę widać na rysunku poniżej.</p>
 Aby uprościć notację w takich przypadkach, zbieżność ich rozkładów
 będziemy wysławiali w terminach tych właśnie zmiennych.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-262" class="definition"><strong>Definicja 24.3  </strong></span>Mówimy, że ciąg wektorów losowych <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span>
+<p><span id="def:unlabeled-div-261" class="definition"><strong>Definicja 24.3  </strong></span>Mówimy, że ciąg wektorów losowych <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span>
 zbiega <strong>według rozkładu</strong> do wektora losowego <span class="math inline">\(\vec{X}\)</span>, jeżeli
 <span class="math inline">\(\mu_{\vec{X}_n} \Rightarrow \mu_\vec{X}\)</span>, czyli
 <span class="math display">\[\begin{equation*}
@@ -539,7 +537,7 @@ dla każdej <span class="math inline">\(f \in C_b(\mathbb{R}^d)\)</span>.</p>
 </div>
 <p>W naturalny sposób Twierdzenie <a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html#thm:port">24.1</a> można przepisać w terminach zmiennych losowych.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-263" class="theorem"><strong>Twierdzenie 24.3  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\vec{X}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
+<p><span id="thm:unlabeled-div-262" class="theorem"><strong>Twierdzenie 24.3  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\vec{X}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
 Następujące warunki są równoważne</p>
 <ol style="list-style-type: decimal">
 <li>
@@ -569,14 +567,14 @@ Następujące warunki są równoważne</p>
 <p>Często będziemy używać nieco innej notacji i np. pisać <span class="math inline">\(X_n \Rightarrow \mu\)</span>, co oznacza,
 że <span class="math inline">\(X_n\)</span> zbiegają do według rozkładu do pewnej zmiennej losowej o rozkładzie <span class="math inline">\(\mu\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-264" class="example"><strong>Przykład 24.8  </strong></span>Niech <span class="math inline">\(\{X_n\}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
+<p><span id="exm:unlabeled-div-263" class="example"><strong>Przykład 24.8  </strong></span>Niech <span class="math inline">\(\{X_n\}\)</span> będzie ciągiem niezależnych zmiennych losowych takich, że
 <span class="math inline">\(\mathbb{P}[X_n = 1] = \mathbb{P}[X_n=-1] = 1/2\)</span> i niech <span class="math inline">\(S_n = X_1+\ldots+ X_n\)</span>.
 Wówczas ciąg zmiennych losowych <span class="math inline">\(S_n/\sqrt n\)</span> zbiega według rozkładu do <span class="math inline">\(\mathcal{N}(0,1)\)</span>,
 co wynika z twierdzenia de Moivre’a - Laplace’a</p>
 </div>
 <p>Zbieżność według rozkładu jest najsłabszą z poznanych do tej pory zbieżności.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-265" class="lemma"><strong>Lemma 24.4  </strong></span>Niech <span class="math inline">\(\{X_n\}, \{Y_n\}\)</span> będą ciągiem zmiennych losowych. Wówczas</p>
+<p><span id="lem:unlabeled-div-264" class="lemma"><strong>Lemma 24.4  </strong></span>Niech <span class="math inline">\(\{X_n\}, \{Y_n\}\)</span> będą ciągiem zmiennych losowych. Wówczas</p>
 <ol style="list-style-type: decimal">
 <li>jeżeli <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} X\)</span>, to <span class="math inline">\(X_n \overset{d}{\to} X\)</span>;</li>
 <li>jeżeli <span class="math inline">\(X_n \overset{d}{\to} X\)</span> i <span class="math inline">\(\mathbb{P}[X=c]=1\)</span>, to <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} c\)</span>;</li>
@@ -589,7 +587,7 @@ co wynika z twierdzenia de Moivre’a - Laplace’a</p>
 <p>Zbieżność według rozkładu nie implikuje zbieżności według prawdopodobieństwa,
 czy też zbieżności p.n. Można to zaobserwować na poniższym przykładzie.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-266" class="example"><strong>Przykład 24.9  </strong></span>Rozważmy przestrzeń probabilistyczną <span class="math inline">\(([0,1], \mathcal{B}or([0,1]), {\rm Leb})\)</span>.
+<p><span id="exm:unlabeled-div-265" class="example"><strong>Przykład 24.9  </strong></span>Rozważmy przestrzeń probabilistyczną <span class="math inline">\(([0,1], \mathcal{B}or([0,1]), {\rm Leb})\)</span>.
 Zdefiniujmy ciąg zmiennych losowych <span class="math inline">\(X_{2n-1} = {\bf 1}_{[0,1/2]}\)</span>, <span class="math inline">\(X_{2n}= {\bf 1}_{[1/2,1]}\)</span>.
 Wówczas ciąg <span class="math inline">\(X_n\)</span> nie jest zbieżny ani punktowo, ani według prawdopodobieństwa,
 ale dla każdego <span class="math inline">\(n\)</span>, <span class="math inline">\(X_n\)</span> ma rozkład <span class="math inline">\(\frac 12 \delta_0 + \frac 12 \delta _1\)</span>, zatem
@@ -600,7 +598,7 @@ ale dla każdego <span class="math inline">\(n\)</span>, <span class="math inlin
 <p>Powyższy przykład pokazuje, że zbieżność według rozkładu nie implikuje zbieżności p.n.,
 ale zachodzi następujący wynik:</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-267" class="theorem"><strong>Twierdzenie 24.4  (Skorochoda) </strong></span>Załóżmy, że <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span> jest ciągiem wektorów losowych
+<p><span id="thm:unlabeled-div-266" class="theorem"><strong>Twierdzenie 24.4  (Skorochoda) </strong></span>Załóżmy, że <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span> jest ciągiem wektorów losowych
 takich, że <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span> dla pewnego wektora losowego <span class="math inline">\(\vec{X}\)</span>.
 Istnieje przestrzeń probabilistyczna <span class="math inline">\((\Omega', \mathcal{F}', \mathbb{P}')\)</span> oraz
 określone na niej wektory losowe
@@ -615,7 +613,7 @@ oraz
 Anatolii Volodymyrovych Skorokhod (1930-2011)
 </p>
 </figure><div class="proof">
-<p><span id="unlabeled-div-268" class="proof"><em>Proof</em>. </span>Przedstawimy dowód dla <span class="math inline">\(d=1\)</span>.
+<p><span id="unlabeled-div-267" class="proof"><em>Proof</em>. </span>Przedstawimy dowód dla <span class="math inline">\(d=1\)</span>.
 Niech <span class="math inline">\(F_n\)</span> i <span class="math inline">\(F\)</span> będą dystrybuantami odpowiednio <span class="math inline">\(X_n\)</span> oraz <span class="math inline">\(X\)</span>.
 Skoro <span class="math inline">\(X_n \Rightarrow X\)</span>, to <span class="math inline">\(F_n(x) \to F(x)\)</span> dla <span class="math inline">\(x \in \mathbb{R} \setminus \mathrm{D}_F\)</span>, gdzie
 <span class="math display">\[\begin{equation*}
@@ -664,11 +662,11 @@ pociąga to podpunkt b.</p>
 \end{equation*}\]</span>
 Wówczas <span class="math inline">\(\mathrm{D}_g\)</span> jest borelowskim podzbiorem <span class="math inline">\(\mathbb{R}^d\)</span>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-269" class="theorem"><strong>Twierdzenie 24.5  (Twierdzenie o odwzorowaniu ciągłym) </strong></span>Niech <span class="math inline">\(g\)</span> będzie mierzalną funkcją.
+<p><span id="thm:unlabeled-div-268" class="theorem"><strong>Twierdzenie 24.5  (Twierdzenie o odwzorowaniu ciągłym) </strong></span>Niech <span class="math inline">\(g\)</span> będzie mierzalną funkcją.
 Jeśli <span class="math inline">\(X_n \to X_\infty\)</span> oraz <span class="math inline">\(P(X_\infty \in D_g) = 0\)</span>, to wtedy <span class="math inline">\(g(X_n) \Rightarrow g(X)\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-270" class="proof"><em>Proof</em>. </span>Zastosujemy Twierdzenie Skorohoda.
+<p><span id="unlabeled-div-269" class="proof"><em>Proof</em>. </span>Zastosujemy Twierdzenie Skorohoda.
 Niech <span class="math inline">\(Y_n \overset{d}{=} X_n\)</span> i <span class="math inline">\(Y_n \to Y_\infty\)</span> prawie na pewno.
 Jeśli <span class="math inline">\(f\)</span> jest funkcją ciągłą, to <span class="math inline">\(\mathrm{D}_{f \circ g} \subseteq \mathrm{D}_g\)</span>,
 więc <span class="math inline">\(\mathbb{P}(Y_\infty \in \mathrm{D}_{f \circ g}) = 0\)</span>,
@@ -693,7 +691,7 @@ ciągu liczb rzeczywistych zawsze można wybrać podciąg zbieżny.
 Ten niepozorny fakt jest bardzo użyteczny przy analizie własności funkcji ciągłych.
 Chcemy znaleźć analogon tej własności dla słabej zbieżności.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-271" class="definition"><strong>Definicja 24.4  </strong></span><strong>Dystrybuanta ułomna</strong> jest to funkcja <span class="math inline">\(F\)</span> spełniająca warunki:</p>
+<p><span id="def:unlabeled-div-270" class="definition"><strong>Definicja 24.4  </strong></span><strong>Dystrybuanta ułomna</strong> jest to funkcja <span class="math inline">\(F\)</span> spełniająca warunki:</p>
 <ol style="list-style-type: decimal">
 <li>
 <span class="math inline">\(F\)</span> jest niemalejąca;</li>
@@ -709,19 +707,18 @@ w szczególności może się zdarzyć, że <span class="math inline">\(p&lt;1\)<
 że ciąg dystrybuant ułomnych <span class="math inline">\(F_n\)</span> zbiega słabo do dystrybuanty ułomnej <span class="math inline">\(F\)</span>,
 jeżeli <span class="math inline">\(F_n(x)\to F(x)\)</span> dla każdego <span class="math inline">\(x\)</span> będącego punktem ciągłości <span class="math inline">\(F\)</span>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-272" class="theorem"><strong>Twierdzenie 24.6  (Helly'ego o wyborze) </strong></span>Każdy ciąg dystrybuant (ułomnych) zawiera podciąg słabo zbieżny do dystrybuanty ułomnej.</p>
+<p><span id="thm:unlabeled-div-271" class="theorem"><strong>Twierdzenie 24.6  (Helly'ego o wyborze) </strong></span>Każdy ciąg dystrybuant (ułomnych) zawiera podciąg słabo zbieżny do dystrybuanty ułomnej.</p>
 </div>
 <figure style="width: 100%; text-align: center;"><img src="PICS/Helly.jpeg" style="width: 40%; display: block; margin: auto"><p style="text-align: center">
 Eduard Helly (1884-1943)
 </p>
 </figure><div class="proof">
-<p><span id="unlabeled-div-273" class="proof"><em>Proof</em>. </span>Pokażemy, używając metody przekątniowej, że dowolny ciąg dystrybuant zawiera podciąg,
+<p><span id="unlabeled-div-272" class="proof"><em>Proof</em>. </span>Pokażemy, używając metody przekątniowej, że dowolny ciąg dystrybuant zawiera podciąg,
 który jest zbieżny na zbiorze liczb wymiernych,
 czyli na gęstym podzbiorze <span class="math inline">\(\mathbb{R}\)</span> do pewnej funkcji <span class="math inline">\(F_0\)</span>.
 Funkcja ta może nie być uzupełniona do dystrybuanty ułomnej liniowo.</p>
 <p>Ustawmy w ciąg liczby wymierne: <span class="math inline">\(w_1,w_2,\ldots\)</span> Ciąg <span class="math inline">\(F_n(w_1)\)</span> jest ograniczony możemy więc wybrać z niego podciąg zbieżny:
-<span class="math inline">\(F_{n_{1,1}}(w_1),
-  F_{n_{1,2}}(w_1), \ldots\)</span>:
+<span class="math inline">\(F_{n_{1,1}}(w_1),  F_{n_{1,2}}(w_1), \ldots\)</span>:
 <span class="math display">\[
   \lim_{k\to \infty} F_{n_{1,k}}(w_1) =: F_0(w_1)
   \]</span>
@@ -736,7 +733,7 @@ Funkcja <span class="math inline">\(F_0\)</span> jest więc zdefiniowana na zbio
 <span class="math display">\[
   F(t) =\inf\{ F_0(w): t&lt;w\in{\mathbb Q} \}, \quad t\in\mathbb{R}.
   \]</span> Wtedy <span class="math inline">\(F\)</span> jest dystrybuantą ułomną (szczegóły pozostawiamy czytelnikowi). Pozostaje do sprawdzenia, że <span class="math inline">\(F_{n_{k,k}}\)</span> zbiega do <span class="math inline">\(F\)</span> we wszystkich punktach ciągłości <span class="math inline">\(F\)</span>.</p>
-<p>Niech <span class="math inline">\(x\)</span> będzie punktem ciągłości <span class="math inline">\(F\)</span> i niech <span class="math inline">\(x_1,x_2, x_3\in {\mathbb  Q}\)</span> będą takie, że <span class="math inline">\(x_1&lt; x_2 &lt; x &lt; x_3\)</span>, wówczas:
+<p>Niech <span class="math inline">\(x\)</span> będzie punktem ciągłości <span class="math inline">\(F\)</span> i niech <span class="math inline">\(x_1,x_2, x_3\in {\mathbb Q}\)</span> będą takie, że <span class="math inline">\(x_1&lt; x_2 &lt; x &lt; x_3\)</span>, wówczas:
 <span class="math display">\[
   F_{n_{k,k}}(x_2) \le F_{n_{k,k}}(x) \le F_{n_{k,k}}(x_3),
   \]</span> co implikuje
@@ -749,7 +746,7 @@ Przypomnijmy, że <span class="math inline">\(x\)</span> jest punktem ciągłoś
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-274" class="example"><strong>Przykład 24.10  </strong></span>Niech
+<p><span id="exm:unlabeled-div-273" class="example"><strong>Przykład 24.10  </strong></span>Niech
 <span class="math display">\[
   F_n(x) = \left\{
   \begin{array}{cc}
@@ -769,7 +766,7 @@ tożsamościowo równa <span class="math inline">\(0\)</span>.</p>
 otrzymujemy ciąg dystrybuant słabo zbieżny do ułomnej dystrybuanty tożsamościowo równej 1.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-275" class="definition"><strong>Definicja 24.5  </strong></span>Rodzina <span class="math inline">\(\{\mu_t\}_{t\in T}\)</span> rozkładów prawdopodobieństwa na
+<p><span id="def:unlabeled-div-274" class="definition"><strong>Definicja 24.5  </strong></span>Rodzina <span class="math inline">\(\{\mu_t\}_{t\in T}\)</span> rozkładów prawdopodobieństwa na
 <span class="math inline">\((\mathbb{R}^d,\mathcal{B}or(\mathbb{R}^d))\)</span> nazywana jest <strong>ciasną</strong> jeżeli
 dla każdego <span class="math inline">\(\varepsilon &gt;0\)</span> istnieje zbiór zwarty <span class="math inline">\(K\subseteq \mathbb{R}^d\)</span> taki, że
 <span class="math display">\[
@@ -779,7 +776,7 @@ dla każdego <span class="math inline">\(\varepsilon &gt;0\)</span> istnieje zbi
 <p>Powyższy warunek mówi, że większość mas miar <span class="math inline">\(\mu_t\)</span> jest skupiona w pobliżu siebie.</p>
 <div class="inline-figure"><img src="TIKZ/tight.svg" style="display: block; margin: auto;"></div>
 <div class="example">
-<p><span id="exm:unlabeled-div-276" class="example"><strong>Przykład 24.11  </strong></span>Niech <span class="math inline">\(T = [1,+\infty)\)</span> i niech <span class="math inline">\(\mu_t\)</span> będzie rozkładem wykładniczym z parametrem <span class="math inline">\(t\)</span>.
+<p><span id="exm:unlabeled-div-275" class="example"><strong>Przykład 24.11  </strong></span>Niech <span class="math inline">\(T = [1,+\infty)\)</span> i niech <span class="math inline">\(\mu_t\)</span> będzie rozkładem wykładniczym z parametrem <span class="math inline">\(t\)</span>.
 Wówczas rodzina miar <span class="math inline">\(\{\mu_t\}_{t \in T}\)</span> jest ciasna. Dla <span class="math inline">\(k\in \mathbb{N}\)</span>
 oraz <span class="math inline">\(t \in T\)</span> mamy
 <span class="math display">\[\begin{equation*}
@@ -792,7 +789,7 @@ Zbiór <span class="math inline">\(K = [0,k]\)</span> jest więc świadkiem na t
 <p>Rodziny miar, które nie są ciasne charakteryzują się tym, że rozkłady skupione są na zbiorach,
 których suma mnogościowa jest nieograniczonym zbiorem <span class="math inline">\(\mathbb{R}^d\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-277" class="example"><strong>Przykład 24.12  </strong></span>Niech <span class="math inline">\(T=\mathbb{N}\)</span> oraz niech <span class="math inline">\(\mu_n = \mathcal{N}(n,1)\)</span>.
+<p><span id="exm:unlabeled-div-276" class="example"><strong>Przykład 24.12  </strong></span>Niech <span class="math inline">\(T=\mathbb{N}\)</span> oraz niech <span class="math inline">\(\mu_n = \mathcal{N}(n,1)\)</span>.
 Dla wygody oznaczmy przez <span class="math inline">\(X_n\)</span> zmienną losową o rozkładzie <span class="math inline">\(\mu_n\)</span>. Wówczas
 <span class="math display">\[\begin{equation*}
 \mu_n([n-2,n+2]) = \mathbb{P}[|X_n-n|\leq 2].
@@ -813,7 +810,7 @@ Dla każdego zwartego <span class="math inline">\(K \subseteq \mathbb{R}\)</span
 Rodzina <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> nie jest zatem ciasna.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-278" class="example"><strong>Przykład 24.13  </strong></span>Niech <span class="math inline">\(\{X_t\}_{t\in T}\)</span> będzie rodziną zmiennych losowych takich, że istnieje <span class="math inline">\(\delta &gt;0\)</span>:
+<p><span id="exm:unlabeled-div-277" class="example"><strong>Przykład 24.13  </strong></span>Niech <span class="math inline">\(\{X_t\}_{t\in T}\)</span> będzie rodziną zmiennych losowych takich, że istnieje <span class="math inline">\(\delta &gt;0\)</span>:
 <span class="math display">\[
   \sup_{t\in T}\mathbb{E}|X_t|^\delta = M &lt; \infty.
   \]</span> Wtedy rodzina <span class="math inline">\(\{\mu_{X_t}\}\)</span> jest ciasna.</p>
@@ -823,7 +820,7 @@ Rodzina <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> nie je
   \]</span> dla dużych wartości <span class="math inline">\(n\)</span>.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-279" class="theorem"><strong>Twierdzenie 24.7  (Prochorowa) </strong></span>Rodzina rozkładów prawdopodobieństwa jest ciasna wtedy i tylko wtedy,
+<p><span id="thm:unlabeled-div-278" class="theorem"><strong>Twierdzenie 24.7  (Prochorowa) </strong></span>Rodzina rozkładów prawdopodobieństwa jest ciasna wtedy i tylko wtedy,
 gdy z każdego ciągu elementów tej rodziny można wybrać podciąg słabo zbieżny
 do pewnego rozkładu prawdopodobieństwa.</p>
 </div>
@@ -831,7 +828,7 @@ do pewnego rozkładu prawdopodobieństwa.</p>
 Yuri Vasilyevich Prokhorov (1929-2013)
 </p>
 </figure><div class="proof">
-<p><span id="unlabeled-div-280" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(F_n\)</span> będzie ciasnym ciągiem dystrybuant. Z twierdzenia Helly’ego istnieje podciąg <span class="math inline">\(F_{n_k}\)</span> zbieżny do pewnej dystrybuanty <span class="math inline">\(F\)</span> (być może ułomnej). Z założenia ciasności dla każdego <span class="math inline">\(\varepsilon &gt; 0\)</span> istnieją punkty <span class="math inline">\(M_{\varepsilon}\)</span> i <span class="math inline">\(-M_{\varepsilon}\)</span> takie, że</p>
+<p><span id="unlabeled-div-279" class="proof"><em>Proof</em>. </span>Niech <span class="math inline">\(F_n\)</span> będzie ciasnym ciągiem dystrybuant. Z twierdzenia Helly’ego istnieje podciąg <span class="math inline">\(F_{n_k}\)</span> zbieżny do pewnej dystrybuanty <span class="math inline">\(F\)</span> (być może ułomnej). Z założenia ciasności dla każdego <span class="math inline">\(\varepsilon &gt; 0\)</span> istnieją punkty <span class="math inline">\(M_{\varepsilon}\)</span> i <span class="math inline">\(-M_{\varepsilon}\)</span> takie, że</p>
 <ul>
 <li>
 <span class="math inline">\(M_{\varepsilon}\)</span> i <span class="math inline">\(-M_{\varepsilon}\)</span> są punktami ciągłości <span class="math inline">\(F\)</span>;</li>
@@ -880,7 +877,7 @@ Przypuśćmy, że rodzina miar nie jest ciasna, a więc istnieje <span class="ma
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-02.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
