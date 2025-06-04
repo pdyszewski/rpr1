@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Lista 6: Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R</title>
+<title>26 Wielowymiarowe funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Zadania na ćwiczenia: 2025-03-31 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania W urnie jest \(b \geq 1\) kul białych i \(c \geq 1\) czarnych. Obliczyć \(\mathbb{E}[X]\), jeśli...">
+<meta name="description" content="Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych. Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co w praktyce sprowadza problem do jednego wymiaru....">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
-<meta property="og:title" content="Lista 6: Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="26 Wielowymiarowe funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Zadania na ćwiczenia: 2025-03-31 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania W urnie jest \(b \geq 1\) kul białych i \(c \geq 1\) czarnych. Obliczyć \(\mathbb{E}[X]\), jeśli...">
+<meta property="og:description" content="Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych. Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co w praktyce sprowadza problem do jednego wymiaru....">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lista 6: Wartość oczekiwana | Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Zadania na ćwiczenia: 2025-03-31 Lista zadań w formacie PDF Zadania do samodzielnego rozwiązania W urnie jest \(b \geq 1\) kul białych i \(c \geq 1\) czarnych. Obliczyć \(\mathbb{E}[X]\), jeśli...">
+<meta name="twitter:title" content="26 Wielowymiarowe funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych. Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co w praktyce sprowadza problem do jednego wymiaru....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -75,7 +75,7 @@
 <li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li><a class="" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
 <li><a class="" href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
-<li><a class="" href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li>
+<li><a class="active" href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li>
 <li><a class="" href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
@@ -83,7 +83,7 @@
 <li><a class="" href="lista-3-prawdopodobie%C5%84stwo-warunkowe.html">Lista 3: Prawdopodobieństwo warunkowe</a></li>
 <li><a class="" href="lista-4-niezale%C5%BCno%C5%9B%C4%87-i-lemat-borela-cantellego.html">Lista 4: Niezależność i lemat Borela-Cantellego</a></li>
 <li><a class="" href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></li>
-<li><a class="active" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
+<li><a class="" href="lista-6-warto%C5%9B%C4%87-oczekiwana.html">Lista 6: Wartość oczekiwana</a></li>
 <li><a class="" href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></li>
 <li><a class="" href="lista-8-wektory-losowe.html">Lista 8: wektory losowe</a></li>
 <li><a class="" href="lista-9-niezale%C5%BCne-zmienne.html">Lista 9: Niezależne zmienne</a></li>
@@ -101,187 +101,125 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="lista-6-wartość-oczekiwana" class="section level1 unnumbered">
-<h1>Lista 6: Wartość oczekiwana<a class="anchor" aria-label="anchor" href="#lista-6-warto%C5%9B%C4%87-oczekiwana"><i class="fas fa-link"></i></a>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="wielowymiarowe-funkcje-charakterystyczne" class="section level1" number="26">
+<h1>
+<span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne<a class="anchor" aria-label="anchor" href="#wielowymiarowe-funkcje-charakterystyczne"><i class="fas fa-link"></i></a>
 </h1>
-<p>Zadania na ćwiczenia: 2025-03-31</p>
-<p><a href="L6_rozklady.pdf">Lista zadań w formacie PDF</a></p>
-<div id="zadania-do-samodzielnego-rozwiązania-5" class="section level2 unnumbered">
-<h2>Zadania do samodzielnego rozwiązania<a class="anchor" aria-label="anchor" href="#zadania-do-samodzielnego-rozwi%C4%85zania-5"><i class="fas fa-link"></i></a>
-</h2>
-<ol style="list-style-type: decimal">
-<li>W urnie jest <span class="math inline">\(b \geq 1\)</span> kul białych i <span class="math inline">\(c \geq 1\)</span> czarnych.
-Obliczyć <span class="math inline">\(\mathbb{E}[X]\)</span>, jeśli <span class="math inline">\(X\)</span> jest liczbą wylosowanych kul białych podczas
-losowania bez zwracania <span class="math inline">\(n\)</span> kul (<span class="math inline">\(n \leq b + c\)</span>);</li>
-</ol>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_1">
-Odpowiedź
-</button>
-<div id="zad6_1" class="collapse">
-<p class="text-primary">
-<span class="math inline">\(bn/(b+c)\)</span>
-</p>
-</div>
-<ol start="2" style="list-style-type: decimal">
-<li>
-<p>Zmienna losowa ma rozkład o gęstości <span class="math inline">\(g(x) = 5x^4 \mathbb{I}_{[0,1]}(x)\)</span>.
-Obliczyć</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\mathbb{E}[X]\)</span></li>
-<li>
-<span class="math inline">\(\mathbb{E}[1/(1+X^5)]\)</span>.</li>
-</ol>
-</li>
-</ol>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_2">
-Odpowiedź
-</button>
-<div id="zad6_2" class="collapse">
-<p class="text-primary">
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>5/6 b. <span class="math inline">\(\log(2)\)</span>
-</li>
-</ol>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>
-<p>Oblicz <span class="math inline">\(\mathbb{E}[X]\)</span> jeżeli <span class="math inline">\(X\)</span> jest zmienną o rozkładzie:</p>
-<ol style="list-style-type: lower-alpha">
-<li>Poiss(<span class="math inline">\(\lambda\)</span>),</li>
-<li>Exp(<span class="math inline">\(\lambda\)</span>),</li>
-<li>Geom(<span class="math inline">\(p\)</span>).</li>
-<li>
-<span class="math inline">\(\mathcal{N}(\mu, \sigma^2)\)</span>.</li>
-</ol>
-</li>
-</ol>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_3">
-Odpowiedź
-</button>
-<div id="zad6_3" class="collapse">
-<p class="text-primary">
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-<span class="math inline">\(\lambda\)</span> b. <span class="math inline">\(1/\lambda\)</span>, c. <span class="math inline">\(1/p\)</span>, d. <span class="math inline">\(\mu\)</span>
-</li>
-</ol>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>
-<p>Zmienna losowa <span class="math inline">\(X\)</span> ma rozkład jednostajny <span class="math inline">\(U[0,1]\)</span>.
-Obliczyć <span class="math inline">\(\mathbb{E}[Y]\)</span> jeżeli</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-<span class="math inline">\(Y = e^X\)</span>,</li>
-<li>
-<span class="math inline">\(Y = \cos^2(\pi X)\)</span>.</li>
-</ol>
-</li>
-</ol>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_4">
-Odpowiedź
-</button>
-<div id="zad6_4" class="collapse">
-<p class="text-primary">
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-<span class="math inline">\(e-1\)</span> b. <span class="math inline">\(1/2\)</span>
-</li>
-</ol>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>
-<p>Niech <span class="math inline">\(F\)</span> będzie dystrybuantą zmiennej losowej <span class="math inline">\(X\)</span>, a <span class="math inline">\(f\)</span> jej gęstością.
-Wyznaczyć dystrybuanty i gęstości zmiennych losowych:</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-<span class="math inline">\(a X + b\)</span> dla <span class="math inline">\(a &gt; 0\)</span>;</li>
-<li>
-<span class="math inline">\(|X|\)</span>;</li>
-<li>
-<span class="math inline">\(X^2\)</span>;</li>
-<li>
-<span class="math inline">\(e^X\)</span>;</li>
-</ol>
-</li>
-</ol>
-W terminach <span class="math inline">\(F\)</span> i <span class="math inline">\(f\)</span>.
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#zad6_5">
-Odpowiedź
-</button>
-<div id="zad6_5" class="collapse">
-<p class="text-primary">
+<p>Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych.
+Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co
+w praktyce sprowadza problem do jednego wymiaru. Rozważać będziemy
+<span class="math inline">\(d\)</span>-wymiarowy wektor losowy <span class="math inline">\(\vec{X} = (X_1, X_2, \ldots, X_d)^T\)</span>.
+Dla <span class="math inline">\(\vec{t} = (t_1, t_2, \ldots, t_d) \in \mathbb{R}^d\)</span> iloczyn skalarny
+<span class="math display">\[\begin{equation*}
+\left\langle \vec{t}, \vec{X} \right\rangle = \sum_{k=1}^d t_k X_k
+\end{equation*}\]</span>
+jest dobrze określoną zmienną losową.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-301" class="definition"><strong>Definicja 26.1  </strong></span>Funkcją charakterystyczną <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(\vec{X}\)</span> nazywamy
+<span class="math inline">\(\varphi_{\vec{X}} \colon \mathbb{R}^d \to \mathbb{C}\)</span> zadane przez
 <span class="math display">\[\begin{align*}
-    a. &amp; F((t-b)/a) &amp; f((x-b)/a)/a \\
-    b. &amp; F(t)-0F(-t) &amp; f(x)-f(-x) \\
-    c. &amp; F(\sqrt{t}) - F(-\sqrt{t}) &amp; (f(\sqrt{x}) +f(\sqrt{x}))/(2\sqrt{x}) \\
-    d. &amp; F(\log(t)) &amp; f(\log(x))/x 1_{y&gt;0}
+\varphi_{\vec{X}} \left( \vec{t} \right) &amp;
+= \mathbb{E} \left[ \exp\left\{ i \left\langle \vec{t}, \vec{X} \right\rangle \right\} \right] \\
+&amp; = \mathbb{E} \left[ \cos\left(\left\langle \vec{t}, \vec{X} \right\rangle \right) \right]
++ i\mathbb{E} \left[ \sin\left(\left\langle \vec{t}, \vec{X} \right\rangle \right) \right]
 \end{align*}\]</span>
-</p>
+dla <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>.</p>
 </div>
+<div class="example">
+<p><span id="exm:unlabeled-div-302" class="example"><strong>Przykład 26.1  </strong></span>Rozważmy <span class="math inline">\(\vec{X} = (X_1, \ldots, X_d)^T\)</span> o <span class="math inline">\(d\)</span>-wymiarowym standardowym rozkładzie normalnym
+<span class="math inline">\(\mathcal{N}(0, I)\)</span>. Wówczas zmienne <span class="math inline">\(X_1, \ldots, X_d\)</span> są niezależne i mają jednowymiarowy
+rozkład normalny <span class="math inline">\(\mathcal{N}(0,1)\)</span>. Stąd
+<span class="math display">\[\begin{align*}
+\varphi_{\vec{X}} \left(\vec{t} \right)  
+&amp;= \mathbb{E} \left[ \exp \left\{ \sum_{j=1}^d it_jX_j \right\} \right] \\
+&amp;= \mathbb{E} \left[ \prod_{j=1}^d\exp \left\{ it_jX_j \right\} \right] \\
+&amp; =\prod_{j=1}^d \varphi_{X_j}(t_j) = e^{-\left\|\vec{t} \right\|/2}
+\end{align*}\]</span>
+Niech teraz <span class="math inline">\(A\)</span> będzie macierzą o wymiarach <span class="math inline">\(m \times d\)</span> i niech <span class="math inline">\(\vec{m} \in \mathbb{R}^m\)</span>. Wiemy, że
+<span class="math inline">\(\vec{Y} = A\vec{X}+\vec{m}\)</span> ma <span class="math inline">\(m\)</span>-wymiarowy rozkład normalny
+<span class="math inline">\(\mathcal{N}\left(\vec{m}, \Sigma \right)\)</span>, gdzie <span class="math inline">\(\Sigma = AA^T\)</span> jest macierzą kowariancji
+wektora <span class="math inline">\(\vec{Y}\)</span>. Znajdziemy teraz funkcję charakterystyczną wektora <span class="math inline">\(\vec{Y}\)</span>.
+Dla <span class="math inline">\(\vec{s} \in \mathbb{R}^m\)</span> mamy
+<span class="math display">\[\begin{align*}
+    \varphi_{\vec{Y}}\left(\vec{s} \right)
+&amp; = \mathbb{E} \left[ \exp\left\{ i \left\langle \vec{s}, A\vec{X} + \vec{m}\right\rangle \right\} \right] \\
+&amp; =  \exp\left\{ i \left\langle \vec{s},\vec{m}\right\rangle \right\}
+\mathbb{E} \left[ \exp\left\{ i \left\langle A^T\vec{s}, \vec{X}\right\rangle \right\} \right] \\
+&amp; =  \exp\left\{ i \left\langle \vec{s},\vec{m}\right\rangle \right\}
+\varphi_{\vec{X}} \left(A^T\vec{s} \right) \\
+&amp; =  \exp\left\{ i \left\langle \vec{s},\vec{m}\right\rangle  - \left\|A^T\vec{s} \right\|/2 \right\}\\
+&amp; =  \exp\left\{ i \left\langle \vec{s},\vec{m}\right\rangle  - \left\langle \Sigma\vec{s} , \vec{s}\right\rangle/2 \right\}
+\end{align*}\]</span></p>
 </div>
-<div id="zadania-na-ćwiczenia-5" class="section level2 unnumbered">
-<h2>Zadania na ćwiczenia<a class="anchor" aria-label="anchor" href="#zadania-na-%C4%87wiczenia-5"><i class="fas fa-link"></i></a>
-</h2>
-<ol style="list-style-type: decimal">
-<li><p>Monika wybrała się do kasyna w Las Vegas mając przy sobie 255$.
-Jako cel postawiła sobie wygranie <span class="math inline">\(1\)</span> dolara w ruletkę i wyjście z kasyna z kwotą 256$.
-Podczas tej wizyty obstawiała kolory. Wszystkie pola poza 0 i 00 są czerwone lub czarne
-(po 18 pól). Poprawne wskazanie koloru (z prawdopodobieństwem 18/38) podwaja zaryzykowaną kwotę.
-Monika zastosowała następującą strategię: postanowiła, że będzie grać kolejno
-o 1$, 2$, 4$, 8$, 16$, 32$, 64$, 128$. Jeżeli w jednej z gier wygra,
-zabiera nagrodę i opuszcza kasyno z 256 dolarami.
-Obliczyć prawdopodobieństwo, że jej się powiodło. Obliczyć wartość oczekiwaną wygranej.</p></li>
-<li><p>Losujemy cięciwę w okręgu o promieniu jeden poprzez wylosowanie jej środka.
-Niech <span class="math inline">\(X_2\)</span> będzie długością wylosowanej cięciwy. Wyznacz rozkład <span class="math inline">\(X_2\)</span>.
-Czy rozkład ten jest absolutnie ciągły? Wyznacz gęstość. Znajdź <span class="math inline">\(\mathbb{E}[X_2]\)</span>.</p></li>
-<li><p>Każdy bok i każda przekątna <span class="math inline">\(2n\)</span>-kąta foremnego malujemy losowo na jeden z trzech kolorów.
-Wybór każdego koloru jest jednakowo prawdopodobny, a kolorowania różnych odcinków są niezależne.
-Niech <span class="math inline">\(X\)</span> oznacza liczbę jednobarwnych trójkątów prostokątnych o wierzchołkach będących
-wierzchołkami <span class="math inline">\(2n\)</span>-kąta. Obliczyć <span class="math inline">\(\mathbb{E}[X]\)</span>.</p></li>
-<li><p>W urnie znajduje się 50 białych kul. Losujemy ze zwracaniem po jednej kuli,
-przy czym wyciągniętą kulę malujemy na czerwono, jeśli jest biała.
-Niech <span class="math inline">\(X\)</span> będzie liczbą czerwonych kul w urnie po 20 losowaniach.
-Obliczyć <span class="math inline">\(\mathbb{E}[X]\)</span>.</p></li>
-<li><p>Na płaszczyźnie zaznaczono <span class="math inline">\(n\)</span> punktów w taki sposób, że żadne trzy nie są współliniowe.
-Każda para punktów została połączona odcinkiem z prawdopodobieństwem <span class="math inline">\(p\)</span>.
-Niech <span class="math inline">\(X\)</span> oznacza liczbę powstałych trójkątów.
-Oblicz <span class="math inline">\(\mathbb{E}X\)</span>.</p></li>
-<li><p>Pokaż, że jeżeli zmienna losowa <span class="math inline">\(X\)</span> ma rozkład dyskretny skoncentrowany na liczbach całkowitych nieujemnych, to
+<p>Dla wielowymiarowych funkcji charakterystycznych zachodzą odpowiedniki twierdzeń o jednoznaczności
+i ciągłości.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-303" class="theorem"><strong>Twierdzenie 26.1  (o jednoznaczności w wielu wymiarach) </strong></span>Jeżeli rozkłady prawdopodobieństw <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> na <span class="math inline">\(\mathbb{R}^d\)</span>
+mają równe funkcje charakterystyczne
 <span class="math display">\[
-     \mathbb{E}[X] = \sum_{k=1}^{\infty} \mathbb{P}(X \geq k).
-\]</span></p></li>
-<li>
-<p>Niech <span class="math inline">\(X\)</span> będzie zmienną losową o dystrybuancie <span class="math inline">\(F\)</span>. Wykaż, że</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Jeżeli <span class="math inline">\(X \geq 0\)</span>, to <span class="math inline">\(\mathbb{E}[X] = \int_0^\infty \mathbb{P}(X&gt;t)\: d t  = \int_0^\infty \mathbb{P}(X \geq t)\:d t\)</span> przy czym istnienie
-jednej strony implikuje istnienie drugiej i ich równość.</p></li>
-<li><p>Jeżeli <span class="math inline">\(X\)</span> jest dowolną zmienną losową o skończonej wartości oczekiwanej,
-to <span class="math inline">\(\mathbb{E}[X] =  \int_0^\infty \left( 1 - F(t) \right)\: d t - \int_{-\infty}^0 F(t)\: d t\)</span>.</p></li>
-<li><p>Jeżeli <span class="math inline">\(X \geq 0\)</span>, <span class="math inline">\(\varphi\)</span> jest rosnąca i różniczkowalna,
-<span class="math inline">\(\varphi(0) = 0\)</span>, to
-<span class="math inline">\(\mathbb{E}[\varphi(X)] = \int_0^\infty \varphi '(t) \mathbb{P}(X&gt;t)\: d t\)</span>.
-W szczególności, jeżeli <span class="math inline">\(r &gt; 0\)</span>, to <span class="math inline">\(\mathbb{E}[X^r] =  \int_0^\infty r t^{r-1} \mathbb{P}(X&gt;t)\: d t\)</span>.</p></li>
-</ol>
-</li>
-<li><p>Udowodnić, że jeżeli <span class="math inline">\(X \geq 0\)</span>, to <span class="math inline">\(\sum_{n=1}^\infty \mathbb{P}(X \geq n) \; \leq \; \
-\mathbb{E}[X] \; \leq 1 + \sum_{n=1}^\infty \mathbb{P}(X \geq n)\)</span>.</p></li>
+\varphi_\mu\left(\vec{t}\right) = \varphi_\nu\left(\vec{t}\right)
+\]</span>
+dla każdego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>,
+to <span class="math inline">\(\mu =\nu\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:WLC" class="theorem"><strong>Twierdzenie 26.2  (Lévy'ego-Craméra w wielu wymiarach) </strong></span>Niech <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span>
+będą rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}^d\)</span>.
+Wówczas</p>
+<ol style="list-style-type: decimal">
+<li>jeżeli <span class="math inline">\(\mu_n \Rightarrow \mu\)</span>, to dla każdego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>,
+<span class="math inline">\(\varphi_{\mu_n}\left(\vec{t}\right) \to \varphi_{\mu}\left(\vec{t}\right)\)</span>;</li>
+<li>jeżeli <span class="math inline">\(\varphi_{\mu_n}\left(\vec{t} \right)\to\varphi\left(\vec{t}\right)\)</span>
+dla każdego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>, dla pewnej funkcji <span class="math inline">\(\varphi\)</span> ciągłej w punkcie <span class="math inline">\(\vec{0}=(0,0,\ldots, 0)\)</span>,
+to <span class="math inline">\(\varphi\)</span> jest funkcją charakterystyczną pewnego rozkładu <span class="math inline">\(\mu\)</span>
+oraz <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</li>
 </ol>
 </div>
+<p>Dowody obu twierdzeń różnią się od odpowiedników jednowymiarowych w drobnych szczegółach
+poza którymi dowody pozostają bez zmian.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-304" class="theorem"><strong>Twierdzenie 26.3  (Cramér–Wold) </strong></span>Niech <span class="math inline">\(\left\{ \vec{X}_n\right\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\vec{X}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
+Wówczas <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span> wtedy i tylko wtedy, gdy
+<span class="math display" id="eq:cw">\[\begin{equation}
+\left\langle \vec{t}, \vec{X}_n \right\rangle \Rightarrow \left\langle \vec{t}, \vec{X} \right\rangle
+\tag{26.1}
+\end{equation}\]</span>
+dla każdego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>.</p>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+<figure style="width: 48%; text-align: center;"><img src="PICS/Harald_Cramer.jpg" style="width: 100%;"><p>
+Harald Cramér (1893-1985)
+</p>
+</figure><figure style="width: 48%; text-align: center;"><img src="PICS/Herman_Wold.jpg" style="width: 100%;"><p>
+Herman Wold (1908-1992)
+</p>
+</figure>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-305" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span>. Dla ustalonego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span> funkcja
+<span class="math inline">\(g\left(\vec{x}\right) = \left\langle \vec{t}, \vec{x}\right\rangle\)</span>
+jest ciągła. Z twierdzenia o odwzorowaniu ciągłym
+<span class="math display">\[\begin{equation*}
+\left\langle \vec{t}, \vec{X}_n \right\rangle = g\left( \vec{X}_n\right) \Rightarrow g\left(\vec{X}\right)= \left\langle \vec{t}, \vec{X} \right\rangle.
+\end{equation*}\]</span>
+Załóżmy teraz, że <a href="wielowymiarowe-funkcje-charakterystyczne.html#eq:cw">(26.1)</a> zachodzi dla każdego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>.
+Mamy
+<span class="math display">\[\begin{equation*}
+    \varphi_{\vec{X}_n}\left(\vec{t} \right) = \varphi_{\langle \vec{t}, \vec{X}_n\rangle }(1) \to
+        \varphi_{\langle \vec{t}, \vec{X}\rangle }(1) =
+    \varphi_{\vec{X}}\left(\vec{t} \right).
+\end{equation*}\]</span>
+Z wielowymiarowego twierdzenia o ciągłości <a href="wielowymiarowe-funkcje-charakterystyczne.html#thm:WLC">26.2</a>, <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span>.</p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="lista-5-zmienne-losowe.html">Lista 5: Zmienne losowe</a></div>
-<div class="next"><a href="lista-7-powt%C3%B3rka-przed-kolokwium.html">Lista 7: Powtórka przed kolokwium</a></div>
+<div class="prev"><a href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></div>
+<div class="next"><a href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#lista-6-warto%C5%9B%C4%87-oczekiwana">Lista 6: Wartość oczekiwana</a></li>
-<li><a class="nav-link" href="#zadania-do-samodzielnego-rozwi%C4%85zania-5">Zadania do samodzielnego rozwiązania</a></li>
-<li><a class="nav-link" href="#zadania-na-%C4%87wiczenia-5">Zadania na ćwiczenia</a></li>
-</ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#wielowymiarowe-funkcje-charakterystyczne"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

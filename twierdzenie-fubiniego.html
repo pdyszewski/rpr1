@@ -7,14 +7,14 @@
 <title>Twierdzenie Fubiniego | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  26.1...">
+<meta name="description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  29.1...">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="Twierdzenie Fubiniego | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  26.1...">
+<meta property="og:description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  29.1...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Twierdzenie Fubiniego | Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  26.1...">
+<meta name="twitter:description" content="Przedstawimy pokrótce elementarne własności i przykłady miar produktowych. Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego. Wszystkie twierdzenia będą przytoczone bez dowodów.  29.1...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -74,6 +74,9 @@
 <li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
 <li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li><a class="" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
+<li><a class="" href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
+<li><a class="" href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li>
+<li><a class="" href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -104,9 +107,9 @@
 <p>Przedstawimy pokrótce elementarne własności i przykłady miar produktowych.
 Następnie zobaczymy kilka zastosowań twierdzenia Fubiniego.
 Wszystkie twierdzenia będą przytoczone bez dowodów.</p>
-<div id="miary-sigma-skończone" class="section level2" number="26.1">
+<div id="miary-sigma-skończone" class="section level2" number="29.1">
 <h2>
-<span class="header-section-number">26.1</span> Miary <span class="math inline">\(\sigma\)</span>-skończone<a class="anchor" aria-label="anchor" href="#miary-sigma-sko%C5%84czone"><i class="fas fa-link"></i></a>
+<span class="header-section-number">29.1</span> Miary <span class="math inline">\(\sigma\)</span>-skończone<a class="anchor" aria-label="anchor" href="#miary-sigma-sko%C5%84czone"><i class="fas fa-link"></i></a>
 </h2>
 <p>Rozważać będziemy przestrzeń miarową <span class="math inline">\((A, \mathcal{A}, \mu)\)</span>.
 Przypomnijmy, że <span class="math inline">\(\mathcal{A}\)</span> jest <span class="math inline">\(\sigma\)</span>-ciałem podzbiorów <span class="math inline">\(A\)</span> oraz <span class="math inline">\(\mu \colon \mathcal{A} \to [0, +\infty]\)</span>
@@ -121,7 +124,7 @@ takie, że
 \end{equation*}\]</span>
 oraz <span class="math inline">\(\mu(A_n) &lt;\infty\)</span> dla każdego <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-280" class="example"><strong>Przykład 26.1  </strong></span>Rozważmy <span class="math inline">\((\mathbb{N}, 2^{\mathbb{N}}, \#)\)</span>, gdzie <span class="math inline">\(\#\)</span> jest miarą liczącą,
+<p><span id="exm:unlabeled-div-313" class="example"><strong>Przykład 29.1  </strong></span>Rozważmy <span class="math inline">\((\mathbb{N}, 2^{\mathbb{N}}, \#)\)</span>, gdzie <span class="math inline">\(\#\)</span> jest miarą liczącą,
 <span class="math display">\[\begin{equation*}
     \# A = \mbox{liczba elementów w $A$}.
 \end{equation*}\]</span>
@@ -132,7 +135,7 @@ Dla <span class="math inline">\(A_n = \{n\}\)</span> mamy
 oraz <span class="math inline">\(\# A_n =1\)</span>. Zbiór liczb naturalnych z miarą liczącą jest zatem <span class="math inline">\(\sigma\)</span>-skończony.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-281" class="example"><strong>Przykład 26.2  </strong></span>Rozważmy przestrzeń <span class="math inline">\(\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
+<p><span id="exm:unlabeled-div-314" class="example"><strong>Przykład 29.2  </strong></span>Rozważmy przestrzeń <span class="math inline">\(\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
 Rozważmy <span class="math inline">\(A_n = [-n, n]\)</span>. Wówczas
 <span class="math display">\[\begin{equation*}
     \bigcup_{n \in \mathbb{N}} [-n,n] = \mathbb{R}
@@ -140,7 +143,7 @@ Rozważmy <span class="math inline">\(A_n = [-n, n]\)</span>. Wówczas
 oraz <span class="math inline">\(\lambda_1([-n,n]) = 2n &lt;\infty\)</span>. Prosta rzeczywista z miarą Lebesgue’a jest zatem <span class="math inline">\(\sigma\)</span>-skończona.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-282" class="example"><strong>Przykład 26.3  </strong></span>Rozważmy <span class="math inline">\((\mathbb{R}, 2^{\mathbb{R}}, \mu_\mathbb{Q})\)</span>, gdzie miara <span class="math inline">\(\mu_{\mathbb{Q}}\)</span> jest zadana przez
+<p><span id="exm:unlabeled-div-315" class="example"><strong>Przykład 29.3  </strong></span>Rozważmy <span class="math inline">\((\mathbb{R}, 2^{\mathbb{R}}, \mu_\mathbb{Q})\)</span>, gdzie miara <span class="math inline">\(\mu_{\mathbb{Q}}\)</span> jest zadana przez
 <span class="math display">\[\begin{equation*}
     \mu_\mathbb{Q}(A) = \# A \cap \mathbb{Q}
 \end{equation*}\]</span>
@@ -155,7 +158,7 @@ Wówczas <span class="math inline">\(\mu_{\mathbb{Q}}(A_0)=0\)</span>. Ustawmy l
 Zbiory <span class="math inline">\(\{A_n\}_n\)</span> są świadkami na to, że rozważana przestrzeń jest <span class="math inline">\(\sigma\)</span>-skończona.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-283" class="example"><strong>Przykład 26.4  </strong></span>Rozważmy modyfikację ostatniej przestrzeni <span class="math inline">\((\mathbb{R}, 2^{\mathbb{R}}, \mu_{\mathbb{R}\setminus \mathbb{Q}})\)</span>, gdzie miara <span class="math inline">\(\mu_{\mathbb{R}\setminus \mathbb{Q}}\)</span> jest zadana przez
+<p><span id="exm:unlabeled-div-316" class="example"><strong>Przykład 29.4  </strong></span>Rozważmy modyfikację ostatniej przestrzeni <span class="math inline">\((\mathbb{R}, 2^{\mathbb{R}}, \mu_{\mathbb{R}\setminus \mathbb{Q}})\)</span>, gdzie miara <span class="math inline">\(\mu_{\mathbb{R}\setminus \mathbb{Q}}\)</span> jest zadana przez
 <span class="math display">\[\begin{equation*}
     \mu_{ \mathbb{R}\setminus \mathbb{Q}}(A) = \# A \cap (\mathbb{R}\setminus \mathbb{Q})
 \end{equation*}\]</span>
@@ -171,9 +174,9 @@ Skoro każdy ze zbiorów <span class="math inline">\(A_n \cap(\mathbb{R} \setmin
 Oznacza to, że <span class="math inline">\(\mathbb{R}\setminus \mathbb{Q}\)</span> jest przeliczalny. Sprzeczność pokazuje, że rozważana przez nasz przestrzeń nie jest <span class="math inline">\(\sigma\)</span>-skończona.</p>
 </div>
 </div>
-<div id="miary-produktowe" class="section level2" number="26.2">
+<div id="miary-produktowe" class="section level2" number="29.2">
 <h2>
-<span class="header-section-number">26.2</span> Miary produktowe<a class="anchor" aria-label="anchor" href="#miary-produktowe"><i class="fas fa-link"></i></a>
+<span class="header-section-number">29.2</span> Miary produktowe<a class="anchor" aria-label="anchor" href="#miary-produktowe"><i class="fas fa-link"></i></a>
 </h2>
 <p>Rozważmy teraz dwie <span class="math inline">\(\sigma\)</span>-skończone przestrzenie miarowe <span class="math inline">\((A, \mathcal{A}, \mu)\)</span> oraz <span class="math inline">\((B, \mathcal{B}, \nu)\)</span>.
 Niech <span class="math inline">\(\Omega = A\times B\)</span> i niech
@@ -191,7 +194,7 @@ Rodzina ta jest zamknięta na przekroje
 <p>Dopełnienie prostokąta jest sumą prostokątów.</p>
 <p>Niech <span class="math inline">\(\mathcal{F}\)</span> będzie najmniejszym <span class="math inline">\(\sigma\)</span>-ciałem podzbiorów <span class="math inline">\(\Omega\)</span> zawierającym <span class="math inline">\(\mathcal{S}\)</span>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-284" class="theorem"><strong>Twierdzenie 26.1  </strong></span>Załóżmy, że przestrzenie miarowe <span class="math inline">\((A, \mathcal{A}, \mu)\)</span> oraz <span class="math inline">\((B, \mathcal{B}, \nu)\)</span> są <span class="math inline">\(\sigma\)</span>-skończone.
+<p><span id="thm:unlabeled-div-317" class="theorem"><strong>Twierdzenie 29.1  </strong></span>Załóżmy, że przestrzenie miarowe <span class="math inline">\((A, \mathcal{A}, \mu)\)</span> oraz <span class="math inline">\((B, \mathcal{B}, \nu)\)</span> są <span class="math inline">\(\sigma\)</span>-skończone.
 Wówczas istnieje dokładnie jedna miary <span class="math inline">\(\eta\)</span> na <span class="math inline">\((\Omega, \mathcal{F})\)</span> taka, że
 <span class="math display">\[\begin{equation*}
     \eta(A \times B) = \mu(A) \cdot \nu(B).
@@ -199,7 +202,7 @@ Wówczas istnieje dokładnie jedna miary <span class="math inline">\(\eta\)</spa
 Będziemy korzystać z oznaczenia <span class="math inline">\(\mu\otimes \nu = \eta\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-285" class="example"><strong>Przykład 26.5  </strong></span>Rozważmy dwie kopie liczb naturalnych wraz z miarami liczącymi. Dokładniej niech
+<p><span id="exm:unlabeled-div-318" class="example"><strong>Przykład 29.5  </strong></span>Rozważmy dwie kopie liczb naturalnych wraz z miarami liczącymi. Dokładniej niech
 <span class="math inline">\((A, \mathcal{A}, \mu)= (B, \mathcal{B}, \nu) = (\mathbb{N}, 2^{\mathbb{N}}, \#)\)</span>,
 gdzie <span class="math inline">\(\#\)</span> jest miarą liczącą. Wówczas <span class="math inline">\(\Omega = \mathbb{N}\times \mathbb{N}\)</span> jest kratą liczb naturalnych.
 Jak wygląda <span class="math inline">\(\mu \otimes \nu\)</span>?
@@ -214,7 +217,7 @@ Zauważmy, że
 W tym przypadku <span class="math inline">\(\mu\otimes \nu\)</span> jest po prostu miarą liczącą na produkcie <span class="math inline">\(\mathbb{N}^2\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-286" class="example"><strong>Przykład 26.6  </strong></span>Niech <span class="math inline">\((A, \mathcal{A}, \mu) = (B, \mathcal{B}, \nu) = (\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
+<p><span id="exm:unlabeled-div-319" class="example"><strong>Przykład 29.6  </strong></span>Niech <span class="math inline">\((A, \mathcal{A}, \mu) = (B, \mathcal{B}, \nu) = (\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
 Jak wygląda <span class="math inline">\(\lambda_1 \otimes \lambda1\)</span> na <span class="math inline">\(\mathbb{R}^2\)</span>? Dla dowolnych borelowskich <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>
 <span class="math display">\[\begin{equation*}
 \lambda_1\otimes \lambda_1(A \times B) = \lambda_1(A) \cdot \lambda_1(B).
@@ -227,7 +230,7 @@ gdzie <span class="math inline">\(\lambda_2\)</span> jest dwuwymiarową miarą L
 Czyli <span class="math inline">\(\lambda_1\otimes \lambda_1 = \lambda_2\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-287" class="example"><strong>Przykład 26.7  </strong></span>Niech <span class="math inline">\((A, \mathcal{A}, \mu) = (\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
+<p><span id="exm:unlabeled-div-320" class="example"><strong>Przykład 29.7  </strong></span>Niech <span class="math inline">\((A, \mathcal{A}, \mu) = (\mathbb{R}, \mathcal{B}or(\mathbb{R}), \lambda_1)\)</span>.
 i <span class="math inline">\((B, \mathcal{B}, \nu) = (\mathbb{Z}, 2^{\mathbb{Z}}, \#)\)</span>. Wówczas <span class="math inline">\(\Omega = \mathbb{R} \times \mathbb{Z} \subseteq \mathbb{R}^2\)</span>
 jest nieskończoną kolekcją poziomych prostych. Wówczas każdy prostokąt postaci $ A {k}$ jest kopią <span class="math inline">\(A\)</span>
 na poziomie <span class="math inline">\(k\)</span>. May
@@ -247,12 +250,12 @@ to
 </div>
 </div>
 </div>
-<div id="całki-względem-miar-produktowych" class="section level2" number="26.3">
+<div id="całki-względem-miar-produktowych" class="section level2" number="29.3">
 <h2>
-<span class="header-section-number">26.3</span> Całki względem miar produktowych<a class="anchor" aria-label="anchor" href="#ca%C5%82ki-wzgl%C4%99dem-miar-produktowych"><i class="fas fa-link"></i></a>
+<span class="header-section-number">29.3</span> Całki względem miar produktowych<a class="anchor" aria-label="anchor" href="#ca%C5%82ki-wzgl%C4%99dem-miar-produktowych"><i class="fas fa-link"></i></a>
 </h2>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-288" class="theorem"><strong>Twierdzenie 26.2  </strong></span>Jeżeli <span class="math inline">\(f\colon A \times B \to \mathbb{R}\)</span> jest taka, że
+<p><span id="thm:unlabeled-div-321" class="theorem"><strong>Twierdzenie 29.2  </strong></span>Jeżeli <span class="math inline">\(f\colon A \times B \to \mathbb{R}\)</span> jest taka, że
 <span class="math inline">\(f \geq 0\)</span> lub <span class="math inline">\(\int_{A\times B} f \mathrm{d}\mu\otimes \nu &lt;\infty\)</span>, to
 <span class="math display">\[\begin{equation*}
 \int_A \int_B f(x,y) \nu(\mathrm{d}y) \mu(\mathrm{d}x) =
@@ -270,9 +273,9 @@ to
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#twierdzenie-fubiniego">Twierdzenie Fubiniego</a></li>
-<li><a class="nav-link" href="#miary-sigma-sko%C5%84czone"><span class="header-section-number">26.1</span> Miary \(\sigma\)-skończone</a></li>
-<li><a class="nav-link" href="#miary-produktowe"><span class="header-section-number">26.2</span> Miary produktowe</a></li>
-<li><a class="nav-link" href="#ca%C5%82ki-wzgl%C4%99dem-miar-produktowych"><span class="header-section-number">26.3</span> Całki względem miar produktowych</a></li>
+<li><a class="nav-link" href="#miary-sigma-sko%C5%84czone"><span class="header-section-number">29.1</span> Miary \(\sigma\)-skończone</a></li>
+<li><a class="nav-link" href="#miary-produktowe"><span class="header-section-number">29.2</span> Miary produktowe</a></li>
+<li><a class="nav-link" href="#ca%C5%82ki-wzgl%C4%99dem-miar-produktowych"><span class="header-section-number">29.3</span> Całki względem miar produktowych</a></li>
 </ul>
 
       <div class="book-extra">
@@ -289,7 +292,7 @@ to
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-02.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
