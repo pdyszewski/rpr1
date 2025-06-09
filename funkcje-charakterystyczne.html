@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="25.1 Całkowanie funkcji o wartościach zespolonych Dla liczby zespolonej \(z\in \mathbb{C}\) przez \(\Re(z)\) oraz \(\Im(z)\) będziemy oznaczać odpowiednio część rzeczywista i część urojoną \(z\)....">
-<meta name="generator" content="bookdown 0.41 with bs4_book()">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
 <meta property="og:title" content="25 Funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="25.1 Całkowanie funkcji o wartościach zespolonych Dla liczby zespolonej \(z\in \mathbb{C}\) przez \(\Re(z)\) oraz \(\Im(z)\) będziemy oznaczać odpowiednio część rzeczywista i część urojoną \(z\)....">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="25.1 Całkowanie funkcji o wartościach zespolonych Dla liczby zespolonej \(z\in \mathbb{C}\) przez \(\Re(z)\) oraz \(\Im(z)\) będziemy oznaczać odpowiednio część rzeczywista i część urojoną \(z\)....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -75,6 +75,8 @@
 <li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li><a class="" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
 <li><a class="active" href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
+<li><a class="" href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li>
+<li><a class="" href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -90,6 +92,7 @@
 <li><a class="" href="lista-12-zbie%C5%BCno%C5%9B%C4%87.html">Lista 12: Zbieżność</a></li>
 <li><a class="" href="lista-13-s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87.html">Lista 13: Słaba zbieżność</a></li>
 <li><a class="" href="lista-14-powt%C3%B3rka-przed-kolokwium.html">Lista 14: Powtórka przed kolokwium</a></li>
+<li><a class="" href="lista-15-funkcje-charakterystyczne-i-centralne-twierdzenie-graniczne.html">Lista 15: Funkcje charakterystyczne i centralne twierdzenie graniczne</a></li>
 <li class="book-part">Dodatek</li>
 <li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
 </ul>
@@ -120,15 +123,25 @@ Powiemy, że <span class="math inline">\(\psi\)</span> jest mierzalna, gdy
 Jeżeli <span class="math inline">\(\psi\)</span> jest mierzalna, to całki z <span class="math inline">\(\Re(\psi)\)</span> oraz <span class="math inline">\(\Im(\psi)\)</span>
 względem dowolnego rozkładu prawdopodobieństwa <span class="math inline">\(\mu\)</span> na <span class="math inline">\(\mathbb{R}\)</span> są dobrze określone.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-281" class="definition"><strong>Definicja 25.1  </strong></span>Niech <span class="math inline">\(\psi \colon \mathbb{R} \to \mathbb{C}\)</span> będzie funkcją mierzalną i niech
+<p><span id="def:unlabeled-div-280" class="definition"><strong>Definicja 25.1  </strong></span>Niech <span class="math inline">\(\psi \colon \mathbb{R} \to \mathbb{C}\)</span> będzie funkcją mierzalną i niech
 <span class="math inline">\(\mu\)</span> będzie dowolnym rozkładem prawdopodobieństwa na <span class="math inline">\(\mathbb{R}\)</span>. Całkę z <span class="math inline">\(\psi\)</span>
 względem <span class="math inline">\(\mu\)</span> definiujemy przez
-<span class="math display">\[\begin{equation*}
-    \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) = \int_\mathbb{R} \Re(\psi(x) ) \mu( \mathrm{d}x)
-     + i\int_\mathbb{R} \Re(\psi(x) ) \mu( \mathrm{d}x).
-\end{equation*}\]</span></p>
+<span class="math display">\[\begin{align*}
+    \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) =&amp; \int_\mathbb{R} \Re(\psi(x) ) \mu( \mathrm{d}x)\\
+      &amp; + i\int_\mathbb{R} \Im(\psi(x) ) \mu( \mathrm{d}x).
+\end{align*}\]</span></p>
 </div>
-<p>Nasze potrzeby sprowadzą się do całkowania bardzo konkretnego rodzaju funkcji. Zanim do tego
+<p>Zauważmy, że z powyższej definicji <span class="math inline">\(\int \psi(x) \mu(\mathrm{d}x)\)</span> jest liczbą zespoloną, oraz
+<span class="math display">\[\begin{equation*}
+    \Re \left( \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x)\right) =
+    \int_\mathbb{R} \Re(\psi(x) ) \mu( \mathrm{d}x).
+\end{equation*}\]</span>
+Analogicznie
+<span class="math display">\[\begin{equation*}
+    \Im \left( \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x)\right) =
+    \int_\mathbb{R} \Im(\psi(x) ) \mu( \mathrm{d}x).
+\end{equation*}\]</span>
+Nasze potrzeby sprowadzą się do całkowania bardzo konkretnego rodzaju funkcji. Zanim do tego
 przejdziemy
 uzasadnimy nierówność trójkąta. Dla liczby zespolonej <span class="math inline">\(z\)</span> przez <span class="math inline">\(|z|\)</span> oznaczać będziemy jej moduł
 <span class="math display">\[\begin{equation*}
@@ -141,44 +154,552 @@ Utożsamiając <span class="math inline">\(\mathbb{C}\)</span> z <span class="ma
 \end{equation*}\]</span>
 dla wektorów losowych otrzymujemy</p>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-282" class="corollary"><strong>Wniosek 25.1  </strong></span>Dla mierzalnej <span class="math inline">\(\psi \colon \mathbb{R} \to \mathbb{C}\)</span>
+<p><span id="cor:tri" class="corollary"><strong>Wniosek 25.1  </strong></span>Dla mierzalnej <span class="math inline">\(\psi \colon \mathbb{R} \to \mathbb{C}\)</span>
 oraz dowolnego rozkładu prawdopodobieństwa na <span class="math inline">\(\mathbb{R}\)</span>,
 <span class="math display">\[\begin{equation*}
 \left| \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) \right| \leq
 \int_\mathbb{R} \left| \psi(x) \right| \mu(\mathrm{d}x).
 \end{equation*}\]</span></p>
 </div>
+<p>Warto jednak w tym miejscu przytoczyć alternatywny dowód Wniosku <a href="funkcje-charakterystyczne.html#cor:tri">25.1</a>.</p>
+<div class="proof">
+<p><span id="unlabeled-div-281" class="proof"><em>Proof</em> (Alternatywny dowód Wniosku <a href="funkcje-charakterystyczne.html#cor:tri">25.1</a>). </span>Jeżeli <span class="math inline">\(\int_\mathbb{R} \psi(x) \mu(\mathrm{d}x)=0\)</span>, to teza wniosku jest oczywista.
+Załóżmy więc, że <span class="math inline">\(\int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) \neq 0\)</span>.
+Niech
+<span class="math display">\[\begin{equation*}
+\lambda =
+\left| \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) \right| /
+\int_\mathbb{R}  \psi(x) \mu(\mathrm{d}x).
+\end{equation*}\]</span>
+Wówczas <span class="math inline">\(\lambda\)</span> jest liczbą zespoloną o module jeden. Z definicji
+<span class="math display">\[\begin{equation*}
+\left| \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) \right|
+= \int_\mathbb{R} \lambda \psi(x)  \mu(\mathrm{d}x).
+\end{equation*}\]</span>
+Skoro moduł liczby zespolonej jest liczbą rzeczywistą, to
+<span class="math display">\[\begin{align*}
+\left| \int_\mathbb{R} \psi(x) \mu(\mathrm{d}x) \right|
+&amp; = \Re \left( \int_\mathbb{R} \lambda \psi(x)  \mu(\mathrm{d}x) \right)\\
+&amp; = \int_\mathbb{R} \Re \left(\lambda \psi(x) \right) \mu(\mathrm{d}x).
+\end{align*}\]</span>
+Skoro <span class="math inline">\(\Re(z)\leq |z|\)</span> dla <span class="math inline">\(z\in \mathbb{C}\)</span>, to
+<span class="math display">\[\begin{align*}
+\int_\mathbb{R} \Re \left(\lambda \psi(x) \right)  \mu(\mathrm{d}x) &amp; =
+\int_\mathbb{R}  \left|\lambda \psi(x) \right|  \mu(\mathrm{d}x) \\ &amp; \leq
+\int_\mathbb{R}  \left| \psi(x) \right|  \mu(\mathrm{d}x).
+\end{align*}\]</span>
+<span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
-<div id="funkcje-charakterystyczne-1" class="section level2" number="25.2">
+</div>
+<div id="funkcje-charakterystyczne-przykłady" class="section level2" number="25.2">
 <h2>
-<span class="header-section-number">25.2</span> Funkcje charakterystyczne<a class="anchor" aria-label="anchor" href="#funkcje-charakterystyczne-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">25.2</span> Funkcje charakterystyczne: przykłady<a class="anchor" aria-label="anchor" href="#funkcje-charakterystyczne-przyk%C5%82ady"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-283" class="definition"><strong>Definicja 25.2  </strong></span><strong>Funkcją charakterystyczną</strong> zmiennej losowej <span class="math inline">\(X\)</span> nazywamy funkcję
+<p><span id="def:unlabeled-div-282" class="definition"><strong>Definicja 25.2  </strong></span><strong>Funkcją charakterystyczną</strong> zmiennej losowej <span class="math inline">\(X\)</span> nazywamy funkcję
 <span class="math inline">\(\varphi_X:\mathbb{R} \to \mathbb{C}\)</span> zdefiniowaną wzorem
 <span class="math display">\[
    \varphi_X(t) = \mathbb{E} \left[e^{it X} \right]
    = \mathbb{E} \left[ \cos (tX) + i \sin (tX) \right].\]</span></p>
 </div>
-Funkcja charakterystyczna nazywana jest też (np. w analizie) transformatą Fouriera. Można zapisać ją też w postaci
+<p>Funkcja charakterystyczna nazywana jest też (np. w analizie) transformatą Fouriera. Można zapisać ją też w postaci
 <span class="math display">\[
-\phi_X(t) = \int_\R e^{its}\mu_X(ds),
-\]</span> gdzie <span class="math inline">\(\mu_X\)</span> jest rozkładem <span class="math inline">\(X\)</span>. Powyższa formuła oznacza transformatę Fouriera miary <span class="math inline">\(\mu_X\)</span>.
+\phi_X(t) = \int_\mathbb{R} e^{its}\mu_X(\mathrm{d}s),
+\]</span>
+gdzie <span class="math inline">\(\mu_X\)</span> jest rozkładem <span class="math inline">\(X\)</span>.
+Powyższa formuła oznacza transformatę Fouriera miary <span class="math inline">\(\mu_X\)</span> dlatego czasami będziemy mówić
+o funkcji charakterystycznej rozkładu <span class="math inline">\(\mu\)</span> zadanej prze
+<span class="math display">\[
+\phi_\mu(t) = \int_\mathbb{R} e^{its}\mu(\mathrm{d}s),
+\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-283" class="example"><strong>Przykład 25.1  </strong></span>Jeżeli <span class="math inline">\(X = a\)</span> z prawdopodobieństwem jeden, to
+<span class="math display">\[ \varphi_X(t) = \mathbb{E}\left[ e^{it X} \right] = e^{ita}.
+  \]</span>
+Funkcję charakterystyczną <span class="math inline">\(\varphi_X\)</span> możemy utożsamić z parą funkcji <span class="math inline">\(\Re(\varphi_X)\)</span>
+oraz <span class="math inline">\(\Im(\varphi_X)\)</span>.
+Dla <span class="math inline">\(a=1\)</span> ich wykresy wyglądają następująco.
+<img src="TIKZ/char0.svg" style="display: block; margin: auto;">
+O funkcji charakterystycznej możemy też myśleć jak o krzywej w <span class="math inline">\(\mathbb{R}^3\)</span>
+o parametryzacji <span class="math inline">\((t, \Re(\varphi_X(t)), \Im(\varphi_X(t)))\)</span>. Wówczas dla <span class="math inline">\(a=1\)</span>
+otrzymujemy</p>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script><div id="psi-plot" style="width: 100%; height: 500px;">
+
+</div>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-284" class="example"><strong>Przykład 25.2  </strong></span>Jeżeli <span class="math inline">\(X\sim U(0,1)\)</span>, to
+<span class="math display">\[\begin{align*}
+\varphi_X(t) &amp; = \int_0^1 e^{its} \mathrm{d}s  \\
+&amp; = \int_0^1 \cos(ts)ds + i \int_0^1 \sin(ts) \mathrm{d}s\\
+&amp;= \left.\frac{\sin (ts)}{t}\right|_0^1 - \left.\frac{i\cos (ts)}{t}\right|_0^1 \\
+&amp; = \frac 1t\left( \sin t - i\cos t + i \right)\\
+&amp;= \frac 1{it} \left( \cos t + i\sin t -1 \right) = \frac{e^{it}-1}{it}.
+\end{align*}\]</span></p>
+<p>Wykres mary funkcji</p>
+<div class="inline-figure"><img src="TIKZ/char1.svg" style="display: block; margin: auto;"></div>
+<p>oraz krzywa w <span class="math inline">\(\mathbb{R}^3\)</span></p>
+<div id="phi-plot" style="width: 100%; height: 500px;">
+
+</div>
+</div>
+<script>
+  const tMin = -15, tMax = 15, N = 500;
+  const t = Array.from({length: N}, (_, i) => tMin + i * (tMax - tMin) / (N - 1));
+
+  // ϕ(t)
+  const re_phi = t.map(x => x === 0 ? 1 : Math.sin(x) / x);
+  const im_phi = t.map(x => x === 0 ? 0 : (1 - Math.cos(x)) / x);
+
+  Plotly.newPlot('phi-plot', [{
+    x: t,
+    y: re_phi,
+    z: im_phi,
+    mode: 'lines',
+    type: 'scatter3d',
+    line: {color: 'rgb(238, 232, 213)', width: 4},
+    name: 'ϕ(t)'
+  }], {
+    paper_bgcolor: '#002b36',
+    font: {color: 'white'},
+    scene: {
+      xaxis: {title: 't'},
+      yaxis: {title: 'Re(ϕ(t))'},
+      zaxis: {title: 'Im(ϕ(t))'}
+    }
+  });
+
+  // ψ(t)
+  const re_psi = t.map(x => Math.cos(x));
+  const im_psi = t.map(x => Math.sin(x));
+
+  Plotly.newPlot('psi-plot', [{
+    x: t,
+    y: re_psi,
+    z: im_psi,
+    mode: 'lines',
+    type: 'scatter3d',
+    line: {color: 'rgb(238, 232, 213)', width: 4},
+    name: 'ψ(t)'
+  }], {
+    paper_bgcolor: '#002b36',
+    font: {color: 'white'},
+    scene: {
+      xaxis: {title: 't'},
+      yaxis: {title: 'Re(ψ(t))'},
+      zaxis: {title: 'Im(ψ(t))'}
+    }
+  });
+
+</script><div class="example">
+<p><span id="exm:unlabeled-div-285" class="example"><strong>Przykład 25.3  </strong></span>Jeżeli <span class="math inline">\(X\sim \mathcal{N}(0,1)\)</span>, to wówczas
+<span class="math display">\[
+  \varphi_X(t) = e^{-\frac{t^2}{2}}.
+  \]</span>
+Istotnie, piszemy:
+<span class="math display">\[\begin{align*}
+  \varphi_X(t) &amp; =
+  \frac{1}{\sqrt{2\pi}} \int_\mathbb{R} e^{itx} e^{-\frac{x^2}2} \mathrm{d}x \\
+  &amp; =  \frac{1}{\sqrt{2\pi}} \int_\mathbb{R} \cos(tx) e^{-\frac{x^2}2} \mathrm{d}x.\\
+  \end{align*}\]</span>
+Wówczas, różniczkując pod całką, a następnie całkując przez części, otrzymujemy
+<span class="math display">\[\begin{align*}
+  \varphi'_X(t) &amp; = -\frac 1{\sqrt{2\pi}}\int_\mathbb{R}  x\sin(tx) e^{-\frac{x^2}{2}} \mathrm{d}x \\
+  &amp; = -\frac 1{\sqrt{2\pi}}\int_\mathbb{R} t \cos(tx) e^{-\frac{x^2}2}\mathrm{d}x = -t\varphi_X(t).
+  \end{align*}\]</span>
+Stąd
+<span class="math display">\[
+  \big( \varphi_X(t) e^{\frac {t^2}2} \big)' =
+  \varphi_X'(t) e^{\frac{t^2}{2}} + t\varphi_X(t)  e^{\frac{t^2}{2}}  = 0,
+  \]</span> a stąd wynika, że
+<span class="math display">\[\varphi_X(t) e^{\frac{t^2}{2}} = C.\]</span>
+Kładąc <span class="math inline">\(t=0\)</span> wyliczamy wartość stałej:
+<span class="math display">\[\varphi_X(0)=1 = C.\]</span>
+Innym sposobem obliczenia <span class="math inline">\(\varphi_X(t)\)</span> jest użycie metod z analizy zespolonej.</p>
+</div>
+<p>Jeżeli rozkład <span class="math inline">\(\mu\)</span> ma gęstość <span class="math inline">\(f \colon \mathbb{R} \to \mathbb{R}\)</span>, to
+funkcja charakterystyczna
+<span class="math display">\[\begin{equation*}
+\varphi_\mu(t) = \int_\mathbb{R} e^{itx}f(x) \mathrm{d}x
+\end{equation*}\]</span>
+jest transformatą Fouriera funkcji <span class="math inline">\(f\)</span>.
+O transformacie Fouriera można posłuchać od Granta Sandersona.</p>
+<div style="text-align: center">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/spUNpyF58BY?si=N3SRRTo8wAuRcQOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="funkcje-charakterystyczne-własności" class="section level2" number="25.3">
+<h2>
+<span class="header-section-number">25.3</span> Funkcje charakterystyczne: własności<a class="anchor" aria-label="anchor" href="#funkcje-charakterystyczne-w%C5%82asno%C5%9Bci"><i class="fas fa-link"></i></a>
+</h2>
+<div class="theorem">
+<p><span id="thm:char" class="theorem"><strong>Twierdzenie 25.1  </strong></span>Niech <span class="math inline">\(\varphi_X\)</span> będzie funkcją charakterytyczną zmiennej losowej <span class="math inline">\(X\)</span>.
+Wtedy</p>
+<ol style="list-style-type: decimal">
+<li>
+<span class="math inline">\(\varphi_X(0)=1\)</span>;</li>
+<li>
+<span class="math inline">\(|\varphi_X(t)|\le 1\)</span>;</li>
+<li>
+<span class="math inline">\(\varphi_X(-t) = \overline{\varphi_X(t)}\)</span>;</li>
+<li>
+<span class="math inline">\(\varphi_X(t)\)</span> jest rzeczywista wtedy i tylko wtedy, gdy rozkład <span class="math inline">\(X\)</span> jest symetryczny;</li>
+<li>funkcja <span class="math inline">\(\phi_X(t)\)</span> jest jednostajnie ciągła;</li>
+<li>
+<span class="math inline">\(\varphi_{aX+b}(t) = e^{itb} \varphi_X(at)\)</span>.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-286" class="proof"><em>Proof</em>. </span>Punkt 1 wynika z
+<span class="math display">\[\varphi_X(0) = \mathbb{E} \left[ 1 \right] = 1.\]</span>
+Dowód punktu 2:
+<span class="math display">\[
+  |\varphi_X(t)| \le \mathbb{E} \left[ \left|e^{itX}\right|\right]=1.
+  \]</span>
+Dowód punktu 3:
+<span class="math display">\[\begin{align*}
+  \varphi_X(-t) &amp; =
+  \mathbb{E} \left[ \cos(-tX) \right] + i \mathbb{E} \left[\sin(-tX) \right] \\
+  &amp; = \mathbb{E} \left[ \cos(tX) \right] - i \mathbb{E} \left[\sin(tX) \right] \\
+  &amp; = \overline{ \mathbb{E}[ e^{it X}] } = \overline{\varphi_X(t)}.
+  \end{align*}\]</span>
+Punkt 4: jeżeli rozkład <span class="math inline">\(X\)</span> jest symetryczny, to <span class="math inline">\(\varphi(X)\)</span> jest rzeczywista w oczywisty sposób.
+Odwrotna implikacja zostanie udowodniona nieco później.</p>
+<p>Punkt 5 wynika z
+<span class="math display">\[\begin{align*}
+   \left|  \varphi_X(t+h) - \varphi_X(t)\right| &amp; =
+   \left| \mathbb{E} \left[(e^{ihX}-1)e^{itX}\right] \right| \\
+   &amp; \le \mathbb{E} \left|e^{ihX}-1\right|.
+  \end{align*}\]</span>
+Z tw. Lebesgue’a powyższa wartość zbiega do 0, gdy <span class="math inline">\(h\to 0\)</span> niezależnie od <span class="math inline">\(t\)</span>.
+Punkt 6:
+<span class="math display">\[\begin{align*}
+  \varphi_{aX+b}(t) &amp; = \mathbb{E} \left[ e^{i(aX+b)t} \right] \\
+  &amp; = e^{ibt}\mathbb{E} \left[ e^{iXat}\right] = e^{itb}\varphi_X(at).
+  \end{align*}\]</span></p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-287" class="theorem"><strong>Twierdzenie 25.2  (Bochnera) </strong></span>Funkcja <span class="math inline">\(\varphi \colon \mathbb{R} \to \mathbb{C}\)</span> jest funkcją charakterystyczną pewnego rozkładu prawdopodobieństwa
+wtedy i tylko wtedy, gdy <span class="math inline">\(\varphi\)</span> jest ciągła, <span class="math inline">\(\varphi(0)=1\)</span> i <span class="math inline">\(\varphi\)</span>
+jest dodatnio określona, tzn. dla każdego ciągu <span class="math inline">\(t_1,\ldots, t_n \in \mathbb{R}\)</span> oraz
+<span class="math inline">\(z_1,\ldots, z_n\in \mathbb{C}\)</span> zachodzi
+<span class="math display">\[
+  \sum_{k,j\le n} \varphi(t_k-t_j) z_k\overline z_j \ge 0.
+  \]</span></p>
+</div>
+<figure style="width: 100%; text-align: center;"><img src="PICS/Bochner.jpg" style="width: 20%; display: block; margin: auto"><p style="text-align: center">
+Salomon Bochner (1899-1982)
+</p>
+</figure><div class="proof">
+<p><span id="unlabeled-div-288" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\varphi\)</span> jest funkcją charakterystyczną, wtedy
+<span class="math display">\[\begin{align*}
+  \sum_{k,j} \varphi(t_k-t_j)z_k \overline z_j &amp; =
+  \sum_{k,j} \mathbb{E}\left[ e^{it_k X}e^{-i t_j X} z_k \overline z_j \right] \\
+  &amp; =\mathbb{E}\left[\sum_{k,j} e^{it_k X } z_k \overline{e^{i t_j X}z_j}\right] \\
+  &amp; = \mathbb{E}\left|\sum_k e^{-t_k X}z_k\right|^2 \ge 0
+  \end{align*}\]</span>
+Dowód odwrotnej implikacji (trudny!) pomijamy.</p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:t107" class="theorem"><strong>Twierdzenie 25.3  </strong></span>Załóżmy, że <span class="math inline">\(X\)</span> jest zmienną losową taką, że
+<span class="math inline">\(\mathbb{E}[|X|^k]&lt;\infty\)</span> dla pewnej liczby naturalnej <span class="math inline">\(k\)</span>.
+Wtedy funkcja charakterystyczna <span class="math inline">\(\varphi_X\)</span> ma <span class="math inline">\(k\)</span>-tą pochodną ciągłą i
+<span class="math display">\[
+  \varphi_X^{(k)}(t) = i^k \mathbb{E}\left[ e^{i t X} X^k \right].
+  \]</span> W szczególności
+<span class="math display">\[
+  \varphi_X^{(k)}(0) = i^k \mathbb{E}\left[X^k\right].
+  \]</span>
+Ponadto
+<span class="math display">\[
+\varphi_X(t) = 1 + \sum_{j=1}^k\frac{(it)^j}{j!} \cdot \mathbb{E} \left[X^j\right] + o(|t|^k),
+\]</span> gdzie ostatni składnik spełnia <span class="math inline">\(\lim_{t\to 0} \frac{o(|t|^k)}{|t|^k} = 0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-289" class="proof"><em>Proof</em>. </span>Dla <span class="math inline">\(k=1\)</span> mamy
+<span class="math display">\[\begin{align*}
+  \frac{\varphi_X(t+h) - \varphi_X(t)}{h} &amp; = \mathbb{E}\left[\frac{e^{i(t+h)X} - e^{itX}}{h}\right]\\
+  &amp; = \mathbb{E}\left[ e^{itX}\cdot \frac{e^{ihX}-1}h \right].
+  \end{align*}\]</span>
+Zauważmy, że
+<span class="math display">\[
+  \lim_{h\to 0 } \frac{e^{ih X }-1}{h} = iX.
+  \]</span>
+Chcemy więc przejść z granicą pod całkę używając twierdzenia Lebesgue’a.
+W tym celu piszemy (przypomnijmy wzór <span class="math inline">\(\cos(2x) = 1-2\sin^2(x)\)</span>):
+<span class="math display">\[\begin{align*}
+  \left| e^{itX}\cdot \frac{e^{ihX}-1}h  \right|
+  \le &amp;  \frac{|\cos(hX)-1|}{|h|} + \frac{|\sin(h X)|}{|h|}\\  
+   = &amp;  |X|\cdot \left( \sin(hX/2)\cdot \frac{\sin (hX/2)}{h|X|/2}\right. \\
+   &amp; + \left. \frac{|\sin h X|}{|h||X|}\right) \\
+   \le &amp; 2|X|.
+  \end{align*}\]</span>
+Z założenia <span class="math inline">\(\mathbb{E}[ |X|]&lt;\infty\)</span> możemy odwołać się do twierdzenie Lebesgue’a i stąd
+<span class="math display">\[\begin{align*}
+  \varphi'_X(t) &amp; = \lim_{h\to 0}   \frac{\varphi_X(t+h) - \varphi_X(t)}{h} \\
+  &amp; = \mathbb{E}\left[ e^{itX}\cdot \lim_{h\to 0}  \frac{e^{ihX}-1}h \right] \\
+   &amp; = i\mathbb{E}\left[ e^{itX} X \right].
+  \end{align*}\]</span>
+Ciągłość <span class="math inline">\(\phi'_X\)</span> (a nawet jednostajna ciągłość) wynika bezpośrednio w powyższej formułki.</p>
+<p>Dla <span class="math inline">\(k&gt; 1\)</span> rozumujemy przez indukcję.</p>
+<p>Ostatnie równanie, przypomina twierdzenia Taylora,
+ale z uwagi na pojawienie się liczb zespolonych dochodzą
+pewne drobne problemy techniczne.
+Szczegóły można znaleźć w
+<a href="https://sites.math.duke.edu/~rtd/PTE/PTE5_011119.pdf">ksiażce Durretta, tw. 3.3.20</a>).</p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-290" class="theorem"><strong>Twierdzenie 25.4  </strong></span>Jeżeli <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> są niezależnymi zmiennymi losowymi, to
+<span class="math display">\[
+  \varphi_{X+Y}(t) = \varphi_X(t) \varphi_Y(t).
+  \]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-291" class="proof"><em>Proof</em>. </span>Piszemy
+<span class="math display">\[\begin{align*}
+  \varphi_{X+Y}(t) &amp; = \mathbb{E} \left[ e^{it (X+Y)}\right] \\
+  &amp; = \mathbb{E} \left[ e^{itX} \right] \mathbb{E}\left[ e^{itY}\right]\\
+  &amp; = \varphi_X(t) \varphi_Y(t).
+  \end{align*}\]</span></p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
 <p>Warto wyjaśnić dlaczego funkcje charakterystyczne będą dla nas przydatne. Wynika to m.in. z powyższego twierdzenia. Chcemy badać sumy niezależnych zmiennych losowych. Ich rozkłady są trudne do obliczenia (wyraziliśmy je wcześniej w terminach splotów). Zauważmy jednak, że na poziomie funkcji charakterystycznych jest to po prostu iloczyn funkcji. Okazuje się, że wiele problemów dla sum zmiennych losowych po wyrażeniu ich w terminach funkcji charakterystycznych staje się znacznie łatwiejszych do przeanalizowania. To jest zjawisko, które pojawia się w wielu innych miejscach (w równaniach różniczkowych transformata Fouriera zamienia różniczkowanie na mnożenie przez wielomian, a splot funkcji na iloczyn ich transformat; w kombinatoryce sploty dwóch ciągów wygodniej analizuje się używając funkcji generujących momenty lub dyskretnej transformaty Fouriera). Musimy więc lepiej zrozumieć związki pomiędzy zmiennymi losowymi, a ich funkcjami charakterystycznymi. W szczególności powinniśmy wiedzieć, że funkcja charakterystyczna jednoznacznie wyznacza rozkład zmiennej losowej (a nawet można ją stosunkowo łatwo odwrócić). Potrzebujemy więc dalszych własności funkcji charakterystycznych.
 Powyższe uwagi nie ograniczają się jedynie do sum niezależnych zmiennych losowych. Jak zobaczymy funkcje charakterystyczne mają znacznie
 szersze zastosowania.</p>
+</div>
+<div id="funkcje-charakterystyczne-a-słaba-zbieżność" class="section level2" number="25.4">
+<h2>
+<span class="header-section-number">25.4</span> Funkcje charakterystyczne a słaba zbieżność<a class="anchor" aria-label="anchor" href="#funkcje-charakterystyczne-a-s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87"><i class="fas fa-link"></i></a>
+</h2>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-292" class="theorem"><strong>Twierdzenie 25.5  (o jednoznaczności) </strong></span>Jeżeli rozkłady prawdopodobieństw <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> na <span class="math inline">\(\mathbb{R}\)</span>
+mają równe funkcje charakterystyczne
+<span class="math display">\[
+\varphi_\mu(t) = \varphi_\nu(t)
+\]</span>
+dla każdego <span class="math inline">\(t \in \mathbb{R}\)</span>,
+to <span class="math inline">\(\mu =\nu\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-293" class="proof"><em>Proof</em>. </span>W dowodzie skorzystamy z twierdzenia Weierstrassa mówiącego,
+że każdą funkcję ciągłą okresową <span class="math inline">\(f\)</span> o okresie <span class="math inline">\(T\)</span> na <span class="math inline">\(\mathbb{R}\)</span>
+możemy przybliżyć jednostajnie ciągiem wielomianów trygonometrycznych
+<span class="math display">\[
+f_n(x) = \sum_{k=0}^n \left( a_k \sin (2\pi kx/T) + b_k \cos (2\pi k x/T) \right).
+\]</span>
+Wystarczy pokazać, że dla dowolnej funkcji <span class="math inline">\(f\in C(\mathbb{R})\)</span>
+mamy
+<span class="math display" id="eq:ww23">\[\begin{equation}
+  \int_\mathbb{R} f(x) \mu(\mathrm{d}x) = \int_\mathbb{R} f(x)\nu(\mathrm{d}x).
+  \tag{25.1}
+\end{equation}\]</span>
+Z równości funkcji charakterystycznych wiemy,
+że powyższa równość zachodzi dla każdej funkcji postaci <span class="math inline">\(x\mapsto e^{itx}\)</span>
+(przy ustalonym <span class="math inline">\(t\)</span>).
+Formuła <a href="funkcje-charakterystyczne.html#eq:ww23">(25.1)</a> zachodzi również dla dowolnego wielomianu trygonometrycznego,
+ponieważ
+<span class="math display">\[
+\sin(tx) = \frac{e^{itx} - e^{-itx}}{2i}
+\]</span>
+oraz
+<span class="math display">\[
+\cos(tx) = \frac{e^{itx} + e^{-itx}}{2}.
+\]</span>
+Zatem z twierdzenia Weierstrassa równość <a href="funkcje-charakterystyczne.html#eq:ww23">(25.1)</a> jest prawdziwa dla dowolnej funkcji,
+która jest ciągła i okresowa.</p>
+<p>Niech <span class="math inline">\(f\)</span> będzie dowolną funkcją ciągłą i ograniczoną.
+Istnieje ciąg funkcji <span class="math inline">\(f_n\)</span> ciągłych oraz okresowych o okresie <span class="math inline">\(2n+2\)</span> takich, że
+<span class="math display">\[
+f(x) = f_n(x) \quad \mbox{dla } x\in [-n,n]
+\]</span>
+oraz
+<span class="math display">\[
+\sup_{x\in \mathbb{R}} |f_n(x)| \le \sup_{x\in \mathbb{R}} |f(x)|
+\]</span>
+Wówczas mamy
+<span class="math display">\[\begin{align*}
+  &amp; \left| \int_\mathbb{R} f(x)\mu(\mathrm{d}x) - \int_\mathbb{R} f(x)\nu(\mathrm{d}x)\right| \\
+  &amp; \le \int_\mathbb{R} |f(x) - f_n(x)|\mu(\mathrm{d}x)\\
+  &amp; + \left| \int_\mathbb{R} f_n(x)\mu(\mathrm{d}x) - \int_\mathbb{R} f_n(x)\nu(\mathrm{d}x)  \right|\\
+  &amp; + \int_\mathbb{R}|f(x)- f_n(x)|\nu(\mathrm{d}x)\\
+  &amp; \le 2\sup_{x\in\mathbb{R}} |f(x)| \Big( \mu\big((-n,n)^c\big)  + \nu\big((-n,n)^c\big) \Big) \\
+  &amp; \to 0,
+\end{align*}\]</span>
+co dowodzi, że <span class="math inline">\(f\)</span> spełnia <a href="funkcje-charakterystyczne.html#eq:ww23">(25.1)</a>.</p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-294" class="corollary"><strong>Wniosek 25.2  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową. Wówczas
+<span class="math inline">\(\varphi_X(t)\)</span> jest rzeczywista wtedy i tylko wtedy, gdy rozkład <span class="math inline">\(X\)</span> jest symetryczny.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-295" class="proof"><em>Proof</em>. </span>Jeżeli funkcja charakterystyczna <span class="math inline">\(\phi_X(t)\)</span> jest rzeczywista, to
+<span class="math display">\[
+  \varphi_X(t) = \overline{\varphi_X(-t)} = \varphi_X(-t) = \varphi_{-X}(t)  
+  \]</span>
+dla każdego <span class="math inline">\(t \in \mathbb{R}\)</span>.
+Zatem w twierdzenia o jednoznaczności rozkładu <span class="math inline">\(X\)</span> oraz <span class="math inline">\(-X\)</span> muszą mieć ten sam rozkład,
+a więc <span class="math inline">\(X\)</span> jest symetryczna.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-296" class="example"><strong>Przykład 25.4  </strong></span>Jeżeli <span class="math inline">\(X_1\)</span> i <span class="math inline">\(X_2\)</span> są niezależne i mają rozkłady odpowiednio
+<span class="math inline">\(\mathcal{N}(m_1,\sigma_1^2)\)</span> i <span class="math inline">\(\mathcal{N}(m_2,\sigma_2^2)\)</span>,
+to <span class="math inline">\(X_1+X_2\)</span> ma
+rozkład <span class="math inline">\(\mathcal{N}(m_1+m_2,\sigma_1^2+\sigma_2^2)\)</span>.
+Istotnie, zapiszmy <span class="math inline">\(X_j = m_j + \sigma_j Y_j\)</span>,
+wówczas <span class="math inline">\(Y_j\)</span> ma rozkład <span class="math inline">\(\mathcal{N}(0,1)\)</span>.
+Możemy więc obliczyć funkcję charakterystyczną <span class="math inline">\(\varphi_{X_j}\)</span>:
+<span class="math display">\[\begin{align*}
+  \varphi_{X_j}(t) &amp; = \varphi_{m_j + \sigma_j Y_j}(t) \\
+  &amp; = e^{im_j}\varphi_{Y_j}(\sigma_j t) \\
+  &amp; = e^{im_jt  } e^{-\frac{\sigma_j^2t^2}{2}},
+\end{align*}\]</span><br>
+zatem
+<span class="math display">\[\begin{align*}
+\varphi_{X_1+X_2}(t) &amp; =   \varphi_{X_1}(t)  \varphi_{X_2}(t) \\
+&amp; = e^{im_1 t} e^{-\frac{\sigma_1^2t^2}{2}}e^{im_2t} e^{-\frac{\sigma_2^2t^2}{2}}\\
+&amp; = e^{i(m_1+m_2)t} e^{-\frac{(\sigma_1^2 + \sigma_2^2)t^2}{2}}.
+\end{align*}\]</span>
+Powyższa funkcja jest funkcją charakterystyczną rozkładu
+<span class="math inline">\(\mathcal{N}(m_1+m_2,\sigma_1^2+\sigma_2^2)\)</span>.
+Z powyższego twierdzenia o jednoznaczności wynika więc, że <span class="math inline">\(X_1+X_2\)</span> ma właśnie taki rozkład.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:LC" class="theorem"><strong>Twierdzenie 25.6  (Lévy'ego-Craméra) </strong></span>Niech <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span>
+będą rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}\)</span>.
+Wówczas</p>
+<ol style="list-style-type: decimal">
+<li>jeżeli <span class="math inline">\(\mu_n \Rightarrow \mu\)</span>, to dla każdego <span class="math inline">\(t\)</span>, <span class="math inline">\(\varphi_{\mu_n}(t) \to \varphi_{\mu}(t)\)</span>;</li>
+<li>jeżeli <span class="math inline">\(\varphi_{\mu_n}(t)\to\varphi(t)\)</span> dla pewnej funkcji <span class="math inline">\(\varphi\)</span> ciągłej w punkcie 0,
+to <span class="math inline">\(\varphi\)</span> jest funkcją charakterystyczną pewnego rozkładu <span class="math inline">\(\mu\)</span> oraz <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</li>
+</ol>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+<figure style="width: 48%; text-align: center;"><img src="PICS/Harald_Cramer.jpg" style="width: 100%;"><p>
+Harald Cramer (1893-1985)
+</p>
+</figure><figure style="width: 48%; text-align: center;"><img src="PICS/Paul_Levy.jpg" style="width: 100%;"><p>
+Paul Lévy (1886-1971)
+</p>
+</figure>
+</div>
+<p>W dowodzie powyższego twierdzenia posłużymy się warunkiem równoważnym zbieżności.
+Aby go umotywować przypomnijmy uwagę z podstawowego kursu analizy.</p>
+<div class="remark">
+<p><span id="unlabeled-div-297" class="remark"><em>Remark</em>. </span>Ciąg liczb rzeczywistych <span class="math inline">\(\{a_n\}_{n \in \mathbb{N}}\)</span> jest zbieżny do liczby rzeczywistej <span class="math inline">\(a\)</span>
+wtedy i tylko wtedy, gdy z każdego podciągu <span class="math inline">\(\{a_{n_k}\}_{k \in \mathbb{N}}\)</span>
+można wybrać podciąg <span class="math inline">\(\{a_{n_{k_j}}\}_{j \in \mathbb{N}}\)</span> zbieżny do <span class="math inline">\(a\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:SUB" class="lemma"><strong>Lemma 25.1  </strong></span>Niech <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\mu\)</span> będą miarami probabilistycznymi na <span class="math inline">\(\mathbb{R}\)</span>.
+Wówczas <span class="math inline">\(\mu_n \Rightarrow \mu\)</span> przy <span class="math inline">\(n \to \infty\)</span> wtedy i tylko wtedy, gdy z każdego ciągu
+<span class="math inline">\(\{\mu_{n_k}\}_{k \in \mathbb{N}}\)</span> można wybrać podciąg <span class="math inline">\(\{\mu_{n_{k_j}}\}_{j \in \mathbb{N}}\)</span> taki,
+że <span class="math inline">\(\mu_{n_{k_j}} \Rightarrow \mu\)</span> przy <span class="math inline">\(j \to \infty\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-298" class="proof"><em>Proof</em> (Dowód Lematu). </span>Jeżeli <span class="math inline">\(\mu_n \Rightarrow \mu\)</span>, to warunek obecny w lemacie jest oczywisty.
+Załóżmy teraz, że <span class="math inline">\(\mu_n\)</span> nie zbiegają słabo do <span class="math inline">\(\mu\)</span>. Istnieje wówczas funkcja
+<span class="math inline">\(f_0 \in C_b(\mathbb{R})\)</span> taka, że ciąg
+<span class="math display">\[\begin{equation*}
+\left\{ \int_{\mathbb{R}} f_0(x) \: \mu_n(\mathrm{d}x) \right\}_{n \in \mathbb{N}}
+\end{equation*}\]</span>
+nie zbiega do <span class="math inline">\(\int_\mathbb{R} f_0(x) \mu(\mathrm{d}x)\)</span>. Oznacza to, że istnieje <span class="math inline">\(\epsilon&gt;0\)</span>
+oraz podciąg <span class="math inline">\(\{n_k\}_{k \in \mathbb{N}}\)</span> taki, że
+<span class="math display">\[\begin{equation*}
+\left| \int_{\mathbb{R}} f_0(x) \: \mu_n(\mathrm{d}x) - \int_{\mathbb{R}} f_0(x) \mu(\mathrm{d})x \right|&gt;\epsilon
+\end{equation*}\]</span>
+dla każdego <span class="math inline">\(k \in \mathbb{N}\)</span>. Z ciągu <span class="math inline">\(\{\mu_{n_k}\}_{k \in \mathbb{N}}\)</span> nie można wybrać podciągu
+zbieżnego do <span class="math inline">\(\mu\)</span>. Zatem warunek obecny w lemacie nie jest spełniony.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-299" class="proof"><em>Proof</em>. </span><strong>Dowód pkt 1:</strong> wystarczy napisać
+<span class="math display">\[\begin{align*}
+  \varphi_{\mu_n}(t)  = &amp; \int_{\mathbb{R}} \cos(tx) \mu_n(\mathrm{d}x) \\
+  + &amp;  i \int_{\mathbb{R}} \sin(tx) \mu_n(\mathrm{d}x) \\
+  &amp; \to   \int_{\mathbb{R}} \cos(tx) \mu(\mathrm{d}x) \\ + &amp;  i \int_\mathbb{R} \sin(tx) \mu(\mathrm{d}x) \\
+  =&amp;    \varphi_{\mu}(t).
+  \end{align*}\]</span>
+<strong>Dowód pkt 2. Krok 1</strong>
+Pokażemy, że jeżeli <span class="math inline">\(\varphi_{\mu_n}(t)\to\varphi(t)\)</span> i <span class="math inline">\(\phi\)</span> jest ciągła w zerze,
+to rodzina <span class="math inline">\(\{\mu_n\}\)</span> jest ciasna.
+Zanim przejdziemy do dowodu, zauważmy, że zachodzi tu pewnego rodzaju dualność i
+poniższe rachunki pokazują, że ogony miar probabilistycznych
+(ich malenie w nieskończoności) jest kontrolowane przez zachowanie
+ich funkcji charakterystycznych przy zerze (tu z kolei warunek jest jakościowy i
+wykorzystamy ciągłość).</p>
+<p>Ustalmy parametry <span class="math inline">\(x\in\mathbb{R}\)</span>,<span class="math inline">\(u&gt;0\)</span> i zauważmy
+<span class="math display">\[\begin{align*}
+  \int_{-u}^u (1-e^{itx})\mathrm{d}t &amp; = 2u - \int_{-u}^u \cos(tx) \mathrm{d}t  \\
+  &amp; = 2u - \frac{2\sin (ux)}{x}.
+  \end{align*}\]</span>
+Podzielmy obie strony przez <span class="math inline">\(u\)</span> i scałkujmy po <span class="math inline">\(x\)</span> względem miary <span class="math inline">\(\mu_n\)</span>. Wówczas
+<span class="math display">\[\begin{align*}
+  &amp; \frac 1u \int_{-u}^u (1-\varphi_{\mu_n}(t)) \mathrm{d}t\\  
+  &amp; = 2 \int_\mathbb{R} \left( 1-\frac{\sin ux}{ux} \right) \mu_n(\mathrm{d}x)\\
+  &amp; \ge 2\int_{\{|x|\ge 2/u\}} \left( 1 - \frac 1{u|x|}\right)\mu_n(\mathrm{d}x) \\
+  &amp; \ge \mu_n\left(\left\{x:\; |x|&gt;2/u\right\}\right).
+  \end{align*}\]</span>
+Ustalmy <span class="math inline">\(\varepsilon&gt;0\)</span>. Z ciągłości <span class="math inline">\(\phi(t)\)</span> w 0 istnieje małe <span class="math inline">\(u\)</span> takie, że
+<span class="math display">\[
+  \frac 1u \int_{-u}^u (1-\varphi(t)) \mathrm{d}t &lt; 2 \varepsilon.
+  \]</span>
+Ze zbieżności <span class="math inline">\(\varphi_{\mu_n}(t)\to \varphi(t)\)</span> wynika, że dla dużych <span class="math inline">\(n\)</span>
+<span class="math display">\[
+  \frac 1u \int_{-u}^u (1-\varphi_{\mu_n}(t)) \mathrm{d}t &lt;\varepsilon.
+  \]</span>
+Zatem
+<span class="math display">\[
+  \mu_n\left(\left\{x:\; |x|&gt;2/u\right\}\right) &lt;2\varepsilon,
+  \]</span>
+a to implikuje, że ciąg miar <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> jest ciasny.</p>
+<p><strong>Krok 2.</strong> Najpierw pokażemy, że <span class="math inline">\(\varphi\)</span> jest funkcją charakterystyczną
+pewnego rozkładu prawdopodobieństwa.
+Rodzina miar <span class="math inline">\(\{\mu_n\}_{n \in \mathbb{N}}\)</span> ciasna,
+a więc z twierdzenia Prochorowa zawiera podciąg <span class="math inline">\(\{\mu_{n_k}\}_{k\in \mathbb{N}}\)</span>
+słabo zbieżny do pewnej miary probabilistycznej <span class="math inline">\(\mu\)</span>.
+Z punktu 1. wynika, że <span class="math inline">\(\varphi_{\mu_{n_k}}(t)\to \varphi_{\mu}(t)\)</span>
+dla każdego <span class="math inline">\(t\)</span>, a zatem <span class="math inline">\(\varphi=\varphi_{\mu}\)</span>.</p>
+<p>Pozostaje do wykazania, że <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.
+Skorzystamy z Lematu <a href="funkcje-charakterystyczne.html#lem:SUB">25.1</a>.
+Rozważmy dowolny podciąg <span class="math inline">\(\{\mu_{n_k}\}_{k \in \mathbb{N}}\)</span>.
+Wówczas ponownie odwołując się do twierdzenia Prochorowa istnieje
+podciąg <span class="math inline">\(\mu_{n_{k_j}} \Rightarrow \tilde{\mu}\)</span>.
+Z punktu 1, <span class="math inline">\(\varphi_{\mu_{n_{k_j}}}(t) \to \varphi_{\tilde{\mu}}(t)\)</span> przy <span class="math inline">\(j \to \infty\)</span>
+dla pewnej miary <span class="math inline">\(\tilde{\mu}\)</span>. A zatem
+<span class="math display">\[
+  \varphi_{\tilde{\mu}}(t) = \varphi_{\mu}(t) = \varphi(t),
+  \]</span>
+a to implikuje <span class="math inline">\(\tilde{\mu} = \mu\)</span>.
+Oznacza to, że <span class="math inline">\(\mu_{n_{k_j}} \Rightarrow \tilde{\mu} =\mu\)</span>. Z Lematu <a href="funkcje-charakterystyczne.html#lem:SUB">25.1</a>
+<span class="math inline">\(\mu_n \Rightarrow \mu\)</span>.</p>
+<p><span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-300" class="theorem"><strong>Twierdzenie 25.7  (odwrotnym przekształceniu Fouriera) </strong></span>Rozkład prawdopodobieństwa <span class="math inline">\(\mu\)</span> taki,
+że funkcja charakterystyczna <span class="math inline">\(\varphi_{\mu}\)</span> jest całkowalna,
+ma ograniczoną i ciągłą gęstość zadaną wzorem
+<span class="math display">\[
+  f(x) = \frac 1{2\pi} \int_{-\infty}^{\infty} e^{-isx} \varphi_{\mu}(s)\mathrm{d}s.
+\]</span></p>
+</div>
 
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></div>
-<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+<div class="next"><a href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#funkcje-charakterystyczne"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
 <li><a class="nav-link" href="#ca%C5%82kowanie-funkcji-o-warto%C5%9Bciach-zespolonych"><span class="header-section-number">25.1</span> Całkowanie funkcji o wartościach zespolonych</a></li>
-<li><a class="nav-link" href="#funkcje-charakterystyczne-1"><span class="header-section-number">25.2</span> Funkcje charakterystyczne</a></li>
+<li><a class="nav-link" href="#funkcje-charakterystyczne-przyk%C5%82ady"><span class="header-section-number">25.2</span> Funkcje charakterystyczne: przykłady</a></li>
+<li><a class="nav-link" href="#funkcje-charakterystyczne-w%C5%82asno%C5%9Bci"><span class="header-section-number">25.3</span> Funkcje charakterystyczne: własności</a></li>
+<li><a class="nav-link" href="#funkcje-charakterystyczne-a-s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87"><span class="header-section-number">25.4</span> Funkcje charakterystyczne a słaba zbieżność</a></li>
 </ul>
 
       <div class="book-extra">
@@ -195,7 +716,7 @@ szersze zastosowania.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-05-30.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

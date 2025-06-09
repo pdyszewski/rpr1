@@ -74,6 +74,9 @@
 <li><a class="" href="dygresja-kompresja.html"><span class="header-section-number">22</span> Dygresja: kompresja</a></li>
 <li><a class="" href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></li>
 <li><a class="active" href="zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu.html"><span class="header-section-number">24</span> Zbieżność według rozkładu</a></li>
+<li><a class="" href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
+<li><a class="" href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li>
+<li><a class="" href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></li>
 <li class="book-part">Listy zadań</li>
 <li><a class="" href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></li>
 <li><a class="" href="lista-2-aksjomaty-rachunku-prawdopodobie%C5%84stwa.html">Lista 2: Aksjomaty rachunku prawdopodobieństwa</a></li>
@@ -89,6 +92,7 @@
 <li><a class="" href="lista-12-zbie%C5%BCno%C5%9B%C4%87.html">Lista 12: Zbieżność</a></li>
 <li><a class="" href="lista-13-s%C5%82aba-zbie%C5%BCno%C5%9B%C4%87.html">Lista 13: Słaba zbieżność</a></li>
 <li><a class="" href="lista-14-powt%C3%B3rka-przed-kolokwium.html">Lista 14: Powtórka przed kolokwium</a></li>
+<li><a class="" href="lista-15-funkcje-charakterystyczne-i-centralne-twierdzenie-graniczne.html">Lista 15: Funkcje charakterystyczne i centralne twierdzenie graniczne</a></li>
 <li class="book-part">Dodatek</li>
 <li><a class="" href="twierdzenie-fubiniego.html">Twierdzenie Fubiniego</a></li>
 </ul>
@@ -144,7 +148,7 @@ Zrobimy więc krok w tył i zastanowimy się najpierw w jaki sposób możemy roz
 </h2>
 <div class="definition">
 <p><span id="def:unlabeled-div-241" class="definition"><strong>Definicja 24.1  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
-Powiemy, że <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> maja ten sam rozkład, jeżeli <span class="math inline">\(\mu_{\vec{X}} = \mu_{\vec{Y}}\)</span>.
+Powiemy, że <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> mają ten sam rozkład, jeżeli <span class="math inline">\(\mu_{\vec{X}} = \mu_{\vec{Y}}\)</span>.
 Piszemy wtedy <span class="math inline">\(\vec{X} \stackrel{d}{=} \vec{Y}\)</span>.</p>
 </div>
 <p>Jeżeli <span class="math inline">\(\mu\)</span> oraz <span class="math inline">\(\nu\)</span> są rozkładami prawdopodobieństwa na <span class="math inline">\(\mathbb{R}^d\)</span> to powiemy, że są one równe,
@@ -198,7 +202,7 @@ Wówczas
 oraz
 <span class="math display">\[\begin{equation*}
 \nu(A)=\int_{\mathbb{R}^d} f(x) \nu(\mathrm{d}x) =
-    \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x) = \mu(A).
+    \int_{\mathbb{R}^d} f(x) \mu(\mathrm{d}x) = \mu(F).
 \end{equation*}\]</span>
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
@@ -522,7 +526,7 @@ Zbieżność tę widać na rysunku poniżej.</p>
 <h2>
 <span class="header-section-number">24.3</span> Zbieżność według rozkładu<a class="anchor" aria-label="anchor" href="#zbie%C5%BCno%C5%9B%C4%87-wed%C5%82ug-rozk%C5%82adu-1"><i class="fas fa-link"></i></a>
 </h2>
-<p>Wiele naturalnych rozkładów najwygodniej jest zdefiniowac w terminach zmiennych losowych.
+<p>Wiele naturalnych rozkładów najwygodniej jest zdefiniować w terminach zmiennych losowych.
 Aby uprościć notację w takich przypadkach, zbieżność ich rozkładów
 będziemy wysławiali w terminach tych właśnie zmiennych.</p>
 <div class="definition">
@@ -852,7 +856,7 @@ Przypuśćmy, że rodzina miar nie jest ciasna, a więc istnieje <span class="ma
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="twierdzenie-de-moivrea-laplacea.html"><span class="header-section-number">23</span> Twierdzenie de Moivre’a-Laplace’a</a></div>
-<div class="next"><a href="lista-1-rozgrzewka.html">Lista 1: Rozgrzewka</a></div>
+<div class="next"><a href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -877,7 +881,7 @@ Przypuśćmy, że rodzina miar nie jest ciasna, a więc istnieje <span class="ma
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-02.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
