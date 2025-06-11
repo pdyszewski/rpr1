@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>11 Rozkłady warunkowe | Rachunek Prawdopodobieństwa 1R</title>
+<title>28 Tempo zbieżności w CTG | Rachunek Prawdopodobieństwa 1R</title>
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
-<meta name="description" content="Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami wartości oczekiwanej i rozkładu zmiennej losowej. Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie...">
+<meta name="description" content="Centralne twierdzenie graniczne mówi, że dla ciągu niezależnych zmiennych \(\{X_n\}_{n \in \mathbb{N}}\) o tym samym rozkładzie z wartością oczekiwaną zero i wariancji jeden, \[\begin{equation*}...">
 <meta name="generator" content="bookdown 0.43 with bs4_book()">
-<meta property="og:title" content="11 Rozkłady warunkowe | Rachunek Prawdopodobieństwa 1R">
+<meta property="og:title" content="28 Tempo zbieżności w CTG | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami wartości oczekiwanej i rozkładu zmiennej losowej. Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie...">
+<meta property="og:description" content="Centralne twierdzenie graniczne mówi, że dla ciągu niezależnych zmiennych \(\{X_n\}_{n \in \mathbb{N}}\) o tym samym rozkładzie z wartością oczekiwaną zero i wariancji jeden, \[\begin{equation*}...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11 Rozkłady warunkowe | Rachunek Prawdopodobieństwa 1R">
-<meta name="twitter:description" content="Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami wartości oczekiwanej i rozkładu zmiennej losowej. Niech \((\Omega, \mathcal{F}, \mathbb{P})\) będzie...">
+<meta name="twitter:title" content="28 Tempo zbieżności w CTG | Rachunek Prawdopodobieństwa 1R">
+<meta name="twitter:description" content="Centralne twierdzenie graniczne mówi, że dla ciągu niezależnych zmiennych \(\{X_n\}_{n \in \mathbb{N}}\) o tym samym rozkładzie z wartością oczekiwaną zero i wariancji jeden, \[\begin{equation*}...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -60,7 +60,7 @@
 <li><a class="" href="warto%C5%9B%C4%87-oczekiwana-zastosowania.html"><span class="header-section-number">8</span> Wartość oczekiwana: zastosowania</a></li>
 <li><a class="" href="przegl%C4%85d-wa%C5%BCniejszych-rozk%C5%82ad%C3%B3w.html"><span class="header-section-number">9</span> Przegląd ważniejszych rozkładów</a></li>
 <li><a class="" href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></li>
-<li><a class="active" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
+<li><a class="" href="rozk%C5%82ady-warunkowe.html"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li>
 <li><a class="" href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></li>
 <li><a class="" href="wariancja.html"><span class="header-section-number">13</span> Wariancja</a></li>
 <li><a class="" href="kowariancja.html"><span class="header-section-number">14</span> Kowariancja</a></li>
@@ -77,7 +77,7 @@
 <li><a class="" href="funkcje-charakterystyczne.html"><span class="header-section-number">25</span> Funkcje charakterystyczne</a></li>
 <li><a class="" href="wielowymiarowe-funkcje-charakterystyczne.html"><span class="header-section-number">26</span> Wielowymiarowe funkcje charakterystyczne</a></li>
 <li><a class="" href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></li>
-<li><a class="" href="tempo-zbie%C5%BCno%C5%9Bci-w-ctg.html"><span class="header-section-number">28</span> Tempo zbieżności w CTG</a></li>
+<li><a class="active" href="tempo-zbie%C5%BCno%C5%9Bci-w-ctg.html"><span class="header-section-number">28</span> Tempo zbieżności w CTG</a></li>
 <li><a class="" href="ctg-lindeberga-fellera.html"><span class="header-section-number">29</span> CTG Lindeberga Fellera</a></li>
 <li><a class="" href="zastosowania.html"><span class="header-section-number">30</span> Zastosowania</a></li>
 <li class="book-part">Listy zadań</li>
@@ -105,101 +105,69 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rozkłady-warunkowe" class="section level1" number="11">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="tempo-zbieżności-w-ctg" class="section level1" number="28">
 <h1>
-<span class="header-section-number">11</span> Rozkłady warunkowe<a class="anchor" aria-label="anchor" href="#rozk%C5%82ady-warunkowe"><i class="fas fa-link"></i></a>
+<span class="header-section-number">28</span> Tempo zbieżności w CTG<a class="anchor" aria-label="anchor" href="#tempo-zbie%C5%BCno%C5%9Bci-w-ctg"><i class="fas fa-link"></i></a>
 </h1>
-<p>Zobaczymy teraz jak koncepcja prawdopodobieństwa warunkowego współgra z koncepcjami
-wartości oczekiwanej i rozkładu zmiennej losowej.
-Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
-Rozważać będziemy zdarzenie <span class="math inline">\(A\)</span> o dodatnim prawdopodobieństwie.
-Przypomnijmy, że definiujemy prawdopodobieństwo warunkowe pod warunkiem zajścia zdarzenia <span class="math inline">\(A\)</span> poprzez
+<p>Centralne twierdzenie graniczne mówi, że
+dla ciągu niezależnych zmiennych <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> o tym samym rozkładzie z wartością oczekiwaną zero i wariancji jeden,
 <span class="math display">\[\begin{equation*}
-    \mathbb{P}[B | A] = \frac{\mathbb{P}[A\cap B]}{\mathbb{P}[A]}, \qquad B \in \mathcal{F}.    
-\end{equation*}\]</span></p>
-<div class="definition">
-<p><span id="def:unlabeled-div-111" class="definition"><strong>Definicja 11.1  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> będzie <span class="math inline">\(d\)</span>-wymiarowym wektorem losowym.
-Rozkładem warunkowym <span class="math inline">\(\vec{X}\)</span> pod warunkiem zajścia zdarzenia <span class="math inline">\(A\)</span>
-nazywamy miarę probabilistyczną <span class="math inline">\(\mu_{\vec{X}|A}\)</span> na <span class="math inline">\(\mathbb{R}^d\)</span>
-zadaną przez
-<span class="math display">\[\begin{equation*}
-    \mu_{\vec{X}|A}(B) = \mathbb{P} \left[\left. \vec{X} \in B \right| A  \right],
-    \qquad B \in \mathcal{B}or\left(\mathbb{R}^d\right).
-\end{equation*}\]</span></p>
-</div>
-<p>Zauważmy, że powyższa konstrukcja nie różni się znacząco od rozkładu <span class="math inline">\(\mu_{\vec{X}}\)</span>
-wektora losowego <span class="math inline">\(\vec{X}\)</span>. Można wręcz powiedzieć, że jest taka sama. Istotnie,
-zauważmy, że funkcja zbioru <span class="math inline">\(\mathbb{P}[\cdot |A]\)</span> jest miarą probabilistyczną na
-<span class="math inline">\((\Omega, \mathcal{F})\)</span>. Mamy w takim przypadku dwie miary probabilistyczne na <span class="math inline">\(\Omega\)</span>.
-Są nimi wyjściowe prawdopodobieństwo <span class="math inline">\(\mathbb{P}[\cdot]\)</span> oraz prawdopodobieństwo warunkowe
-<span class="math inline">\(\mathbb{P}[\cdot|A]\)</span>. Wektor losowy <span class="math inline">\(\vec{X} \colon \Omega \to \mathbb{R}^d\)</span> ma więc dwa
-opisy probabilistyczne (rozkłady) w zależności od tego która z przestrzeni probabilistycznych
-<span class="math display">\[\begin{equation*}
-    (\Omega, \mathcal{F}, \mathbb{P}), \qquad (\Omega, \mathcal{F}, \mathbb{P}[\cdot | A])
+\mathbb{P}\left[ a \leq S_n/\sqrt{n} \leq b \right] \approx \frac{1}{\sqrt{2\pi}} \int_a^b e^{-s^2/2}\mathrm{d}s.
 \end{equation*}\]</span>
-jest aktualnie rozważana. Oznacza to, że wszystkie związki między
-<span class="math inline">\(\mathbb{P}\)</span> a <span class="math inline">\(\mu_{\vec{X}}\)</span> zachodzą też między <span class="math inline">\(\mathbb{P}[\cdot|A]\)</span> a <span class="math inline">\(\mu_{\vec{X}|A}\)</span>.
-Jednym z najczęściej spotykanych przykładów jest związek między wartością oczekiwaną
-a całką względem rozkładu.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-112" class="definition"><strong>Definicja 11.2  </strong></span>Niech <span class="math inline">\(X\)</span> będzie zmienną losową posiadającą wartość oczekiwaną.
-Warunkową wartością oczekiwaną pod warunkiem zajścia zdarzenia <span class="math inline">\(A\)</span>
-nazywamy
+Dokładna wartość prawdopodobieństwa po lewej stronie może być trudna do wyliczenia.
+W takich sytuacjach korzysta się z powyższego przybliżenia przez całkę po prawej stronie.
+To z kolei prowadzi do naturalnego pytania: Jaki jest błąd powyższego przybliżenia?</p>
+<p>Przez <span class="math inline">\(\Phi\)</span> będziemy oznaczać dystrybuantę standardowego rozkładu normalnego, tj.
 <span class="math display">\[\begin{equation*}
-    \mathbb{E}[X | A] = \int_\Omega X(\omega) \mathbb{P}[\mathrm{d}\omega |A].
+    \Phi(t) = \frac{1}{\sqrt{2\pi}}\int^t_{-\infty} e^{-s^2/2} \mathrm{d}s.
 \end{equation*}\]</span></p>
-</div>
-<p>Według powyższej definicji <span class="math inline">\(\mathbb{E}[X|A]\)</span> jest po prostu całką z funkcji <span class="math inline">\(X\)</span> względem
-miary <span class="math inline">\(\mathbb{P}[\cdot |A]\)</span>. Oznacza to, że dla dowolnej
-funkcji borelowskiej <span class="math inline">\(\varphi \colon \mathbb{R} \to \mathbb{R}\)</span> zachodzi
-<span class="math display">\[\begin{equation*}
-    \mathbb{E} [\varphi(X) | A] = \int_\mathbb{R} \varphi(s) \mu_{X|A}(\mathrm{d}s).
-\end{equation*}\]</span>
-Powyższa dyskusja pokazuje, że pod kątem teoretycznym rozkłady warunkowe mają
-taką samą naturę jak zwykłe rozkłady poznane wcześniej.
-W praktyce jednak operacja warunkowania istotnie zmienia własności probabilistyczne zmiennych losowych.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-113" class="example"><strong>Przykład 11.1  </strong></span>Rzucamy nieskończenie wiele razy symetryczną monetą.
-Niech <span class="math inline">\(X\)</span> będzie liczbą rzutów potrzebnych do otrzymania pierwszego orła.
-Interesuje nas rozkład <span class="math inline">\(X\)</span> pod warunkiem zdarzenia <span class="math inline">\(A\)</span>, że w pierwszych <span class="math inline">\(n\)</span> rzutach pojawił
-się (co najmniej jeden) orzeł.
-Zauważmy najpierw, że <span class="math inline">\(A = \{ X \leq n\}\)</span>. Chcąc wyznaczyć rozkład <span class="math inline">\(X\)</span> wystarczy
-wyznaczyć prawdopodobieństwa zdarzeń <span class="math inline">\(\{X=k\}\)</span> względem prawdopodobieństwa warunkowego.
-Zauważmy, że
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[X \leq n] = 1-\mathbb{P}[X &gt; n] = 1-2^{-n}.
-\end{equation*}\]</span>
-Dla <span class="math inline">\(k \leq n\)</span> mamy
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[X =k | A] = \frac{2^{-k}}{1-2^{-n}}
-\end{equation*}\]</span>
-oraz <span class="math inline">\(\mathbb{P}[X =k | A] = 0\)</span> dla <span class="math inline">\(k&gt;n\)</span>.
-Dla porównania <span class="math inline">\(\mathbb{P}[X=k] = 2^{-k}\)</span>. Warunkowanie zmienia tylko
-prawdopodobieństwo o stałą na pierwszych <span class="math inline">\(n\)</span> liczbach naturalnych.</p>
+<p><span id="exm:unlabeled-div-313" class="example"><strong>Przykład 28.1  </strong></span>Niech <span class="math inline">\(\{U_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem Bernoulliego, tzn. <span class="math inline">\(\mathbb{P}[U_n=\pm 1]=1/2\)</span>.
+Wówczas dla parzystych wartości <span class="math inline">\(n\)</span>:
+<span class="math display">\[\begin{align*}
+    \left|\mathbb{P}\left(  \frac{U_1+\ldots + U_n }{\sqrt n \mathbb{V}ar[U_n]} &lt;0
+     \right) - \Phi(0)\right|  =&amp;  \left| \mathbb{P}[U_1+\ldots + U_n &lt; 0] - \frac 12 \right|\\
+      =&amp;  \left| \frac 12 \mathbb{P} \left[U_1+\ldots + U_n &lt; 0\right]\right. \\ &amp;
+      +\left.\frac 12  \mathbb{P}\left[U_1+\ldots + U_n &gt; 0\right] - \frac 12 \right|\\
+      =&amp; \left| \frac 12 \big( 1 -  \mathbb{P}[U_1+\ldots + U_n = 0] \big) - \frac 12 \right|\\
+          &amp; = \frac 12 \mathbb{P}[U_1+\ldots + U_n = 0]\\  
+      &amp;= \frac 12 \cdot \frac{{n\choose n/2}}{2^{n}} \\
+          &amp;\sim \frac 12\cdot \frac 1{\sqrt{\pi n/2}} = \frac 1{\sqrt{2\pi}} \frac 1{\sqrt n}.
+  \end{align*}\]</span>
+W przypadku zmiennych <span class="math inline">\(\{U_n\}_{n \in \mathbb{N}}\)</span> błąd przybliżenia w CTG jest rzędu <span class="math inline">\(n^{-1/2}\)</span>.</p>
 </div>
-<div class="example">
-<p><span id="exm:unlabeled-div-114" class="example"><strong>Przykład 11.2  </strong></span>Ponownie rzucamy symetryczną monetą. Niech <span class="math inline">\(X\)</span> będzie liczbą rzutów potrzebną do otrzymania
-pierwszego orła. Tym razem niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że w pierwszych <span class="math inline">\(n\)</span> rzutach pojawił się
-dokładnie jeden orzeł.
-Wówczas
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[A] = n 2^{-n}.
-\end{equation*}\]</span>
-Dla <span class="math inline">\(k\leq n\)</span>,
-<span class="math display">\[\begin{equation*}
-    \mathbb{P}[X = k|A] = \frac{2^{-n}}{n2^{-n}} = \frac 1n.
-\end{equation*}\]</span>
-Tym razem warunkowanie całkowicie zmieniło charakter rozkładu. Rzeczywiście, pod warunkiem <span class="math inline">\(A\)</span>
-zmienna <span class="math inline">\(X\)</span> ma rozkład jednostajny na <span class="math inline">\([n] = \{1, 2, \ldots , n\}\)</span>.</p>
+<p>Poniższe twierdzenie opisuje tempo zbieżności w CTG, a więc rozmiar błędu, jaki robimy powołując się na CTG.
+Twierdzenie podamy bez dowodu.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-314" class="theorem"><strong>Twierdzenie 28.1  (Berry-Essen) </strong></span>Jeżeli <span class="math inline">\(\{X_n\}_{n\in \mathbb{N}}\)</span> jest ciągiem niezależnych zmiennych losowych o takim samym rozkładzie,<span class="math inline">\(\mathbb{E} \left[ |X_1|^3 \right]&lt;\infty\)</span>,
+<span class="math inline">\(\mathbb{E}[ X_1] = 0\)</span> oraz <span class="math inline">\(\sigma^2 = \mathbb{V}ar [X_1]\)</span>, to
+<span class="math display">\[
+  \sup_{t\in\mathbb{R}}\left| \mathbb{P}\left( \frac{X_1+\ldots+ X_n}{\sqrt n \sigma} &lt; t
+  \right) - \Phi(t)
+  \right| \le \frac{C\mathbb{E}\left[|X_1|^3\right]}{\sigma^3 \sqrt n},
+  \]</span> gdzie <span class="math inline">\(\Phi(t)\)</span> jest dystrybuantą rozkładu normalnego <span class="math inline">\(N(0,1)\)</span>, a <span class="math inline">\(C\)</span> pewną ustaloną stałą (niezależną od rozkładu <span class="math inline">\(X_1\)</span>).</p>
 </div>
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+<figure style="width: 48%; text-align: center;"><img src="PICS/Berry.jpg" style="width: 50%;"><p>
+Andrew Campbell Berry (1906 -1998)
+</p>
+</figure><figure style="width: 48%; text-align: center;"><img src="PICS/esseen.jpg" style="width: 100%;"><p>
+Carl-Gustav Esseen (1918 - 2001)
+</p>
+</figure>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-315" class="remark"><em>Remark</em>. </span>Optymalna wartość <span class="math inline">\(C\)</span> nie jest znana. Wiadomo, że <span class="math inline">\(\frac 1{\sqrt{2\pi}} \le C &lt; 0,8\)</span>.</p>
+</div>
+<p>Powyższy wynik mówi, że błąd w CTG jest rzędu <span class="math inline">\(C/\sqrt n\)</span> i <span class="math inline">\(C\ge 1/\sqrt{2\pi}\)</span>. Tego oszacowania nie można poprawić.</p>
 
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="wektory-losowe.html"><span class="header-section-number">10</span> Wektory losowe</a></div>
-<div class="next"><a href="niezale%C5%BCne-zmienne-losowe.html"><span class="header-section-number">12</span> Niezależne zmienne losowe</a></div>
+<div class="prev"><a href="centralne-twierdzenie-graniczne.html"><span class="header-section-number">27</span> Centralne Twierdzenie Graniczne</a></div>
+<div class="next"><a href="ctg-lindeberga-fellera.html"><span class="header-section-number">29</span> CTG Lindeberga Fellera</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#rozk%C5%82ady-warunkowe"><span class="header-section-number">11</span> Rozkłady warunkowe</a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#tempo-zbie%C5%BCno%C5%9Bci-w-ctg"><span class="header-section-number">28</span> Tempo zbieżności w CTG</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

@@ -81,3 +81,26 @@
       display: inline-block;
       position: relative;
     }
+#canvas_perm {
+  width: 80%;
+  margin: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+  #canvas_perm_button {
+    margin-top: 12px;
+  }
+    button {
+      font-family: monospace;
+      background-color: #2aa198;
+      color: #002b36;
+      border: none;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #268986;
+    }
