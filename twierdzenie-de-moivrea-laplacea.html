@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Z MPWL wielkich liczb wynika, że jeżeli zmienne \(\{X_k\}_{k\in \mathbb{N}}\) są niezależne i mają ten sam rozkład, to dla \(S_n = \sum_{k=1}^nX_k\) zachodzi \(S_n/n \to \mathbb{E} [X]\) p.n....">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="23 Twierdzenie de Moivre’a-Laplace’a | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Z MPWL wielkich liczb wynika, że jeżeli zmienne \(\{X_k\}_{k\in \mathbb{N}}\) są niezależne i mają ten sam rozkład, to dla \(S_n = \sum_{k=1}^nX_k\) zachodzi \(S_n/n \to \mathbb{E} [X]\) p.n....">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Z MPWL wielkich liczb wynika, że jeżeli zmienne \(\{X_k\}_{k\in \mathbb{N}}\) są niezależne i mają ten sam rozkład, to dla \(S_n = \sum_{k=1}^nX_k\) zachodzi \(S_n/n \to \mathbb{E} [X]\) p.n....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -120,7 +120,7 @@ Zauważmy, że powyższe mówi, że z prawdopodobieństwem jeden, dla każdego <
 Czyli wykres ciągu <span class="math inline">\(\{S_n\}_{n \in \mathbb{N}}\)</span> od pewnego miejsca będzie znajdował się między prostymi o nachyleniach
 <span class="math inline">\(\mathbb{E}[X_1] \pm \epsilon\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-235" class="example"><strong>Przykład 23.1  </strong></span>Jeżeli <span class="math inline">\(X_j\)</span> mają rozkład jednostajny na przedziale <span class="math inline">\([-1,3]\)</span>, to <span class="math inline">\(\mathbb{E}[X_j]=1\)</span>.
+<p><span id="exm:unlabeled-div-236" class="example"><strong>Przykład 23.1  </strong></span>Jeżeli <span class="math inline">\(X_j\)</span> mają rozkład jednostajny na przedziale <span class="math inline">\([-1,3]\)</span>, to <span class="math inline">\(\mathbb{E}[X_j]=1\)</span>.
 Zatem dla dostatecznie dużego <span class="math inline">\(n\)</span>,
 <span class="math display">\[\begin{equation*}
 0.9 n \leq S_n \leq 1.1n.
@@ -203,7 +203,7 @@ przypomnijmy, że <span class="math inline">\((S_n+n)/2\)</span> ma rozkład <sp
 <p>Chcemy więc pokazać, że przy odpowiedniej normalizacji prawdopodobieństwa te będą zbiegać do funkcji Gaussa.
 Jest to treścią poniższego twierdzenia, pochodzącego z pierwszej połowy XVIII wieku:</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-236" class="theorem"><strong>Twierdzenie 23.1  (de Moivre'a - Laplace'a) </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich,
+<p><span id="thm:unlabeled-div-237" class="theorem"><strong>Twierdzenie 23.1  (de Moivre'a - Laplace'a) </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem niezależnych zmiennych losowych takich,
 że <span class="math inline">\(\mathbb{P}[X_1=1] = \mathbb{P}[X_1 = -1] = 1/2\)</span> i niech
 <span class="math inline">\(S_n = X_1+\ldots + X_n\)</span>. Wówczas dla dowolnych <span class="math inline">\(a&lt;b\)</span>
 <span class="math display">\[
@@ -221,7 +221,7 @@ Pierre-Simon Laplace
 </figure>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-237" class="proof"><em>Proof</em>. </span>Przedstawiony poniżej dowód nie jest w pełni precyzyjny i zawiera drobne luki
+<p><span id="unlabeled-div-238" class="proof"><em>Proof</em>. </span>Przedstawiony poniżej dowód nie jest w pełni precyzyjny i zawiera drobne luki
 (przejścia graniczne wymagają dokładniejszej wersji wzoru Stirlinga i dokładniejszych szacowań).
 Pokazuje jednak istotę dowodu, a pozostałe do uzupełnienia dosyć techniczne szczegóły można znaleźć w literaturze.</p>
 <p>Zacznijmy od oczywistej obserwacji, że w parzystych krokach spacer losowy <span class="math inline">\(S_n\)</span> jest w parzystych punktach.
@@ -274,7 +274,7 @@ Dalej
 gdzie ostatnia implikacja wynika z definicji całki Riemanna.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-238" class="example"><strong>Przykład 23.2  </strong></span>Jakie jest prawdopodobieństwo, że w 100 rzutach kostką otrzymamy co najmniej 60 orłów?
+<p><span id="exm:unlabeled-div-239" class="example"><strong>Przykład 23.2  </strong></span>Jakie jest prawdopodobieństwo, że w 100 rzutach kostką otrzymamy co najmniej 60 orłów?
 Sformułujmy to zadanie w terminach zmiennych losowych, które były używane w powyższym twierdzeniu. Niech <span class="math inline">\(X_i = 1\)</span>, gdy wyrzucono w <span class="math inline">\(i\)</span>-tym rzucie orła i <span class="math inline">\(X_i=-1\)</span> w przeciwnym razie. Oznaczmy przez <span class="math inline">\(S_n = X_1+\ldots+X_n\)</span>. Wówczas 60 orłów i 40 reszek daje <span class="math inline">\(S_{100} = 20\)</span>. Z powyższego twierdzenia mamy więc
 <span class="math display">\[
 \mathbb{P}[S_{100}\ge 20] = \mathbb{P}[S_{100}/10 \ge 2] \approx 1- \Phi(2) \approx 0,02.
@@ -285,7 +285,7 @@ Analogicznie można obliczyć o wyrzucenia co najmniej 540 orłów w 1000 rzutac
 \]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-239" class="theorem"><strong>Twierdzenie 23.2  </strong></span>Niech <span class="math inline">\(S_n\)</span> będzie liczbą sukcesów w <span class="math inline">\(n\)</span> próbach przy ie sukcesu <span class="math inline">\(p\)</span> (<span class="math inline">\(S_n\sim {\rm Bin}(n,p)\)</span>). Wówczas
+<p><span id="thm:unlabeled-div-240" class="theorem"><strong>Twierdzenie 23.2  </strong></span>Niech <span class="math inline">\(S_n\)</span> będzie liczbą sukcesów w <span class="math inline">\(n\)</span> próbach przy ie sukcesu <span class="math inline">\(p\)</span> (<span class="math inline">\(S_n\sim {\rm Bin}(n,p)\)</span>). Wówczas
 <span class="math display">\[
   \lim_{n \to \infty}\mathbb{P}\bigg(a \leq \frac{S_n-np}{\sqrt{n pq}} \leq b \bigg) = \frac{1}{\sqrt{2\pi}} \int_a^b e^{-s^2/2}\mathrm{d}s.
   \]</span></p>
@@ -319,7 +319,7 @@ Podczas kolejnych wykładów pokażemy, że analogiczny wynik zachodzi w znaczni
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-16.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

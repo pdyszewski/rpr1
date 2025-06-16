@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Rozważmy pewien górnolotny przykład. Powiedzmy, że w chwili \(0\) zakupiliśmy opcję kupna na wykupienie akcji spółki w chwili \(1\) po określonej kwocie (taka opcja nazywana jest opcją...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="3 Prawdopodobieństwo warunkowe | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Rozważmy pewien górnolotny przykład. Powiedzmy, że w chwili \(0\) zakupiliśmy opcję kupna na wykupienie akcji spółki w chwili \(1\) po określonej kwocie (taka opcja nazywana jest opcją...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Rozważmy pewien górnolotny przykład. Powiedzmy, że w chwili \(0\) zakupiliśmy opcję kupna na wykupienie akcji spółki w chwili \(1\) po określonej kwocie (taka opcja nazywana jest opcją...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -158,7 +158,7 @@ terminach pierwotnie rozważanego prawdopodobieństwa <span class="math inline">
 Ta konstrukcja jest spotykana tak często, że wyrażenie występujące po prawej stronie ostatniego
 wzoru ma swoją specjalną nazwę.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-22" class="definition"><strong>Definicja 3.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną. Rozważmy zdarzenie <span class="math inline">\(B\)</span>
+<p><span id="def:unlabeled-div-23" class="definition"><strong>Definicja 3.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną. Rozważmy zdarzenie <span class="math inline">\(B\)</span>
 takie, że <span class="math inline">\(\mathbb{P}[B]&gt;0\)</span>. <strong>Prawdopodobieństwem
 warunkowym</strong> (zajścia) zdarzenia <span class="math inline">\(A\)</span> pod warunkiem (zajścia) zdarzenia <span class="math inline">\(B\)</span> nazywamy liczbę
 <span class="math display">\[
@@ -176,7 +176,7 @@ co z kolei zależy od płci (mężczyźni 73,8; kobiety 81,7 - dane wg GUS za 20
 ale też aktualnego wieku (przeciętny 60 latek, niezależnie od płci, będzie żył jeszcze średnio 260,7 miesięcy,
 a 65 latek, 217,1 miesiąca).</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-23" class="example"><strong>Przykład 3.1  </strong></span>Wybieramy losową rodzinę z dwojgiem dzieci.
+<p><span id="exm:unlabeled-div-24" class="example"><strong>Przykład 3.1  </strong></span>Wybieramy losową rodzinę z dwojgiem dzieci.
 Interesuje nas prawdopodobieństwo, że jest to dwóch chłopców, jeżeli wiemy, że</p>
 <ol style="list-style-type: lower-alpha">
 <li>starsze dziecko jest chłopcem;</li>
@@ -214,7 +214,7 @@ oraz, skoro zdarzenia <span class="math inline">\(A\cap B\)</span> oraz <span cl
 Ostatni wzór jest szczególnie pomocny kiedy eksperymenty podzielone są na etapy.
 Zanim zbadamy konkretny przykład uogólnijmy powyższy rachunek na dowolną liczbę zdarzeń.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-24" class="definition"><strong>Definicja 3.2  </strong></span>Niech <span class="math inline">\(I \subseteq \mathbb{N}\)</span> będzie zbiorem indeksów.
+<p><span id="def:unlabeled-div-25" class="definition"><strong>Definicja 3.2  </strong></span>Niech <span class="math inline">\(I \subseteq \mathbb{N}\)</span> będzie zbiorem indeksów.
 Mówimy, że rodzina zdarzeń <span class="math inline">\(\{B_k\}_{k\in I}\)</span> (dopuszczamy <span class="math inline">\(|I|=\infty\)</span>) jest <strong>rozbiciem</strong> zbioru <span class="math inline">\(\Omega\)</span>, jeżeli
 <span class="math display">\[
 \Omega = \bigcup_{k \in I} B_k
@@ -222,14 +222,14 @@ Mówimy, że rodzina zdarzeń <span class="math inline">\(\{B_k\}_{k\in I}\)</sp
 oraz zbiory <span class="math inline">\(B_k\)</span> są parami rozłączne.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-25" class="theorem"><strong>Twierdzenie 3.1  (Wzór na prawdopodobieństwo całkowite) </strong></span>Jeżeli <span class="math inline">\(\{B_k\}_{k \in I}\)</span> jest rozbiciem <span class="math inline">\(\Omega\)</span> (skończonym lub przeliczalnym) takim, że
+<p><span id="thm:unlabeled-div-26" class="theorem"><strong>Twierdzenie 3.1  (Wzór na prawdopodobieństwo całkowite) </strong></span>Jeżeli <span class="math inline">\(\{B_k\}_{k \in I}\)</span> jest rozbiciem <span class="math inline">\(\Omega\)</span> (skończonym lub przeliczalnym) takim, że
 <span class="math inline">\(\mathbb{P}[B_k]&gt;0\)</span> dla każdego <span class="math inline">\(k\in I\)</span>, to dla dowolnego zdarzenia <span class="math inline">\(A\in \mathcal{F}\)</span>
 <span class="math display">\[
   \mathbb{P}[A] = \sum_{k \in I} \mathbb{P}[A|B_k]\mathbb{P}[B_k]
 \]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span>Korzystając z definicji rozbicia oraz prawdopodobieństwa warunkowego piszemy
+<p><span id="unlabeled-div-27" class="proof"><em>Proof</em>. </span>Korzystając z definicji rozbicia oraz prawdopodobieństwa warunkowego piszemy
 <span class="math display">\[\begin{align*}
 \mathbb{P}[A] &amp; = \mathbb{P}\left[ A\cap \bigcup_{k\in I} B_k\right]
 = \mathbb{P}\left[  \bigcup_{k\in I} (A\cap B_k)\right]
@@ -237,7 +237,7 @@ oraz zbiory <span class="math inline">\(B_k\)</span> są parami rozłączne.</p>
 \end{align*}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-27" class="example"><strong>Przykład 3.2  </strong></span>W loterii fantowej szansa wylosowania losu wygrywającego jest równa <span class="math inline">\(p\)</span>, przegrywającego <span class="math inline">\(q\)</span>, a z prawdopodobieństwem
+<p><span id="exm:unlabeled-div-28" class="example"><strong>Przykład 3.2  </strong></span>W loterii fantowej szansa wylosowania losu wygrywającego jest równa <span class="math inline">\(p\)</span>, przegrywającego <span class="math inline">\(q\)</span>, a z prawdopodobieństwem
 <span class="math inline">\(r\)</span> (<span class="math inline">\(p+q+r=1\)</span>) wyciągamy los ‘graj dalej’. Los ‘graj dalej’ wrzucany
 jest do urny i pozwala na kolejne losowanie. Jakie jest prawdopodobieństwo wygranej?
 Oznaczmy przez <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> zdarzenie polegające na wyciągnięciu losu odpowiednio wygrywającego,
@@ -256,7 +256,7 @@ Zatem
 <h2>Wzór Bayesa<a class="anchor" aria-label="anchor" href="#wz%C3%B3r-bayesa"><i class="fas fa-link"></i></a>
 </h2>
 <div class="example">
-<p><span id="exm:unlabeled-div-28" class="example"><strong>Przykład 3.3  </strong></span>Rozważmy następujący test na obecność pewnej choroby.
+<p><span id="exm:unlabeled-div-29" class="example"><strong>Przykład 3.3  </strong></span>Rozważmy następujący test na obecność pewnej choroby.
 Wiadomo, że <span class="math inline">\(1\)</span> osoba na <span class="math inline">\(1000\)</span> jest chora.
 Ponadto wiemy, że u chorych test wykrywa chorobę z prawdopodobieństwem <span class="math inline">\(99\%\)</span>,
 a u osób zdrowych działa poprawnie (tzn. nie wykrywa choroby) z prawdopodobieństwem <span class="math inline">\(95\%\)</span>.
@@ -285,20 +285,20 @@ Z jakim prawdopodobieństwem wynik jest spowodowany przez chorobę?
 Z jakim prawdopodobieństwem wynik jest fałszywie pozytywny?
 Odpowiedzi na powyższe pytanie możemy udzielić stosując wzór Bayesa.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-29" class="theorem"><strong>Twierdzenie 3.2  (Wzór Bayesa) </strong></span>Przy założeniach jw. jeżeli <span class="math inline">\(\mathbb{P}[A]&gt;0\)</span>, to dla każdego <span class="math inline">\(k\in I\)</span>,
+<p><span id="thm:unlabeled-div-30" class="theorem"><strong>Twierdzenie 3.2  (Wzór Bayesa) </strong></span>Przy założeniach jw. jeżeli <span class="math inline">\(\mathbb{P}[A]&gt;0\)</span>, to dla każdego <span class="math inline">\(k\in I\)</span>,
 <span class="math display">\[
 \mathbb{P}[B_k| A] = \frac{\mathbb{P}[A|B_k]\mathbb{P}[B_k]}{\sum_{i \in I} \mathbb{P}[A|B_i]\mathbb{P}[B_i]}.
 \]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-30" class="proof"><em>Proof</em>. </span>Ze wzoru na prawdopodobieństwo całkowite
+<p><span id="unlabeled-div-31" class="proof"><em>Proof</em>. </span>Ze wzoru na prawdopodobieństwo całkowite
 <span class="math display">\[
 \frac{\mathbb{P}[A|B_k]\mathbb{P}[B_k]}{\sum_{i \in I} \mathbb{P}[A|B_i]\mathbb{P}[B_i]}
 = \frac{\mathbb{P}[A\cap B_k]}{\mathbb{P}[A]} =   \mathbb{P}B_k| A].
 \]</span></p>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-31" class="remark"><em>Remark</em>. </span>Ze względu na strukturę wzorów w dwóch ostatnich twierdzeniach korzysta się z nich w różnych kontekstach.</p>
+<p><span id="unlabeled-div-32" class="remark"><em>Remark</em>. </span>Ze względu na strukturę wzorów w dwóch ostatnich twierdzeniach korzysta się z nich w różnych kontekstach.</p>
 <ul>
 <li>Wzór na prawdopodobieństwo całkowite pozwala na obliczanie prawdopodobieństw zdarzeń,
 które mogą zajść w wyniku innych zdarzeń, np. przy doświadczeniach wieloetapowych.</li>
@@ -306,7 +306,7 @@ które mogą zajść w wyniku innych zdarzeń, np. przy doświadczeniach wieloet
 </ul>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-32" class="example"><strong>Przykład 3.4  </strong></span>Mamy <span class="math inline">\(100\)</span> monet, spośród których jedna jest fałszywa i ma orła po obu stronach.
+<p><span id="exm:unlabeled-div-33" class="example"><strong>Przykład 3.4  </strong></span>Mamy <span class="math inline">\(100\)</span> monet, spośród których jedna jest fałszywa i ma orła po obu stronach.
 Wybieramy losową monetę i rzucamy nią <span class="math inline">\(10\)</span> razy.
 W wyniku otrzymaliśmy <span class="math inline">\(10\)</span> orłów. Jakie jest prawdopodobieństwo, że wylosowana moneta była fałszywa?
 Oznaczmy zdarzenia</p>
@@ -328,7 +328,7 @@ Oznaczmy zdarzenia</p>
 \end{align*}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-33" class="example"><strong>Przykład 3.5  </strong></span>U pacjenta przeprowadzono test na obecność pewnej choroby.
+<p><span id="exm:unlabeled-div-34" class="example"><strong>Przykład 3.5  </strong></span>U pacjenta przeprowadzono test na obecność pewnej choroby.
 Wiadomo, że <span class="math inline">\(1\)</span> osoba na <span class="math inline">\(1000\)</span> jest chora.
 Ponadto wiemy, że u chorych test wykrywa chorobę z prawdopodobieństwem <span class="math inline">\(99\%\)</span>,
 a u osób zdrowych działa poprawnie (tzn. nie wykrywa choroby) z prawdopodobieństwem <span class="math inline">\(95\%\)</span>.
@@ -390,7 +390,7 @@ ważna jest informacja o innych czynnikach związanych z chorobą (np. informacj
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-16.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

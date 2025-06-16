@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych. Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co w praktyce sprowadza problem do jednego wymiaru....">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="26 Wielowymiarowe funkcje charakterystyczne | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych. Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co w praktyce sprowadza problem do jednego wymiaru....">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Omówimy pokrótce funkcje charakterystyczne dla wektorów losowych. Szczęśliwie się składa, że są one definiowane przez iloczyny skalarne, co w praktyce sprowadza problem do jednego wymiaru....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -120,8 +120,8 @@ Dla <span class="math inline">\(\vec{t} = (t_1, t_2, \ldots, t_d) \in \mathbb{R}
 \end{equation*}\]</span>
 jest dobrze określoną zmienną losową.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-301" class="definition"><strong>Definicja 26.1  </strong></span>Funkcją charakterystyczną <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(\vec{X}\)</span> nazywamy
-<span class="math inline">\(\varphi_{\vec{X}} \colon \mathbb{R}^d \to \mathbb{C}\)</span> zadane przez
+<p><span id="def:unlabeled-div-302" class="definition"><strong>Definicja 26.1  </strong></span>Funkcją charakterystyczną <span class="math inline">\(d\)</span>-wymiarowego wektora losowego <span class="math inline">\(\vec{X}\)</span> nazywamy
+<span class="math inline">\(\varphi_{\vec{X}} \colon \mathbb{R}^d \to \mathbb{C}\)</span> zadaną przez
 <span class="math display">\[\begin{align*}
 \varphi_{\vec{X}} \left( \vec{t} \right) &amp;
 = \mathbb{E} \left[ \exp\left\{ i \left\langle \vec{t}, \vec{X} \right\rangle \right\} \right] \\
@@ -131,7 +131,7 @@ jest dobrze określoną zmienną losową.</p>
 dla <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-302" class="example"><strong>Przykład 26.1  </strong></span>Rozważmy <span class="math inline">\(\vec{X} = (X_1, \ldots, X_d)^T\)</span> o <span class="math inline">\(d\)</span>-wymiarowym standardowym rozkładzie normalnym
+<p><span id="exm:unlabeled-div-303" class="example"><strong>Przykład 26.1  </strong></span>Rozważmy <span class="math inline">\(\vec{X} = (X_1, \ldots, X_d)^T\)</span> o <span class="math inline">\(d\)</span>-wymiarowym standardowym rozkładzie normalnym
 <span class="math inline">\(\mathcal{N}(0, I)\)</span>. Wówczas zmienne <span class="math inline">\(X_1, \ldots, X_d\)</span> są niezależne i mają jednowymiarowy
 rozkład normalny <span class="math inline">\(\mathcal{N}(0,1)\)</span>. Stąd
 <span class="math display">\[\begin{align*}
@@ -159,7 +159,7 @@ Dla <span class="math inline">\(\vec{s} \in \mathbb{R}^m\)</span> mamy
 <p>Dla wielowymiarowych funkcji charakterystycznych zachodzą odpowiedniki twierdzeń o jednoznaczności
 i ciągłości.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-303" class="theorem"><strong>Twierdzenie 26.1  (o jednoznaczności w wielu wymiarach) </strong></span>Jeżeli rozkłady prawdopodobieństw <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> na <span class="math inline">\(\mathbb{R}^d\)</span>
+<p><span id="thm:unlabeled-div-304" class="theorem"><strong>Twierdzenie 26.1  (o jednoznaczności w wielu wymiarach) </strong></span>Jeżeli rozkłady prawdopodobieństw <span class="math inline">\(\mu\)</span> i <span class="math inline">\(\nu\)</span> na <span class="math inline">\(\mathbb{R}^d\)</span>
 mają równe funkcje charakterystyczne
 <span class="math display">\[
 \varphi_\mu\left(\vec{t}\right) = \varphi_\nu\left(\vec{t}\right)
@@ -183,7 +183,7 @@ oraz <span class="math inline">\(\mu_n\Rightarrow \mu\)</span>.</li>
 <p>Dowody obu twierdzeń różnią się od odpowiedników jednowymiarowych w drobnych szczegółach
 poza którymi dowody pozostają bez zmian.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-304" class="theorem"><strong>Twierdzenie 26.3  (Cramér–Wold) </strong></span>Niech <span class="math inline">\(\left\{ \vec{X}_n\right\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\vec{X}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
+<p><span id="thm:unlabeled-div-305" class="theorem"><strong>Twierdzenie 26.3  (Cramér–Wold) </strong></span>Niech <span class="math inline">\(\left\{ \vec{X}_n\right\}_{n \in \mathbb{N}}\)</span>, <span class="math inline">\(\vec{X}\)</span> będą <span class="math inline">\(d\)</span>-wymiarowymi wektorami losowymi.
 Wówczas <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span> wtedy i tylko wtedy, gdy
 <span class="math display" id="eq:cw">\[\begin{equation}
 \left\langle \vec{t}, \vec{X}_n \right\rangle \Rightarrow \left\langle \vec{t}, \vec{X} \right\rangle
@@ -201,7 +201,7 @@ Herman Wold (1908-1992)
 </figure>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-305" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span>. Dla ustalonego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span> funkcja
+<p><span id="unlabeled-div-306" class="proof"><em>Proof</em>. </span>Załóżmy, że <span class="math inline">\(\vec{X}_n \Rightarrow \vec{X}\)</span>. Dla ustalonego <span class="math inline">\(\vec{t} \in \mathbb{R}^d\)</span> funkcja
 <span class="math inline">\(g\left(\vec{x}\right) = \left\langle \vec{t}, \vec{x}\right\rangle\)</span>
 jest ciągła. Z twierdzenia o odwzorowaniu ciągłym
 <span class="math display">\[\begin{equation*}
@@ -240,7 +240,7 @@ Z wielowymiarowego twierdzenia o ciągłości <a href="wielowymiarowe-funkcje-ch
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-16.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

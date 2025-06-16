@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="CTG opisane powyżej zachodzi dla sum zmiennych losowych o tym samym rozkładzie. Pokażemy ogólniejszą wersję CTG, która zachodzi dla sum zmiennych losowych, które niekoniecznie mają ten sam...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="29 CTG Lindeberga Fellera | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="CTG opisane powyżej zachodzi dla sum zmiennych losowych o tym samym rozkładzie. Pokażemy ogólniejszą wersję CTG, która zachodzi dla sum zmiennych losowych, które niekoniecznie mają ten sam...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="CTG opisane powyżej zachodzi dla sum zmiennych losowych o tym samym rozkładzie. Pokażemy ogólniejszą wersję CTG, która zachodzi dla sum zmiennych losowych, które niekoniecznie mają ten sam...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -126,7 +126,7 @@ Rozważmy tablicę zmiennych losowych <span class="math inline">\(\{X_{n,k}\}_{k
 Zakładamy, że w każdym wierszu zmienne losowe są niezależne. Taką tablicę nazywamy <strong>schematem serii</strong>.
 Dla uproszczenia przyjmijmy <span class="math inline">\(k_n=n\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-316" class="example"><strong>Przykład 29.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_n\)</span> będzie ciągiem zmiennych losowych i.i.d. (niezależnych o tym samym rozkładzie),
+<p><span id="exm:unlabeled-div-317" class="example"><strong>Przykład 29.1  </strong></span>Niech <span class="math inline">\(\{X_n\}_n\)</span> będzie ciągiem zmiennych losowych i.i.d. (niezależnych o tym samym rozkładzie),
 <span class="math inline">\(\mathbb{E}[X_1]=0\)</span>, <span class="math inline">\(\mathbb{V}ar [X_1] = \sigma^2\)</span>. Niech
 <span class="math display">\[
   X_{n,k} = \frac{X_k}{\sigma \sqrt n}.
@@ -142,7 +142,7 @@ kolejne zmienne losowe są coraz mniejsze.</p>
 \frac{Z_n - \mathbb{E} Z_n}{\sqrt{\mathbb{V}ar(Z_n)}} \Rightarrow \mathcal{N}(0,1).
 \]</span> Oczywiście są potrzebne pewne założenia. Poniżej formułujemy wynik, które zakłada, że zmienne losowe <span class="math inline">\(\{X_{n,k}\}\)</span> są ‘asymptotycznie małe’.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-317" class="theorem"><strong>Twierdzenie 29.1  (Lindeberg-Feller) </strong></span>Niech <span class="math inline">\(\{X_{n,k}\}_{k\leq n}\)</span> będzie schematem serii, spełniającym:</p>
+<p><span id="thm:unlabeled-div-318" class="theorem"><strong>Twierdzenie 29.1  (Lindeberg-Feller) </strong></span>Niech <span class="math inline">\(\{X_{n,k}\}_{k\leq n}\)</span> będzie schematem serii, spełniającym:</p>
 <ol style="list-style-type: decimal">
 <li>
 <span class="math inline">\(\mathbb{E}[X_{n,k}] = 0\)</span> dla wszystkich <span class="math inline">\(n,k\)</span>;</li>
@@ -174,7 +174,7 @@ William Feller (1906 – 1970)
 </figure>
 </div>
 <div class="remark">
-<p><span id="unlabeled-div-318" class="remark"><em>Remark</em>. </span>warunek Lindeberga mówi, że <span class="math inline">\(X_{n,k}\)</span> są asymptotycznie małe, tzn. dla każdego <span class="math inline">\(r&gt;0\)</span>
+<p><span id="unlabeled-div-319" class="remark"><em>Remark</em>. </span>warunek Lindeberga mówi, że <span class="math inline">\(X_{n,k}\)</span> są asymptotycznie małe, tzn. dla każdego <span class="math inline">\(r&gt;0\)</span>
 <span class="math display">\[
 \max_{k\le n} \mathbb{P}\left[ |X_{n,k}|\ge r  \right] \to 0, \qquad n\to\infty.
 \]</span>
@@ -199,7 +199,7 @@ Następne dwie nierówności są zespolonym odpowiednikiem tych poznanych
 na analizie. Ze względu na obecność parametru zespolonego
 przedstawimy jednak kompletny dowód.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-319" class="lemma"><strong>Lemma 29.1  </strong></span>Dla rzeczywistych <span class="math inline">\(t\)</span>,
+<p><span id="lem:unlabeled-div-320" class="lemma"><strong>Lemma 29.1  </strong></span>Dla rzeczywistych <span class="math inline">\(t\)</span>,
 <span class="math display" id="eq:2s">\[\begin{equation}%\label{eq:2s}
     \big| e^{it} - 1 - it  \big| \le t^2/2
    \tag{29.2}
@@ -211,7 +211,7 @@ oraz
   \end{equation}\]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-320" class="proof"><em>Proof</em>. </span>Zauważmy najpierw, że korzystając ze wzoru <span class="math inline">\(\cos(t) = 1-2\sin^2(t/2)\)</span> otrzymujemy
+<p><span id="unlabeled-div-321" class="proof"><em>Proof</em>. </span>Zauważmy najpierw, że korzystając ze wzoru <span class="math inline">\(\cos(t) = 1-2\sin^2(t/2)\)</span> otrzymujemy
 <span class="math display">\[\begin{align*}
    \left| e^{it}-1\right| &amp; =  \sqrt{(1-\cos(t))^2+\sin^2(t)} \\
    &amp; = \sqrt{2-2\cos(t)} = 2 |\sin(t/2)|\leq |t|.
@@ -242,7 +242,7 @@ niech <span class="math inline">\(a_1,\ldots, a_n, b_1,\ldots, b_n \in\mathbb{C}
 \tag{29.5}
 \end{equation}\]</span></p>
 <div class="proof">
-<p><span id="unlabeled-div-321" class="proof"><em>Proof</em>. </span>Ustalmy <span class="math inline">\(t\in \mathbb{R}\)</span>. Niech
+<p><span id="unlabeled-div-322" class="proof"><em>Proof</em>. </span>Ustalmy <span class="math inline">\(t\in \mathbb{R}\)</span>. Niech
 <span class="math display">\[
 Z_n = \sum_{k=1}^n X_{n,k},\quad
 \varphi_{n,k} = \varphi_{X_{n,k}},\quad \sigma_{n,k}^2 = \mathbb{V}ar(X_{n,k}) = \mathbb{E} [X_{n,k}^2].
@@ -250,7 +250,7 @@ Z_n = \sum_{k=1}^n X_{n,k},\quad
 \varphi_{Z_n}(t) \to e^{-\frac {\sigma^2 t^2}2},
 \]</span>
 a więc, że funkcje charakterystyczne zbiegają do funkcji charakterystycznej rozkładu normalnego,
-co pociągnie żądaną zbieżność z twierdzenie L'evy’ego-Cram'era.
+co pociągnie żądaną zbieżność z twierdzenia Lévy’ego-Craméra.
 Z niezależności zmiennych losowych mamy
 <span class="math display">\[
 \varphi_{Z_n}(t) = \prod_{k=1}^n \varphi_{n,k}(t).
@@ -336,7 +336,7 @@ Ustalmy <span class="math inline">\(\varepsilon&gt;0\)</span>. Istnieje <span cl
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-16.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

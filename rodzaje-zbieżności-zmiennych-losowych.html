@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Ostatni omówiony przez nas przykład pokazuje, że jeżeli \(X_n\) jest liczbą otrzymanych orłów przy \(n\in \mathbb{N}\) rzutach symetryczną monetą, to \[\begin{equation*} X_n/n \approx 1/2....">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="18 Rodzaje zbieżności zmiennych losowych | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Ostatni omówiony przez nas przykład pokazuje, że jeżeli \(X_n\) jest liczbą otrzymanych orłów przy \(n\in \mathbb{N}\) rzutach symetryczną monetą, to \[\begin{equation*} X_n/n \approx 1/2....">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Ostatni omówiony przez nas przykład pokazuje, że jeżeli \(X_n\) jest liczbą otrzymanych orłów przy \(n\in \mathbb{N}\) rzutach symetryczną monetą, to \[\begin{equation*} X_n/n \approx 1/2....">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -121,7 +121,7 @@ Aby uściślić powyższą relację musimy omówić różne rodzaje zbieżności
 <span class="header-section-number">18.1</span> Zbieżność prawie na pewno<a class="anchor" aria-label="anchor" href="#zbie%C5%BCno%C5%9B%C4%87-prawie-na-pewno"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-180" class="definition"><strong>Definicja 18.1  </strong></span>Załóżmy, że <span class="math inline">\(\vec{X}_n\)</span> jest ciągiem <span class="math inline">\(d\)</span>-wymiarowych wektorów losowych.
+<p><span id="def:unlabeled-div-181" class="definition"><strong>Definicja 18.1  </strong></span>Załóżmy, że <span class="math inline">\(\vec{X}_n\)</span> jest ciągiem <span class="math inline">\(d\)</span>-wymiarowych wektorów losowych.
 Mówimy, że <span class="math inline">\(\vec{X}_n\)</span> zbiega do wektora losowego <span class="math inline">\(\vec{X}\)</span> <strong>prawie na pewno</strong>,
 jeżeli
 <span class="math display">\[\begin{equation*}
@@ -132,7 +132,7 @@ Piszemy wówczas
 </div>
 <p>Zbieżność prawie na pewno jest koncepcyjnie najprostszym rodzajem zbieżności z jaką będziemy mieć do czynienia.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-181" class="example"><strong>Przykład 18.1  </strong></span>Niech <span class="math inline">\(\Omega = [-1,1]\)</span> z miarą Lebesgue’a. Rozważmy ciąg zmiennych losowych
+<p><span id="exm:unlabeled-div-182" class="example"><strong>Przykład 18.1  </strong></span>Niech <span class="math inline">\(\Omega = [-1,1]\)</span> z miarą Lebesgue’a. Rozważmy ciąg zmiennych losowych
 <span class="math inline">\(X_n(\omega) = \omega^n\)</span>. Wówczas dla <span class="math inline">\(X(\omega) =0\)</span> mamy
 <span class="math display">\[\begin{equation*}
 \left\{\omega: X_n(\omega)\to  X(\omega)\right\} = (-1,1).
@@ -151,7 +151,7 @@ Zatem <span class="math inline">\(X_n\)</span> zbiega prawie na pewno do <span c
 co jest zbiorem o prawdopodobieństwie zero.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-182" class="definition"><strong>Definicja 18.2  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> będą wektorami losowymi. Powiemy, że <span class="math inline">\(\vec{X}\)</span> jest prawie na pewno równy <span class="math inline">\(\vec{Y}\)</span>, jeżeli
+<p><span id="def:unlabeled-div-183" class="definition"><strong>Definicja 18.2  </strong></span>Niech <span class="math inline">\(\vec{X}\)</span> i <span class="math inline">\(\vec{Y}\)</span> będą wektorami losowymi. Powiemy, że <span class="math inline">\(\vec{X}\)</span> jest prawie na pewno równy <span class="math inline">\(\vec{Y}\)</span>, jeżeli
 <span class="math display">\[\begin{equation*}
   \mathbb{P}\left[ \left\{\omega: \vec{X}(\omega)=  \vec{Y}(\omega)\right\} \right]=1.
 \end{equation*}\]</span>
@@ -159,16 +159,16 @@ Piszemy wtedy <span class="math inline">\(\vec{X}=\vec{Y}\)</span> p.n.</p>
 </div>
 <p>Powyższa terminologia pozwala stwierdzić, że granica p.n. jest jedyna.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-183" class="lemma"><strong>Lemma 18.1  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n\in \mathbb{N}}\)</span> będzie ciągiem wektorów losowych.
+<p><span id="lem:unlabeled-div-184" class="lemma"><strong>Lemma 18.1  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n\in \mathbb{N}}\)</span> będzie ciągiem wektorów losowych.
 Jeżeli <span class="math inline">\(\vec{X}_n\)</span> zbiega prawie na pewno do <span class="math inline">\(\vec{X}\)</span>
 oraz <span class="math inline">\(\vec{X}_n\)</span> zbiega prawie na pewno do <span class="math inline">\(\vec{Y}\)</span>, to <span class="math inline">\(\vec{X} = \vec{Y}\)</span> p.n.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-184" class="proof"><em>Proof</em>. </span>Pozostawiamy jako ćwiczenie.
+<p><span id="unlabeled-div-185" class="proof"><em>Proof</em>. </span>Pozostawiamy jako ćwiczenie.
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-185" class="example"><strong>Przykład 18.2  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem zmiennych losowych takich, że <span class="math inline">\(X_n\)</span> ma rozkład <span class="math inline">\(\mathrm{Exp}(n)\)</span>. Wówczas
+<p><span id="exm:unlabeled-div-186" class="example"><strong>Przykład 18.2  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem zmiennych losowych takich, że <span class="math inline">\(X_n\)</span> ma rozkład <span class="math inline">\(\mathrm{Exp}(n)\)</span>. Wówczas
 <span class="math display" id="eq:claim">\[\begin{equation}
     \lim_{n \to \infty}\sqrt{n}X_n  =0.
     \tag{18.1}
@@ -257,7 +257,7 @@ Zbieżność możemy zaobserwować również na symulacjach.</p>
 <div class="inline-figure"><img src="RachunekPrawdopodobienstwa2025_files/figure-html/zbieznosc-1.png" width="672" style="display: block; margin: auto;"></div>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-186" class="theorem"><strong>Twierdzenie 18.1  </strong></span>Jeżeli <span class="math inline">\(\vec{X}_n \overset{{\rm p.n.}}{\to} \vec{X}\)</span> i <span class="math inline">\(\vec{Y}_n \overset{{\rm p.n.}}{\to} \vec{Y}\)</span>, to</p>
+<p><span id="thm:unlabeled-div-187" class="theorem"><strong>Twierdzenie 18.1  </strong></span>Jeżeli <span class="math inline">\(\vec{X}_n \overset{{\rm p.n.}}{\to} \vec{X}\)</span> i <span class="math inline">\(\vec{Y}_n \overset{{\rm p.n.}}{\to} \vec{Y}\)</span>, to</p>
 <ol style="list-style-type: lower-alpha">
 <li>
 <span class="math inline">\(a\vec{X}_n + b\vec{Y}_n \overset{{\rm p.n.}}{\to} a\vec{X}+b\vec{Y}\)</span>.</li>
@@ -266,7 +266,7 @@ Zbieżność możemy zaobserwować również na symulacjach.</p>
 </ol>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-187" class="proof"><em>Proof</em>. </span>Ćwiczenie.
+<p><span id="unlabeled-div-188" class="proof"><em>Proof</em>. </span>Ćwiczenie.
 <span style="display: inline-block; width: 100%; text-align: right;">□</span></p>
 </div>
 </div>
@@ -277,7 +277,7 @@ Zbieżność możemy zaobserwować również na symulacjach.</p>
 <p>Drugim omawianym przez nas rodzajem zbieżności będzie znana z kursu miary i całki zbieżność według miary.
 Z racji, że operujemy wyłącznie na miarach probabilistycznych dostosujemy nieznacznie terminologię.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-188" class="definition"><strong>Definicja 18.3  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem wektorów losowych.
+<p><span id="def:unlabeled-div-189" class="definition"><strong>Definicja 18.3  </strong></span>Niech <span class="math inline">\(\{\vec{X}_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem wektorów losowych.
 Powiemy, że <span class="math inline">\(\vec{X}_n\)</span> zbiega do <span class="math inline">\(\vec{X}\)</span> <strong>według prawdopodobieństwa</strong>,
 jeżeli dla każdego <span class="math inline">\(\varepsilon &gt;0\)</span>,
 <span class="math display">\[\begin{equation*}
@@ -291,7 +291,7 @@ Piszemy wówczas
 <p>Zbieżność według prawdopodobieństwa mówi, że z dużym prawdopodobieństwem <span class="math inline">\(\vec{X}_n\)</span> jest bliski
 <span class="math inline">\(\vec{X}\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-189" class="example"><strong>Przykład 18.3  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem zmiennych losowych takich,
+<p><span id="exm:unlabeled-div-190" class="example"><strong>Przykład 18.3  </strong></span>Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie ciągiem zmiennych losowych takich,
 że <span class="math inline">\(X_n\)</span> ma rozkład <span class="math inline">\(\mathrm{Exp}(n)\)</span>. Wówczas
 <span class="math display">\[\begin{equation}
     \lim_{n \to \infty}\sqrt{n}X_n  =0
@@ -302,11 +302,11 @@ według prawdopodobieństwa. Rzeczywiście, dla <span class="math inline">\(\eps
 \end{equation*}\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-190" class="theorem"><strong>Twierdzenie 18.2  </strong></span>Jeżeli <span class="math inline">\(\vec{X}_n \overset{{\rm p.n.}}{\to} \vec{X}\)</span>,
+<p><span id="thm:unlabeled-div-191" class="theorem"><strong>Twierdzenie 18.2  </strong></span>Jeżeli <span class="math inline">\(\vec{X}_n \overset{{\rm p.n.}}{\to} \vec{X}\)</span>,
 to <span class="math inline">\(\vec{X}_n \overset{\mathbb{P}}{\to} \vec{X}\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-191" class="proof"><em>Proof</em>. </span>Bez zmieszania ogólności załóżmy, że rozważane wektory losowe są jednowymiarowe.
+<p><span id="unlabeled-div-192" class="proof"><em>Proof</em>. </span>Bez zmieszania ogólności załóżmy, że rozważane wektory losowe są jednowymiarowe.
 Załóżmy, że <span class="math inline">\(X_n \overset{{\rm p.n.}}{\to} X\)</span>. Ustalmy <span class="math inline">\(\varepsilon &gt;0\)</span>.
 Przypomnijmy, że zbieżność punktowa oznacza, że dla prawie każdej <span class="math inline">\(\omega\)</span> zachodzi
 <span class="math display">\[
@@ -325,7 +325,7 @@ jest wstępujący. Zatem
 <span class="math display">\[
     1=   \mathbb{P} \left[  \bigcup_{m=1}^\infty A_m \right] = \lim_{m\to \infty} \mathbb{P}[A_m].
   \]</span>
-Zauważmy, że <span class="math inline">\(A_m\subset \{ |X_m-X| &lt; \varepsilon \}\)</span>, a więc
+Zauważmy, że <span class="math inline">\(A_m\subset \{ |X_m-X| &lt; \varepsilon  \}\)</span>, a więc
 <span class="math display">\[
   \lim_{m\to \infty} \mathbb{P}\left[|X_m-X|&lt;\varepsilon  \right] = 1
   \]</span>
@@ -338,7 +338,7 @@ co pokazuje zbieżność <span class="math inline">\(X_m\)</span> do <span class
 </div>
 <p>Implikacja odwrotna nie jest prawdziwa.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-192" class="example"><strong>Przykład 18.4  </strong></span>Na przestrzeni probabilistycznej
+<p><span id="exm:unlabeled-div-193" class="example"><strong>Przykład 18.4  </strong></span>Na przestrzeni probabilistycznej
 <span class="math inline">\(([0,1], \mathcal{B}or([0,1]),{\rm Leb})\)</span>
 definiujemy ciąg zmiennych losowych <span class="math inline">\(\{X_k\}_{k \in \mathbb{N}}\)</span></p>
 <p><img src="TIKZ/punkt.svg" style="display: block; margin: auto;"><img src="TIKZ/punkt2.svg" style="display: block; margin: auto;"><img src="TIKZ/punkt3.svg" style="display: block; margin: auto;"></p>
@@ -351,7 +351,7 @@ ale nie zbiega prawie na pewno
 (bo dla każdego punktu <span class="math inline">\(\omega\in [0,1]\)</span> nieskończenie elementów <span class="math inline">\(X_k(\omega)=1\)</span>).</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-193" class="example"><strong>Przykład 18.5  </strong></span>Rozważmy jeszcze jeden przykład. Niech <span class="math inline">\(\{p_n\}_{n \in \mathbb{N}}\)</span> będzie dowolnym ciągiem liczb
+<p><span id="exm:unlabeled-div-194" class="example"><strong>Przykład 18.5  </strong></span>Rozważmy jeszcze jeden przykład. Niech <span class="math inline">\(\{p_n\}_{n \in \mathbb{N}}\)</span> będzie dowolnym ciągiem liczb
 z przedziału <span class="math inline">\([0,1]\)</span>. Niech <span class="math inline">\(\{X_n\}_{n \in \mathbb{N}}\)</span> będzie nieskończonym
 ciągiem niezależnych zmiennych losowych takich, że
 <span class="math display">\[\begin{equation*}
@@ -417,12 +417,12 @@ podciągu <span class="math inline">\(\{X_{n^2}(\omega)\}_n\)</span> widzimy tyl
 </div>
 <p>Zjawisko z poprzedniego przykładu można uogólnić.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-194" class="theorem"><strong>Twierdzenie 18.3  (Twierdzenie Riesza) </strong></span>Jeżeli <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} X\)</span>,
+<p><span id="thm:unlabeled-div-195" class="theorem"><strong>Twierdzenie 18.3  (Twierdzenie Riesza) </strong></span>Jeżeli <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} X\)</span>,
 to istnieje podciąg <span class="math inline">\(\{X_{n_k}\}_{k\in \mathbb{N}}\)</span> taki, że
 <span class="math inline">\(X_{n_k} \overset{{\rm p.n}}{\to} X\)</span>.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-195" class="proof"><em>Proof</em>. </span>Z definicji zbieżności według prawdopodobieństwa dla każdego <span class="math inline">\(k\)</span> istnieje <span class="math inline">\(n_k\)</span> takie, że
+<p><span id="unlabeled-div-196" class="proof"><em>Proof</em>. </span>Z definicji zbieżności według prawdopodobieństwa dla każdego <span class="math inline">\(k\)</span> istnieje <span class="math inline">\(n_k\)</span> takie, że
 <span class="math display">\[
   \mathbb{P}\left[ |X_n-X| &gt; 2^{-k} \right] \le 2^{-k}\qquad \forall n\ge n_k.
   \]</span>
@@ -453,7 +453,7 @@ Dzieje się tak dlatego, że zbieżność prawie na pewno czy według prawdopodo
 z dużym prawdopodobieństwem <span class="math inline">\(X_n\)</span> jest bliskie <span class="math inline">\(X\)</span>. Nie jest jasne co się dzieje na zbiorze o małym
 prawdopodobieństwie, gdzie <span class="math inline">\(X_n\)</span> jest dalekie od <span class="math inline">\(X\)</span>. Odległość ta może być bardzo duża.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-196" class="definition"><strong>Definicja 18.4  </strong></span>Niech <span class="math inline">\(p\geq 1\)</span>.
+<p><span id="def:unlabeled-div-197" class="definition"><strong>Definicja 18.4  </strong></span>Niech <span class="math inline">\(p\geq 1\)</span>.
 Powiemy, żę <span class="math inline">\(X_n\)</span> zbiega do <span class="math inline">\(X\)</span> w <span class="math inline">\(L^p\)</span>,
 jeżeli <span class="math inline">\(X, X_n\in L^p\)</span> (tzn. <span class="math inline">\(\|X_n\|_p =\mathbb{E} [|X_n|^p]^{1/p}&lt;\infty\)</span>)
 oraz
@@ -463,7 +463,7 @@ oraz
 Piszemy wówczas <span class="math inline">\(X_n \overset{L^p}{\to} X\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-197" class="example"><strong>Przykład 18.6  </strong></span>Rozważmy przestrzeń probabilistyczną <span class="math inline">\(([0,1], \mathcal{B}or([0,1]), \mathrm{Leb})\)</span>.
+<p><span id="exm:unlabeled-div-198" class="example"><strong>Przykład 18.6  </strong></span>Rozważmy przestrzeń probabilistyczną <span class="math inline">\(([0,1], \mathcal{B}or([0,1]), \mathrm{Leb})\)</span>.
 Rozważmy zmienne losowe <span class="math inline">\(X_n = n^{\alpha} \mathbf{1}_{[0,1/n]}\)</span>. Wówczas <span class="math inline">\(X_n \to 0\)</span> p.n.
 Dla <span class="math inline">\(p\geq 1\)</span> mamy
 <span class="math display">\[\begin{equation*}
@@ -472,10 +472,10 @@ Dla <span class="math inline">\(p\geq 1\)</span> mamy
 zbieżność zachodzi więc dla <span class="math inline">\(p&lt;1/\alpha\)</span>.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-198" class="theorem"><strong>Twierdzenie 18.4  </strong></span>Jeżeli <span class="math inline">\(X_n \overset{L^p}{\to} X\)</span>, to <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} X\)</span>. Implikacja odwrotna nie jest prawdziwa.</p>
+<p><span id="thm:unlabeled-div-199" class="theorem"><strong>Twierdzenie 18.4  </strong></span>Jeżeli <span class="math inline">\(X_n \overset{L^p}{\to} X\)</span>, to <span class="math inline">\(X_n \overset{\mathbb{P}}{\to} X\)</span>. Implikacja odwrotna nie jest prawdziwa.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-199" class="proof"><em>Proof</em>. </span>Z nierówności Czebyszewa wynika, że
+<p><span id="unlabeled-div-200" class="proof"><em>Proof</em>. </span>Z nierówności Czebyszewa wynika, że
 <span class="math display">\[
   \mathbb{P}\big[ |X_n - X| &gt; \varepsilon  \big] \le \frac{\mathbb{E}|X_n-X|^p}{\varepsilon^p} \to 0.
   \]</span></p>
@@ -486,7 +486,7 @@ zbieżność zachodzi więc dla <span class="math inline">\(p&lt;1/\alpha\)</spa
 <span class="header-section-number">18.4</span> Słabe prawo wielkich liczb<a class="anchor" aria-label="anchor" href="#s%C5%82abe-prawo-wielkich-liczb"><i class="fas fa-link"></i></a>
 </h2>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-200" class="theorem"><strong>Twierdzenie 18.5  (Słabe Prawo Wielkich Liczb (SPWL)) </strong></span>Jeżeli ciąg zmiennych losowych <span class="math inline">\(X_1,X_2,\ldots\)</span> spełnia <span class="math inline">\(\mathbb{E}[ X_i^2]&lt;\infty\)</span>,
+<p><span id="thm:unlabeled-div-201" class="theorem"><strong>Twierdzenie 18.5  (Słabe Prawo Wielkich Liczb (SPWL)) </strong></span>Jeżeli ciąg zmiennych losowych <span class="math inline">\(X_1,X_2,\ldots\)</span> spełnia <span class="math inline">\(\mathbb{E}[ X_i^2]&lt;\infty\)</span>,
 zmienne losowe są nieskorelowane oraz mają wspólnie
 ograniczoną wariancję:
 <span class="math display">\[\begin{equation*}
@@ -502,7 +502,7 @@ W szczególności jeżeli wszystkie zmienne losowe <span class="math inline">\(X
   \]</span></p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-201" class="proof"><em>Proof</em>. </span>Mamy<br><span class="math display">\[\begin{align*}
+<p><span id="unlabeled-div-202" class="proof"><em>Proof</em>. </span>Mamy<br><span class="math display">\[\begin{align*}
     &amp;\left\| \frac{X_1+\ldots + X_n - \mathbb{E}[X_1+\ldots + X_n]}{n} \right\|_2^2 =\\
      &amp;\mathbb{V}ar\bigg( \frac{X_1+\ldots + X_n}{n} \bigg)
     = \frac{1}{n^2} \mathbb{V}ar(X_1+\ldots + X_n)\\
@@ -512,7 +512,7 @@ W szczególności jeżeli wszystkie zmienne losowe <span class="math inline">\(X
 </div>
 <p>Wkrótce pokażemy znacznie mocniejszy wynik: Mocne Prawo Wielkich Liczb (MPWL), które mówi o zbieżności p.n.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-202" class="example"><strong>Przykład 18.7  </strong></span>Niech <span class="math inline">\(X_1,X_2,\ldots\)</span> będą niezależnymi zmiennymi losowymi o rozkładzie <span class="math inline">\(U([-1,1])\)</span>. Wówczas zmienne losowe
+<p><span id="exm:unlabeled-div-203" class="example"><strong>Przykład 18.7  </strong></span>Niech <span class="math inline">\(X_1,X_2,\ldots\)</span> będą niezależnymi zmiennymi losowymi o rozkładzie <span class="math inline">\(U([-1,1])\)</span>. Wówczas zmienne losowe
 <span class="math inline">\(X^2_1,X^2_2,\ldots\)</span> są niezależne oraz
 <span class="math display">\[
   \mathbb{E} X_i^2 =\int_{-1}^1 x^2 \frac{dx}2 = \frac 13, \qquad \mathbb{V}ar X_i^2 \le \mathbb{E} X_i^4 \le 1.
@@ -564,7 +564,7 @@ Ten rachunek pokazuje, że niemal cała masa kostki <span class="math inline">\(
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-16.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -8,7 +8,7 @@
 <meta name="author" content="Dariusz Buraczewski">
 <meta name="author" content="Piotr Dyszewski">
 <meta name="description" content="Wróćmy do przykładu polegającego na rzucie dwoma kośćmi. Wówczas przestrzenią probabilistyczną jest \(\Omega = [6]^2\) z miarą jednostajną probabilistyczną \(\mathbb{P}\) na \(\Omega\). Rozważmy...">
-<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta name="generator" content="bookdown 0.41 with bs4_book()">
 <meta property="og:title" content="4 Niezależność zdarzeń | Rachunek Prawdopodobieństwa 1R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Wróćmy do przykładu polegającego na rzucie dwoma kośćmi. Wówczas przestrzenią probabilistyczną jest \(\Omega = [6]^2\) z miarą jednostajną probabilistyczną \(\mathbb{P}\) na \(\Omega\). Rozważmy...">
@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Wróćmy do przykładu polegającego na rzucie dwoma kośćmi. Wówczas przestrzenią probabilistyczną jest \(\Omega = [6]^2\) z miarą jednostajną probabilistyczną \(\mathbb{P}\) na \(\Omega\). Rozważmy...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script><script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
     	</script><script>quizdown.init();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -132,7 +132,7 @@ Powyższa równość może być zapisana jako
 Zauważmy, że powyższa równość nie wymusza założenia <span class="math inline">\(\mathbb{P}[B]&gt;0\)</span>.
 Własność ta okazuje się być bardzo użyteczna i często spotykana.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-34" class="definition"><strong>Definicja 4.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
+<p><span id="def:unlabeled-div-35" class="definition"><strong>Definicja 4.1  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną.
 Zdarzenia <span class="math inline">\(A,B\in \mathcal{F}\)</span> nazywamy <strong>niezależnymi</strong>, gdy
 <span class="math display">\[
   \mathbb{P}[A\cap B] = \mathbb{P}[A]\mathbb{P}[B].
@@ -141,7 +141,7 @@ Zdarzenia <span class="math inline">\(A,B\in \mathcal{F}\)</span> nazywamy <stro
 <p>Zauważmy, że jeżeli <span class="math inline">\(\mathbb{P}[A]=0\)</span> lub <span class="math inline">\(\mathbb{P}[A]=1\)</span>, to dla każdego <span class="math inline">\(B\in \mathcal{F}\)</span>
 zdarzenia <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są niezależne.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-35" class="example"><strong>Przykład 4.1  </strong></span>Rzucamy kostką sześcienną. Niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że wypadnie liczba parzysta,
+<p><span id="exm:unlabeled-div-36" class="example"><strong>Przykład 4.1  </strong></span>Rzucamy kostką sześcienną. Niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że wypadnie liczba parzysta,
 a <span class="math inline">\(B\)</span> zdarzeniem, że wypadnie wypadnie liczba podzielna przez <span class="math inline">\(3\)</span>.
 Wówczas oba zdarzenia są niezależne.
 Definiujemy przestrzeń probabilistyczną: <span class="math inline">\(\Omega = [6] = \{ 1,2, \ldots 6\}\)</span>,
@@ -154,7 +154,7 @@ Mamy
 </div>
 <p>Często z samego opisu zdarzeń nie wynika ich niezależność.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-36" class="example"><strong>Przykład 4.2  </strong></span>Wybieramy losową rodzinę posiadającą <span class="math inline">\(n\)</span> dzieci.
+<p><span id="exm:unlabeled-div-37" class="example"><strong>Przykład 4.2  </strong></span>Wybieramy losową rodzinę posiadającą <span class="math inline">\(n\)</span> dzieci.
 Niech <span class="math inline">\(A\)</span> będzie zdarzeniem, że w wybranej rodzinie jest co najwyżej jedna dziewczynka, a
 <span class="math inline">\(B\)</span> będzie zdarzeniem, że w wybranej rodzinie są dziewczynki i chłopcy.
 Czy zdarzenia <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> są niezależne?
@@ -177,19 +177,19 @@ co ma miejsce jedynie dla <span class="math inline">\(n=3\)</span>.
 W tym przypadku powody niezależności są czysto algebraiczne.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-37" class="definition"><strong>Definicja 4.2  </strong></span>Zdarzenia <span class="math inline">\(A_1,\ldots,A_n\in \mathcal{F}\)</span> nazywamy <strong>niezależnymi</strong>, gdy
+<p><span id="def:unlabeled-div-38" class="definition"><strong>Definicja 4.2  </strong></span>Zdarzenia <span class="math inline">\(A_1,\ldots,A_n\in \mathcal{F}\)</span> nazywamy <strong>niezależnymi</strong>, gdy
 <span class="math display">\[
   \mathbb{P}[A_{i_1} \cap A_{i_2}\cap \ldots \cap A_{i_k}] = \mathbb{P}[A_{i_1}]\cdot \ldots \cdot \mathbb{P}[A_{i_k}]
   \]</span>
 dla każdego ciągu <span class="math inline">\(1\le i_1 &lt; i_2 &lt;\cdots &lt; i_k \le n\)</span>, <span class="math inline">\(k=2,3,\ldots, n\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-38" class="definition"><strong>Definicja 4.3  </strong></span>Zdarzenia <span class="math inline">\(A_1,\ldots,A_n\in \mathcal{F}\)</span> nazywamy <em>niezależnymi parami</em>, gdy dla dowolnych <span class="math inline">\(i\not=j\)</span>
+<p><span id="def:unlabeled-div-39" class="definition"><strong>Definicja 4.3  </strong></span>Zdarzenia <span class="math inline">\(A_1,\ldots,A_n\in \mathcal{F}\)</span> nazywamy <em>niezależnymi parami</em>, gdy dla dowolnych <span class="math inline">\(i\not=j\)</span>
 zdarzenia <span class="math inline">\(A_i\)</span> i <span class="math inline">\(A_j\)</span> są niezależne</p>
 </div>
 <p>Jeżeli zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne, to są niezależne parami. Odwrotna implikacja nie jest jednak prawdziwa.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-39" class="example"><strong>Przykład 4.3  </strong></span>Rzucamy 2 razy kostką. Oznaczmy</p>
+<p><span id="exm:unlabeled-div-40" class="example"><strong>Przykład 4.3  </strong></span>Rzucamy 2 razy kostką. Oznaczmy</p>
 <ul>
 <li>
 <span class="math inline">\(A\)</span> - za pierwszym razem wypadła parzysta liczba oczek;</li>
@@ -216,7 +216,7 @@ Chcemy badać ciągi niezależnych doświadczeń (może być ich nieskończenie 
 <h2>Niezależne <span class="math inline">\(\sigma\)</span>-ciała<a class="anchor" aria-label="anchor" href="#niezale%C5%BCne-sigma-cia%C5%82a"><i class="fas fa-link"></i></a>
 </h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-40" class="definition"><strong>Definicja 4.4  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną
+<p><span id="def:unlabeled-div-41" class="definition"><strong>Definicja 4.4  </strong></span>Niech <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> będzie przestrzenią probabilistyczną
 oraz niech <span class="math inline">\(\mathcal{F}_1\)</span>, <span class="math inline">\(\mathcal{F}_2\)</span>, …, <span class="math inline">\(\mathcal{F}_n\)</span>
 będą <span class="math inline">\(\sigma\)</span>-ciałami zawartymi w <span class="math inline">\(\mathcal{F}\)</span>.
 Mówimy, że <span class="math inline">\(\sigma\)</span>-ciała te
@@ -229,11 +229,11 @@ zachodzi warunek
 <p>Równoważnie (zadanie) <span class="math inline">\(\sigma\)</span>-ciała <span class="math inline">\(\mathcal{F}_1\)</span>, <span class="math inline">\(\mathcal{F}_2\)</span>, …, <span class="math inline">\(\mathcal{F}_n\)</span>
 są niezależne gdy dowolne zdarzenia <span class="math inline">\(A_1\in \mathcal{F}_1\)</span>, …, <span class="math inline">\(A_n\in \mathcal{F}_n\)</span> są niezależne.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-41" class="definition"><strong>Definicja 4.5  </strong></span>Dowolna rodzina <span class="math inline">\(\sigma\)</span>-ciał <span class="math inline">\(\{\mathcal{F}_i\}_{i\in I}\)</span> jest niezależna,
+<p><span id="def:unlabeled-div-42" class="definition"><strong>Definicja 4.5  </strong></span>Dowolna rodzina <span class="math inline">\(\sigma\)</span>-ciał <span class="math inline">\(\{\mathcal{F}_i\}_{i\in I}\)</span> jest niezależna,
 jeżeli każdy skończony jej podzbiór jest niezależny.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-42" class="example"><strong>Przykład 4.4  </strong></span>Rzucamy <span class="math inline">\(2\)</span> razy kostką. Pokażemy, że przy jednostajnym prawdopodobieństwie, rzuty te są niezależne.
+<p><span id="exm:unlabeled-div-43" class="example"><strong>Przykład 4.4  </strong></span>Rzucamy <span class="math inline">\(2\)</span> razy kostką. Pokażemy, że przy jednostajnym prawdopodobieństwie, rzuty te są niezależne.
 Niech <span class="math inline">\(\Omega = \left\{ (i,j): i,j \in [6]\right\}\)</span>, <span class="math inline">\(\mathcal{F}\)</span> składa się ze wszystkich podzbiorów
 <span class="math inline">\(\Omega\)</span>, a <span class="math inline">\(\mathbb{P}\)</span>
 jest wspomnianą już jednostajną miarą probabilistyczną.<br>
@@ -274,15 +274,15 @@ Dla przekroju
 <p>Powyższy przykład pokazuje, że intuicyjne pojęcie niezależności dwóch rzutów kostką zgadza się z formalną definicją.<br>
 Łatwo uogólnić go do <span class="math inline">\(n\)</span> rzutów.</p>
 <div class="lemma">
-<p><span id="lem:unlabeled-div-43" class="lemma"><strong>Lemma 4.1  </strong></span>Załóżmy, że zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne.
+<p><span id="lem:unlabeled-div-44" class="lemma"><strong>Lemma 4.1  </strong></span>Załóżmy, że zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne.
 Wtedy <span class="math inline">\(\sigma\)</span>-ciała generowane przez <span class="math inline">\(A_i\)</span>: <span class="math inline">\(\sigma(A_1),\ldots, \sigma(A_n)\)</span>
 (przypomnijmy <span class="math inline">\(\sigma(A) = \{\emptyset, A, A^c, \Omega\}\)</span>) również są niezależne.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-44" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie</p>
+<p><span id="unlabeled-div-45" class="proof"><em>Proof</em>. </span>Pozostawiamy jako zadanie</p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-45" class="corollary"><strong>Wniosek 4.1  </strong></span>Jeżeli zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne, to
+<p><span id="cor:unlabeled-div-46" class="corollary"><strong>Wniosek 4.1  </strong></span>Jeżeli zdarzenia <span class="math inline">\(A_1,\ldots, A_n\)</span> są niezależne, to
 <span class="math display">\[
 \mathbb{P}\left[ \bigcup_{i=1}^n A_i   \right] =
 1 -\mathbb{P}\left[ \bigcap_{i=1}^n A_i^c   \right] = 1 -\prod_{i=1}^n (1 - \mathbb{P}[A_i]).
@@ -330,7 +330,7 @@ Jest to miara produktowa:
 \mathbb{P} = \mathbb{P}_1 \otimes \ldots \otimes \mathbb{P}_n.
 \]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-46" class="example"><strong>Przykład 4.5  </strong></span>Losujemy niezależnie dwie liczby z przedziału <span class="math inline">\([0,1]\)</span>.
+<p><span id="exm:unlabeled-div-47" class="example"><strong>Przykład 4.5  </strong></span>Losujemy niezależnie dwie liczby z przedziału <span class="math inline">\([0,1]\)</span>.
 W tym przypadku mamy <span class="math inline">\(\Omega_1=\Omega_2=[0,1]\)</span>,
 <span class="math inline">\(\mathcal{F}_1=\mathcal{F}_2 = \mathcal{B}or([0,1])\)</span> oraz <span class="math inline">\(\mathbb{P}_1=\mathbb{P}_2=\lambda_1\)</span>,
 gdzie <span class="math inline">\(\lambda_1\)</span> jest jednowymiarową miarą Lebesgue’a.
@@ -371,7 +371,7 @@ modeluje wynik doświadczenia w <span class="math inline">\(i\)</span>-tym kroku
 <li>
 <span class="math inline">\(\mathcal{F} = \mathcal{F}_1 \otimes \ldots \otimes \mathcal{F}_n\)</span>,</li>
 <li>
-<span class="math inline">\(\mathbb{P} = \mathbb{P}_1 \otimes \ldots \otimes \mathbb{P}_n\)</span>.</li>
+<span class="math inline">\(\mathbb{P}  = \mathbb{P}_1 \otimes \ldots \otimes \mathbb{P}_n\)</span>.</li>
 </ul>
 <p>Wtedy dla <span class="math inline">\(\omega = (\omega_1,\ldots, \omega_n)\in \Omega\)</span> mamy
 <span class="math display">\[
@@ -417,7 +417,7 @@ Stąd <span class="math inline">\(|A_k| = {n\choose k}\)</span> oraz
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-12.</p>
+    <p>"<strong>Rachunek Prawdopodobieństwa 1R</strong>: Notatki do wykładu" was written by Dariusz Buraczewski, Piotr Dyszewski. It was last built on 2025-06-16.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
